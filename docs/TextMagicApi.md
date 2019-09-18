@@ -1,0 +1,8845 @@
+# TextMagicClient::TextMagicApi
+
+## Load the API package
+```perl
+use TextMagicClient::Object::TextMagicApi;
+```
+
+All URIs are relative to *http://my.textmagic.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**assign_contacts_to_list**](TextMagicApi.md#assign_contacts_to_list) | **PUT** /api/v2/lists/{id}/contacts | Assign contacts to the specified list.
+[**block_contact**](TextMagicApi.md#block_contact) | **POST** /api/v2/contacts/block | Block contact from inbound and outbound communication by phone number.
+[**buy_dedicated_number**](TextMagicApi.md#buy_dedicated_number) | **POST** /api/v2/numbers | Buy a dedicated number and assign it to the specified account.
+[**cancel_survey**](TextMagicApi.md#cancel_survey) | **PUT** /api/v2/surveys/{id}/cancel | Cancel a survey.
+[**check_phone_verification_code**](TextMagicApi.md#check_phone_verification_code) | **PUT** /api/v2/user/phone/verification | Check user phone verification code
+[**clear_and_assign_contacts_to_list**](TextMagicApi.md#clear_and_assign_contacts_to_list) | **POST** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts.
+[**close_chats_bulk**](TextMagicApi.md#close_chats_bulk) | **POST** /api/v2/chats/close/bulk | Close chats by chat ids or close all chats
+[**close_read_chats**](TextMagicApi.md#close_read_chats) | **POST** /api/v2/chats/close/read | Close all chats that have no unread messages.
+[**close_subaccount**](TextMagicApi.md#close_subaccount) | **DELETE** /api/v2/subaccounts/{id} | Close subaccount.
+[**create_contact**](TextMagicApi.md#create_contact) | **POST** /api/v2/contacts | Create a new contact from the submitted data.
+[**create_contact_note**](TextMagicApi.md#create_contact_note) | **POST** /api/v2/contacts/{id}/notes | Create a new contact note.
+[**create_custom_field**](TextMagicApi.md#create_custom_field) | **POST** /api/v2/customfields | Create a new custom field from the submitted data.
+[**create_list**](TextMagicApi.md#create_list) | **POST** /api/v2/lists | Create a new list from the submitted data.
+[**create_push_token**](TextMagicApi.md#create_push_token) | **POST** /api/v2/push/tokens | Add or update a device token.
+[**create_survey**](TextMagicApi.md#create_survey) | **POST** /api/v2/surveys | Create a new survey from the submitted data.
+[**create_survey_node**](TextMagicApi.md#create_survey_node) | **POST** /api/v2/surveys/{id}/nodes | Create a new node from the submitted data.
+[**create_template**](TextMagicApi.md#create_template) | **POST** /api/v2/templates | Create a new template from the submitted data.
+[**delete_all_contacts**](TextMagicApi.md#delete_all_contacts) | **DELETE** /api/v2/contact/all | Delete all contacts.
+[**delete_all_outbound_messages**](TextMagicApi.md#delete_all_outbound_messages) | **DELETE** /api/v2/message/all | Delete all messages
+[**delete_avatar**](TextMagicApi.md#delete_avatar) | **DELETE** /api/v2/user/avatar | Delete an avatar for the current user.\\
+[**delete_chat_messages**](TextMagicApi.md#delete_chat_messages) | **POST** /api/v2/chats/{id}/messages/delete | Delete messages from chat by given messages ID(s).
+[**delete_chats_bulk**](TextMagicApi.md#delete_chats_bulk) | **POST** /api/v2/chats/delete | Delete chats by given ID(s) or delete all chats.
+[**delete_contact**](TextMagicApi.md#delete_contact) | **DELETE** /api/v2/contacts/{id} | Delete a single contact.
+[**delete_contact_avatar**](TextMagicApi.md#delete_contact_avatar) | **DELETE** /api/v2/contacts/{id}/avatar | Delete an avatar for the contact.
+[**delete_contact_note**](TextMagicApi.md#delete_contact_note) | **DELETE** /api/v2/notes/{id} | Delete a single contact note.
+[**delete_contact_notes_bulk**](TextMagicApi.md#delete_contact_notes_bulk) | **POST** /api/v2/contacts/{id}/notes/delete | Delete contact note by given ID(s) or delete all contact notes.
+[**delete_contacts_by_ids**](TextMagicApi.md#delete_contacts_by_ids) | **POST** /api/v2/contacts/delete | Delete contact by given ID(s) or delete all contacts.
+[**delete_contacts_from_list**](TextMagicApi.md#delete_contacts_from_list) | **DELETE** /api/v2/lists/{id}/contacts | Unassign contacts from the specified list.
+[**delete_custom_field**](TextMagicApi.md#delete_custom_field) | **DELETE** /api/v2/customfields/{id} | Delete a single custom field.
+[**delete_dedicated_number**](TextMagicApi.md#delete_dedicated_number) | **DELETE** /api/v2/numbers/{id} | Cancel dedicated number subscription.
+[**delete_inbound_message**](TextMagicApi.md#delete_inbound_message) | **DELETE** /api/v2/replies/{id} | Delete the incoming message.
+[**delete_inbound_messages_bulk**](TextMagicApi.md#delete_inbound_messages_bulk) | **POST** /api/v2/replies/delete | Delete inbound messages by given ID(s) or delete all inbound messages.
+[**delete_list**](TextMagicApi.md#delete_list) | **DELETE** /api/v2/lists/{id} | Delete a single list.
+[**delete_list_avatar**](TextMagicApi.md#delete_list_avatar) | **DELETE** /api/v2/lists/{id}/avatar | Delete an avatar for the list.
+[**delete_list_contacts_bulk**](TextMagicApi.md#delete_list_contacts_bulk) | **POST** /api/v2/lists/{id}/contacts/delete | Delete contact from list by given ID(s) or all contacts from list.
+[**delete_lists_bulk**](TextMagicApi.md#delete_lists_bulk) | **POST** /api/v2/lists/delete | Delete list by given ID(s) or delete all lists.
+[**delete_message_session**](TextMagicApi.md#delete_message_session) | **DELETE** /api/v2/sessions/{id} | Delete a message session, together with all nested messages.
+[**delete_message_sessions_bulk**](TextMagicApi.md#delete_message_sessions_bulk) | **POST** /api/v2/sessions/delete | Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+[**delete_outbound_message**](TextMagicApi.md#delete_outbound_message) | **DELETE** /api/v2/messages/{id} | Delete message
+[**delete_outbound_messages_bulk**](TextMagicApi.md#delete_outbound_messages_bulk) | **POST** /api/v2/messages/delete | Delete messages by IDs
+[**delete_push_token**](TextMagicApi.md#delete_push_token) | **DELETE** /api/v2/push/tokens/{type}/{deviceId} | Delete a push notification device token.
+[**delete_scheduled_message**](TextMagicApi.md#delete_scheduled_message) | **DELETE** /api/v2/schedules/{id} | Delete a message session, together with all nested messages.
+[**delete_scheduled_messages_bulk**](TextMagicApi.md#delete_scheduled_messages_bulk) | **POST** /api/v2/schedules/delete | Delete scheduled messages by given ID(s) or delete all scheduled messages.
+[**delete_sender_id**](TextMagicApi.md#delete_sender_id) | **DELETE** /api/v2/senderids/{id} | Delete a Sender ID.
+[**delete_survey**](TextMagicApi.md#delete_survey) | **DELETE** /api/v2/surveys/{id} | Delete a survey.
+[**delete_survey_node**](TextMagicApi.md#delete_survey_node) | **DELETE** /api/v2/surveys/nodes/{id} | Delete a node.
+[**delete_template**](TextMagicApi.md#delete_template) | **DELETE** /api/v2/templates/{id} | Delete a single template.
+[**delete_templates_bulk**](TextMagicApi.md#delete_templates_bulk) | **POST** /api/v2/templates/delete | Delete template by given ID(s) or delete all templates.
+[**do_auth**](TextMagicApi.md#do_auth) | **POST** /api/v2/auth | Authenticate user by given username and password.
+[**do_carrier_lookup**](TextMagicApi.md#do_carrier_lookup) | **GET** /api/v2/lookups/{phone} | Carrier Lookup
+[**do_email_lookup**](TextMagicApi.md#do_email_lookup) | **GET** /api/v2/email-lookups/{email} | Validate Email address using Email Lookup tool
+[**duplicate_survey**](TextMagicApi.md#duplicate_survey) | **PUT** /api/v2/surveys/{id}/duplicate | Duplicate a survey.
+[**get_all_bulk_sessions**](TextMagicApi.md#get_all_bulk_sessions) | **GET** /api/v2/bulks | Get all bulk sending sessions.
+[**get_all_chats**](TextMagicApi.md#get_all_chats) | **GET** /api/v2/chats | Get all user chats.
+[**get_all_inbound_messages**](TextMagicApi.md#get_all_inbound_messages) | **GET** /api/v2/replies | Get all inbox messages.
+[**get_all_message_sessions**](TextMagicApi.md#get_all_message_sessions) | **GET** /api/v2/sessions | Get all message sending sessions.
+[**get_all_outbound_messages**](TextMagicApi.md#get_all_outbound_messages) | **GET** /api/v2/messages | Get all messages
+[**get_all_scheduled_messages**](TextMagicApi.md#get_all_scheduled_messages) | **GET** /api/v2/schedules | Get all scheduled messages.
+[**get_all_templates**](TextMagicApi.md#get_all_templates) | **GET** /api/v2/templates | Get all user templates.
+[**get_available_dedicated_numbers**](TextMagicApi.md#get_available_dedicated_numbers) | **GET** /api/v2/numbers/available | Find available dedicated numbers to buy.
+[**get_available_sender_setting_options**](TextMagicApi.md#get_available_sender_setting_options) | **GET** /api/v2/sources | Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
+[**get_balance_notification_options**](TextMagicApi.md#get_balance_notification_options) | **GET** /api/v2/user/notification/balance/bundles | Returns the list of available balance options which can be used as a bound to determine when to send email to user with low balance notification. See https://my.textmagic.com/online/account/notifications/balance
+[**get_balance_notification_settings**](TextMagicApi.md#get_balance_notification_settings) | **GET** /api/v2/user/notification/balance | Get balance notification settings
+[**get_blocked_contacts**](TextMagicApi.md#get_blocked_contacts) | **GET** /api/v2/contacts/block/list | Get blocked contacts.
+[**get_bulk_session**](TextMagicApi.md#get_bulk_session) | **GET** /api/v2/bulks/{id} | Get bulk message session status.
+[**get_callback_settings**](TextMagicApi.md#get_callback_settings) | **GET** /api/v2/callback/settings | Fetch callback URL settings
+[**get_calls_prices**](TextMagicApi.md#get_calls_prices) | **GET** /api/v2/calls/price | Check pricing for a inbound/outbound call.
+[**get_chat**](TextMagicApi.md#get_chat) | **GET** /api/v2/chats/{id} | Get a single chat.
+[**get_chat_by_phone**](TextMagicApi.md#get_chat_by_phone) | **GET** /api/v2/chats/{phone}/by/phone | Find chats by phone.
+[**get_chat_messages**](TextMagicApi.md#get_chat_messages) | **GET** /api/v2/chats/{id}/message | Fetch messages from chat with specified chat id.
+[**get_contact**](TextMagicApi.md#get_contact) | **GET** /api/v2/contacts/{id} | Get a single contact.
+[**get_contact_by_phone**](TextMagicApi.md#get_contact_by_phone) | **GET** /api/v2/contacts/phone/{phone} | Get a single contact by phone number.
+[**get_contact_if_blocked**](TextMagicApi.md#get_contact_if_blocked) | **GET** /api/v2/contacts/block/phone | Check is that phone number blocked
+[**get_contact_import_session_progress**](TextMagicApi.md#get_contact_import_session_progress) | **GET** /api/v2/contacts/import/progress/{id} | Get contact import session progress.
+[**get_contact_note**](TextMagicApi.md#get_contact_note) | **GET** /api/v2/notes/{id} | Get a single contact note.
+[**get_contact_notes**](TextMagicApi.md#get_contact_notes) | **GET** /api/v2/contacts/{id}/notes | Fetch notes assigned to the given contact.
+[**get_contacts**](TextMagicApi.md#get_contacts) | **GET** /api/v2/contacts | Get all user contacts.
+[**get_contacts_autocomplete**](TextMagicApi.md#get_contacts_autocomplete) | **GET** /api/v2/contacts/autocomplete | Get contacts autocomplete suggestions by given search term.
+[**get_contacts_by_list_id**](TextMagicApi.md#get_contacts_by_list_id) | **GET** /api/v2/lists/{id}/contacts | Fetch user contacts by given group id.
+[**get_countries**](TextMagicApi.md#get_countries) | **GET** /api/v2/countries | Return list of countries.
+[**get_current_user**](TextMagicApi.md#get_current_user) | **GET** /api/v2/user | Get current user info.
+[**get_custom_field**](TextMagicApi.md#get_custom_field) | **GET** /api/v2/customfields/{id} | Get a single custom field.
+[**get_custom_fields**](TextMagicApi.md#get_custom_fields) | **GET** /api/v2/customfields | Get all contact custom fields.
+[**get_dedicated_number**](TextMagicApi.md#get_dedicated_number) | **GET** /api/v2/numbers/{id} | Get a single dedicated number.
+[**get_disallowed_rules**](TextMagicApi.md#get_disallowed_rules) | **GET** /api/v2/user/disallowed-rules | Get an array of all rules that are disallowed to the current account.
+[**get_favourites**](TextMagicApi.md#get_favourites) | **GET** /api/v2/contacts/favorite | Get favorite contacts and lists.
+[**get_forwarded_calls**](TextMagicApi.md#get_forwarded_calls) | **GET** /api/v2/calls | Get all forwarded calls.
+[**get_inbound_message**](TextMagicApi.md#get_inbound_message) | **GET** /api/v2/replies/{id} | Get a single inbox message.
+[**get_inbound_messages_notification_settings**](TextMagicApi.md#get_inbound_messages_notification_settings) | **GET** /api/v2/user/notification/inbound | Get inbound messages notification settings
+[**get_invoices**](TextMagicApi.md#get_invoices) | **GET** /api/v2/invoices | Return account invoices.
+[**get_list**](TextMagicApi.md#get_list) | **GET** /api/v2/lists/{id} | Get a single list.
+[**get_list_contacts_ids**](TextMagicApi.md#get_list_contacts_ids) | **GET** /api/v2/lists/{id}/contacts/ids | Fetch all contacts IDs belonging to the list with ID.
+[**get_lists_of_contact**](TextMagicApi.md#get_lists_of_contact) | **GET** /api/v2/contacts/{id}/lists | Return lists which contact belongs to.
+[**get_message_preview**](TextMagicApi.md#get_message_preview) | **GET** /api/v2/messages/preview | Preview message
+[**get_message_price**](TextMagicApi.md#get_message_price) | **GET** /api/v2/messages/price | Check price
+[**get_message_prices**](TextMagicApi.md#get_message_prices) | **GET** /api/v2/messages/prices | Get pricing
+[**get_message_session**](TextMagicApi.md#get_message_session) | **GET** /api/v2/sessions/{id} | Get a message session.
+[**get_message_session_stat**](TextMagicApi.md#get_message_session_stat) | **GET** /api/v2/sessions/{id}/stat | Get sending session statistics.
+[**get_messages_by_session_id**](TextMagicApi.md#get_messages_by_session_id) | **GET** /api/v2/sessions/{id}/messages | Fetch messages by given session id.
+[**get_messaging_counters**](TextMagicApi.md#get_messaging_counters) | **GET** /api/v2/stats/messaging/data | Return counters for messaging data views.
+[**get_messaging_stat**](TextMagicApi.md#get_messaging_stat) | **GET** /api/v2/stats/messaging | Return messaging statistics.
+[**get_outbound_message**](TextMagicApi.md#get_outbound_message) | **GET** /api/v2/messages/{id} | Get a single message
+[**get_outbound_messages_history**](TextMagicApi.md#get_outbound_messages_history) | **GET** /api/v2/history | Get history
+[**get_push_tokens**](TextMagicApi.md#get_push_tokens) | **GET** /api/v2/push/tokens | Get all device tokens assigned to the current account
+[**get_scheduled_message**](TextMagicApi.md#get_scheduled_message) | **GET** /api/v2/schedules/{id} | Get message schedule.
+[**get_sender_id**](TextMagicApi.md#get_sender_id) | **GET** /api/v2/senderids/{id} | Get a single Sender ID.
+[**get_sender_ids**](TextMagicApi.md#get_sender_ids) | **GET** /api/v2/senderids | Get all sender IDs of current user.
+[**get_sender_settings**](TextMagicApi.md#get_sender_settings) | **GET** /api/v2/sender/settings | Get current user sender settings.
+[**get_spending_stat**](TextMagicApi.md#get_spending_stat) | **GET** /api/v2/stats/spending | Return account spending statistics.
+[**get_state**](TextMagicApi.md#get_state) | **GET** /api/v2/state | Get current entities state
+[**get_subaccount**](TextMagicApi.md#get_subaccount) | **GET** /api/v2/subaccounts/{id} | Get a single subaccount.
+[**get_subaccounts**](TextMagicApi.md#get_subaccounts) | **GET** /api/v2/subaccounts | Get all subaccounts of current user.
+[**get_subaccounts_with_tokens**](TextMagicApi.md#get_subaccounts_with_tokens) | **POST** /api/v2/subaccounts/tokens/list | Get all subaccounts with their REST API tokens associated with specified app name.
+[**get_survey**](TextMagicApi.md#get_survey) | **GET** /api/v2/surveys/{id} | Get a survey by id.
+[**get_survey_node**](TextMagicApi.md#get_survey_node) | **GET** /api/v2/surveys/nodes/{id} | Get a node by id.
+[**get_survey_nodes**](TextMagicApi.md#get_survey_nodes) | **GET** /api/v2/surveys/{id}/nodes | Fetch nodes by given survey id.
+[**get_surveys**](TextMagicApi.md#get_surveys) | **GET** /api/v2/surveys | Get all user surveys.
+[**get_template**](TextMagicApi.md#get_template) | **GET** /api/v2/templates/{id} | Get a single template.
+[**get_timezones**](TextMagicApi.md#get_timezones) | **GET** /api/v2/timezones | Return all available timezone IDs.
+[**get_unread_messages_total**](TextMagicApi.md#get_unread_messages_total) | **GET** /api/v2/chats/unread/count | Get total amount of unread messages in the current user chats.
+[**get_unsubscribed_contact**](TextMagicApi.md#get_unsubscribed_contact) | **GET** /api/v2/unsubscribers/{id} | Get a single unsubscribed contact.
+[**get_unsubscribers**](TextMagicApi.md#get_unsubscribers) | **GET** /api/v2/unsubscribers | Get all contact have unsubscribed from your communication.
+[**get_user_dedicated_numbers**](TextMagicApi.md#get_user_dedicated_numbers) | **GET** /api/v2/numbers | Get user&#39;s dedicated numbers.
+[**get_user_lists**](TextMagicApi.md#get_user_lists) | **GET** /api/v2/lists | Get all user lists.
+[**get_versions**](TextMagicApi.md#get_versions) | **GET** /api/v2/versions | Get minimal valid apps versions
+[**invite_subaccount**](TextMagicApi.md#invite_subaccount) | **POST** /api/v2/subaccounts | Invite new subaccount.
+[**mark_chats_read_bulk**](TextMagicApi.md#mark_chats_read_bulk) | **POST** /api/v2/chats/read/bulk | Mark several chats as read by chat ids or mark all chats as read
+[**mark_chats_unread_bulk**](TextMagicApi.md#mark_chats_unread_bulk) | **POST** /api/v2/chats/unread/bulk | Mark several chats as UNread by chat ids or mark all chats as UNread
+[**merge_survey_nodes**](TextMagicApi.md#merge_survey_nodes) | **POST** /api/v2/surveys/nodes/merge | Merge two question nodes.
+[**mute_chat**](TextMagicApi.md#mute_chat) | **POST** /api/v2/chats/mute | Set mute mode.
+[**mute_chats_bulk**](TextMagicApi.md#mute_chats_bulk) | **POST** /api/v2/chats/mute/bulk | Mute several chats by chat ids or mute all chats
+[**ping**](TextMagicApi.md#ping) | **GET** /api/v2/ping | Just does a pong.
+[**reopen_chats_bulk**](TextMagicApi.md#reopen_chats_bulk) | **POST** /api/v2/chats/reopen/bulk | Reopen chats by chat ids or reopen all chats
+[**request_new_subaccount_token**](TextMagicApi.md#request_new_subaccount_token) | **POST** /api/v2/subaccounts/tokens | Request a new REST API token for subaccount.
+[**request_sender_id**](TextMagicApi.md#request_sender_id) | **POST** /api/v2/senderids | Request for a new Sender ID.
+[**reset_survey**](TextMagicApi.md#reset_survey) | **PUT** /api/v2/surveys/{id}/reset | Reset a survey flow.
+[**search_chats**](TextMagicApi.md#search_chats) | **GET** /api/v2/chats/search | Find chats by inbound or outbound messages text.
+[**search_chats_by_ids**](TextMagicApi.md#search_chats_by_ids) | **GET** /api/v2/chats/search/ids | Find chats by IDs.
+[**search_chats_by_receipent**](TextMagicApi.md#search_chats_by_receipent) | **GET** /api/v2/chats/search/recipients | Find chats by recipient (contact, list name or phone number).
+[**search_contacts**](TextMagicApi.md#search_contacts) | **GET** /api/v2/contacts/search | Find user contacts by given parameters.
+[**search_inbound_messages**](TextMagicApi.md#search_inbound_messages) | **GET** /api/v2/replies/search | Find inbound messages by given parameters.
+[**search_lists**](TextMagicApi.md#search_lists) | **GET** /api/v2/lists/search | Find contact lists by given parameters.
+[**search_outbound_messages**](TextMagicApi.md#search_outbound_messages) | **GET** /api/v2/messages/search | Find messages
+[**search_scheduled_messages**](TextMagicApi.md#search_scheduled_messages) | **GET** /api/v2/schedules/search | Find scheduled messages by given parameters.
+[**search_templates**](TextMagicApi.md#search_templates) | **GET** /api/v2/templates/search | Find user templates by given parameters.
+[**send_email_verification_code**](TextMagicApi.md#send_email_verification_code) | **GET** /api/v2/user/email/verification | Send user email verification
+[**send_message**](TextMagicApi.md#send_message) | **POST** /api/v2/messages | Send message
+[**send_phone_verification_code**](TextMagicApi.md#send_phone_verification_code) | **GET** /api/v2/user/phone/verification | Send user phone verification
+[**set_chat_status**](TextMagicApi.md#set_chat_status) | **POST** /api/v2/chats/status | Set status of the chat given by ID.
+[**start_survey**](TextMagicApi.md#start_survey) | **PUT** /api/v2/surveys/{id}/start | Start a survey.
+[**unblock_contact**](TextMagicApi.md#unblock_contact) | **POST** /api/v2/contacts/unblock | Unblock contact by phone number.
+[**unblock_contacts_bulk**](TextMagicApi.md#unblock_contacts_bulk) | **POST** /api/v2/contacts/unblock/bulk | Unblock several contacts by blocked contact ids or unblock all contacts
+[**unmute_chats_bulk**](TextMagicApi.md#unmute_chats_bulk) | **POST** /api/v2/chats/unmute/bulk | Unmute several chats by chat ids or unmute all chats
+[**unsubscribe_contact**](TextMagicApi.md#unsubscribe_contact) | **POST** /api/v2/unsubscribers | Unsubscribe contact from your communication by phone number.
+[**update_balance_notification_settings**](TextMagicApi.md#update_balance_notification_settings) | **PUT** /api/v2/user/notification/balance | Update balance notification settings
+[**update_callback_settings**](TextMagicApi.md#update_callback_settings) | **PUT** /api/v2/callback/settings | Update callback URL settings
+[**update_chat_desktop_notification_settings**](TextMagicApi.md#update_chat_desktop_notification_settings) | **PUT** /api/v2/user/desktop/notification | Update chat desktop notification settings
+[**update_contact**](TextMagicApi.md#update_contact) | **PUT** /api/v2/contacts/{id} | Update existing contact.
+[**update_contact_note**](TextMagicApi.md#update_contact_note) | **PUT** /api/v2/notes/{id} | Update existing contact note.
+[**update_current_user**](TextMagicApi.md#update_current_user) | **PUT** /api/v2/user | Update current user info.
+[**update_custom_field**](TextMagicApi.md#update_custom_field) | **PUT** /api/v2/customfields/{id} | Update existing custom field.
+[**update_custom_field_value**](TextMagicApi.md#update_custom_field_value) | **PUT** /api/v2/customfields/{id}/update | Update contact&#39;s custom field value.
+[**update_inbound_messages_notification_settings**](TextMagicApi.md#update_inbound_messages_notification_settings) | **PUT** /api/v2/user/notification/inbound | Update inbound messages notification settings
+[**update_list**](TextMagicApi.md#update_list) | **PUT** /api/v2/lists/{id} | Update existing list.
+[**update_password**](TextMagicApi.md#update_password) | **PUT** /api/v2/user/password/change | Change user password.
+[**update_sender_setting**](TextMagicApi.md#update_sender_setting) | **PUT** /api/v2/sender/settings | Change sender settings for specified country.
+[**update_survey**](TextMagicApi.md#update_survey) | **PUT** /api/v2/surveys/{id} | Update existing survey.
+[**update_survey_node**](TextMagicApi.md#update_survey_node) | **PUT** /api/v2/surveys/nodes/{id} | Update existing node.
+[**update_template**](TextMagicApi.md#update_template) | **PUT** /api/v2/templates/{id} | Update existing template.
+[**upload_avatar**](TextMagicApi.md#upload_avatar) | **POST** /api/v2/user/avatar | Add an avatar for the current user.
+[**upload_contact_avatar**](TextMagicApi.md#upload_contact_avatar) | **POST** /api/v2/contacts/{id}/avatar | Add an avatar for the contact.
+[**upload_list_avatar**](TextMagicApi.md#upload_list_avatar) | **POST** /api/v2/lists/{id}/avatar | Add an avatar for the list.
+[**upload_message_attachment**](TextMagicApi.md#upload_message_attachment) | **POST** /api/v2/messages/attachment | Upload message attachment
+
+
+# **assign_contacts_to_list**
+> ResourceLinkResponse assign_contacts_to_list(assign_contacts_to_list_input_object => $assign_contacts_to_list_input_object, id => $id)
+
+Assign contacts to the specified list.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $assign_contacts_to_list_input_object = TextMagicClient::Object::AssignContactsToListInputObject->new(); # AssignContactsToListInputObject | Contact ID(s), separated by comma or 'all' to add all contacts belonging to the current user
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->assign_contacts_to_list(assign_contacts_to_list_input_object => $assign_contacts_to_list_input_object, id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->assign_contacts_to_list: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **assign_contacts_to_list_input_object** | [**AssignContactsToListInputObject**](AssignContactsToListInputObject.md)| Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user | 
+ **id** | **int**|  | 
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **block_contact**
+> ResourceLinkResponse block_contact(block_contact_input_object => $block_contact_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Block contact from inbound and outbound communication by phone number.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $block_contact_input_object = TextMagicClient::Object::BlockContactInputObject->new(); # BlockContactInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->block_contact(block_contact_input_object => $block_contact_input_object, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->block_contact: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **block_contact_input_object** | [**BlockContactInputObject**](BlockContactInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **buy_dedicated_number**
+> buy_dedicated_number(buy_dedicated_number_input_object => $buy_dedicated_number_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Buy a dedicated number and assign it to the specified account.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $buy_dedicated_number_input_object = TextMagicClient::Object::BuyDedicatedNumberInputObject->new(); # BuyDedicatedNumberInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->buy_dedicated_number(buy_dedicated_number_input_object => $buy_dedicated_number_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->buy_dedicated_number: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **buy_dedicated_number_input_object** | [**BuyDedicatedNumberInputObject**](BuyDedicatedNumberInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cancel_survey**
+> ResourceLinkResponse cancel_survey(id => $id)
+
+Cancel a survey.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->cancel_survey(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->cancel_survey: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **check_phone_verification_code**
+> check_phone_verification_code(check_phone_verification_code_input_object => $check_phone_verification_code_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Check user phone verification code
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $check_phone_verification_code_input_object = TextMagicClient::Object::CheckPhoneVerificationCodeInputObject->new(); # CheckPhoneVerificationCodeInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->check_phone_verification_code(check_phone_verification_code_input_object => $check_phone_verification_code_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->check_phone_verification_code: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **check_phone_verification_code_input_object** | [**CheckPhoneVerificationCodeInputObject**](CheckPhoneVerificationCodeInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **clear_and_assign_contacts_to_list**
+> ResourceLinkResponse clear_and_assign_contacts_to_list(clear_and_assign_contacts_to_list_input_object => $clear_and_assign_contacts_to_list_input_object, id => $id)
+
+Reset list members to the specified contacts.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $clear_and_assign_contacts_to_list_input_object = TextMagicClient::Object::ClearAndAssignContactsToListInputObject->new(); # ClearAndAssignContactsToListInputObject | Contact ID(s), separated by comma or 'all' to add all contacts belonging to the current user
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->clear_and_assign_contacts_to_list(clear_and_assign_contacts_to_list_input_object => $clear_and_assign_contacts_to_list_input_object, id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->clear_and_assign_contacts_to_list: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **clear_and_assign_contacts_to_list_input_object** | [**ClearAndAssignContactsToListInputObject**](ClearAndAssignContactsToListInputObject.md)| Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user | 
+ **id** | **int**|  | 
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **close_chats_bulk**
+> close_chats_bulk(close_chats_bulk_input_object => $close_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Close chats by chat ids or close all chats
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $close_chats_bulk_input_object = TextMagicClient::Object::CloseChatsBulkInputObject->new(); # CloseChatsBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->close_chats_bulk(close_chats_bulk_input_object => $close_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->close_chats_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **close_chats_bulk_input_object** | [**CloseChatsBulkInputObject**](CloseChatsBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **close_read_chats**
+> close_read_chats()
+
+Close all chats that have no unread messages.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    $api_instance->close_read_chats();
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->close_read_chats: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **close_subaccount**
+> close_subaccount(id => $id)
+
+Close subaccount.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->close_subaccount(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->close_subaccount: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_contact**
+> ResourceLinkResponse create_contact(create_contact_input_object => $create_contact_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Create a new contact from the submitted data.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $create_contact_input_object = TextMagicClient::Object::CreateContactInputObject->new(); # CreateContactInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->create_contact(create_contact_input_object => $create_contact_input_object, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->create_contact: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_contact_input_object** | [**CreateContactInputObject**](CreateContactInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_contact_note**
+> ResourceLinkResponse create_contact_note(create_contact_note_input_object => $create_contact_note_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+
+Create a new contact note.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $create_contact_note_input_object = TextMagicClient::Object::CreateContactNoteInputObject->new(); # CreateContactNoteInputObject | 
+my $id = 56; # int | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->create_contact_note(create_contact_note_input_object => $create_contact_note_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->create_contact_note: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_contact_note_input_object** | [**CreateContactNoteInputObject**](CreateContactNoteInputObject.md)|  | 
+ **id** | **int**|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_custom_field**
+> ResourceLinkResponse create_custom_field(create_custom_field_input_object => $create_custom_field_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Create a new custom field from the submitted data.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $create_custom_field_input_object = TextMagicClient::Object::CreateCustomFieldInputObject->new(); # CreateCustomFieldInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->create_custom_field(create_custom_field_input_object => $create_custom_field_input_object, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->create_custom_field: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_custom_field_input_object** | [**CreateCustomFieldInputObject**](CreateCustomFieldInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_list**
+> ResourceLinkResponse create_list(create_list_input_object => $create_list_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Create a new list from the submitted data.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $create_list_input_object = TextMagicClient::Object::CreateListInputObject->new(); # CreateListInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->create_list(create_list_input_object => $create_list_input_object, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->create_list: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_list_input_object** | [**CreateListInputObject**](CreateListInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_push_token**
+> create_push_token(create_push_token_input_object => $create_push_token_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Add or update a device token.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $create_push_token_input_object = TextMagicClient::Object::CreatePushTokenInputObject->new(); # CreatePushTokenInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->create_push_token(create_push_token_input_object => $create_push_token_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->create_push_token: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_push_token_input_object** | [**CreatePushTokenInputObject**](CreatePushTokenInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_survey**
+> ResourceLinkResponse create_survey(create_survey_input_object => $create_survey_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Create a new survey from the submitted data.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $create_survey_input_object = TextMagicClient::Object::CreateSurveyInputObject->new(); # CreateSurveyInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->create_survey(create_survey_input_object => $create_survey_input_object, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->create_survey: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_survey_input_object** | [**CreateSurveyInputObject**](CreateSurveyInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_survey_node**
+> ResourceLinkResponse create_survey_node(create_survey_node_input_object => $create_survey_node_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+
+Create a new node from the submitted data.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $create_survey_node_input_object = TextMagicClient::Object::CreateSurveyNodeInputObject->new(); # CreateSurveyNodeInputObject | 
+my $id = 1; # int | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->create_survey_node(create_survey_node_input_object => $create_survey_node_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->create_survey_node: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_survey_node_input_object** | [**CreateSurveyNodeInputObject**](CreateSurveyNodeInputObject.md)|  | 
+ **id** | **int**|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_template**
+> ResourceLinkResponse create_template(create_template_input_object => $create_template_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Create a new template from the submitted data.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $create_template_input_object = TextMagicClient::Object::CreateTemplateInputObject->new(); # CreateTemplateInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->create_template(create_template_input_object => $create_template_input_object, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->create_template: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_template_input_object** | [**CreateTemplateInputObject**](CreateTemplateInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_all_contacts**
+> delete_all_contacts()
+
+Delete all contacts.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    $api_instance->delete_all_contacts();
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_all_contacts: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_all_outbound_messages**
+> delete_all_outbound_messages()
+
+Delete all messages
+
+Delete all messages.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    $api_instance->delete_all_outbound_messages();
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_all_outbound_messages: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_avatar**
+> delete_avatar()
+
+Delete an avatar for the current user.\\
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    $api_instance->delete_avatar();
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_avatar: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_chat_messages**
+> delete_chat_messages(delete_chat_messages_bulk_input_object => $delete_chat_messages_bulk_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+
+Delete messages from chat by given messages ID(s).
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $delete_chat_messages_bulk_input_object = TextMagicClient::Object::DeleteChatMessagesBulkInputObject->new(); # DeleteChatMessagesBulkInputObject | 
+my $id = 1; # int | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->delete_chat_messages(delete_chat_messages_bulk_input_object => $delete_chat_messages_bulk_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_chat_messages: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delete_chat_messages_bulk_input_object** | [**DeleteChatMessagesBulkInputObject**](DeleteChatMessagesBulkInputObject.md)|  | 
+ **id** | **int**|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_chats_bulk**
+> delete_chats_bulk(delete_chats_bulk_input_object => $delete_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Delete chats by given ID(s) or delete all chats.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $delete_chats_bulk_input_object = TextMagicClient::Object::DeleteChatsBulkInputObject->new(); # DeleteChatsBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->delete_chats_bulk(delete_chats_bulk_input_object => $delete_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_chats_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delete_chats_bulk_input_object** | [**DeleteChatsBulkInputObject**](DeleteChatsBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_contact**
+> delete_contact(id => $id)
+
+Delete a single contact.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_contact(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_contact: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_contact_avatar**
+> delete_contact_avatar(id => $id)
+
+Delete an avatar for the contact.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 56; # int | 
+
+eval { 
+    $api_instance->delete_contact_avatar(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_contact_avatar: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_contact_note**
+> delete_contact_note(id => $id)
+
+Delete a single contact note.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_contact_note(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_contact_note: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_contact_notes_bulk**
+> delete_contact_notes_bulk(id => $id, delete_contact_notes_bulk_input_object => $delete_contact_notes_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Delete contact note by given ID(s) or delete all contact notes.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+my $delete_contact_notes_bulk_input_object = TextMagicClient::Object::DeleteContactNotesBulkInputObject->new(); # DeleteContactNotesBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->delete_contact_notes_bulk(id => $id, delete_contact_notes_bulk_input_object => $delete_contact_notes_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_contact_notes_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **delete_contact_notes_bulk_input_object** | [**DeleteContactNotesBulkInputObject**](DeleteContactNotesBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_contacts_by_ids**
+> delete_contacts_by_ids(delete_contacts_by_ids_input_object => $delete_contacts_by_ids_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Delete contact by given ID(s) or delete all contacts.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $delete_contacts_by_ids_input_object = TextMagicClient::Object::DeleteContactsByIdsInputObject->new(); # DeleteContactsByIdsInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->delete_contacts_by_ids(delete_contacts_by_ids_input_object => $delete_contacts_by_ids_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_contacts_by_ids: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delete_contacts_by_ids_input_object** | [**DeleteContactsByIdsInputObject**](DeleteContactsByIdsInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_contacts_from_list**
+> delete_contacts_from_list(delete_contacs_from_list_object => $delete_contacs_from_list_object, id => $id)
+
+Unassign contacts from the specified list.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $delete_contacs_from_list_object = TextMagicClient::Object::DeleteContacsFromListObject->new(); # DeleteContacsFromListObject | Contact ID(s), separated by comma
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_contacts_from_list(delete_contacs_from_list_object => $delete_contacs_from_list_object, id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_contacts_from_list: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delete_contacs_from_list_object** | [**DeleteContacsFromListObject**](DeleteContacsFromListObject.md)| Contact ID(s), separated by comma | 
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_custom_field**
+> delete_custom_field(id => $id)
+
+Delete a single custom field.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_custom_field(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_custom_field: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_dedicated_number**
+> delete_dedicated_number(id => $id)
+
+Cancel dedicated number subscription.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_dedicated_number(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_dedicated_number: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_inbound_message**
+> delete_inbound_message(id => $id)
+
+Delete the incoming message.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_inbound_message(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_inbound_message: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_inbound_messages_bulk**
+> delete_inbound_messages_bulk(delete_inbound_messages_bulk_input_object => $delete_inbound_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Delete inbound messages by given ID(s) or delete all inbound messages.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $delete_inbound_messages_bulk_input_object = TextMagicClient::Object::DeleteInboundMessagesBulkInputObject->new(); # DeleteInboundMessagesBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->delete_inbound_messages_bulk(delete_inbound_messages_bulk_input_object => $delete_inbound_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_inbound_messages_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delete_inbound_messages_bulk_input_object** | [**DeleteInboundMessagesBulkInputObject**](DeleteInboundMessagesBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_list**
+> delete_list(id => $id)
+
+Delete a single list.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_list(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_list: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_list_avatar**
+> delete_list_avatar(id => $id)
+
+Delete an avatar for the list.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_list_avatar(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_list_avatar: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_list_contacts_bulk**
+> delete_list_contacts_bulk(delete_list_contacts_bulk_input_object => $delete_list_contacts_bulk_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+
+Delete contact from list by given ID(s) or all contacts from list.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $delete_list_contacts_bulk_input_object = TextMagicClient::Object::DeleteListContactsBulkInputObject->new(); # DeleteListContactsBulkInputObject | 
+my $id = 1; # int | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->delete_list_contacts_bulk(delete_list_contacts_bulk_input_object => $delete_list_contacts_bulk_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_list_contacts_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delete_list_contacts_bulk_input_object** | [**DeleteListContactsBulkInputObject**](DeleteListContactsBulkInputObject.md)|  | 
+ **id** | **int**|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_lists_bulk**
+> delete_lists_bulk(delete_lists_bulk_input_object => $delete_lists_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Delete list by given ID(s) or delete all lists.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $delete_lists_bulk_input_object = TextMagicClient::Object::DeleteListsBulkInputObject->new(); # DeleteListsBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->delete_lists_bulk(delete_lists_bulk_input_object => $delete_lists_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_lists_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delete_lists_bulk_input_object** | [**DeleteListsBulkInputObject**](DeleteListsBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_message_session**
+> delete_message_session(id => $id)
+
+Delete a message session, together with all nested messages.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_message_session(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_message_session: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_message_sessions_bulk**
+> delete_message_sessions_bulk(delete_message_sessions_bulk_input_object => $delete_message_sessions_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $delete_message_sessions_bulk_input_object = TextMagicClient::Object::DeleteMessageSessionsBulkInputObject->new(); # DeleteMessageSessionsBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->delete_message_sessions_bulk(delete_message_sessions_bulk_input_object => $delete_message_sessions_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_message_sessions_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delete_message_sessions_bulk_input_object** | [**DeleteMessageSessionsBulkInputObject**](DeleteMessageSessionsBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_outbound_message**
+> delete_outbound_message(id => $id)
+
+Delete message
+
+Delete a single message.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_outbound_message(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_outbound_message: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_outbound_messages_bulk**
+> delete_outbound_messages_bulk(delete_outbound_messages_bulk_input_object => $delete_outbound_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Delete messages by IDs
+
+Delete outbound messages by given ID(s) or delete all outbound messages.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $delete_outbound_messages_bulk_input_object = TextMagicClient::Object::DeleteOutboundMessagesBulkInputObject->new(); # DeleteOutboundMessagesBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->delete_outbound_messages_bulk(delete_outbound_messages_bulk_input_object => $delete_outbound_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_outbound_messages_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delete_outbound_messages_bulk_input_object** | [**DeleteOutboundMessagesBulkInputObject**](DeleteOutboundMessagesBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_push_token**
+> delete_push_token(type => $type, device_id => $device_id)
+
+Delete a push notification device token.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $type = 'type_example'; # string | 
+my $device_id = 56; # int | 
+
+eval { 
+    $api_instance->delete_push_token(type => $type, device_id => $device_id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_push_token: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **string**|  | 
+ **device_id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_scheduled_message**
+> delete_scheduled_message(id => $id)
+
+Delete a message session, together with all nested messages.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_scheduled_message(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_scheduled_message: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_scheduled_messages_bulk**
+> delete_scheduled_messages_bulk(delete_scheduled_messages_bulk_input_object => $delete_scheduled_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Delete scheduled messages by given ID(s) or delete all scheduled messages.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $delete_scheduled_messages_bulk_input_object = TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject->new(); # DeleteScheduledMessagesBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->delete_scheduled_messages_bulk(delete_scheduled_messages_bulk_input_object => $delete_scheduled_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_scheduled_messages_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delete_scheduled_messages_bulk_input_object** | [**DeleteScheduledMessagesBulkInputObject**](DeleteScheduledMessagesBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_sender_id**
+> delete_sender_id(id => $id)
+
+Delete a Sender ID.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_sender_id(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_sender_id: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_survey**
+> delete_survey(id => $id)
+
+Delete a survey.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_survey(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_survey: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_survey_node**
+> delete_survey_node(id => $id)
+
+Delete a node.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_survey_node(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_survey_node: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_template**
+> delete_template(id => $id)
+
+Delete a single template.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    $api_instance->delete_template(id => $id);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_template: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_templates_bulk**
+> delete_templates_bulk(delete_templates_bulk_input_object => $delete_templates_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Delete template by given ID(s) or delete all templates.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $delete_templates_bulk_input_object = TextMagicClient::Object::DeleteTemplatesBulkInputObject->new(); # DeleteTemplatesBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->delete_templates_bulk(delete_templates_bulk_input_object => $delete_templates_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->delete_templates_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delete_templates_bulk_input_object** | [**DeleteTemplatesBulkInputObject**](DeleteTemplatesBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **do_auth**
+> DoAuthResponse do_auth(do_auth_input_object => $do_auth_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Authenticate user by given username and password.
+
+Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+);
+
+my $do_auth_input_object = TextMagicClient::Object::DoAuthInputObject->new(); # DoAuthInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->do_auth(do_auth_input_object => $do_auth_input_object, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->do_auth: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **do_auth_input_object** | [**DoAuthInputObject**](DoAuthInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**DoAuthResponse**](DoAuthResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **do_carrier_lookup**
+> DoCarrierLookupResponse do_carrier_lookup(phone => $phone, country => $country)
+
+Carrier Lookup
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $phone = '"1-541-754-3010"'; # string | 
+my $country = 'country_example'; # string | Country code for local formatted numbers
+
+eval { 
+    my $result = $api_instance->do_carrier_lookup(phone => $phone, country => $country);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->do_carrier_lookup: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **phone** | **string**|  | 
+ **country** | **string**| Country code for local formatted numbers | [optional] [default to US]
+
+### Return type
+
+[**DoCarrierLookupResponse**](DoCarrierLookupResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **do_email_lookup**
+> DoEmailLookupResponse do_email_lookup(email => $email)
+
+Validate Email address using Email Lookup tool
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $email = '"andrey.v@textmagic.biz"'; # string | 
+
+eval { 
+    my $result = $api_instance->do_email_lookup(email => $email);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->do_email_lookup: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **string**|  | 
+
+### Return type
+
+[**DoEmailLookupResponse**](DoEmailLookupResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **duplicate_survey**
+> ResourceLinkResponse duplicate_survey(id => $id)
+
+Duplicate a survey.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->duplicate_survey(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->duplicate_survey: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_all_bulk_sessions**
+> GetAllBulkSessionsResponse get_all_bulk_sessions(page => $page, limit => $limit)
+
+Get all bulk sending sessions.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+
+eval { 
+    my $result = $api_instance->get_all_bulk_sessions(page => $page, limit => $limit);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_all_bulk_sessions: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+
+### Return type
+
+[**GetAllBulkSessionsResponse**](GetAllBulkSessionsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_all_chats**
+> GetAllChatsResponse get_all_chats(status => $status, page => $page, limit => $limit, order_by => $order_by, voice => $voice, flat => $flat)
+
+Get all user chats.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $status = 'status_example'; # string | Fetch only (a)ctive, (c)losed or (d)eleted chats
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
+my $voice = 56; # int | Fetch results with voice calls
+my $flat = 1; # int | Should additional contact info be included
+
+eval { 
+    my $result = $api_instance->get_all_chats(status => $status, page => $page, limit => $limit, order_by => $order_by, voice => $voice, flat => $flat);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_all_chats: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **status** | **string**| Fetch only (a)ctive, (c)losed or (d)eleted chats | [optional] 
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **voice** | **int**| Fetch results with voice calls | [optional] [default to 0]
+ **flat** | **int**| Should additional contact info be included | [optional] [default to 0]
+
+### Return type
+
+[**GetAllChatsResponse**](GetAllChatsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_all_inbound_messages**
+> GetAllInboundMessagesResponse get_all_inbound_messages(page => $page, limit => $limit, order_by => $order_by, direction => $direction)
+
+Get all inbox messages.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
+my $direction = 'direction_example'; # string | Order direction. Default is desc
+
+eval { 
+    my $result = $api_instance->get_all_inbound_messages(page => $page, limit => $limit, order_by => $order_by, direction => $direction);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_all_inbound_messages: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+
+### Return type
+
+[**GetAllInboundMessagesResponse**](GetAllInboundMessagesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_all_message_sessions**
+> GetAllMessageSessionsResponse get_all_message_sessions(page => $page, limit => $limit)
+
+Get all message sending sessions.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+
+eval { 
+    my $result = $api_instance->get_all_message_sessions(page => $page, limit => $limit);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_all_message_sessions: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+
+### Return type
+
+[**GetAllMessageSessionsResponse**](GetAllMessageSessionsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_all_outbound_messages**
+> GetAllOutboundMessagesResponse get_all_outbound_messages(page => $page, limit => $limit, last_id => $last_id)
+
+Get all messages
+
+Get all user oubound messages.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $last_id = 56; # int | Filter results by ID, selecting all values lesser than the specified ID. Note that \\'page\\' parameter is ignored when \\'lastId\\' is specified
+
+eval { 
+    my $result = $api_instance->get_all_outbound_messages(page => $page, limit => $limit, last_id => $last_id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_all_outbound_messages: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **last_id** | **int**| Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified | [optional] 
+
+### Return type
+
+[**GetAllOutboundMessagesResponse**](GetAllOutboundMessagesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_all_scheduled_messages**
+> GetAllScheduledMessagesResponse get_all_scheduled_messages(page => $page, limit => $limit, status => $status, order_by => $order_by, direction => $direction)
+
+Get all scheduled messages.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $status = 'status_example'; # string | Fetch schedules with the specific status: a - actual, c - completed, x - all
+my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
+my $direction = 'direction_example'; # string | Order direction. Default is desc
+
+eval { 
+    my $result = $api_instance->get_all_scheduled_messages(page => $page, limit => $limit, status => $status, order_by => $order_by, direction => $direction);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_all_scheduled_messages: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **status** | **string**| Fetch schedules with the specific status: a - actual, c - completed, x - all | [optional] [default to x]
+ **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+
+### Return type
+
+[**GetAllScheduledMessagesResponse**](GetAllScheduledMessagesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_all_templates**
+> GetAllTemplatesResponse get_all_templates(page => $page, limit => $limit)
+
+Get all user templates.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 1; # int | Fetch specified results page
+my $limit = 10; # int | How many results to return
+
+eval { 
+    my $result = $api_instance->get_all_templates(page => $page, limit => $limit);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_all_templates: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] 
+ **limit** | **int**| How many results to return | [optional] 
+
+### Return type
+
+[**GetAllTemplatesResponse**](GetAllTemplatesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_available_dedicated_numbers**
+> GetAvailableDedicatedNumbersResponse get_available_dedicated_numbers(country => $country, prefix => $prefix, tollfree => $tollfree)
+
+Find available dedicated numbers to buy.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $country = '"GB"'; # string | Dedicated number country. Two letters in upper case
+my $prefix = 56; # int | Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree = 1 parameter and there are available tollfree numbers, this parameter will be ignore.
+my $tollfree = 56; # int | Should we show only tollfree numbers (tollfree available only for US). Default is false.
+
+eval { 
+    my $result = $api_instance->get_available_dedicated_numbers(country => $country, prefix => $prefix, tollfree => $tollfree);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_available_dedicated_numbers: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **country** | **string**| Dedicated number country. Two letters in upper case | 
+ **prefix** | **int**| Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree &#x3D; 1 parameter and there are available tollfree numbers, this parameter will be ignore. | [optional] [default to 1]
+ **tollfree** | **int**| Should we show only tollfree numbers (tollfree available only for US). Default is false. | [optional] [default to 0]
+
+### Return type
+
+[**GetAvailableDedicatedNumbersResponse**](GetAvailableDedicatedNumbersResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_available_sender_setting_options**
+> GetAvailableSenderSettingOptionsResponse get_available_sender_setting_options(country => $country)
+
+Get all available sender setting options which could be used in \"from\" parameter of POST messages method.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $country = 'country_example'; # string | Return sender setting options available in specific country only. Two upper case characters
+
+eval { 
+    my $result = $api_instance->get_available_sender_setting_options(country => $country);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_available_sender_setting_options: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **country** | **string**| Return sender setting options available in specific country only. Two upper case characters | [optional] 
+
+### Return type
+
+[**GetAvailableSenderSettingOptionsResponse**](GetAvailableSenderSettingOptionsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_balance_notification_options**
+> GetBalanceNotificationOptionsResponse get_balance_notification_options()
+
+Returns the list of available balance options which can be used as a bound to determine when to send email to user with low balance notification. See https://my.textmagic.com/online/account/notifications/balance
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->get_balance_notification_options();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_balance_notification_options: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetBalanceNotificationOptionsResponse**](GetBalanceNotificationOptionsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_balance_notification_settings**
+> GetBalanceNotificationSettingsResponse get_balance_notification_settings()
+
+Get balance notification settings
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->get_balance_notification_settings();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_balance_notification_settings: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetBalanceNotificationSettingsResponse**](GetBalanceNotificationSettingsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_blocked_contacts**
+> GetBlockedContactsResponse get_blocked_contacts(page => $page, limit => $limit, query => $query, order_by => $order_by, direction => $direction)
+
+Get blocked contacts.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $query = 'query_example'; # string | Find blocked contacts by specified search query
+my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
+my $direction = 'direction_example'; # string | Order direction. Default is desc
+
+eval { 
+    my $result = $api_instance->get_blocked_contacts(page => $page, limit => $limit, query => $query, order_by => $order_by, direction => $direction);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_blocked_contacts: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **query** | **string**| Find blocked contacts by specified search query | [optional] 
+ **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+
+### Return type
+
+[**GetBlockedContactsResponse**](GetBlockedContactsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_bulk_session**
+> BulkSession get_bulk_session(id => $id)
+
+Get bulk message session status.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_bulk_session(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_bulk_session: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**BulkSession**](BulkSession.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_callback_settings**
+> GetCallbackSettingsResponse get_callback_settings()
+
+Fetch callback URL settings
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->get_callback_settings();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_callback_settings: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetCallbackSettingsResponse**](GetCallbackSettingsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_calls_prices**
+> HASH[string,object] get_calls_prices()
+
+Check pricing for a inbound/outbound call.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->get_calls_prices();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_calls_prices: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**HASH[string,object]**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_chat**
+> Chat get_chat(id => $id)
+
+Get a single chat.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_chat(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_chat: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**Chat**](Chat.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_chat_by_phone**
+> Chat get_chat_by_phone(phone => $phone, upsert => $upsert, reopen => $reopen)
+
+Find chats by phone.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $phone = 'phone_example'; # string | 
+my $upsert = 56; # int | Create a new chat if not found
+my $reopen = 56; # int | Reopen chat if found or do not change status
+
+eval { 
+    my $result = $api_instance->get_chat_by_phone(phone => $phone, upsert => $upsert, reopen => $reopen);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_chat_by_phone: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **phone** | **string**|  | 
+ **upsert** | **int**| Create a new chat if not found | [optional] [default to 0]
+ **reopen** | **int**| Reopen chat if found or do not change status | [optional] [default to 0]
+
+### Return type
+
+[**Chat**](Chat.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_chat_messages**
+> GetChatMessagesResponse get_chat_messages(id => $id, page => $page, limit => $limit, query => $query, start => $start, end => $end, direction => $direction, voice => $voice)
+
+Fetch messages from chat with specified chat id.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $query = 'query_example'; # string | Find messages by specified search query
+my $start = 56; # int | Return messages since specified timestamp only
+my $end = 56; # int | Return messages up to specified timestamp only
+my $direction = 'direction_example'; # string | Order direction. Default is desc
+my $voice = 56; # int | Fetch results with voice calls
+
+eval { 
+    my $result = $api_instance->get_chat_messages(id => $id, page => $page, limit => $limit, query => $query, start => $start, end => $end, direction => $direction, voice => $voice);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_chat_messages: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **query** | **string**| Find messages by specified search query | [optional] 
+ **start** | **int**| Return messages since specified timestamp only | [optional] 
+ **end** | **int**| Return messages up to specified timestamp only | [optional] 
+ **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **voice** | **int**| Fetch results with voice calls | [optional] [default to 0]
+
+### Return type
+
+[**GetChatMessagesResponse**](GetChatMessagesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_contact**
+> Contact get_contact(id => $id)
+
+Get a single contact.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | The contact id
+
+eval { 
+    my $result = $api_instance->get_contact(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_contact: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| The contact id | 
+
+### Return type
+
+[**Contact**](Contact.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_contact_by_phone**
+> Contact get_contact_by_phone(phone => $phone)
+
+Get a single contact by phone number.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $phone = 'phone_example'; # string | 
+
+eval { 
+    my $result = $api_instance->get_contact_by_phone(phone => $phone);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_contact_by_phone: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **phone** | **string**|  | 
+
+### Return type
+
+[**Contact**](Contact.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_contact_if_blocked**
+> Contact get_contact_if_blocked(phone => $phone)
+
+Check is that phone number blocked
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $phone = '9997339956475'; # string | Phone number to check
+
+eval { 
+    my $result = $api_instance->get_contact_if_blocked(phone => $phone);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_contact_if_blocked: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **phone** | **string**| Phone number to check | 
+
+### Return type
+
+[**Contact**](Contact.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_contact_import_session_progress**
+> GetContactImportSessionProgressResponse get_contact_import_session_progress(id => $id)
+
+Get contact import session progress.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 56; # int | 
+
+eval { 
+    my $result = $api_instance->get_contact_import_session_progress(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_contact_import_session_progress: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**GetContactImportSessionProgressResponse**](GetContactImportSessionProgressResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_contact_note**
+> ContactNote get_contact_note(id => $id)
+
+Get a single contact note.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 56; # int | 
+
+eval { 
+    my $result = $api_instance->get_contact_note(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_contact_note: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**ContactNote**](ContactNote.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_contact_notes**
+> GetContactNotesResponse get_contact_notes(id => $id, page => $page, limit => $limit)
+
+Fetch notes assigned to the given contact.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+
+eval { 
+    my $result = $api_instance->get_contact_notes(id => $id, page => $page, limit => $limit);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_contact_notes: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+
+### Return type
+
+[**GetContactNotesResponse**](GetContactNotesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_contacts**
+> GetContactsResponse get_contacts(page => $page, limit => $limit, shared => $shared, order_by => $order_by, direction => $direction)
+
+Get all user contacts.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $shared = 56; # int | Should shared contacts to be included
+my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
+my $direction = 'direction_example'; # string | Order direction. Default is desc
+
+eval { 
+    my $result = $api_instance->get_contacts(page => $page, limit => $limit, shared => $shared, order_by => $order_by, direction => $direction);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_contacts: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **shared** | **int**| Should shared contacts to be included | [optional] [default to 0]
+ **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+
+### Return type
+
+[**GetContactsResponse**](GetContactsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_contacts_autocomplete**
+> ARRAY[GetContactsAutocompleteResponse] get_contacts_autocomplete(query => $query, limit => $limit, lists => $lists)
+
+Get contacts autocomplete suggestions by given search term.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $query = '"A"'; # string | Find recipients by specified search query
+my $limit = 56; # int | How many results to return
+my $lists = 56; # int | Should lists be returned or not
+
+eval { 
+    my $result = $api_instance->get_contacts_autocomplete(query => $query, limit => $limit, lists => $lists);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_contacts_autocomplete: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **query** | **string**| Find recipients by specified search query | 
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **lists** | **int**| Should lists be returned or not | [optional] [default to 0]
+
+### Return type
+
+[**ARRAY[GetContactsAutocompleteResponse]**](GetContactsAutocompleteResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_contacts_by_list_id**
+> GetContactsByListIdResponse get_contacts_by_list_id(id => $id, page => $page, limit => $limit, order_by => $order_by, direction => $direction)
+
+Fetch user contacts by given group id.
+
+A useful synonym for \"contacts/search\" command with provided \"listId\" parameter.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | Given group Id.
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
+my $direction = 'direction_example'; # string | Order direction. Default is desc
+
+eval { 
+    my $result = $api_instance->get_contacts_by_list_id(id => $id, page => $page, limit => $limit, order_by => $order_by, direction => $direction);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_contacts_by_list_id: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| Given group Id. | 
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+
+### Return type
+
+[**GetContactsByListIdResponse**](GetContactsByListIdResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_countries**
+> ARRAY[Country] get_countries()
+
+Return list of countries.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->get_countries();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_countries: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ARRAY[Country]**](Country.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_current_user**
+> User get_current_user()
+
+Get current user info.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->get_current_user();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_current_user: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_custom_field**
+> UserCustomField get_custom_field(id => $id)
+
+Get a single custom field.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_custom_field(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_custom_field: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**UserCustomField**](UserCustomField.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_custom_fields**
+> GetCustomFieldsResponse get_custom_fields(page => $page, limit => $limit)
+
+Get all contact custom fields.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+
+eval { 
+    my $result = $api_instance->get_custom_fields(page => $page, limit => $limit);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_custom_fields: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+
+### Return type
+
+[**GetCustomFieldsResponse**](GetCustomFieldsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_dedicated_number**
+> UsersInbound get_dedicated_number(id => $id)
+
+Get a single dedicated number.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_dedicated_number(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_dedicated_number: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**UsersInbound**](UsersInbound.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_disallowed_rules**
+> ARRAY[string] get_disallowed_rules()
+
+Get an array of all rules that are disallowed to the current account.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->get_disallowed_rules();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_disallowed_rules: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**ARRAY[string]**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_favourites**
+> GetFavouritesResponse get_favourites(page => $page, limit => $limit, query => $query)
+
+Get favorite contacts and lists.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $query = 'query_example'; # string | Find contacts or lists by specified search query
+
+eval { 
+    my $result = $api_instance->get_favourites(page => $page, limit => $limit, query => $query);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_favourites: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **query** | **string**| Find contacts or lists by specified search query | [optional] [default to A]
+
+### Return type
+
+[**GetFavouritesResponse**](GetFavouritesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_forwarded_calls**
+> GetForwardedCallsResponse get_forwarded_calls(page => $page, limit => $limit)
+
+Get all forwarded calls.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+
+eval { 
+    my $result = $api_instance->get_forwarded_calls(page => $page, limit => $limit);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_forwarded_calls: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+
+### Return type
+
+[**GetForwardedCallsResponse**](GetForwardedCallsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_inbound_message**
+> MessageIn get_inbound_message(id => $id)
+
+Get a single inbox message.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_inbound_message(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_inbound_message: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**MessageIn**](MessageIn.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_inbound_messages_notification_settings**
+> GetInboundMessagesNotificationSettingsResponse get_inbound_messages_notification_settings()
+
+Get inbound messages notification settings
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->get_inbound_messages_notification_settings();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_inbound_messages_notification_settings: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetInboundMessagesNotificationSettingsResponse**](GetInboundMessagesNotificationSettingsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_invoices**
+> GetInvoicesResponse get_invoices(page => $page, limit => $limit)
+
+Return account invoices.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+
+eval { 
+    my $result = $api_instance->get_invoices(page => $page, limit => $limit);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_invoices: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+
+### Return type
+
+[**GetInvoicesResponse**](GetInvoicesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_list**
+> Group get_list(id => $id)
+
+Get a single list.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_list(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_list: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**Group**](Group.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_list_contacts_ids**
+> GetListContactsIdsResponse get_list_contacts_ids(id => $id)
+
+Fetch all contacts IDs belonging to the list with ID.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_list_contacts_ids(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_list_contacts_ids: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**GetListContactsIdsResponse**](GetListContactsIdsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_lists_of_contact**
+> GetListsOfContactResponse get_lists_of_contact(id => $id, page => $page, limit => $limit)
+
+Return lists which contact belongs to.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+
+eval { 
+    my $result = $api_instance->get_lists_of_contact(id => $id, page => $page, limit => $limit);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_lists_of_contact: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+
+### Return type
+
+[**GetListsOfContactResponse**](GetListsOfContactResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_message_preview**
+> GetMessagePreviewResponse get_message_preview(text => $text, template_id => $template_id, sending_time => $sending_time, sending_date_time => $sending_date_time, sending_timezone => $sending_timezone, contacts => $contacts, lists => $lists, phones => $phones, cut_extra => $cut_extra, parts_count => $parts_count, reference_id => $reference_id, from => $from, rule => $rule, create_chat => $create_chat, tts => $tts, local => $local, local_country => $local_country)
+
+Preview message
+
+Get messages preview (with tags merged) up to 100 messages per session.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $text = '"Test message test"'; # string | Message text. Required if template_id is not set
+my $template_id = 1; # int | Template used instead of message text. Required if text is not set
+my $sending_time = 1565606455; # int | DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time in unix timestamp format. Default is now
+my $sending_date_time = '"2020-05-27 13:02:33"'; # string | Sending time in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to sendingTimezone
+my $sending_timezone = '"America/Buenos_Aires"'; # string | ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone
+my $contacts = '"1,2,3,4"'; # string | Comma separated array of contact resources id message will be sent to
+my $lists = '"1,2,3,4"'; # string | Comma separated array of list resources id message will be sent to
+my $phones = '"+19993322111,+19993322110"'; # string | Comma separated array of E.164 phone numbers message will be sent to
+my $cut_extra = 56; # int | Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. Default is 0
+my $parts_count = 56; # int | Maximum message parts count (TextMagic allows sending 1 to 6 message parts). Default is 6
+my $reference_id = 1; # int | Custom message reference id which can be used in your application infrastructure
+my $from = '"Testid1"'; # string | One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery
+my $rule = '"FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1;COUNT=1"'; # string | iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details
+my $create_chat = 56; # int | Should sending method try to create new Chat(if not exist) with specified recipients. Default is 0
+my $tts = 56; # int | Send Text to Speech message. Default is 0
+my $local = 56; # int | Treat phone numbers passed in \\'phones\\' field as local. Default is 0
+my $local_country = '"US"'; # string | 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is account country
+
+eval { 
+    my $result = $api_instance->get_message_preview(text => $text, template_id => $template_id, sending_time => $sending_time, sending_date_time => $sending_date_time, sending_timezone => $sending_timezone, contacts => $contacts, lists => $lists, phones => $phones, cut_extra => $cut_extra, parts_count => $parts_count, reference_id => $reference_id, from => $from, rule => $rule, create_chat => $create_chat, tts => $tts, local => $local, local_country => $local_country);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_message_preview: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **text** | **string**| Message text. Required if template_id is not set | [optional] 
+ **template_id** | **int**| Template used instead of message text. Required if text is not set | [optional] 
+ **sending_time** | **int**| DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time in unix timestamp format. Default is now | [optional] 
+ **sending_date_time** | **string**| Sending time in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to sendingTimezone | [optional] 
+ **sending_timezone** | **string**| ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone | [optional] 
+ **contacts** | **string**| Comma separated array of contact resources id message will be sent to | [optional] 
+ **lists** | **string**| Comma separated array of list resources id message will be sent to | [optional] 
+ **phones** | **string**| Comma separated array of E.164 phone numbers message will be sent to | [optional] 
+ **cut_extra** | **int**| Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. Default is 0 | [optional] [default to 0]
+ **parts_count** | **int**| Maximum message parts count (TextMagic allows sending 1 to 6 message parts). Default is 6 | [optional] [default to 6]
+ **reference_id** | **int**| Custom message reference id which can be used in your application infrastructure | [optional] 
+ **from** | **string**| One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery | [optional] 
+ **rule** | **string**| iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details | [optional] 
+ **create_chat** | **int**| Should sending method try to create new Chat(if not exist) with specified recipients. Default is 0 | [optional] [default to 0]
+ **tts** | **int**| Send Text to Speech message. Default is 0 | [optional] [default to 0]
+ **local** | **int**| Treat phone numbers passed in \\&#39;phones\\&#39; field as local. Default is 0 | [optional] [default to 0]
+ **local_country** | **string**| 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is account country | [optional] 
+
+### Return type
+
+[**GetMessagePreviewResponse**](GetMessagePreviewResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_message_price**
+> GetMessagePriceResponse get_message_price(include_blocked => $include_blocked, text => $text, template_id => $template_id, sending_time => $sending_time, sending_date_time => $sending_date_time, sending_timezone => $sending_timezone, contacts => $contacts, lists => $lists, phones => $phones, cut_extra => $cut_extra, parts_count => $parts_count, reference_id => $reference_id, from => $from, rule => $rule, create_chat => $create_chat, tts => $tts, local => $local, local_country => $local_country)
+
+Check price
+
+Check pricing for a new outbound message.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $include_blocked = 56; # int | Should we show pricing for the blocked contacts.
+my $text = '"Test message test"'; # string | Message text. Required if template_id is not set
+my $template_id = 1; # int | Template used instead of message text. Required if text is not set
+my $sending_time = 1565606455; # int | DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time in unix timestamp format. Default is now
+my $sending_date_time = '"2020-05-27 13:02:33"'; # string | Sending time in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to sendingTimezone
+my $sending_timezone = '"America/Buenos_Aires"'; # string | ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone
+my $contacts = '"1,2,3,4"'; # string | Comma separated array of contact resources id message will be sent to
+my $lists = '"1,2,3,4"'; # string | Comma separated array of list resources id message will be sent to
+my $phones = '"+19993322111,+19993322110"'; # string | Comma separated array of E.164 phone numbers message will be sent to
+my $cut_extra = 56; # int | Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. Default is 0
+my $parts_count = 56; # int | Maximum message parts count (TextMagic allows sending 1 to 6 message parts). Default is 6
+my $reference_id = 1; # int | Custom message reference id which can be used in your application infrastructure
+my $from = '"Testid1"'; # string | One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery
+my $rule = '"FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1;COUNT=1"'; # string | iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details
+my $create_chat = 56; # int | Should sending method try to create new Chat(if not exist) with specified recipients. Default is 0
+my $tts = 56; # int | Send Text to Speech message. Default is 0
+my $local = 56; # int | Treat phone numbers passed in \\'phones\\' field as local. Default is 0
+my $local_country = '"US"'; # string | 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is account country
+
+eval { 
+    my $result = $api_instance->get_message_price(include_blocked => $include_blocked, text => $text, template_id => $template_id, sending_time => $sending_time, sending_date_time => $sending_date_time, sending_timezone => $sending_timezone, contacts => $contacts, lists => $lists, phones => $phones, cut_extra => $cut_extra, parts_count => $parts_count, reference_id => $reference_id, from => $from, rule => $rule, create_chat => $create_chat, tts => $tts, local => $local, local_country => $local_country);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_message_price: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **include_blocked** | **int**| Should we show pricing for the blocked contacts. | [optional] [default to 0]
+ **text** | **string**| Message text. Required if template_id is not set | [optional] 
+ **template_id** | **int**| Template used instead of message text. Required if text is not set | [optional] 
+ **sending_time** | **int**| DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time in unix timestamp format. Default is now | [optional] 
+ **sending_date_time** | **string**| Sending time in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to sendingTimezone | [optional] 
+ **sending_timezone** | **string**| ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone | [optional] 
+ **contacts** | **string**| Comma separated array of contact resources id message will be sent to | [optional] 
+ **lists** | **string**| Comma separated array of list resources id message will be sent to | [optional] 
+ **phones** | **string**| Comma separated array of E.164 phone numbers message will be sent to | [optional] 
+ **cut_extra** | **int**| Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. Default is 0 | [optional] [default to 0]
+ **parts_count** | **int**| Maximum message parts count (TextMagic allows sending 1 to 6 message parts). Default is 6 | [optional] [default to 6]
+ **reference_id** | **int**| Custom message reference id which can be used in your application infrastructure | [optional] 
+ **from** | **string**| One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery | [optional] 
+ **rule** | **string**| iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details | [optional] 
+ **create_chat** | **int**| Should sending method try to create new Chat(if not exist) with specified recipients. Default is 0 | [optional] [default to 0]
+ **tts** | **int**| Send Text to Speech message. Default is 0 | [optional] [default to 0]
+ **local** | **int**| Treat phone numbers passed in \\&#39;phones\\&#39; field as local. Default is 0 | [optional] [default to 0]
+ **local_country** | **string**| 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is account country | [optional] 
+
+### Return type
+
+[**GetMessagePriceResponse**](GetMessagePriceResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_message_prices**
+> GetMessagePricesResponse get_message_prices()
+
+Get pricing
+
+Get message prices for all countries.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->get_message_prices();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_message_prices: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetMessagePricesResponse**](GetMessagePricesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_message_session**
+> MessageSession get_message_session(id => $id)
+
+Get a message session.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_message_session(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_message_session: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**MessageSession**](MessageSession.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_message_session_stat**
+> GetMessageSessionStatResponse get_message_session_stat(id => $id, include_deleted => $include_deleted)
+
+Get sending session statistics.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+my $include_deleted = 56; # int | Search also in deleted messages
+
+eval { 
+    my $result = $api_instance->get_message_session_stat(id => $id, include_deleted => $include_deleted);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_message_session_stat: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **include_deleted** | **int**| Search also in deleted messages | [optional] [default to 0]
+
+### Return type
+
+[**GetMessageSessionStatResponse**](GetMessageSessionStatResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_messages_by_session_id**
+> GetMessagesBySessionIdResponse get_messages_by_session_id(id => $id, page => $page, limit => $limit, statuses => $statuses, include_deleted => $include_deleted)
+
+Fetch messages by given session id.
+
+A useful synonym for \"messages/search\" command with provided \"sessionId\" parameter.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $statuses = 'statuses_example'; # string | Find messages by status
+my $include_deleted = 56; # int | Search also in deleted messages
+
+eval { 
+    my $result = $api_instance->get_messages_by_session_id(id => $id, page => $page, limit => $limit, statuses => $statuses, include_deleted => $include_deleted);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_messages_by_session_id: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **statuses** | **string**| Find messages by status | [optional] 
+ **include_deleted** | **int**| Search also in deleted messages | [optional] [default to 0]
+
+### Return type
+
+[**GetMessagesBySessionIdResponse**](GetMessagesBySessionIdResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_messaging_counters**
+> GetMessagingCountersResponse get_messaging_counters()
+
+Return counters for messaging data views.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->get_messaging_counters();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_messaging_counters: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetMessagingCountersResponse**](GetMessagingCountersResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_messaging_stat**
+> GetMessagingStatResponse get_messaging_stat(by => $by, start => $start, end => $end)
+
+Return messaging statistics.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $by = 'by_example'; # string | Group results by specified period: off, day, month or year. Default is off
+my $start = 56; # int | Start date in unix timestamp format. Default is 7 days ago
+my $end = 'end_example'; # string | End date in unix timestamp format. Default is now
+
+eval { 
+    my $result = $api_instance->get_messaging_stat(by => $by, start => $start, end => $end);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_messaging_stat: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **by** | **string**| Group results by specified period: off, day, month or year. Default is off | [optional] [default to off]
+ **start** | **int**| Start date in unix timestamp format. Default is 7 days ago | [optional] 
+ **end** | **string**| End date in unix timestamp format. Default is now | [optional] 
+
+### Return type
+
+[**GetMessagingStatResponse**](GetMessagingStatResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_outbound_message**
+> MessageOut get_outbound_message(id => $id)
+
+Get a single message
+
+Get a single outgoing message.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_outbound_message(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_outbound_message: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**MessageOut**](MessageOut.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_outbound_messages_history**
+> GetOutboundMessagesHistoryResponse get_outbound_messages_history(limit => $limit, last_id => $last_id, query => $query, order_by => $order_by, direction => $direction)
+
+Get history
+
+Get outbound messages history.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $limit = 56; # int | How many results to return
+my $last_id = 56; # int | Filter results by ID, selecting all values lesser than the specified ID.
+my $query = 'query_example'; # string | Find message by specified search query
+my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
+my $direction = 'direction_example'; # string | Order direction. Default is desc
+
+eval { 
+    my $result = $api_instance->get_outbound_messages_history(limit => $limit, last_id => $last_id, query => $query, order_by => $order_by, direction => $direction);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_outbound_messages_history: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **last_id** | **int**| Filter results by ID, selecting all values lesser than the specified ID. | [optional] 
+ **query** | **string**| Find message by specified search query | [optional] 
+ **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+
+### Return type
+
+[**GetOutboundMessagesHistoryResponse**](GetOutboundMessagesHistoryResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_push_tokens**
+> GetPushTokensResponse get_push_tokens()
+
+Get all device tokens assigned to the current account
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->get_push_tokens();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_push_tokens: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetPushTokensResponse**](GetPushTokensResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_scheduled_message**
+> MessagesIcs get_scheduled_message(id => $id)
+
+Get message schedule.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_scheduled_message(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_scheduled_message: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**MessagesIcs**](MessagesIcs.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_sender_id**
+> SenderId get_sender_id(id => $id)
+
+Get a single Sender ID.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_sender_id(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_sender_id: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**SenderId**](SenderId.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_sender_ids**
+> GetSenderIdsResponse get_sender_ids(page => $page, limit => $limit)
+
+Get all sender IDs of current user.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+
+eval { 
+    my $result = $api_instance->get_sender_ids(page => $page, limit => $limit);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_sender_ids: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+
+### Return type
+
+[**GetSenderIdsResponse**](GetSenderIdsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_sender_settings**
+> GetSenderSettingsResponse get_sender_settings(country => $country)
+
+Get current user sender settings.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $country = 'country_example'; # string | Return sender settings enabled for sending to specified country. Two upper case characters
+
+eval { 
+    my $result = $api_instance->get_sender_settings(country => $country);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_sender_settings: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **country** | **string**| Return sender settings enabled for sending to specified country. Two upper case characters | [optional] 
+
+### Return type
+
+[**GetSenderSettingsResponse**](GetSenderSettingsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_spending_stat**
+> GetSpendingStatResponse get_spending_stat(page => $page, limit => $limit, start => $start, end => $end)
+
+Return account spending statistics.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $start = 56; # int | Optional. Start date in unix timestamp format. Default is 7 days ago
+my $end = 56; # int | Optional. End date in unix timestamp format. Default is now
+
+eval { 
+    my $result = $api_instance->get_spending_stat(page => $page, limit => $limit, start => $start, end => $end);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_spending_stat: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **start** | **int**| Optional. Start date in unix timestamp format. Default is 7 days ago | [optional] 
+ **end** | **int**| Optional. End date in unix timestamp format. Default is now | [optional] 
+
+### Return type
+
+[**GetSpendingStatResponse**](GetSpendingStatResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_state**
+> GetStateResponse get_state()
+
+Get current entities state
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->get_state();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_state: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetStateResponse**](GetStateResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_subaccount**
+> User get_subaccount(id => $id)
+
+Get a single subaccount.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_subaccount(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_subaccount: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_subaccounts**
+> User get_subaccounts(page => $page, limit => $limit)
+
+Get all subaccounts of current user.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+
+eval { 
+    my $result = $api_instance->get_subaccounts(page => $page, limit => $limit);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_subaccounts: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_subaccounts_with_tokens**
+> GetSubaccountsWithTokensResponse get_subaccounts_with_tokens(get_subaccounts_with_tokens_input_object => $get_subaccounts_with_tokens_input_object, page => $page, limit => $limit, x_ignore_null_values => $x_ignore_null_values)
+
+Get all subaccounts with their REST API tokens associated with specified app name.
+
+When more than one token related to app name, last key will be returned.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $get_subaccounts_with_tokens_input_object = TextMagicClient::Object::GetSubaccountsWithTokensInputObject->new(); # GetSubaccountsWithTokensInputObject | 
+my $page = 8.14; # Number | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->get_subaccounts_with_tokens(get_subaccounts_with_tokens_input_object => $get_subaccounts_with_tokens_input_object, page => $page, limit => $limit, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_subaccounts_with_tokens: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **get_subaccounts_with_tokens_input_object** | [**GetSubaccountsWithTokensInputObject**](GetSubaccountsWithTokensInputObject.md)|  | 
+ **page** | **Number**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**GetSubaccountsWithTokensResponse**](GetSubaccountsWithTokensResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_survey**
+> Survey get_survey(id => $id)
+
+Get a survey by id.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_survey(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_survey: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**Survey**](Survey.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_survey_node**
+> SurveyNode get_survey_node(id => $id)
+
+Get a node by id.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_survey_node(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_survey_node: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**SurveyNode**](SurveyNode.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_survey_nodes**
+> GetSurveyNodesResponse get_survey_nodes(id => $id)
+
+Fetch nodes by given survey id.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_survey_nodes(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_survey_nodes: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**GetSurveyNodesResponse**](GetSurveyNodesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_surveys**
+> GetSurveysResponse get_surveys(page => $page, limit => $limit)
+
+Get all user surveys.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+
+eval { 
+    my $result = $api_instance->get_surveys(page => $page, limit => $limit);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_surveys: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+
+### Return type
+
+[**GetSurveysResponse**](GetSurveysResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_template**
+> MessageTemplate get_template(id => $id)
+
+Get a single template.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_template(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_template: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**MessageTemplate**](MessageTemplate.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_timezones**
+> object get_timezones(full => $full)
+
+Return all available timezone IDs.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $full = 56; # int | Return full info about timezones in array (0 or 1). Default is 0
+
+eval { 
+    my $result = $api_instance->get_timezones(full => $full);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_timezones: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **full** | **int**| Return full info about timezones in array (0 or 1). Default is 0 | [optional] [default to 0]
+
+### Return type
+
+**object**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_unread_messages_total**
+> GetUnreadMessagesTotalResponse get_unread_messages_total()
+
+Get total amount of unread messages in the current user chats.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->get_unread_messages_total();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_unread_messages_total: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetUnreadMessagesTotalResponse**](GetUnreadMessagesTotalResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_unsubscribed_contact**
+> UnsubscribedContact get_unsubscribed_contact(id => $id)
+
+Get a single unsubscribed contact.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_unsubscribed_contact(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_unsubscribed_contact: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**UnsubscribedContact**](UnsubscribedContact.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_unsubscribers**
+> GetUnsubscribersResponse get_unsubscribers(page => $page, limit => $limit)
+
+Get all contact have unsubscribed from your communication.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+
+eval { 
+    my $result = $api_instance->get_unsubscribers(page => $page, limit => $limit);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_unsubscribers: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+
+### Return type
+
+[**GetUnsubscribersResponse**](GetUnsubscribersResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_user_dedicated_numbers**
+> GetUserDedicatedNumbersResponse get_user_dedicated_numbers(page => $page, limit => $limit, survey_id => $survey_id)
+
+Get user's dedicated numbers.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $survey_id = 56; # int | Fetch only that numbers which are ready for the survey
+
+eval { 
+    my $result = $api_instance->get_user_dedicated_numbers(page => $page, limit => $limit, survey_id => $survey_id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_user_dedicated_numbers: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **survey_id** | **int**| Fetch only that numbers which are ready for the survey | [optional] 
+
+### Return type
+
+[**GetUserDedicatedNumbersResponse**](GetUserDedicatedNumbersResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_user_lists**
+> GetUserListsResponse get_user_lists(page => $page, limit => $limit, order_by => $order_by, direction => $direction, favorite_only => $favorite_only, only_mine => $only_mine)
+
+Get all user lists.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
+my $direction = 'direction_example'; # string | Order direction. Default is desc
+my $favorite_only = 56; # int | Return only favorite lists
+my $only_mine = 56; # int | Return only current user lists
+
+eval { 
+    my $result = $api_instance->get_user_lists(page => $page, limit => $limit, order_by => $order_by, direction => $direction, favorite_only => $favorite_only, only_mine => $only_mine);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_user_lists: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **favorite_only** | **int**| Return only favorite lists | [optional] [default to 0]
+ **only_mine** | **int**| Return only current user lists | [optional] [default to 0]
+
+### Return type
+
+[**GetUserListsResponse**](GetUserListsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_versions**
+> GetVersionsResponse get_versions()
+
+Get minimal valid apps versions
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->get_versions();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_versions: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetVersionsResponse**](GetVersionsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **invite_subaccount**
+> invite_subaccount(invite_subaccount_input_object => $invite_subaccount_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Invite new subaccount.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $invite_subaccount_input_object = TextMagicClient::Object::InviteSubaccountInputObject->new(); # InviteSubaccountInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->invite_subaccount(invite_subaccount_input_object => $invite_subaccount_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->invite_subaccount: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **invite_subaccount_input_object** | [**InviteSubaccountInputObject**](InviteSubaccountInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **mark_chats_read_bulk**
+> mark_chats_read_bulk(mark_chats_read_bulk_input_object => $mark_chats_read_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Mark several chats as read by chat ids or mark all chats as read
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $mark_chats_read_bulk_input_object = TextMagicClient::Object::MarkChatsReadBulkInputObject->new(); # MarkChatsReadBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->mark_chats_read_bulk(mark_chats_read_bulk_input_object => $mark_chats_read_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->mark_chats_read_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mark_chats_read_bulk_input_object** | [**MarkChatsReadBulkInputObject**](MarkChatsReadBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **mark_chats_unread_bulk**
+> mark_chats_unread_bulk(mark_chats_unread_bulk_input_object => $mark_chats_unread_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Mark several chats as UNread by chat ids or mark all chats as UNread
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $mark_chats_unread_bulk_input_object = TextMagicClient::Object::MarkChatsUnreadBulkInputObject->new(); # MarkChatsUnreadBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->mark_chats_unread_bulk(mark_chats_unread_bulk_input_object => $mark_chats_unread_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->mark_chats_unread_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mark_chats_unread_bulk_input_object** | [**MarkChatsUnreadBulkInputObject**](MarkChatsUnreadBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **merge_survey_nodes**
+> merge_survey_nodes(merge_survey_nodes_input_object => $merge_survey_nodes_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Merge two question nodes.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $merge_survey_nodes_input_object = TextMagicClient::Object::MergeSurveyNodesInputObject->new(); # MergeSurveyNodesInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->merge_survey_nodes(merge_survey_nodes_input_object => $merge_survey_nodes_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->merge_survey_nodes: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merge_survey_nodes_input_object** | [**MergeSurveyNodesInputObject**](MergeSurveyNodesInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **mute_chat**
+> ResourceLinkResponse mute_chat(mute_chat_input_object => $mute_chat_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Set mute mode.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $mute_chat_input_object = TextMagicClient::Object::MuteChatInputObject->new(); # MuteChatInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->mute_chat(mute_chat_input_object => $mute_chat_input_object, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->mute_chat: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mute_chat_input_object** | [**MuteChatInputObject**](MuteChatInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **mute_chats_bulk**
+> mute_chats_bulk(mute_chats_bulk_input_object => $mute_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Mute several chats by chat ids or mute all chats
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $mute_chats_bulk_input_object = TextMagicClient::Object::MuteChatsBulkInputObject->new(); # MuteChatsBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->mute_chats_bulk(mute_chats_bulk_input_object => $mute_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->mute_chats_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mute_chats_bulk_input_object** | [**MuteChatsBulkInputObject**](MuteChatsBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ping**
+> PingResponse ping()
+
+Just does a pong.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    my $result = $api_instance->ping();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->ping: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**PingResponse**](PingResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **reopen_chats_bulk**
+> reopen_chats_bulk(reopen_chats_bulk_input_object => $reopen_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Reopen chats by chat ids or reopen all chats
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $reopen_chats_bulk_input_object = TextMagicClient::Object::ReopenChatsBulkInputObject->new(); # ReopenChatsBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->reopen_chats_bulk(reopen_chats_bulk_input_object => $reopen_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->reopen_chats_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reopen_chats_bulk_input_object** | [**ReopenChatsBulkInputObject**](ReopenChatsBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **request_new_subaccount_token**
+> User request_new_subaccount_token(request_new_subaccount_token_input_object => $request_new_subaccount_token_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Request a new REST API token for subaccount.
+
+Returning user object, key and app name.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $request_new_subaccount_token_input_object = TextMagicClient::Object::RequestNewSubaccountTokenInputObject->new(); # RequestNewSubaccountTokenInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->request_new_subaccount_token(request_new_subaccount_token_input_object => $request_new_subaccount_token_input_object, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->request_new_subaccount_token: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_new_subaccount_token_input_object** | [**RequestNewSubaccountTokenInputObject**](RequestNewSubaccountTokenInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **request_sender_id**
+> ResourceLinkResponse request_sender_id(request_sender_id_input_object => $request_sender_id_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Request for a new Sender ID.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $request_sender_id_input_object = TextMagicClient::Object::RequestSenderIdInputObject->new(); # RequestSenderIdInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->request_sender_id(request_sender_id_input_object => $request_sender_id_input_object, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->request_sender_id: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_sender_id_input_object** | [**RequestSenderIdInputObject**](RequestSenderIdInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **reset_survey**
+> ResourceLinkResponse reset_survey(id => $id)
+
+Reset a survey flow.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->reset_survey(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->reset_survey: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **search_chats**
+> SearchChatsResponse search_chats(page => $page, limit => $limit, query => $query)
+
+Find chats by inbound or outbound messages text.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $query = 'query_example'; # string | Find chats by specified search query
+
+eval { 
+    my $result = $api_instance->search_chats(page => $page, limit => $limit, query => $query);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->search_chats: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **query** | **string**| Find chats by specified search query | [optional] 
+
+### Return type
+
+[**SearchChatsResponse**](SearchChatsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **search_chats_by_ids**
+> SearchChatsByIdsResponse search_chats_by_ids(page => $page, limit => $limit, ids => $ids)
+
+Find chats by IDs.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $ids = 'ids_example'; # string | Find chats by ID(s)
+
+eval { 
+    my $result = $api_instance->search_chats_by_ids(page => $page, limit => $limit, ids => $ids);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->search_chats_by_ids: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **ids** | **string**| Find chats by ID(s) | [optional] 
+
+### Return type
+
+[**SearchChatsByIdsResponse**](SearchChatsByIdsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **search_chats_by_receipent**
+> SearchChatsByReceipentResponse search_chats_by_receipent(page => $page, limit => $limit, query => $query, order_by => $order_by)
+
+Find chats by recipient (contact, list name or phone number).
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $query = 'query_example'; # string | Find chats by specified search query
+my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
+
+eval { 
+    my $result = $api_instance->search_chats_by_receipent(page => $page, limit => $limit, query => $query, order_by => $order_by);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->search_chats_by_receipent: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **query** | **string**| Find chats by specified search query | [optional] 
+ **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
+
+### Return type
+
+[**SearchChatsByReceipentResponse**](SearchChatsByReceipentResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **search_contacts**
+> SearchContactsResponse search_contacts(page => $page, limit => $limit, shared => $shared, ids => $ids, list_id => $list_id, include_blocked => $include_blocked, query => $query, local => $local, country => $country, order_by => $order_by, direction => $direction)
+
+Find user contacts by given parameters.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $shared = 56; # int | Should shared contacts to be included
+my $ids = 'ids_example'; # string | Find contact by ID(s)
+my $list_id = 56; # int | Find contact by List ID
+my $include_blocked = 56; # int | Should blocked contacts to be included
+my $query = 'query_example'; # string | Find contacts by specified search query
+my $local = 56; # int | Treat phone number passed in 'query' field as local. Default is 0
+my $country = 'country_example'; # string | 2-letter ISO country code for local phone numbers, used when 'local' is set to true. Default is account country
+my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
+my $direction = 'direction_example'; # string | Order direction. Default is desc
+
+eval { 
+    my $result = $api_instance->search_contacts(page => $page, limit => $limit, shared => $shared, ids => $ids, list_id => $list_id, include_blocked => $include_blocked, query => $query, local => $local, country => $country, order_by => $order_by, direction => $direction);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->search_contacts: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **shared** | **int**| Should shared contacts to be included | [optional] [default to 0]
+ **ids** | **string**| Find contact by ID(s) | [optional] 
+ **list_id** | **int**| Find contact by List ID | [optional] 
+ **include_blocked** | **int**| Should blocked contacts to be included | [optional] 
+ **query** | **string**| Find contacts by specified search query | [optional] 
+ **local** | **int**| Treat phone number passed in &#39;query&#39; field as local. Default is 0 | [optional] [default to 0]
+ **country** | **string**| 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country | [optional] 
+ **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+
+### Return type
+
+[**SearchContactsResponse**](SearchContactsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **search_inbound_messages**
+> SearchInboundMessagesResponse search_inbound_messages(page => $page, limit => $limit, ids => $ids, query => $query, order_by => $order_by, direction => $direction, expand => $expand)
+
+Find inbound messages by given parameters.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $ids = 'ids_example'; # string | Find message by ID(s)
+my $query = 'query_example'; # string | Find recipients by specified search query
+my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
+my $direction = 'direction_example'; # string | Order direction. Default is desc
+my $expand = 56; # int | Expand by adding firstName, lastName and contactId
+
+eval { 
+    my $result = $api_instance->search_inbound_messages(page => $page, limit => $limit, ids => $ids, query => $query, order_by => $order_by, direction => $direction, expand => $expand);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->search_inbound_messages: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **ids** | **string**| Find message by ID(s) | [optional] 
+ **query** | **string**| Find recipients by specified search query | [optional] 
+ **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **expand** | **int**| Expand by adding firstName, lastName and contactId | [optional] [default to 0]
+
+### Return type
+
+[**SearchInboundMessagesResponse**](SearchInboundMessagesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **search_lists**
+> SearchListsResponse search_lists(page => $page, limit => $limit, ids => $ids, query => $query, only_mine => $only_mine, only_default => $only_default, order_by => $order_by, direction => $direction)
+
+Find contact lists by given parameters.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $ids = '"1,2,3,4"'; # string | Find lists by ID(s)
+my $query = '"A"'; # string | Find lists by specified search query
+my $only_mine = 56; # int | Return only current user lists
+my $only_default = 56; # int | Return only default lists
+my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
+my $direction = 'direction_example'; # string | Order direction. Default is desc
+
+eval { 
+    my $result = $api_instance->search_lists(page => $page, limit => $limit, ids => $ids, query => $query, only_mine => $only_mine, only_default => $only_default, order_by => $order_by, direction => $direction);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->search_lists: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **ids** | **string**| Find lists by ID(s) | [optional] 
+ **query** | **string**| Find lists by specified search query | [optional] 
+ **only_mine** | **int**| Return only current user lists | [optional] [default to 0]
+ **only_default** | **int**| Return only default lists | [optional] [default to 0]
+ **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+
+### Return type
+
+[**SearchListsResponse**](SearchListsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **search_outbound_messages**
+> SearchOutboundMessagesResponse search_outbound_messages(page => $page, limit => $limit, last_id => $last_id, ids => $ids, session_id => $session_id, statuses => $statuses, include_deleted => $include_deleted, query => $query)
+
+Find messages
+
+Find outbound messages by given parameters.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $last_id = 56; # int | Filter results by ID, selecting all values lesser than the specified ID. Note that \\'page\\' parameter is ignored when \\'lastId\\' is specified
+my $ids = 'ids_example'; # string | Find message by ID(s)
+my $session_id = 56; # int | Find messages by session ID
+my $statuses = '"q"'; # string | Find messages by status
+my $include_deleted = 56; # int | Search also in deleted messages
+my $query = 'query_example'; # string | Find messages by specified search query
+
+eval { 
+    my $result = $api_instance->search_outbound_messages(page => $page, limit => $limit, last_id => $last_id, ids => $ids, session_id => $session_id, statuses => $statuses, include_deleted => $include_deleted, query => $query);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->search_outbound_messages: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **last_id** | **int**| Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified | [optional] 
+ **ids** | **string**| Find message by ID(s) | [optional] 
+ **session_id** | **int**| Find messages by session ID | [optional] 
+ **statuses** | **string**| Find messages by status | [optional] 
+ **include_deleted** | **int**| Search also in deleted messages | [optional] [default to 0]
+ **query** | **string**| Find messages by specified search query | [optional] 
+
+### Return type
+
+[**SearchOutboundMessagesResponse**](SearchOutboundMessagesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **search_scheduled_messages**
+> SearchScheduledMessagesResponse search_scheduled_messages(page => $page, limit => $limit, query => $query, ids => $ids, status => $status, order_by => $order_by, direction => $direction)
+
+Find scheduled messages by given parameters.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $query = 'query_example'; # string | Find messages by specified search query
+my $ids = 'ids_example'; # string | Find schedules by ID(s)
+my $status = 'status_example'; # string | Fetch schedules with the specific status: a - actual, c - completed, x - all
+my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
+my $direction = 'direction_example'; # string | Order direction. Default is desc
+
+eval { 
+    my $result = $api_instance->search_scheduled_messages(page => $page, limit => $limit, query => $query, ids => $ids, status => $status, order_by => $order_by, direction => $direction);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->search_scheduled_messages: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **query** | **string**| Find messages by specified search query | [optional] 
+ **ids** | **string**| Find schedules by ID(s) | [optional] 
+ **status** | **string**| Fetch schedules with the specific status: a - actual, c - completed, x - all | [optional] [default to x]
+ **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+
+### Return type
+
+[**SearchScheduledMessagesResponse**](SearchScheduledMessagesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **search_templates**
+> SearchTemplatesResponse search_templates(page => $page, limit => $limit, ids => $ids, name => $name, content => $content)
+
+Find user templates by given parameters.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | Fetch specified results page
+my $limit = 56; # int | How many results to return
+my $ids = 'ids_example'; # string | Find template by ID(s)
+my $name = 'name_example'; # string | Find template by name
+my $content = 'content_example'; # string | Find template by content
+
+eval { 
+    my $result = $api_instance->search_templates(page => $page, limit => $limit, ids => $ids, name => $name, content => $content);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->search_templates: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Fetch specified results page | [optional] [default to 1]
+ **limit** | **int**| How many results to return | [optional] [default to 10]
+ **ids** | **string**| Find template by ID(s) | [optional] 
+ **name** | **string**| Find template by name | [optional] 
+ **content** | **string**| Find template by content | [optional] 
+
+### Return type
+
+[**SearchTemplatesResponse**](SearchTemplatesResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **send_email_verification_code**
+> send_email_verification_code()
+
+Send user email verification
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    $api_instance->send_email_verification_code();
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->send_email_verification_code: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **send_message**
+> SendMessageResponse send_message(send_message_input_object => $send_message_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Send message
+
+The main entrypoint to send messages. See examples above for the reference.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $send_message_input_object = TextMagicClient::Object::SendMessageInputObject->new(); # SendMessageInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->send_message(send_message_input_object => $send_message_input_object, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->send_message: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **send_message_input_object** | [**SendMessageInputObject**](SendMessageInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**SendMessageResponse**](SendMessageResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **send_phone_verification_code**
+> send_phone_verification_code()
+
+Send user phone verification
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+
+eval { 
+    $api_instance->send_phone_verification_code();
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->send_phone_verification_code: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **set_chat_status**
+> ResourceLinkResponse set_chat_status(set_chat_status_input_object => $set_chat_status_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Set status of the chat given by ID.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $set_chat_status_input_object = TextMagicClient::Object::SetChatStatusInputObject->new(); # SetChatStatusInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->set_chat_status(set_chat_status_input_object => $set_chat_status_input_object, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->set_chat_status: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **set_chat_status_input_object** | [**SetChatStatusInputObject**](SetChatStatusInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **start_survey**
+> ResourceLinkResponse start_survey(id => $id)
+
+Start a survey.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->start_survey(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->start_survey: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **unblock_contact**
+> unblock_contact(unblock_contact_input_object => $unblock_contact_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Unblock contact by phone number.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $unblock_contact_input_object = TextMagicClient::Object::UnblockContactInputObject->new(); # UnblockContactInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->unblock_contact(unblock_contact_input_object => $unblock_contact_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->unblock_contact: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **unblock_contact_input_object** | [**UnblockContactInputObject**](UnblockContactInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **unblock_contacts_bulk**
+> unblock_contacts_bulk(unblock_contacts_bulk_input_object => $unblock_contacts_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Unblock several contacts by blocked contact ids or unblock all contacts
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $unblock_contacts_bulk_input_object = TextMagicClient::Object::UnblockContactsBulkInputObject->new(); # UnblockContactsBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->unblock_contacts_bulk(unblock_contacts_bulk_input_object => $unblock_contacts_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->unblock_contacts_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **unblock_contacts_bulk_input_object** | [**UnblockContactsBulkInputObject**](UnblockContactsBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **unmute_chats_bulk**
+> unmute_chats_bulk(unmute_chats_bulk_input_object => $unmute_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Unmute several chats by chat ids or unmute all chats
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $unmute_chats_bulk_input_object = TextMagicClient::Object::UnmuteChatsBulkInputObject->new(); # UnmuteChatsBulkInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->unmute_chats_bulk(unmute_chats_bulk_input_object => $unmute_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->unmute_chats_bulk: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **unmute_chats_bulk_input_object** | [**UnmuteChatsBulkInputObject**](UnmuteChatsBulkInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **unsubscribe_contact**
+> ResourceLinkResponse unsubscribe_contact(unsubscribe_contact_input_object => $unsubscribe_contact_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Unsubscribe contact from your communication by phone number.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $unsubscribe_contact_input_object = TextMagicClient::Object::UnsubscribeContactInputObject->new(); # UnsubscribeContactInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->unsubscribe_contact(unsubscribe_contact_input_object => $unsubscribe_contact_input_object, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->unsubscribe_contact: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **unsubscribe_contact_input_object** | [**UnsubscribeContactInputObject**](UnsubscribeContactInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_balance_notification_settings**
+> update_balance_notification_settings(update_balance_notification_settings_input_object => $update_balance_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Update balance notification settings
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $update_balance_notification_settings_input_object = TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject->new(); # UpdateBalanceNotificationSettingsInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->update_balance_notification_settings(update_balance_notification_settings_input_object => $update_balance_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_balance_notification_settings: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_balance_notification_settings_input_object** | [**UpdateBalanceNotificationSettingsInputObject**](UpdateBalanceNotificationSettingsInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_callback_settings**
+> update_callback_settings(update_callback_settings_input_object => $update_callback_settings_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Update callback URL settings
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $update_callback_settings_input_object = TextMagicClient::Object::UpdateCallbackSettingsInputObject->new(); # UpdateCallbackSettingsInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->update_callback_settings(update_callback_settings_input_object => $update_callback_settings_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_callback_settings: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_callback_settings_input_object** | [**UpdateCallbackSettingsInputObject**](UpdateCallbackSettingsInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_chat_desktop_notification_settings**
+> update_chat_desktop_notification_settings(update_chat_desktop_notification_settings_input_object => $update_chat_desktop_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Update chat desktop notification settings
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $update_chat_desktop_notification_settings_input_object = TextMagicClient::Object::UpdateChatDesktopNotificationSettingsInputObject->new(); # UpdateChatDesktopNotificationSettingsInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->update_chat_desktop_notification_settings(update_chat_desktop_notification_settings_input_object => $update_chat_desktop_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_chat_desktop_notification_settings: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_chat_desktop_notification_settings_input_object** | [**UpdateChatDesktopNotificationSettingsInputObject**](UpdateChatDesktopNotificationSettingsInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_contact**
+> ResourceLinkResponse update_contact(update_contact_input_object => $update_contact_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+
+Update existing contact.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $update_contact_input_object = TextMagicClient::Object::UpdateContactInputObject->new(); # UpdateContactInputObject | 
+my $id = 1; # int | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->update_contact(update_contact_input_object => $update_contact_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_contact: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_contact_input_object** | [**UpdateContactInputObject**](UpdateContactInputObject.md)|  | 
+ **id** | **int**|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_contact_note**
+> ResourceLinkResponse update_contact_note(update_contact_note_input_object => $update_contact_note_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+
+Update existing contact note.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $update_contact_note_input_object = TextMagicClient::Object::UpdateContactNoteInputObject->new(); # UpdateContactNoteInputObject | 
+my $id = 1; # int | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->update_contact_note(update_contact_note_input_object => $update_contact_note_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_contact_note: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_contact_note_input_object** | [**UpdateContactNoteInputObject**](UpdateContactNoteInputObject.md)|  | 
+ **id** | **int**|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_current_user**
+> UpdateCurrentUserResponse update_current_user(update_current_user_input_object => $update_current_user_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Update current user info.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $update_current_user_input_object = TextMagicClient::Object::UpdateCurrentUserInputObject->new(); # UpdateCurrentUserInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->update_current_user(update_current_user_input_object => $update_current_user_input_object, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_current_user: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_current_user_input_object** | [**UpdateCurrentUserInputObject**](UpdateCurrentUserInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**UpdateCurrentUserResponse**](UpdateCurrentUserResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_custom_field**
+> ResourceLinkResponse update_custom_field(update_custom_field_input_object => $update_custom_field_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+
+Update existing custom field.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $update_custom_field_input_object = TextMagicClient::Object::UpdateCustomFieldInputObject->new(); # UpdateCustomFieldInputObject | 
+my $id = 1; # int | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->update_custom_field(update_custom_field_input_object => $update_custom_field_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_custom_field: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_custom_field_input_object** | [**UpdateCustomFieldInputObject**](UpdateCustomFieldInputObject.md)|  | 
+ **id** | **int**|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_custom_field_value**
+> ResourceLinkResponse update_custom_field_value(update_custom_field_value_input_object => $update_custom_field_value_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+
+Update contact's custom field value.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $update_custom_field_value_input_object = TextMagicClient::Object::UpdateCustomFieldValueInputObject->new(); # UpdateCustomFieldValueInputObject | 
+my $id = 'id_example'; # string | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->update_custom_field_value(update_custom_field_value_input_object => $update_custom_field_value_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_custom_field_value: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_custom_field_value_input_object** | [**UpdateCustomFieldValueInputObject**](UpdateCustomFieldValueInputObject.md)|  | 
+ **id** | **string**|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_inbound_messages_notification_settings**
+> update_inbound_messages_notification_settings(update_inbound_messages_notification_settings_input_object => $update_inbound_messages_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Update inbound messages notification settings
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $update_inbound_messages_notification_settings_input_object = TextMagicClient::Object::UpdateInboundMessagesNotificationSettingsInputObject->new(); # UpdateInboundMessagesNotificationSettingsInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->update_inbound_messages_notification_settings(update_inbound_messages_notification_settings_input_object => $update_inbound_messages_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_inbound_messages_notification_settings: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_inbound_messages_notification_settings_input_object** | [**UpdateInboundMessagesNotificationSettingsInputObject**](UpdateInboundMessagesNotificationSettingsInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_list**
+> ResourceLinkResponse update_list(id => $id, update_list_object => $update_list_object)
+
+Update existing list.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+my $update_list_object = TextMagicClient::Object::UpdateListObject->new(); # UpdateListObject | 
+
+eval { 
+    my $result = $api_instance->update_list(id => $id, update_list_object => $update_list_object);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_list: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **update_list_object** | [**UpdateListObject**](UpdateListObject.md)|  | [optional] 
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_password**
+> update_password(update_password_input_object => $update_password_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Change user password.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $update_password_input_object = TextMagicClient::Object::UpdatePasswordInputObject->new(); # UpdatePasswordInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->update_password(update_password_input_object => $update_password_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_password: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_password_input_object** | [**UpdatePasswordInputObject**](UpdatePasswordInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_sender_setting**
+> update_sender_setting(update_sender_setting_input_object => $update_sender_setting_input_object, x_ignore_null_values => $x_ignore_null_values)
+
+Change sender settings for specified country.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $update_sender_setting_input_object = TextMagicClient::Object::UpdateSenderSettingInputObject->new(); # UpdateSenderSettingInputObject | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    $api_instance->update_sender_setting(update_sender_setting_input_object => $update_sender_setting_input_object, x_ignore_null_values => $x_ignore_null_values);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_sender_setting: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_sender_setting_input_object** | [**UpdateSenderSettingInputObject**](UpdateSenderSettingInputObject.md)|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_survey**
+> ResourceLinkResponse update_survey(update_survey_input_object => $update_survey_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+
+Update existing survey.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $update_survey_input_object = TextMagicClient::Object::UpdateSurveyInputObject->new(); # UpdateSurveyInputObject | 
+my $id = 1; # int | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->update_survey(update_survey_input_object => $update_survey_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_survey: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_survey_input_object** | [**UpdateSurveyInputObject**](UpdateSurveyInputObject.md)|  | 
+ **id** | **int**|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_survey_node**
+> ResourceLinkResponse update_survey_node(update_survey_node_input_object => $update_survey_node_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+
+Update existing node.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $update_survey_node_input_object = TextMagicClient::Object::UpdateSurveyNodeInputObject->new(); # UpdateSurveyNodeInputObject | 
+my $id = 1; # int | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->update_survey_node(update_survey_node_input_object => $update_survey_node_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_survey_node: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_survey_node_input_object** | [**UpdateSurveyNodeInputObject**](UpdateSurveyNodeInputObject.md)|  | 
+ **id** | **int**|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_template**
+> ResourceLinkResponse update_template(update_template_input_object => $update_template_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+
+Update existing template.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $update_template_input_object = TextMagicClient::Object::UpdateTemplateInputObject->new(); # UpdateTemplateInputObject | 
+my $id = 1; # int | 
+my $x_ignore_null_values = 1; # boolean | 
+
+eval { 
+    my $result = $api_instance->update_template(update_template_input_object => $update_template_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->update_template: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **update_template_input_object** | [**UpdateTemplateInputObject**](UpdateTemplateInputObject.md)|  | 
+ **id** | **int**|  | 
+ **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **upload_avatar**
+> upload_avatar(image => $image)
+
+Add an avatar for the current user.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $image = '/path/to/file.txt'; # File | User avatar. Should be PNG or JPG file not more than 10 MB
+
+eval { 
+    $api_instance->upload_avatar(image => $image);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->upload_avatar: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **image** | **File**| User avatar. Should be PNG or JPG file not more than 10 MB | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **upload_contact_avatar**
+> ResourceLinkResponse upload_contact_avatar(image => $image, id => $id)
+
+Add an avatar for the contact.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $image = '/path/to/file.txt'; # File | Contact avatar. Should be PNG or JPG file not more than 10 MB
+my $id = 56; # int | 
+
+eval { 
+    my $result = $api_instance->upload_contact_avatar(image => $image, id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->upload_contact_avatar: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **image** | **File**| Contact avatar. Should be PNG or JPG file not more than 10 MB | 
+ **id** | **int**|  | 
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **upload_list_avatar**
+> ResourceLinkResponse upload_list_avatar(image => $image, id => $id)
+
+Add an avatar for the list.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $image = '/path/to/file.txt'; # File | List avatar. Should be PNG or JPG file not more than 10 MB
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->upload_list_avatar(image => $image, id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->upload_list_avatar: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **image** | **File**| List avatar. Should be PNG or JPG file not more than 10 MB | 
+ **id** | **int**|  | 
+
+### Return type
+
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **upload_message_attachment**
+> UploadMessageAttachmentResponse upload_message_attachment(file => $file)
+
+Upload message attachment
+
+Upload a new file to insert it as a link.
+
+### Example 
+```perl
+use Data::Dumper;
+use TextMagicClient::TextMagicApi;
+my $api_instance = TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $file = '/path/to/file.txt'; # File | Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats
+
+eval { 
+    my $result = $api_instance->upload_message_attachment(file => $file);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->upload_message_attachment: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **File**| Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats | 
+
+### Return type
+
+[**UploadMessageAttachmentResponse**](UploadMessageAttachmentResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
