@@ -17,9 +17,13 @@ Next modules must be installed:
 
 ## Installation
 
-```perl
-perl Makefile.pl
-make
+```bash
+wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.334.tar.gz && \
+tar zxf v2.0.334.tar.gz && \
+rm -f v2.0.334.tar.gz && \
+cd textmagic-rest-perl-2.0.334 && \
+perl Makefile.pl && \
+make && \
 make install
 ```
 
