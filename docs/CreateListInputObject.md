@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::CreateListInputObject
+# TextMagicClient::Object::CreateListInputObject
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::CreateListInputObject;
+use TextMagicClient::Object::CreateListInputObject;
 ```
 
 ## Properties

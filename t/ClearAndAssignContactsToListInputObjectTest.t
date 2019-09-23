@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::ClearAndAssignContactsToListInputObject');
+use_ok('TextMagicClient::Object::ClearAndAssignContactsToListInputObject');
 
-my $instance = WWW::SwaggerClient::Object::ClearAndAssignContactsToListInputObject->new();
+my $instance = TextMagicClient::Object::ClearAndAssignContactsToListInputObject->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::ClearAndAssignContactsToListInputObject');
+isa_ok($instance, 'TextMagicClient::Object::ClearAndAssignContactsToListInputObject');
 

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::FavoriteContact
+# TextMagicClient::Object::FavoriteContact
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::FavoriteContact;
+use TextMagicClient::Object::FavoriteContact;
 ```
 
 ## Properties

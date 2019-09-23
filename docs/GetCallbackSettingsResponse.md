@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetCallbackSettingsResponse
+# TextMagicClient::Object::GetCallbackSettingsResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetCallbackSettingsResponse;
+use TextMagicClient::Object::GetCallbackSettingsResponse;
 ```
 
 ## Properties

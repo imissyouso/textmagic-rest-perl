@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::UpdateChatDesktopNotificationSettingsInputObject
+# TextMagicClient::Object::UpdateChatDesktopNotificationSettingsInputObject
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::UpdateChatDesktopNotificationSettingsInputObject;
+use TextMagicClient::Object::UpdateChatDesktopNotificationSettingsInputObject;
 ```
 
 ## Properties

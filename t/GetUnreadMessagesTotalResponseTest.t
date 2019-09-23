@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GetUnreadMessagesTotalResponse');
+use_ok('TextMagicClient::Object::GetUnreadMessagesTotalResponse');
 
-my $instance = WWW::SwaggerClient::Object::GetUnreadMessagesTotalResponse->new();
+my $instance = TextMagicClient::Object::GetUnreadMessagesTotalResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GetUnreadMessagesTotalResponse');
+isa_ok($instance, 'TextMagicClient::Object::GetUnreadMessagesTotalResponse');
 

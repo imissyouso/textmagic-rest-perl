@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::DeleteChatsBulkInputObject
+# TextMagicClient::Object::DeleteChatsBulkInputObject
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::DeleteChatsBulkInputObject;
+use TextMagicClient::Object::DeleteChatsBulkInputObject;
 ```
 
 ## Properties

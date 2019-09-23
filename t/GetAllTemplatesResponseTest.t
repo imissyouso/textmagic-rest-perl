@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GetAllTemplatesResponse');
+use_ok('TextMagicClient::Object::GetAllTemplatesResponse');
 
-my $instance = WWW::SwaggerClient::Object::GetAllTemplatesResponse->new();
+my $instance = TextMagicClient::Object::GetAllTemplatesResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GetAllTemplatesResponse');
+isa_ok($instance, 'TextMagicClient::Object::GetAllTemplatesResponse');
 

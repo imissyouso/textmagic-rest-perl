@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::NotFoundResponse
+# TextMagicClient::Object::NotFoundResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::NotFoundResponse;
+use TextMagicClient::Object::NotFoundResponse;
 ```
 
 ## Properties

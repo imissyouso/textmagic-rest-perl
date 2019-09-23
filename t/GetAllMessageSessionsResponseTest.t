@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GetAllMessageSessionsResponse');
+use_ok('TextMagicClient::Object::GetAllMessageSessionsResponse');
 
-my $instance = WWW::SwaggerClient::Object::GetAllMessageSessionsResponse->new();
+my $instance = TextMagicClient::Object::GetAllMessageSessionsResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GetAllMessageSessionsResponse');
+isa_ok($instance, 'TextMagicClient::Object::GetAllMessageSessionsResponse');
 

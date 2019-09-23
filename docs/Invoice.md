@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::Invoice
+# TextMagicClient::Object::Invoice
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::Invoice;
+use TextMagicClient::Object::Invoice;
 ```
 
 ## Properties

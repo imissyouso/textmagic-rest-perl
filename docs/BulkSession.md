@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::BulkSession
+# TextMagicClient::Object::BulkSession
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::BulkSession;
+use TextMagicClient::Object::BulkSession;
 ```
 
 ## Properties

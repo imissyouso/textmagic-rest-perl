@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetAllScheduledMessagesResponse
+# TextMagicClient::Object::GetAllScheduledMessagesResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetAllScheduledMessagesResponse;
+use TextMagicClient::Object::GetAllScheduledMessagesResponse;
 ```
 
 ## Properties

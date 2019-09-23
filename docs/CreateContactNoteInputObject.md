@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::CreateContactNoteInputObject
+# TextMagicClient::Object::CreateContactNoteInputObject
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::CreateContactNoteInputObject;
+use TextMagicClient::Object::CreateContactNoteInputObject;
 ```
 
 ## Properties

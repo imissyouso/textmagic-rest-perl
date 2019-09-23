@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::SearchTemplatesResponse');
+use_ok('TextMagicClient::Object::SearchTemplatesResponse');
 
-my $instance = WWW::SwaggerClient::Object::SearchTemplatesResponse->new();
+my $instance = TextMagicClient::Object::SearchTemplatesResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::SearchTemplatesResponse');
+isa_ok($instance, 'TextMagicClient::Object::SearchTemplatesResponse');
 

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetAllTemplatesResponse
+# TextMagicClient::Object::GetAllTemplatesResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetAllTemplatesResponse;
+use TextMagicClient::Object::GetAllTemplatesResponse;
 ```
 
 ## Properties

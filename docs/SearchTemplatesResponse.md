@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::SearchTemplatesResponse
+# TextMagicClient::Object::SearchTemplatesResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::SearchTemplatesResponse;
+use TextMagicClient::Object::SearchTemplatesResponse;
 ```
 
 ## Properties

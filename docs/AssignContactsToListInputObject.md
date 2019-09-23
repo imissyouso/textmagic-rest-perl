@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::AssignContactsToListInputObject
+# TextMagicClient::Object::AssignContactsToListInputObject
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::AssignContactsToListInputObject;
+use TextMagicClient::Object::AssignContactsToListInputObject;
 ```
 
 ## Properties

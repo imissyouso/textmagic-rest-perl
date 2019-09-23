@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetContactsAutocompleteResponse
+# TextMagicClient::Object::GetContactsAutocompleteResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetContactsAutocompleteResponse;
+use TextMagicClient::Object::GetContactsAutocompleteResponse;
 ```
 
 ## Properties

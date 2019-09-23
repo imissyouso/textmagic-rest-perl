@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::UpdateInboundMessagesNotificationSettingsInputObject
+# TextMagicClient::Object::UpdateInboundMessagesNotificationSettingsInputObject
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::UpdateInboundMessagesNotificationSettingsInputObject;
+use TextMagicClient::Object::UpdateInboundMessagesNotificationSettingsInputObject;
 ```
 
 ## Properties

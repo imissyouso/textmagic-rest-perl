@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::UpdateListObject
+# TextMagicClient::Object::UpdateListObject
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::UpdateListObject;
+use TextMagicClient::Object::UpdateListObject;
 ```
 
 ## Properties

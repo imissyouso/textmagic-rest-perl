@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GetInvoicesResponse');
+use_ok('TextMagicClient::Object::GetInvoicesResponse');
 
-my $instance = WWW::SwaggerClient::Object::GetInvoicesResponse->new();
+my $instance = TextMagicClient::Object::GetInvoicesResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GetInvoicesResponse');
+isa_ok($instance, 'TextMagicClient::Object::GetInvoicesResponse');
 

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetContactImportSessionProgressResponse
+# TextMagicClient::Object::GetContactImportSessionProgressResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetContactImportSessionProgressResponse;
+use TextMagicClient::Object::GetContactImportSessionProgressResponse;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::SearchScheduledMessagesResponse
+# TextMagicClient::Object::SearchScheduledMessagesResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::SearchScheduledMessagesResponse;
+use TextMagicClient::Object::SearchScheduledMessagesResponse;
 ```
 
 ## Properties

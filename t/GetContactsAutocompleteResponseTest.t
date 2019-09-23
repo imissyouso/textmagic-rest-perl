@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GetContactsAutocompleteResponse');
+use_ok('TextMagicClient::Object::GetContactsAutocompleteResponse');
 
-my $instance = WWW::SwaggerClient::Object::GetContactsAutocompleteResponse->new();
+my $instance = TextMagicClient::Object::GetContactsAutocompleteResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GetContactsAutocompleteResponse');
+isa_ok($instance, 'TextMagicClient::Object::GetContactsAutocompleteResponse');
 

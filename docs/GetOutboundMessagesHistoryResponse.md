@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetOutboundMessagesHistoryResponse
+# TextMagicClient::Object::GetOutboundMessagesHistoryResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetOutboundMessagesHistoryResponse;
+use TextMagicClient::Object::GetOutboundMessagesHistoryResponse;
 ```
 
 ## Properties

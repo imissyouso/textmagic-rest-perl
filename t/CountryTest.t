@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::Country');
+use_ok('TextMagicClient::Object::Country');
 
-my $instance = WWW::SwaggerClient::Object::Country->new();
+my $instance = TextMagicClient::Object::Country->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::Country');
+isa_ok($instance, 'TextMagicClient::Object::Country');
 

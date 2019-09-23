@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::CreateSurveyNodeInputObject');
+use_ok('TextMagicClient::Object::CreateSurveyNodeInputObject');
 
-my $instance = WWW::SwaggerClient::Object::CreateSurveyNodeInputObject->new();
+my $instance = TextMagicClient::Object::CreateSurveyNodeInputObject->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::CreateSurveyNodeInputObject');
+isa_ok($instance, 'TextMagicClient::Object::CreateSurveyNodeInputObject');
 

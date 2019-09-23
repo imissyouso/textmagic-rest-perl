@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::CreateListInputObject');
+use_ok('TextMagicClient::Object::CreateListInputObject');
 
-my $instance = WWW::SwaggerClient::Object::CreateListInputObject->new();
+my $instance = TextMagicClient::Object::CreateListInputObject->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::CreateListInputObject');
+isa_ok($instance, 'TextMagicClient::Object::CreateListInputObject');
 

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetContactNotesResponse
+# TextMagicClient::Object::GetContactNotesResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetContactNotesResponse;
+use TextMagicClient::Object::GetContactNotesResponse;
 ```
 
 ## Properties

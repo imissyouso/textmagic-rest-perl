@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::ForwardedCall
+# TextMagicClient::Object::ForwardedCall
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::ForwardedCall;
+use TextMagicClient::Object::ForwardedCall;
 ```
 
 ## Properties

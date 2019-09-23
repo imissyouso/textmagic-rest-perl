@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::UpdatePasswordInputObject');
+use_ok('TextMagicClient::Object::UpdatePasswordInputObject');
 
-my $instance = WWW::SwaggerClient::Object::UpdatePasswordInputObject->new();
+my $instance = TextMagicClient::Object::UpdatePasswordInputObject->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::UpdatePasswordInputObject');
+isa_ok($instance, 'TextMagicClient::Object::UpdatePasswordInputObject');
 

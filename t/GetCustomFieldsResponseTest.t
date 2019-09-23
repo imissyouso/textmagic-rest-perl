@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GetCustomFieldsResponse');
+use_ok('TextMagicClient::Object::GetCustomFieldsResponse');
 
-my $instance = WWW::SwaggerClient::Object::GetCustomFieldsResponse->new();
+my $instance = TextMagicClient::Object::GetCustomFieldsResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GetCustomFieldsResponse');
+isa_ok($instance, 'TextMagicClient::Object::GetCustomFieldsResponse');
 

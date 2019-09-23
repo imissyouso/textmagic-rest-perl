@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetAvailableDedicatedNumbersResponse
+# TextMagicClient::Object::GetAvailableDedicatedNumbersResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetAvailableDedicatedNumbersResponse;
+use TextMagicClient::Object::GetAvailableDedicatedNumbersResponse;
 ```
 
 ## Properties

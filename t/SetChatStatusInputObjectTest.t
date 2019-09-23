@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::SetChatStatusInputObject');
+use_ok('TextMagicClient::Object::SetChatStatusInputObject');
 
-my $instance = WWW::SwaggerClient::Object::SetChatStatusInputObject->new();
+my $instance = TextMagicClient::Object::SetChatStatusInputObject->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::SetChatStatusInputObject');
+isa_ok($instance, 'TextMagicClient::Object::SetChatStatusInputObject');
 

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GetUnsubscribersResponse');
+use_ok('TextMagicClient::Object::GetUnsubscribersResponse');
 
-my $instance = WWW::SwaggerClient::Object::GetUnsubscribersResponse->new();
+my $instance = TextMagicClient::Object::GetUnsubscribersResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GetUnsubscribersResponse');
+isa_ok($instance, 'TextMagicClient::Object::GetUnsubscribersResponse');
 

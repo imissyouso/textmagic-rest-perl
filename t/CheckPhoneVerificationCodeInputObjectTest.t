@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::CheckPhoneVerificationCodeInputObject');
+use_ok('TextMagicClient::Object::CheckPhoneVerificationCodeInputObject');
 
-my $instance = WWW::SwaggerClient::Object::CheckPhoneVerificationCodeInputObject->new();
+my $instance = TextMagicClient::Object::CheckPhoneVerificationCodeInputObject->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::CheckPhoneVerificationCodeInputObject');
+isa_ok($instance, 'TextMagicClient::Object::CheckPhoneVerificationCodeInputObject');
 

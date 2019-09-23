@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetVersionsResponse
+# TextMagicClient::Object::GetVersionsResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetVersionsResponse;
+use TextMagicClient::Object::GetVersionsResponse;
 ```
 
 ## Properties

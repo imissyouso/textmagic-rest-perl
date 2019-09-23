@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::UnauthorizedResponse');
+use_ok('TextMagicClient::Object::UnauthorizedResponse');
 
-my $instance = WWW::SwaggerClient::Object::UnauthorizedResponse->new();
+my $instance = TextMagicClient::Object::UnauthorizedResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::UnauthorizedResponse');
+isa_ok($instance, 'TextMagicClient::Object::UnauthorizedResponse');
 

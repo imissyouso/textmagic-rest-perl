@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetMessagingCountersResponse
+# TextMagicClient::Object::GetMessagingCountersResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetMessagingCountersResponse;
+use TextMagicClient::Object::GetMessagingCountersResponse;
 ```
 
 ## Properties

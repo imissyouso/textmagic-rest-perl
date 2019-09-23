@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetFavouritesResponse
+# TextMagicClient::Object::GetFavouritesResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetFavouritesResponse;
+use TextMagicClient::Object::GetFavouritesResponse;
 ```
 
 ## Properties

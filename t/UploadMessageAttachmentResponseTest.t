@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::UploadMessageAttachmentResponse');
+use_ok('TextMagicClient::Object::UploadMessageAttachmentResponse');
 
-my $instance = WWW::SwaggerClient::Object::UploadMessageAttachmentResponse->new();
+my $instance = TextMagicClient::Object::UploadMessageAttachmentResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::UploadMessageAttachmentResponse');
+isa_ok($instance, 'TextMagicClient::Object::UploadMessageAttachmentResponse');
 

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::CreateTemplateInputObject
+# TextMagicClient::Object::CreateTemplateInputObject
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::CreateTemplateInputObject;
+use TextMagicClient::Object::CreateTemplateInputObject;
 ```
 
 ## Properties

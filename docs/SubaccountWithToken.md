@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::SubaccountWithToken
+# TextMagicClient::Object::SubaccountWithToken
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::SubaccountWithToken;
+use TextMagicClient::Object::SubaccountWithToken;
 ```
 
 ## Properties

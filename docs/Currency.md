@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::Currency
+# TextMagicClient::Object::Currency
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::Currency;
+use TextMagicClient::Object::Currency;
 ```
 
 ## Properties

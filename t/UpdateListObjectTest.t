@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::UpdateListObject');
+use_ok('TextMagicClient::Object::UpdateListObject');
 
-my $instance = WWW::SwaggerClient::Object::UpdateListObject->new();
+my $instance = TextMagicClient::Object::UpdateListObject->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::UpdateListObject');
+isa_ok($instance, 'TextMagicClient::Object::UpdateListObject');
 

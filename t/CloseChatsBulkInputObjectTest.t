@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::CloseChatsBulkInputObject');
+use_ok('TextMagicClient::Object::CloseChatsBulkInputObject');
 
-my $instance = WWW::SwaggerClient::Object::CloseChatsBulkInputObject->new();
+my $instance = TextMagicClient::Object::CloseChatsBulkInputObject->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::CloseChatsBulkInputObject');
+isa_ok($instance, 'TextMagicClient::Object::CloseChatsBulkInputObject');
 

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::DeleteContacsFromListObject');
+use_ok('TextMagicClient::Object::DeleteContacsFromListObject');
 
-my $instance = WWW::SwaggerClient::Object::DeleteContacsFromListObject->new();
+my $instance = TextMagicClient::Object::DeleteContacsFromListObject->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::DeleteContacsFromListObject');
+isa_ok($instance, 'TextMagicClient::Object::DeleteContacsFromListObject');
 

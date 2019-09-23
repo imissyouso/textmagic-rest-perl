@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::PushToken');
+use_ok('TextMagicClient::Object::PushToken');
 
-my $instance = WWW::SwaggerClient::Object::PushToken->new();
+my $instance = TextMagicClient::Object::PushToken->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::PushToken');
+isa_ok($instance, 'TextMagicClient::Object::PushToken');
 

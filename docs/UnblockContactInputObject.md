@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::UnblockContactInputObject
+# TextMagicClient::Object::UnblockContactInputObject
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::UnblockContactInputObject;
+use TextMagicClient::Object::UnblockContactInputObject;
 ```
 
 ## Properties

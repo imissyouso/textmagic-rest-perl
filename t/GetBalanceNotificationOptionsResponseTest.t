@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GetBalanceNotificationOptionsResponse');
+use_ok('TextMagicClient::Object::GetBalanceNotificationOptionsResponse');
 
-my $instance = WWW::SwaggerClient::Object::GetBalanceNotificationOptionsResponse->new();
+my $instance = TextMagicClient::Object::GetBalanceNotificationOptionsResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GetBalanceNotificationOptionsResponse');
+isa_ok($instance, 'TextMagicClient::Object::GetBalanceNotificationOptionsResponse');
 

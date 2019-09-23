@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::DoAuthInputObject
+# TextMagicClient::Object::DoAuthInputObject
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::DoAuthInputObject;
+use TextMagicClient::Object::DoAuthInputObject;
 ```
 
 ## Properties

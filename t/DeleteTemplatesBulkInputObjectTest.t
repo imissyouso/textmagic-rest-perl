@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::DeleteTemplatesBulkInputObject');
+use_ok('TextMagicClient::Object::DeleteTemplatesBulkInputObject');
 
-my $instance = WWW::SwaggerClient::Object::DeleteTemplatesBulkInputObject->new();
+my $instance = TextMagicClient::Object::DeleteTemplatesBulkInputObject->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::DeleteTemplatesBulkInputObject');
+isa_ok($instance, 'TextMagicClient::Object::DeleteTemplatesBulkInputObject');
 

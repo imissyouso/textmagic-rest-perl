@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GetAvailableSenderSettingOptionsResponse');
+use_ok('TextMagicClient::Object::GetAvailableSenderSettingOptionsResponse');
 
-my $instance = WWW::SwaggerClient::Object::GetAvailableSenderSettingOptionsResponse->new();
+my $instance = TextMagicClient::Object::GetAvailableSenderSettingOptionsResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GetAvailableSenderSettingOptionsResponse');
+isa_ok($instance, 'TextMagicClient::Object::GetAvailableSenderSettingOptionsResponse');
 

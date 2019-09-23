@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetAllOutboundMessagesResponse
+# TextMagicClient::Object::GetAllOutboundMessagesResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetAllOutboundMessagesResponse;
+use TextMagicClient::Object::GetAllOutboundMessagesResponse;
 ```
 
 ## Properties

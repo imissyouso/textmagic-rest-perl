@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::MessageOut
+# TextMagicClient::Object::MessageOut
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::MessageOut;
+use TextMagicClient::Object::MessageOut;
 ```
 
 ## Properties

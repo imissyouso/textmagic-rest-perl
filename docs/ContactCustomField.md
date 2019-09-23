@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::ContactCustomField
+# TextMagicClient::Object::ContactCustomField
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::ContactCustomField;
+use TextMagicClient::Object::ContactCustomField;
 ```
 
 ## Properties

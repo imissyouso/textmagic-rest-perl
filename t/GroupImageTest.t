@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GroupImage');
+use_ok('TextMagicClient::Object::GroupImage');
 
-my $instance = WWW::SwaggerClient::Object::GroupImage->new();
+my $instance = TextMagicClient::Object::GroupImage->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GroupImage');
+isa_ok($instance, 'TextMagicClient::Object::GroupImage');
 

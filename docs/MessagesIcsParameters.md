@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::MessagesIcsParameters
+# TextMagicClient::Object::MessagesIcsParameters
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::MessagesIcsParameters;
+use TextMagicClient::Object::MessagesIcsParameters;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::UserImage
+# TextMagicClient::Object::UserImage
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::UserImage;
+use TextMagicClient::Object::UserImage;
 ```
 
 ## Properties

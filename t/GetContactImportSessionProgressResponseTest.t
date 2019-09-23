@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GetContactImportSessionProgressResponse');
+use_ok('TextMagicClient::Object::GetContactImportSessionProgressResponse');
 
-my $instance = WWW::SwaggerClient::Object::GetContactImportSessionProgressResponse->new();
+my $instance = TextMagicClient::Object::GetContactImportSessionProgressResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GetContactImportSessionProgressResponse');
+isa_ok($instance, 'TextMagicClient::Object::GetContactImportSessionProgressResponse');
 

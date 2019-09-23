@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::BuyDedicatedNumberInputObject
+# TextMagicClient::Object::BuyDedicatedNumberInputObject
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::BuyDedicatedNumberInputObject;
+use TextMagicClient::Object::BuyDedicatedNumberInputObject;
 ```
 
 ## Properties

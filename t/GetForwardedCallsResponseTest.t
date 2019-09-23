@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GetForwardedCallsResponse');
+use_ok('TextMagicClient::Object::GetForwardedCallsResponse');
 
-my $instance = WWW::SwaggerClient::Object::GetForwardedCallsResponse->new();
+my $instance = TextMagicClient::Object::GetForwardedCallsResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GetForwardedCallsResponse');
+isa_ok($instance, 'TextMagicClient::Object::GetForwardedCallsResponse');
 

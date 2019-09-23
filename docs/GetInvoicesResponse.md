@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetInvoicesResponse
+# TextMagicClient::Object::GetInvoicesResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetInvoicesResponse;
+use TextMagicClient::Object::GetInvoicesResponse;
 ```
 
 ## Properties

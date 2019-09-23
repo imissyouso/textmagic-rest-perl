@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::SearchContactsResponse
+# TextMagicClient::Object::SearchContactsResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::SearchContactsResponse;
+use TextMagicClient::Object::SearchContactsResponse;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::UploadMessageAttachmentResponse
+# TextMagicClient::Object::UploadMessageAttachmentResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::UploadMessageAttachmentResponse;
+use TextMagicClient::Object::UploadMessageAttachmentResponse;
 ```
 
 ## Properties

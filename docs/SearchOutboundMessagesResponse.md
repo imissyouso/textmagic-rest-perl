@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::SearchOutboundMessagesResponse
+# TextMagicClient::Object::SearchOutboundMessagesResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::SearchOutboundMessagesResponse;
+use TextMagicClient::Object::SearchOutboundMessagesResponse;
 ```
 
 ## Properties

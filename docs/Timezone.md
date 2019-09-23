@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::Timezone
+# TextMagicClient::Object::Timezone
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::Timezone;
+use TextMagicClient::Object::Timezone;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetBlockedContactsResponse
+# TextMagicClient::Object::GetBlockedContactsResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetBlockedContactsResponse;
+use TextMagicClient::Object::GetBlockedContactsResponse;
 ```
 
 ## Properties

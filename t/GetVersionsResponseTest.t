@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GetVersionsResponse');
+use_ok('TextMagicClient::Object::GetVersionsResponse');
 
-my $instance = WWW::SwaggerClient::Object::GetVersionsResponse->new();
+my $instance = TextMagicClient::Object::GetVersionsResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GetVersionsResponse');
+isa_ok($instance, 'TextMagicClient::Object::GetVersionsResponse');
 

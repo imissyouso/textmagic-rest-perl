@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetMessagePreviewResponse
+# TextMagicClient::Object::GetMessagePreviewResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetMessagePreviewResponse;
+use TextMagicClient::Object::GetMessagePreviewResponse;
 ```
 
 ## Properties

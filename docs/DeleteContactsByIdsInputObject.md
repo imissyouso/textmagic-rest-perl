@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::DeleteContactsByIdsInputObject
+# TextMagicClient::Object::DeleteContactsByIdsInputObject
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::DeleteContactsByIdsInputObject;
+use TextMagicClient::Object::DeleteContactsByIdsInputObject;
 ```
 
 ## Properties

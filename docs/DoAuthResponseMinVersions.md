@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::DoAuthResponseMinVersions
+# TextMagicClient::Object::DoAuthResponseMinVersions
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::DoAuthResponseMinVersions;
+use TextMagicClient::Object::DoAuthResponseMinVersions;
 ```
 
 ## Properties

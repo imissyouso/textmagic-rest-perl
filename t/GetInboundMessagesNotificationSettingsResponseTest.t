@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GetInboundMessagesNotificationSettingsResponse');
+use_ok('TextMagicClient::Object::GetInboundMessagesNotificationSettingsResponse');
 
-my $instance = WWW::SwaggerClient::Object::GetInboundMessagesNotificationSettingsResponse->new();
+my $instance = TextMagicClient::Object::GetInboundMessagesNotificationSettingsResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GetInboundMessagesNotificationSettingsResponse');
+isa_ok($instance, 'TextMagicClient::Object::GetInboundMessagesNotificationSettingsResponse');
 

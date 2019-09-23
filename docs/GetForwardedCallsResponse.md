@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetForwardedCallsResponse
+# TextMagicClient::Object::GetForwardedCallsResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetForwardedCallsResponse;
+use TextMagicClient::Object::GetForwardedCallsResponse;
 ```
 
 ## Properties

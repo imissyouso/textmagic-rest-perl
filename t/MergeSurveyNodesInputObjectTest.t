@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::MergeSurveyNodesInputObject');
+use_ok('TextMagicClient::Object::MergeSurveyNodesInputObject');
 
-my $instance = WWW::SwaggerClient::Object::MergeSurveyNodesInputObject->new();
+my $instance = TextMagicClient::Object::MergeSurveyNodesInputObject->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::MergeSurveyNodesInputObject');
+isa_ok($instance, 'TextMagicClient::Object::MergeSurveyNodesInputObject');
 

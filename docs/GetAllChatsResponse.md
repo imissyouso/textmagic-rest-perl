@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::GetAllChatsResponse
+# TextMagicClient::Object::GetAllChatsResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::GetAllChatsResponse;
+use TextMagicClient::Object::GetAllChatsResponse;
 ```
 
 ## Properties

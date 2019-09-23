@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::SearchChatsByIdsResponse
+# TextMagicClient::Object::SearchChatsByIdsResponse
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::SearchChatsByIdsResponse;
+use TextMagicClient::Object::SearchChatsByIdsResponse;
 ```
 
 ## Properties

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::GetAllScheduledMessagesResponse');
+use_ok('TextMagicClient::Object::GetAllScheduledMessagesResponse');
 
-my $instance = WWW::SwaggerClient::Object::GetAllScheduledMessagesResponse->new();
+my $instance = TextMagicClient::Object::GetAllScheduledMessagesResponse->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::GetAllScheduledMessagesResponse');
+isa_ok($instance, 'TextMagicClient::Object::GetAllScheduledMessagesResponse');
 

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::UpdateSenderSettingInputObject
+# TextMagicClient::Object::UpdateSenderSettingInputObject
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::UpdateSenderSettingInputObject;
+use TextMagicClient::Object::UpdateSenderSettingInputObject;
 ```
 
 ## Properties

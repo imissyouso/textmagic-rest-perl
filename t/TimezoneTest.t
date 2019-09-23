@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::SwaggerClient::Object::Timezone');
+use_ok('TextMagicClient::Object::Timezone');
 
-my $instance = WWW::SwaggerClient::Object::Timezone->new();
+my $instance = TextMagicClient::Object::Timezone->new();
 
-isa_ok($instance, 'WWW::SwaggerClient::Object::Timezone');
+isa_ok($instance, 'TextMagicClient::Object::Timezone');
 
