@@ -1,8 +1,8 @@
-# TextMagicClient::Object::DeleteContacsFromListObject
+# Net::SMS::TextMagicClient::Object::DeleteContacsFromListObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::DeleteContacsFromListObject;
+use Net::SMS::TextMagicClient::Object::DeleteContacsFromListObject;
 ```
 
 ## Properties

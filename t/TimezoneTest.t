@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::Timezone');
+use_ok('Net::SMS::TextMagicClient::Object::Timezone');
 
-my $instance = TextMagicClient::Object::Timezone->new();
+my $instance = Net::SMS::TextMagicClient::Object::Timezone->new();
 
-isa_ok($instance, 'TextMagicClient::Object::Timezone');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::Timezone');
 

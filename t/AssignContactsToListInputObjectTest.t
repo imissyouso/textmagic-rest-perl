@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::AssignContactsToListInputObject');
+use_ok('Net::SMS::TextMagicClient::Object::AssignContactsToListInputObject');
 
-my $instance = TextMagicClient::Object::AssignContactsToListInputObject->new();
+my $instance = Net::SMS::TextMagicClient::Object::AssignContactsToListInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::AssignContactsToListInputObject');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::AssignContactsToListInputObject');
 

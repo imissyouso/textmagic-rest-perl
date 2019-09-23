@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::ContactImage');
+use_ok('Net::SMS::TextMagicClient::Object::ContactImage');
 
-my $instance = TextMagicClient::Object::ContactImage->new();
+my $instance = Net::SMS::TextMagicClient::Object::ContactImage->new();
 
-isa_ok($instance, 'TextMagicClient::Object::ContactImage');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::ContactImage');
 

@@ -1,8 +1,8 @@
-# TextMagicClient::Object::Currency
+# Net::SMS::TextMagicClient::Object::Currency
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::Currency;
+use Net::SMS::TextMagicClient::Object::Currency;
 ```
 
 ## Properties

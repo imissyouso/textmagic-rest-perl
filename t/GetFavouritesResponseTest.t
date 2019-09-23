@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::GetFavouritesResponse');
+use_ok('Net::SMS::TextMagicClient::Object::GetFavouritesResponse');
 
-my $instance = TextMagicClient::Object::GetFavouritesResponse->new();
+my $instance = Net::SMS::TextMagicClient::Object::GetFavouritesResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::GetFavouritesResponse');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::GetFavouritesResponse');
 

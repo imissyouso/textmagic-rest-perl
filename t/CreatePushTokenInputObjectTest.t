@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::CreatePushTokenInputObject');
+use_ok('Net::SMS::TextMagicClient::Object::CreatePushTokenInputObject');
 
-my $instance = TextMagicClient::Object::CreatePushTokenInputObject->new();
+my $instance = Net::SMS::TextMagicClient::Object::CreatePushTokenInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::CreatePushTokenInputObject');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::CreatePushTokenInputObject');
 

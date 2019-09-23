@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SurveySenderCountries
+# Net::SMS::TextMagicClient::Object::SurveySenderCountries
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SurveySenderCountries;
+use Net::SMS::TextMagicClient::Object::SurveySenderCountries;
 ```
 
 ## Properties

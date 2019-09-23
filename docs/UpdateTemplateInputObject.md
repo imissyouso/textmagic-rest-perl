@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UpdateTemplateInputObject
+# Net::SMS::TextMagicClient::Object::UpdateTemplateInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UpdateTemplateInputObject;
+use Net::SMS::TextMagicClient::Object::UpdateTemplateInputObject;
 ```
 
 ## Properties

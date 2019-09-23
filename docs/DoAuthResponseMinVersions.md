@@ -1,8 +1,8 @@
-# TextMagicClient::Object::DoAuthResponseMinVersions
+# Net::SMS::TextMagicClient::Object::DoAuthResponseMinVersions
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::DoAuthResponseMinVersions;
+use Net::SMS::TextMagicClient::Object::DoAuthResponseMinVersions;
 ```
 
 ## Properties

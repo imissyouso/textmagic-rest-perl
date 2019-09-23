@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::GetBlockedContactsResponse');
+use_ok('Net::SMS::TextMagicClient::Object::GetBlockedContactsResponse');
 
-my $instance = TextMagicClient::Object::GetBlockedContactsResponse->new();
+my $instance = Net::SMS::TextMagicClient::Object::GetBlockedContactsResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::GetBlockedContactsResponse');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::GetBlockedContactsResponse');
 

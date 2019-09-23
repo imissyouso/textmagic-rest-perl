@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetAllScheduledMessagesResponse
+# Net::SMS::TextMagicClient::Object::GetAllScheduledMessagesResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetAllScheduledMessagesResponse;
+use Net::SMS::TextMagicClient::Object::GetAllScheduledMessagesResponse;
 ```
 
 ## Properties

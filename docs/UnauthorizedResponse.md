@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UnauthorizedResponse
+# Net::SMS::TextMagicClient::Object::UnauthorizedResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UnauthorizedResponse;
+use Net::SMS::TextMagicClient::Object::UnauthorizedResponse;
 ```
 
 ## Properties

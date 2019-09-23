@@ -1,8 +1,8 @@
-# TextMagicClient::Object::BulkSession
+# Net::SMS::TextMagicClient::Object::BulkSession
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::BulkSession;
+use Net::SMS::TextMagicClient::Object::BulkSession;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# TextMagicClient::Object::MessagesIcsTextParameters
+# Net::SMS::TextMagicClient::Object::MessagesIcsTextParameters
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::MessagesIcsTextParameters;
+use Net::SMS::TextMagicClient::Object::MessagesIcsTextParameters;
 ```
 
 ## Properties

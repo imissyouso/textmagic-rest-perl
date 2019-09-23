@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SendMessageInputObject
+# Net::SMS::TextMagicClient::Object::SendMessageInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SendMessageInputObject;
+use Net::SMS::TextMagicClient::Object::SendMessageInputObject;
 ```
 
 ## Properties

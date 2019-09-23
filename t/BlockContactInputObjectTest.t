@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::BlockContactInputObject');
+use_ok('Net::SMS::TextMagicClient::Object::BlockContactInputObject');
 
-my $instance = TextMagicClient::Object::BlockContactInputObject->new();
+my $instance = Net::SMS::TextMagicClient::Object::BlockContactInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::BlockContactInputObject');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::BlockContactInputObject');
 

@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UpdateCurrentUserResponse
+# Net::SMS::TextMagicClient::Object::UpdateCurrentUserResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UpdateCurrentUserResponse;
+use Net::SMS::TextMagicClient::Object::UpdateCurrentUserResponse;
 ```
 
 ## Properties

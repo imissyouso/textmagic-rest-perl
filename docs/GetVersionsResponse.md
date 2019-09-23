@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetVersionsResponse
+# Net::SMS::TextMagicClient::Object::GetVersionsResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetVersionsResponse;
+use Net::SMS::TextMagicClient::Object::GetVersionsResponse;
 ```
 
 ## Properties

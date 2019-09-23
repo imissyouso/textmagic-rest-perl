@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::NotFoundResponse');
+use_ok('Net::SMS::TextMagicClient::Object::NotFoundResponse');
 
-my $instance = TextMagicClient::Object::NotFoundResponse->new();
+my $instance = Net::SMS::TextMagicClient::Object::NotFoundResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::NotFoundResponse');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::NotFoundResponse');
 

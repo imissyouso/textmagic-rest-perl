@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UserStatement
+# Net::SMS::TextMagicClient::Object::UserStatement
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UserStatement;
+use Net::SMS::TextMagicClient::Object::UserStatement;
 ```
 
 ## Properties

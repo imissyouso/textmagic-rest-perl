@@ -1,8 +1,8 @@
-# TextMagicClient::Object::DoAuthInputObject
+# Net::SMS::TextMagicClient::Object::DoAuthInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::DoAuthInputObject;
+use Net::SMS::TextMagicClient::Object::DoAuthInputObject;
 ```
 
 ## Properties

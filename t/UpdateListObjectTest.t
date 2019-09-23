@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::UpdateListObject');
+use_ok('Net::SMS::TextMagicClient::Object::UpdateListObject');
 
-my $instance = TextMagicClient::Object::UpdateListObject->new();
+my $instance = Net::SMS::TextMagicClient::Object::UpdateListObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::UpdateListObject');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::UpdateListObject');
 

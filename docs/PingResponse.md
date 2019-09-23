@@ -1,8 +1,8 @@
-# TextMagicClient::Object::PingResponse
+# Net::SMS::TextMagicClient::Object::PingResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::PingResponse;
+use Net::SMS::TextMagicClient::Object::PingResponse;
 ```
 
 ## Properties

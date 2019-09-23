@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetAllOutboundMessagesResponse
+# Net::SMS::TextMagicClient::Object::GetAllOutboundMessagesResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetAllOutboundMessagesResponse;
+use Net::SMS::TextMagicClient::Object::GetAllOutboundMessagesResponse;
 ```
 
 ## Properties

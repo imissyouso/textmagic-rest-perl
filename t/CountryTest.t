@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::Country');
+use_ok('Net::SMS::TextMagicClient::Object::Country');
 
-my $instance = TextMagicClient::Object::Country->new();
+my $instance = Net::SMS::TextMagicClient::Object::Country->new();
 
-isa_ok($instance, 'TextMagicClient::Object::Country');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::Country');
 

@@ -1,8 +1,8 @@
-# TextMagicClient::Object::Chat
+# Net::SMS::TextMagicClient::Object::Chat
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::Chat;
+use Net::SMS::TextMagicClient::Object::Chat;
 ```
 
 ## Properties

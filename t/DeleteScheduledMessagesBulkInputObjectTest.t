@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject');
+use_ok('Net::SMS::TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject');
 
-my $instance = TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject->new();
+my $instance = Net::SMS::TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject');
 

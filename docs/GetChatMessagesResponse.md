@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetChatMessagesResponse
+# Net::SMS::TextMagicClient::Object::GetChatMessagesResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetChatMessagesResponse;
+use Net::SMS::TextMagicClient::Object::GetChatMessagesResponse;
 ```
 
 ## Properties

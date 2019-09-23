@@ -1,8 +1,8 @@
-# TextMagicClient::Object::Timezone
+# Net::SMS::TextMagicClient::Object::Timezone
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::Timezone;
+use Net::SMS::TextMagicClient::Object::Timezone;
 ```
 
 ## Properties

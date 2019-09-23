@@ -1,8 +1,8 @@
-# TextMagicClient::Object::CloseChatsBulkInputObject
+# Net::SMS::TextMagicClient::Object::CloseChatsBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::CloseChatsBulkInputObject;
+use Net::SMS::TextMagicClient::Object::CloseChatsBulkInputObject;
 ```
 
 ## Properties

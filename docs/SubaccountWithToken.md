@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SubaccountWithToken
+# Net::SMS::TextMagicClient::Object::SubaccountWithToken
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SubaccountWithToken;
+use Net::SMS::TextMagicClient::Object::SubaccountWithToken;
 ```
 
 ## Properties

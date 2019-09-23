@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SuccessfulResponse
+# Net::SMS::TextMagicClient::Object::SuccessfulResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SuccessfulResponse;
+use Net::SMS::TextMagicClient::Object::SuccessfulResponse;
 ```
 
 ## Properties

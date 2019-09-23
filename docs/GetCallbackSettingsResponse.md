@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetCallbackSettingsResponse
+# Net::SMS::TextMagicClient::Object::GetCallbackSettingsResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetCallbackSettingsResponse;
+use Net::SMS::TextMagicClient::Object::GetCallbackSettingsResponse;
 ```
 
 ## Properties

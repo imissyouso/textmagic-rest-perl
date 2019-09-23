@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject
+# Net::SMS::TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject;
+use Net::SMS::TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject;
 ```
 
 ## Properties

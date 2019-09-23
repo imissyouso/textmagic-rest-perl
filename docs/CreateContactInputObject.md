@@ -1,8 +1,8 @@
-# TextMagicClient::Object::CreateContactInputObject
+# Net::SMS::TextMagicClient::Object::CreateContactInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::CreateContactInputObject;
+use Net::SMS::TextMagicClient::Object::CreateContactInputObject;
 ```
 
 ## Properties

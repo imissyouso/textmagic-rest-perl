@@ -1,8 +1,8 @@
-# TextMagicClient::Object::BadRequestResponse
+# Net::SMS::TextMagicClient::Object::BadRequestResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::BadRequestResponse;
+use Net::SMS::TextMagicClient::Object::BadRequestResponse;
 ```
 
 ## Properties

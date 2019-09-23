@@ -1,8 +1,8 @@
-# TextMagicClient::Object::Conversation
+# Net::SMS::TextMagicClient::Object::Conversation
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::Conversation;
+use Net::SMS::TextMagicClient::Object::Conversation;
 ```
 
 ## Properties

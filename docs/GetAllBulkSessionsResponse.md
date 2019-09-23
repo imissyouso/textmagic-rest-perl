@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetAllBulkSessionsResponse
+# Net::SMS::TextMagicClient::Object::GetAllBulkSessionsResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetAllBulkSessionsResponse;
+use Net::SMS::TextMagicClient::Object::GetAllBulkSessionsResponse;
 ```
 
 ## Properties

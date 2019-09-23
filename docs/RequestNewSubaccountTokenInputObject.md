@@ -1,8 +1,8 @@
-# TextMagicClient::Object::RequestNewSubaccountTokenInputObject
+# Net::SMS::TextMagicClient::Object::RequestNewSubaccountTokenInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::RequestNewSubaccountTokenInputObject;
+use Net::SMS::TextMagicClient::Object::RequestNewSubaccountTokenInputObject;
 ```
 
 ## Properties

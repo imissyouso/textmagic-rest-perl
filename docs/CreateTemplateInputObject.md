@@ -1,8 +1,8 @@
-# TextMagicClient::Object::CreateTemplateInputObject
+# Net::SMS::TextMagicClient::Object::CreateTemplateInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::CreateTemplateInputObject;
+use Net::SMS::TextMagicClient::Object::CreateTemplateInputObject;
 ```
 
 ## Properties

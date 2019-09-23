@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UserCustomField
+# Net::SMS::TextMagicClient::Object::UserCustomField
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UserCustomField;
+use Net::SMS::TextMagicClient::Object::UserCustomField;
 ```
 
 ## Properties

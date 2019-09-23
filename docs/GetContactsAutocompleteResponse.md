@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetContactsAutocompleteResponse
+# Net::SMS::TextMagicClient::Object::GetContactsAutocompleteResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetContactsAutocompleteResponse;
+use Net::SMS::TextMagicClient::Object::GetContactsAutocompleteResponse;
 ```
 
 ## Properties

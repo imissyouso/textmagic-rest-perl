@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::UpdatePasswordInputObject');
+use_ok('Net::SMS::TextMagicClient::Object::UpdatePasswordInputObject');
 
-my $instance = TextMagicClient::Object::UpdatePasswordInputObject->new();
+my $instance = Net::SMS::TextMagicClient::Object::UpdatePasswordInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::UpdatePasswordInputObject');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::UpdatePasswordInputObject');
 

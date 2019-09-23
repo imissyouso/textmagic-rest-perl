@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::DeleteChatMessagesBulkInputObject');
+use_ok('Net::SMS::TextMagicClient::Object::DeleteChatMessagesBulkInputObject');
 
-my $instance = TextMagicClient::Object::DeleteChatMessagesBulkInputObject->new();
+my $instance = Net::SMS::TextMagicClient::Object::DeleteChatMessagesBulkInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::DeleteChatMessagesBulkInputObject');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::DeleteChatMessagesBulkInputObject');
 

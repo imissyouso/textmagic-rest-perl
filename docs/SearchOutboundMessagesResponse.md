@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SearchOutboundMessagesResponse
+# Net::SMS::TextMagicClient::Object::SearchOutboundMessagesResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SearchOutboundMessagesResponse;
+use Net::SMS::TextMagicClient::Object::SearchOutboundMessagesResponse;
 ```
 
 ## Properties

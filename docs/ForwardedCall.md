@@ -1,8 +1,8 @@
-# TextMagicClient::Object::ForwardedCall
+# Net::SMS::TextMagicClient::Object::ForwardedCall
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::ForwardedCall;
+use Net::SMS::TextMagicClient::Object::ForwardedCall;
 ```
 
 ## Properties

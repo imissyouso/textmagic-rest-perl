@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::Survey');
+use_ok('Net::SMS::TextMagicClient::Object::Survey');
 
-my $instance = TextMagicClient::Object::Survey->new();
+my $instance = Net::SMS::TextMagicClient::Object::Survey->new();
 
-isa_ok($instance, 'TextMagicClient::Object::Survey');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::Survey');
 

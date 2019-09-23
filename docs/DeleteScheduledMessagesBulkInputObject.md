@@ -1,8 +1,8 @@
-# TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject
+# Net::SMS::TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject;
+use Net::SMS::TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject;
 ```
 
 ## Properties

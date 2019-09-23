@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::ForwardedCall');
+use_ok('Net::SMS::TextMagicClient::Object::ForwardedCall');
 
-my $instance = TextMagicClient::Object::ForwardedCall->new();
+my $instance = Net::SMS::TextMagicClient::Object::ForwardedCall->new();
 
-isa_ok($instance, 'TextMagicClient::Object::ForwardedCall');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::ForwardedCall');
 

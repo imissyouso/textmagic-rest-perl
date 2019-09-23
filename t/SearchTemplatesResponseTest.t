@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::SearchTemplatesResponse');
+use_ok('Net::SMS::TextMagicClient::Object::SearchTemplatesResponse');
 
-my $instance = TextMagicClient::Object::SearchTemplatesResponse->new();
+my $instance = Net::SMS::TextMagicClient::Object::SearchTemplatesResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::SearchTemplatesResponse');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::SearchTemplatesResponse');
 

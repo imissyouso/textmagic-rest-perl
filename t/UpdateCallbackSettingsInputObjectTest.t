@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::UpdateCallbackSettingsInputObject');
+use_ok('Net::SMS::TextMagicClient::Object::UpdateCallbackSettingsInputObject');
 
-my $instance = TextMagicClient::Object::UpdateCallbackSettingsInputObject->new();
+my $instance = Net::SMS::TextMagicClient::Object::UpdateCallbackSettingsInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::UpdateCallbackSettingsInputObject');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::UpdateCallbackSettingsInputObject');
 

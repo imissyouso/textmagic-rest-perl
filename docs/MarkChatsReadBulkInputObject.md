@@ -1,8 +1,8 @@
-# TextMagicClient::Object::MarkChatsReadBulkInputObject
+# Net::SMS::TextMagicClient::Object::MarkChatsReadBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::MarkChatsReadBulkInputObject;
+use Net::SMS::TextMagicClient::Object::MarkChatsReadBulkInputObject;
 ```
 
 ## Properties

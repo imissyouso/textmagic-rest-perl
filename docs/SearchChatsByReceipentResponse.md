@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SearchChatsByReceipentResponse
+# Net::SMS::TextMagicClient::Object::SearchChatsByReceipentResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SearchChatsByReceipentResponse;
+use Net::SMS::TextMagicClient::Object::SearchChatsByReceipentResponse;
 ```
 
 ## Properties

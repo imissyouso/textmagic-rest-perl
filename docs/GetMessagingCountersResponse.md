@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetMessagingCountersResponse
+# Net::SMS::TextMagicClient::Object::GetMessagingCountersResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetMessagingCountersResponse;
+use Net::SMS::TextMagicClient::Object::GetMessagingCountersResponse;
 ```
 
 ## Properties

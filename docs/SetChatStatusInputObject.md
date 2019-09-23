@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SetChatStatusInputObject
+# Net::SMS::TextMagicClient::Object::SetChatStatusInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SetChatStatusInputObject;
+use Net::SMS::TextMagicClient::Object::SetChatStatusInputObject;
 ```
 
 ## Properties

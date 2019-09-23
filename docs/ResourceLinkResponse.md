@@ -1,8 +1,8 @@
-# TextMagicClient::Object::ResourceLinkResponse
+# Net::SMS::TextMagicClient::Object::ResourceLinkResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::ResourceLinkResponse;
+use Net::SMS::TextMagicClient::Object::ResourceLinkResponse;
 ```
 
 ## Properties

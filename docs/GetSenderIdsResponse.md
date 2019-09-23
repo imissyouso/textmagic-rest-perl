@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetSenderIdsResponse
+# Net::SMS::TextMagicClient::Object::GetSenderIdsResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetSenderIdsResponse;
+use Net::SMS::TextMagicClient::Object::GetSenderIdsResponse;
 ```
 
 ## Properties

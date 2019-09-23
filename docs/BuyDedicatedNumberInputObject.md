@@ -1,8 +1,8 @@
-# TextMagicClient::Object::BuyDedicatedNumberInputObject
+# Net::SMS::TextMagicClient::Object::BuyDedicatedNumberInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::BuyDedicatedNumberInputObject;
+use Net::SMS::TextMagicClient::Object::BuyDedicatedNumberInputObject;
 ```
 
 ## Properties

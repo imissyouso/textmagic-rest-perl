@@ -1,8 +1,8 @@
-# TextMagicClient::Object::InviteSubaccountInputObject
+# Net::SMS::TextMagicClient::Object::InviteSubaccountInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::InviteSubaccountInputObject;
+use Net::SMS::TextMagicClient::Object::InviteSubaccountInputObject;
 ```
 
 ## Properties

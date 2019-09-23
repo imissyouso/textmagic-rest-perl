@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetContactImportSessionProgressResponse
+# Net::SMS::TextMagicClient::Object::GetContactImportSessionProgressResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetContactImportSessionProgressResponse;
+use Net::SMS::TextMagicClient::Object::GetContactImportSessionProgressResponse;
 ```
 
 ## Properties

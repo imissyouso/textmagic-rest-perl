@@ -1,8 +1,8 @@
-# TextMagicClient::Object::DeleteContactsByIdsInputObject
+# Net::SMS::TextMagicClient::Object::DeleteContactsByIdsInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::DeleteContactsByIdsInputObject;
+use Net::SMS::TextMagicClient::Object::DeleteContactsByIdsInputObject;
 ```
 
 ## Properties

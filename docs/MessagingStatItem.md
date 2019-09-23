@@ -1,8 +1,8 @@
-# TextMagicClient::Object::MessagingStatItem
+# Net::SMS::TextMagicClient::Object::MessagingStatItem
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::MessagingStatItem;
+use Net::SMS::TextMagicClient::Object::MessagingStatItem;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# TextMagicClient::Object::Invoice
+# Net::SMS::TextMagicClient::Object::Invoice
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::Invoice;
+use Net::SMS::TextMagicClient::Object::Invoice;
 ```
 
 ## Properties

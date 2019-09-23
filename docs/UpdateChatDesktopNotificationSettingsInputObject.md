@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UpdateChatDesktopNotificationSettingsInputObject
+# Net::SMS::TextMagicClient::Object::UpdateChatDesktopNotificationSettingsInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UpdateChatDesktopNotificationSettingsInputObject;
+use Net::SMS::TextMagicClient::Object::UpdateChatDesktopNotificationSettingsInputObject;
 ```
 
 ## Properties

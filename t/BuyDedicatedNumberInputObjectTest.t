@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::BuyDedicatedNumberInputObject');
+use_ok('Net::SMS::TextMagicClient::Object::BuyDedicatedNumberInputObject');
 
-my $instance = TextMagicClient::Object::BuyDedicatedNumberInputObject->new();
+my $instance = Net::SMS::TextMagicClient::Object::BuyDedicatedNumberInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::BuyDedicatedNumberInputObject');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::BuyDedicatedNumberInputObject');
 

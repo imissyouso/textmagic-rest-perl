@@ -1,8 +1,8 @@
-# TextMagicClient::Object::DeleteMessageSessionsBulkInputObject
+# Net::SMS::TextMagicClient::Object::DeleteMessageSessionsBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::DeleteMessageSessionsBulkInputObject;
+use Net::SMS::TextMagicClient::Object::DeleteMessageSessionsBulkInputObject;
 ```
 
 ## Properties

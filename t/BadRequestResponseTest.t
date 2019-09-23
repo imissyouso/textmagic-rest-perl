@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::BadRequestResponse');
+use_ok('Net::SMS::TextMagicClient::Object::BadRequestResponse');
 
-my $instance = TextMagicClient::Object::BadRequestResponse->new();
+my $instance = Net::SMS::TextMagicClient::Object::BadRequestResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::BadRequestResponse');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::BadRequestResponse');
 

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::GetUnsubscribersResponse');
+use_ok('Net::SMS::TextMagicClient::Object::GetUnsubscribersResponse');
 
-my $instance = TextMagicClient::Object::GetUnsubscribersResponse->new();
+my $instance = Net::SMS::TextMagicClient::Object::GetUnsubscribersResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::GetUnsubscribersResponse');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::GetUnsubscribersResponse');
 

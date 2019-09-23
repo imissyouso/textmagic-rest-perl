@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetAvailableSenderSettingOptionsResponse
+# Net::SMS::TextMagicClient::Object::GetAvailableSenderSettingOptionsResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetAvailableSenderSettingOptionsResponse;
+use Net::SMS::TextMagicClient::Object::GetAvailableSenderSettingOptionsResponse;
 ```
 
 ## Properties

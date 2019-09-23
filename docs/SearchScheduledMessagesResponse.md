@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SearchScheduledMessagesResponse
+# Net::SMS::TextMagicClient::Object::SearchScheduledMessagesResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SearchScheduledMessagesResponse;
+use Net::SMS::TextMagicClient::Object::SearchScheduledMessagesResponse;
 ```
 
 ## Properties

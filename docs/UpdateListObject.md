@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UpdateListObject
+# Net::SMS::TextMagicClient::Object::UpdateListObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UpdateListObject;
+use Net::SMS::TextMagicClient::Object::UpdateListObject;
 ```
 
 ## Properties

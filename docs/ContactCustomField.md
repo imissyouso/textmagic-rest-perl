@@ -1,8 +1,8 @@
-# TextMagicClient::Object::ContactCustomField
+# Net::SMS::TextMagicClient::Object::ContactCustomField
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::ContactCustomField;
+use Net::SMS::TextMagicClient::Object::ContactCustomField;
 ```
 
 ## Properties

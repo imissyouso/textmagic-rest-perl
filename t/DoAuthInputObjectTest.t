@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::DoAuthInputObject');
+use_ok('Net::SMS::TextMagicClient::Object::DoAuthInputObject');
 
-my $instance = TextMagicClient::Object::DoAuthInputObject->new();
+my $instance = Net::SMS::TextMagicClient::Object::DoAuthInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::DoAuthInputObject');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::DoAuthInputObject');
 

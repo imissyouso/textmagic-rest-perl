@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::MuteChatInputObject');
+use_ok('Net::SMS::TextMagicClient::Object::MuteChatInputObject');
 
-my $instance = TextMagicClient::Object::MuteChatInputObject->new();
+my $instance = Net::SMS::TextMagicClient::Object::MuteChatInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::MuteChatInputObject');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::MuteChatInputObject');
 

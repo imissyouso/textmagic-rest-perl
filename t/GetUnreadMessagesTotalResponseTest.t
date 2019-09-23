@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::GetUnreadMessagesTotalResponse');
+use_ok('Net::SMS::TextMagicClient::Object::GetUnreadMessagesTotalResponse');
 
-my $instance = TextMagicClient::Object::GetUnreadMessagesTotalResponse->new();
+my $instance = Net::SMS::TextMagicClient::Object::GetUnreadMessagesTotalResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::GetUnreadMessagesTotalResponse');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::GetUnreadMessagesTotalResponse');
 

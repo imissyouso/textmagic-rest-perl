@@ -1,8 +1,8 @@
-# TextMagicClient::Object::BadRequestResponseErrors
+# Net::SMS::TextMagicClient::Object::BadRequestResponseErrors
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::BadRequestResponseErrors;
+use Net::SMS::TextMagicClient::Object::BadRequestResponseErrors;
 ```
 
 ## Properties

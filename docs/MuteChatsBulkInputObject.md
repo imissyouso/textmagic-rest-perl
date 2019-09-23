@@ -1,8 +1,8 @@
-# TextMagicClient::Object::MuteChatsBulkInputObject
+# Net::SMS::TextMagicClient::Object::MuteChatsBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::MuteChatsBulkInputObject;
+use Net::SMS::TextMagicClient::Object::MuteChatsBulkInputObject;
 ```
 
 ## Properties

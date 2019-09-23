@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetAllTemplatesResponse
+# Net::SMS::TextMagicClient::Object::GetAllTemplatesResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetAllTemplatesResponse;
+use Net::SMS::TextMagicClient::Object::GetAllTemplatesResponse;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UpdateSurveyNodeInputObject
+# Net::SMS::TextMagicClient::Object::UpdateSurveyNodeInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UpdateSurveyNodeInputObject;
+use Net::SMS::TextMagicClient::Object::UpdateSurveyNodeInputObject;
 ```
 
 ## Properties

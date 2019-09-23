@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject');
+use_ok('Net::SMS::TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject');
 
-my $instance = TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject->new();
+my $instance = Net::SMS::TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject');
 

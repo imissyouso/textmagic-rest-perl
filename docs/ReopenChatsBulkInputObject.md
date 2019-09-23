@@ -1,8 +1,8 @@
-# TextMagicClient::Object::ReopenChatsBulkInputObject
+# Net::SMS::TextMagicClient::Object::ReopenChatsBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::ReopenChatsBulkInputObject;
+use Net::SMS::TextMagicClient::Object::ReopenChatsBulkInputObject;
 ```
 
 ## Properties

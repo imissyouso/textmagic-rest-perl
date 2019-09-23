@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SurveyRecipient
+# Net::SMS::TextMagicClient::Object::SurveyRecipient
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SurveyRecipient;
+use Net::SMS::TextMagicClient::Object::SurveyRecipient;
 ```
 
 ## Properties

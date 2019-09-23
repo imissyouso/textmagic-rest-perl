@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetSpendingStatResponse
+# Net::SMS::TextMagicClient::Object::GetSpendingStatResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetSpendingStatResponse;
+use Net::SMS::TextMagicClient::Object::GetSpendingStatResponse;
 ```
 
 ## Properties

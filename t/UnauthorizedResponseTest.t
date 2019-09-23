@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::UnauthorizedResponse');
+use_ok('Net::SMS::TextMagicClient::Object::UnauthorizedResponse');
 
-my $instance = TextMagicClient::Object::UnauthorizedResponse->new();
+my $instance = Net::SMS::TextMagicClient::Object::UnauthorizedResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::UnauthorizedResponse');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::UnauthorizedResponse');
 

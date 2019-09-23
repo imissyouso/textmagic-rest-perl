@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::SetChatStatusInputObject');
+use_ok('Net::SMS::TextMagicClient::Object::SetChatStatusInputObject');
 
-my $instance = TextMagicClient::Object::SetChatStatusInputObject->new();
+my $instance = Net::SMS::TextMagicClient::Object::SetChatStatusInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::SetChatStatusInputObject');
+isa_ok($instance, 'Net::SMS::TextMagicClient::Object::SetChatStatusInputObject');
 
