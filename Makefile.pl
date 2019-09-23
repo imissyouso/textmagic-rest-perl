@@ -8,5 +8,12 @@ WriteMakefile(
         "Log::Any" => 0,
         "JSON" => 0,
         "Data::Dumper" => 0,
+        "LWP::UserAgent" => 0,
+        "Module::Runtime" => 0,
+        "Class::Data::Inheritable" => 0,
+        "Date::Parse" => 0,
+        "DateTime" => 0,
+        "Class::Accessor" => 0,
+        "LWP::Protocol::https" => 0
     }
 );

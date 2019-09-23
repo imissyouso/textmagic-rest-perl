@@ -6,25 +6,17 @@ TextMagic's application programming interface (API) provides the communication l
 
 For detailed documentation, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/)
 
-## Requirements
-
-Next modules must be installed:
-
-- URI::Query
-- Log::Any
-- JSON
-- Data::Dumper
-
 ## Installation
 
 ```bash
-wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.335.tar.gz && \
-tar zxf v2.0.335.tar.gz && \
-rm -f v2.0.335.tar.gz && \
-cd textmagic-rest-perl-2.0.335 && \
+wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.336.tar.gz && \
+tar zxf v2.0.336.tar.gz && \
+rm -f v2.0.336.tar.gz && \
+cd textmagic-rest-perl-2.0.336 && \
 perl Makefile.pl && \
 make && \
-make install
+make install && \
+cpanm --installdeps .
 ```
 
 ## Usage Example
