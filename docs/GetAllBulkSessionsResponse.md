@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetAllBulkSessionsResponse
+# WWW::SwaggerClient::Object::GetAllBulkSessionsResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetAllBulkSessionsResponse;
+use WWW::SwaggerClient::Object::GetAllBulkSessionsResponse;
 ```
 
 ## Properties

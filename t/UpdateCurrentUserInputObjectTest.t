@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::UpdateCurrentUserInputObject');
+use_ok('WWW::SwaggerClient::Object::UpdateCurrentUserInputObject');
 
-my $instance = TextMagicClient::Object::UpdateCurrentUserInputObject->new();
+my $instance = WWW::SwaggerClient::Object::UpdateCurrentUserInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::UpdateCurrentUserInputObject');
+isa_ok($instance, 'WWW::SwaggerClient::Object::UpdateCurrentUserInputObject');
 

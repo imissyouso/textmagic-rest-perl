@@ -1,8 +1,8 @@
-# TextMagicClient::Object::DeleteTemplatesBulkInputObject
+# WWW::SwaggerClient::Object::DeleteTemplatesBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::DeleteTemplatesBulkInputObject;
+use WWW::SwaggerClient::Object::DeleteTemplatesBulkInputObject;
 ```
 
 ## Properties

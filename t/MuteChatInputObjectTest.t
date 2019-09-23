@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::MuteChatInputObject');
+use_ok('WWW::SwaggerClient::Object::MuteChatInputObject');
 
-my $instance = TextMagicClient::Object::MuteChatInputObject->new();
+my $instance = WWW::SwaggerClient::Object::MuteChatInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::MuteChatInputObject');
+isa_ok($instance, 'WWW::SwaggerClient::Object::MuteChatInputObject');
 

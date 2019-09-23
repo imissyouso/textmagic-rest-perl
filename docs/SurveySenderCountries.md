@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SurveySenderCountries
+# WWW::SwaggerClient::Object::SurveySenderCountries
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SurveySenderCountries;
+use WWW::SwaggerClient::Object::SurveySenderCountries;
 ```
 
 ## Properties

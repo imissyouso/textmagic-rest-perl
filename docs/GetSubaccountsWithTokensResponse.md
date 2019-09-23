@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetSubaccountsWithTokensResponse
+# WWW::SwaggerClient::Object::GetSubaccountsWithTokensResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetSubaccountsWithTokensResponse;
+use WWW::SwaggerClient::Object::GetSubaccountsWithTokensResponse;
 ```
 
 ## Properties

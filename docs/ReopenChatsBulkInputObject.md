@@ -1,8 +1,8 @@
-# TextMagicClient::Object::ReopenChatsBulkInputObject
+# WWW::SwaggerClient::Object::ReopenChatsBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::ReopenChatsBulkInputObject;
+use WWW::SwaggerClient::Object::ReopenChatsBulkInputObject;
 ```
 
 ## Properties

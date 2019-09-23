@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UpdateCustomFieldValueInputObject
+# WWW::SwaggerClient::Object::UpdateCustomFieldValueInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UpdateCustomFieldValueInputObject;
+use WWW::SwaggerClient::Object::UpdateCustomFieldValueInputObject;
 ```
 
 ## Properties

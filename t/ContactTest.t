@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::Contact');
+use_ok('WWW::SwaggerClient::Object::Contact');
 
-my $instance = TextMagicClient::Object::Contact->new();
+my $instance = WWW::SwaggerClient::Object::Contact->new();
 
-isa_ok($instance, 'TextMagicClient::Object::Contact');
+isa_ok($instance, 'WWW::SwaggerClient::Object::Contact');
 

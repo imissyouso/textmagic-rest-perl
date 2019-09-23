@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::UpdateCustomFieldInputObject');
+use_ok('WWW::SwaggerClient::Object::UpdateCustomFieldInputObject');
 
-my $instance = TextMagicClient::Object::UpdateCustomFieldInputObject->new();
+my $instance = WWW::SwaggerClient::Object::UpdateCustomFieldInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::UpdateCustomFieldInputObject');
+isa_ok($instance, 'WWW::SwaggerClient::Object::UpdateCustomFieldInputObject');
 

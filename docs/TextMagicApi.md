@@ -1,8 +1,8 @@
-# TextMagicClient::TextMagicApi
+# WWW::SwaggerClient::TextMagicApi
 
 ## Load the API package
 ```perl
-use TextMagicClient::Object::TextMagicApi;
+use WWW::SwaggerClient::Object::TextMagicApi;
 ```
 
 All URIs are relative to *http://my.textmagic.com*
@@ -192,15 +192,15 @@ Assign contacts to the specified list.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $assign_contacts_to_list_input_object = TextMagicClient::Object::AssignContactsToListInputObject->new(); # AssignContactsToListInputObject | Contact ID(s), separated by comma or 'all' to add all contacts belonging to the current user
+my $assign_contacts_to_list_input_object = WWW::SwaggerClient::Object::AssignContactsToListInputObject->new(); # AssignContactsToListInputObject | Contact ID(s), separated by comma or 'all' to add all contacts belonging to the current user
 my $id = 1; # int | 
 
 eval { 
@@ -242,15 +242,15 @@ Block contact from inbound and outbound communication by phone number.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $block_contact_input_object = TextMagicClient::Object::BlockContactInputObject->new(); # BlockContactInputObject | 
+my $block_contact_input_object = WWW::SwaggerClient::Object::BlockContactInputObject->new(); # BlockContactInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -292,15 +292,15 @@ Buy a dedicated number and assign it to the specified account.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $buy_dedicated_number_input_object = TextMagicClient::Object::BuyDedicatedNumberInputObject->new(); # BuyDedicatedNumberInputObject | 
+my $buy_dedicated_number_input_object = WWW::SwaggerClient::Object::BuyDedicatedNumberInputObject->new(); # BuyDedicatedNumberInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -341,8 +341,8 @@ Cancel a survey.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -389,15 +389,15 @@ Check user phone verification code
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $check_phone_verification_code_input_object = TextMagicClient::Object::CheckPhoneVerificationCodeInputObject->new(); # CheckPhoneVerificationCodeInputObject | 
+my $check_phone_verification_code_input_object = WWW::SwaggerClient::Object::CheckPhoneVerificationCodeInputObject->new(); # CheckPhoneVerificationCodeInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -438,15 +438,15 @@ Reset list members to the specified contacts.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $clear_and_assign_contacts_to_list_input_object = TextMagicClient::Object::ClearAndAssignContactsToListInputObject->new(); # ClearAndAssignContactsToListInputObject | Contact ID(s), separated by comma or 'all' to add all contacts belonging to the current user
+my $clear_and_assign_contacts_to_list_input_object = WWW::SwaggerClient::Object::ClearAndAssignContactsToListInputObject->new(); # ClearAndAssignContactsToListInputObject | Contact ID(s), separated by comma or 'all' to add all contacts belonging to the current user
 my $id = 1; # int | 
 
 eval { 
@@ -488,15 +488,15 @@ Close chats by chat ids or close all chats
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $close_chats_bulk_input_object = TextMagicClient::Object::CloseChatsBulkInputObject->new(); # CloseChatsBulkInputObject | 
+my $close_chats_bulk_input_object = WWW::SwaggerClient::Object::CloseChatsBulkInputObject->new(); # CloseChatsBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -537,8 +537,8 @@ Close all chats that have no unread messages.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -580,8 +580,8 @@ Close subaccount.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -627,15 +627,15 @@ Create a new contact from the submitted data.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $create_contact_input_object = TextMagicClient::Object::CreateContactInputObject->new(); # CreateContactInputObject | 
+my $create_contact_input_object = WWW::SwaggerClient::Object::CreateContactInputObject->new(); # CreateContactInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -677,15 +677,15 @@ Create a new contact note.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $create_contact_note_input_object = TextMagicClient::Object::CreateContactNoteInputObject->new(); # CreateContactNoteInputObject | 
+my $create_contact_note_input_object = WWW::SwaggerClient::Object::CreateContactNoteInputObject->new(); # CreateContactNoteInputObject | 
 my $id = 56; # int | 
 my $x_ignore_null_values = 1; # boolean | 
 
@@ -729,15 +729,15 @@ Create a new custom field from the submitted data.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $create_custom_field_input_object = TextMagicClient::Object::CreateCustomFieldInputObject->new(); # CreateCustomFieldInputObject | 
+my $create_custom_field_input_object = WWW::SwaggerClient::Object::CreateCustomFieldInputObject->new(); # CreateCustomFieldInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -779,15 +779,15 @@ Create a new list from the submitted data.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $create_list_input_object = TextMagicClient::Object::CreateListInputObject->new(); # CreateListInputObject | 
+my $create_list_input_object = WWW::SwaggerClient::Object::CreateListInputObject->new(); # CreateListInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -829,15 +829,15 @@ Add or update a device token.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $create_push_token_input_object = TextMagicClient::Object::CreatePushTokenInputObject->new(); # CreatePushTokenInputObject | 
+my $create_push_token_input_object = WWW::SwaggerClient::Object::CreatePushTokenInputObject->new(); # CreatePushTokenInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -878,15 +878,15 @@ Create a new survey from the submitted data.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $create_survey_input_object = TextMagicClient::Object::CreateSurveyInputObject->new(); # CreateSurveyInputObject | 
+my $create_survey_input_object = WWW::SwaggerClient::Object::CreateSurveyInputObject->new(); # CreateSurveyInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -928,15 +928,15 @@ Create a new node from the submitted data.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $create_survey_node_input_object = TextMagicClient::Object::CreateSurveyNodeInputObject->new(); # CreateSurveyNodeInputObject | 
+my $create_survey_node_input_object = WWW::SwaggerClient::Object::CreateSurveyNodeInputObject->new(); # CreateSurveyNodeInputObject | 
 my $id = 1; # int | 
 my $x_ignore_null_values = 1; # boolean | 
 
@@ -980,15 +980,15 @@ Create a new template from the submitted data.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $create_template_input_object = TextMagicClient::Object::CreateTemplateInputObject->new(); # CreateTemplateInputObject | 
+my $create_template_input_object = WWW::SwaggerClient::Object::CreateTemplateInputObject->new(); # CreateTemplateInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -1030,8 +1030,8 @@ Delete all contacts.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -1075,8 +1075,8 @@ Delete all messages.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -1118,8 +1118,8 @@ Delete an avatar for the current user.\\
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -1161,15 +1161,15 @@ Delete messages from chat by given messages ID(s).
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $delete_chat_messages_bulk_input_object = TextMagicClient::Object::DeleteChatMessagesBulkInputObject->new(); # DeleteChatMessagesBulkInputObject | 
+my $delete_chat_messages_bulk_input_object = WWW::SwaggerClient::Object::DeleteChatMessagesBulkInputObject->new(); # DeleteChatMessagesBulkInputObject | 
 my $id = 1; # int | 
 my $x_ignore_null_values = 1; # boolean | 
 
@@ -1212,15 +1212,15 @@ Delete chats by given ID(s) or delete all chats.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $delete_chats_bulk_input_object = TextMagicClient::Object::DeleteChatsBulkInputObject->new(); # DeleteChatsBulkInputObject | 
+my $delete_chats_bulk_input_object = WWW::SwaggerClient::Object::DeleteChatsBulkInputObject->new(); # DeleteChatsBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -1261,8 +1261,8 @@ Delete a single contact.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -1308,8 +1308,8 @@ Delete an avatar for the contact.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -1355,8 +1355,8 @@ Delete a single contact note.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -1402,8 +1402,8 @@ Delete contact note by given ID(s) or delete all contact notes.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -1411,7 +1411,7 @@ my $api_instance = TextMagicClient::TextMagicApi->new(
 );
 
 my $id = 1; # int | 
-my $delete_contact_notes_bulk_input_object = TextMagicClient::Object::DeleteContactNotesBulkInputObject->new(); # DeleteContactNotesBulkInputObject | 
+my $delete_contact_notes_bulk_input_object = WWW::SwaggerClient::Object::DeleteContactNotesBulkInputObject->new(); # DeleteContactNotesBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -1453,15 +1453,15 @@ Delete contact by given ID(s) or delete all contacts.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $delete_contacts_by_ids_input_object = TextMagicClient::Object::DeleteContactsByIdsInputObject->new(); # DeleteContactsByIdsInputObject | 
+my $delete_contacts_by_ids_input_object = WWW::SwaggerClient::Object::DeleteContactsByIdsInputObject->new(); # DeleteContactsByIdsInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -1502,15 +1502,15 @@ Unassign contacts from the specified list.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $delete_contacs_from_list_object = TextMagicClient::Object::DeleteContacsFromListObject->new(); # DeleteContacsFromListObject | Contact ID(s), separated by comma
+my $delete_contacs_from_list_object = WWW::SwaggerClient::Object::DeleteContacsFromListObject->new(); # DeleteContacsFromListObject | Contact ID(s), separated by comma
 my $id = 1; # int | 
 
 eval { 
@@ -1551,8 +1551,8 @@ Delete a single custom field.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -1598,8 +1598,8 @@ Cancel dedicated number subscription.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -1645,8 +1645,8 @@ Delete the incoming message.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -1692,15 +1692,15 @@ Delete inbound messages by given ID(s) or delete all inbound messages.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $delete_inbound_messages_bulk_input_object = TextMagicClient::Object::DeleteInboundMessagesBulkInputObject->new(); # DeleteInboundMessagesBulkInputObject | 
+my $delete_inbound_messages_bulk_input_object = WWW::SwaggerClient::Object::DeleteInboundMessagesBulkInputObject->new(); # DeleteInboundMessagesBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -1741,8 +1741,8 @@ Delete a single list.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -1788,8 +1788,8 @@ Delete an avatar for the list.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -1835,15 +1835,15 @@ Delete contact from list by given ID(s) or all contacts from list.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $delete_list_contacts_bulk_input_object = TextMagicClient::Object::DeleteListContactsBulkInputObject->new(); # DeleteListContactsBulkInputObject | 
+my $delete_list_contacts_bulk_input_object = WWW::SwaggerClient::Object::DeleteListContactsBulkInputObject->new(); # DeleteListContactsBulkInputObject | 
 my $id = 1; # int | 
 my $x_ignore_null_values = 1; # boolean | 
 
@@ -1886,15 +1886,15 @@ Delete list by given ID(s) or delete all lists.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $delete_lists_bulk_input_object = TextMagicClient::Object::DeleteListsBulkInputObject->new(); # DeleteListsBulkInputObject | 
+my $delete_lists_bulk_input_object = WWW::SwaggerClient::Object::DeleteListsBulkInputObject->new(); # DeleteListsBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -1935,8 +1935,8 @@ Delete a message session, together with all nested messages.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -1982,15 +1982,15 @@ Delete messages sessions, together with all nested messages, by given ID(s) or d
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $delete_message_sessions_bulk_input_object = TextMagicClient::Object::DeleteMessageSessionsBulkInputObject->new(); # DeleteMessageSessionsBulkInputObject | 
+my $delete_message_sessions_bulk_input_object = WWW::SwaggerClient::Object::DeleteMessageSessionsBulkInputObject->new(); # DeleteMessageSessionsBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -2033,8 +2033,8 @@ Delete a single message.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2082,15 +2082,15 @@ Delete outbound messages by given ID(s) or delete all outbound messages.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $delete_outbound_messages_bulk_input_object = TextMagicClient::Object::DeleteOutboundMessagesBulkInputObject->new(); # DeleteOutboundMessagesBulkInputObject | 
+my $delete_outbound_messages_bulk_input_object = WWW::SwaggerClient::Object::DeleteOutboundMessagesBulkInputObject->new(); # DeleteOutboundMessagesBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -2131,8 +2131,8 @@ Delete a push notification device token.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2180,8 +2180,8 @@ Delete a message session, together with all nested messages.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2227,15 +2227,15 @@ Delete scheduled messages by given ID(s) or delete all scheduled messages.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $delete_scheduled_messages_bulk_input_object = TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject->new(); # DeleteScheduledMessagesBulkInputObject | 
+my $delete_scheduled_messages_bulk_input_object = WWW::SwaggerClient::Object::DeleteScheduledMessagesBulkInputObject->new(); # DeleteScheduledMessagesBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -2276,8 +2276,8 @@ Delete a Sender ID.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2323,8 +2323,8 @@ Delete a survey.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2370,8 +2370,8 @@ Delete a node.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2417,8 +2417,8 @@ Delete a single template.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2464,15 +2464,15 @@ Delete template by given ID(s) or delete all templates.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $delete_templates_bulk_input_object = TextMagicClient::Object::DeleteTemplatesBulkInputObject->new(); # DeleteTemplatesBulkInputObject | 
+my $delete_templates_bulk_input_object = WWW::SwaggerClient::Object::DeleteTemplatesBulkInputObject->new(); # DeleteTemplatesBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -2515,11 +2515,11 @@ Returning a username and token that you should pass to the all requests (in X-TM
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 );
 
-my $do_auth_input_object = TextMagicClient::Object::DoAuthInputObject->new(); # DoAuthInputObject | 
+my $do_auth_input_object = WWW::SwaggerClient::Object::DoAuthInputObject->new(); # DoAuthInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -2561,8 +2561,8 @@ Carrier Lookup
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2611,8 +2611,8 @@ Validate Email address using Email Lookup tool
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2659,8 +2659,8 @@ Duplicate a survey.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2707,8 +2707,8 @@ Get all bulk sending sessions.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2757,8 +2757,8 @@ Get all user chats.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2815,8 +2815,8 @@ Get all inbox messages.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2869,8 +2869,8 @@ Get all message sending sessions.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2921,8 +2921,8 @@ Get all user oubound messages.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -2973,8 +2973,8 @@ Get all scheduled messages.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3029,8 +3029,8 @@ Get all user templates.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3079,8 +3079,8 @@ Find available dedicated numbers to buy.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3131,8 +3131,8 @@ Get all available sender setting options which could be used in \"from\" paramet
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3179,8 +3179,8 @@ Returns the list of available balance options which can be used as a bound to de
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3223,8 +3223,8 @@ Get balance notification settings
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3267,8 +3267,8 @@ Get blocked contacts.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3323,8 +3323,8 @@ Get bulk message session status.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3371,8 +3371,8 @@ Fetch callback URL settings
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3415,8 +3415,8 @@ Check pricing for a inbound/outbound call.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3459,8 +3459,8 @@ Get a single chat.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3507,8 +3507,8 @@ Find chats by phone.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3559,8 +3559,8 @@ Fetch messages from chat with specified chat id.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3621,8 +3621,8 @@ Get a single contact.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3669,8 +3669,8 @@ Get a single contact by phone number.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3717,8 +3717,8 @@ Check is that phone number blocked
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3765,8 +3765,8 @@ Get contact import session progress.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3813,8 +3813,8 @@ Get a single contact note.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3861,8 +3861,8 @@ Fetch notes assigned to the given contact.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3913,8 +3913,8 @@ Get all user contacts.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -3969,8 +3969,8 @@ Get contacts autocomplete suggestions by given search term.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4023,8 +4023,8 @@ A useful synonym for \"contacts/search\" command with provided \"listId\" parame
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4079,8 +4079,8 @@ Return list of countries.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4123,8 +4123,8 @@ Get current user info.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4167,8 +4167,8 @@ Get a single custom field.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4215,8 +4215,8 @@ Get all contact custom fields.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4265,8 +4265,8 @@ Get a single dedicated number.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4313,8 +4313,8 @@ Get an array of all rules that are disallowed to the current account.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4357,8 +4357,8 @@ Get favorite contacts and lists.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4409,8 +4409,8 @@ Get all forwarded calls.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4459,8 +4459,8 @@ Get a single inbox message.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4507,8 +4507,8 @@ Get inbound messages notification settings
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4551,8 +4551,8 @@ Return account invoices.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4601,8 +4601,8 @@ Get a single list.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4649,8 +4649,8 @@ Fetch all contacts IDs belonging to the list with ID.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4697,8 +4697,8 @@ Return lists which contact belongs to.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4751,8 +4751,8 @@ Get messages preview (with tags merged) up to 100 messages per session.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4833,8 +4833,8 @@ Check pricing for a new outbound message.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4917,8 +4917,8 @@ Get message prices for all countries.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -4961,8 +4961,8 @@ Get a message session.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5009,8 +5009,8 @@ Get sending session statistics.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5061,8 +5061,8 @@ A useful synonym for \"messages/search\" command with provided \"sessionId\" par
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5117,8 +5117,8 @@ Return counters for messaging data views.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5161,8 +5161,8 @@ Return messaging statistics.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5215,8 +5215,8 @@ Get a single outgoing message.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5265,8 +5265,8 @@ Get outbound messages history.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5321,8 +5321,8 @@ Get all device tokens assigned to the current account
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5365,8 +5365,8 @@ Get message schedule.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5413,8 +5413,8 @@ Get a single Sender ID.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5461,8 +5461,8 @@ Get all sender IDs of current user.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5511,8 +5511,8 @@ Get current user sender settings.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5559,8 +5559,8 @@ Return account spending statistics.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5613,8 +5613,8 @@ Get current entities state
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5657,8 +5657,8 @@ Get a single subaccount.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5705,8 +5705,8 @@ Get all subaccounts of current user.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5757,15 +5757,15 @@ When more than one token related to app name, last key will be returned.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $get_subaccounts_with_tokens_input_object = TextMagicClient::Object::GetSubaccountsWithTokensInputObject->new(); # GetSubaccountsWithTokensInputObject | 
+my $get_subaccounts_with_tokens_input_object = WWW::SwaggerClient::Object::GetSubaccountsWithTokensInputObject->new(); # GetSubaccountsWithTokensInputObject | 
 my $page = 8.14; # Number | Fetch specified results page
 my $limit = 56; # int | How many results to return
 my $x_ignore_null_values = 1; # boolean | 
@@ -5811,8 +5811,8 @@ Get a survey by id.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5859,8 +5859,8 @@ Get a node by id.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5907,8 +5907,8 @@ Fetch nodes by given survey id.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -5955,8 +5955,8 @@ Get all user surveys.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -6005,8 +6005,8 @@ Get a single template.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -6053,8 +6053,8 @@ Return all available timezone IDs.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -6101,8 +6101,8 @@ Get total amount of unread messages in the current user chats.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -6145,8 +6145,8 @@ Get a single unsubscribed contact.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -6193,8 +6193,8 @@ Get all contact have unsubscribed from your communication.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -6243,8 +6243,8 @@ Get user's dedicated numbers.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -6295,8 +6295,8 @@ Get all user lists.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -6353,8 +6353,8 @@ Get minimal valid apps versions
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -6397,15 +6397,15 @@ Invite new subaccount.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $invite_subaccount_input_object = TextMagicClient::Object::InviteSubaccountInputObject->new(); # InviteSubaccountInputObject | 
+my $invite_subaccount_input_object = WWW::SwaggerClient::Object::InviteSubaccountInputObject->new(); # InviteSubaccountInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -6446,15 +6446,15 @@ Mark several chats as read by chat ids or mark all chats as read
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $mark_chats_read_bulk_input_object = TextMagicClient::Object::MarkChatsReadBulkInputObject->new(); # MarkChatsReadBulkInputObject | 
+my $mark_chats_read_bulk_input_object = WWW::SwaggerClient::Object::MarkChatsReadBulkInputObject->new(); # MarkChatsReadBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -6495,15 +6495,15 @@ Mark several chats as UNread by chat ids or mark all chats as UNread
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $mark_chats_unread_bulk_input_object = TextMagicClient::Object::MarkChatsUnreadBulkInputObject->new(); # MarkChatsUnreadBulkInputObject | 
+my $mark_chats_unread_bulk_input_object = WWW::SwaggerClient::Object::MarkChatsUnreadBulkInputObject->new(); # MarkChatsUnreadBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -6544,15 +6544,15 @@ Merge two question nodes.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $merge_survey_nodes_input_object = TextMagicClient::Object::MergeSurveyNodesInputObject->new(); # MergeSurveyNodesInputObject | 
+my $merge_survey_nodes_input_object = WWW::SwaggerClient::Object::MergeSurveyNodesInputObject->new(); # MergeSurveyNodesInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -6593,15 +6593,15 @@ Set mute mode.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $mute_chat_input_object = TextMagicClient::Object::MuteChatInputObject->new(); # MuteChatInputObject | 
+my $mute_chat_input_object = WWW::SwaggerClient::Object::MuteChatInputObject->new(); # MuteChatInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -6643,15 +6643,15 @@ Mute several chats by chat ids or mute all chats
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $mute_chats_bulk_input_object = TextMagicClient::Object::MuteChatsBulkInputObject->new(); # MuteChatsBulkInputObject | 
+my $mute_chats_bulk_input_object = WWW::SwaggerClient::Object::MuteChatsBulkInputObject->new(); # MuteChatsBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -6692,8 +6692,8 @@ Just does a pong.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -6736,15 +6736,15 @@ Reopen chats by chat ids or reopen all chats
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $reopen_chats_bulk_input_object = TextMagicClient::Object::ReopenChatsBulkInputObject->new(); # ReopenChatsBulkInputObject | 
+my $reopen_chats_bulk_input_object = WWW::SwaggerClient::Object::ReopenChatsBulkInputObject->new(); # ReopenChatsBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -6787,15 +6787,15 @@ Returning user object, key and app name.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $request_new_subaccount_token_input_object = TextMagicClient::Object::RequestNewSubaccountTokenInputObject->new(); # RequestNewSubaccountTokenInputObject | 
+my $request_new_subaccount_token_input_object = WWW::SwaggerClient::Object::RequestNewSubaccountTokenInputObject->new(); # RequestNewSubaccountTokenInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -6837,15 +6837,15 @@ Request for a new Sender ID.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $request_sender_id_input_object = TextMagicClient::Object::RequestSenderIdInputObject->new(); # RequestSenderIdInputObject | 
+my $request_sender_id_input_object = WWW::SwaggerClient::Object::RequestSenderIdInputObject->new(); # RequestSenderIdInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -6887,8 +6887,8 @@ Reset a survey flow.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -6935,8 +6935,8 @@ Find chats by inbound or outbound messages text.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -6987,8 +6987,8 @@ Find chats by IDs.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -7039,8 +7039,8 @@ Find chats by recipient (contact, list name or phone number).
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -7093,8 +7093,8 @@ Find user contacts by given parameters.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -7161,8 +7161,8 @@ Find inbound messages by given parameters.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -7221,8 +7221,8 @@ Find contact lists by given parameters.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -7285,8 +7285,8 @@ Find outbound messages by given parameters.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -7347,8 +7347,8 @@ Find scheduled messages by given parameters.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -7407,8 +7407,8 @@ Find user templates by given parameters.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -7463,8 +7463,8 @@ Send user email verification
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -7508,15 +7508,15 @@ The main entrypoint to send messages. See examples above for the reference.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $send_message_input_object = TextMagicClient::Object::SendMessageInputObject->new(); # SendMessageInputObject | 
+my $send_message_input_object = WWW::SwaggerClient::Object::SendMessageInputObject->new(); # SendMessageInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -7558,8 +7558,8 @@ Send user phone verification
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -7601,15 +7601,15 @@ Set status of the chat given by ID.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $set_chat_status_input_object = TextMagicClient::Object::SetChatStatusInputObject->new(); # SetChatStatusInputObject | 
+my $set_chat_status_input_object = WWW::SwaggerClient::Object::SetChatStatusInputObject->new(); # SetChatStatusInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -7651,8 +7651,8 @@ Start a survey.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -7699,15 +7699,15 @@ Unblock contact by phone number.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $unblock_contact_input_object = TextMagicClient::Object::UnblockContactInputObject->new(); # UnblockContactInputObject | 
+my $unblock_contact_input_object = WWW::SwaggerClient::Object::UnblockContactInputObject->new(); # UnblockContactInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -7748,15 +7748,15 @@ Unblock several contacts by blocked contact ids or unblock all contacts
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $unblock_contacts_bulk_input_object = TextMagicClient::Object::UnblockContactsBulkInputObject->new(); # UnblockContactsBulkInputObject | 
+my $unblock_contacts_bulk_input_object = WWW::SwaggerClient::Object::UnblockContactsBulkInputObject->new(); # UnblockContactsBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -7797,15 +7797,15 @@ Unmute several chats by chat ids or unmute all chats
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $unmute_chats_bulk_input_object = TextMagicClient::Object::UnmuteChatsBulkInputObject->new(); # UnmuteChatsBulkInputObject | 
+my $unmute_chats_bulk_input_object = WWW::SwaggerClient::Object::UnmuteChatsBulkInputObject->new(); # UnmuteChatsBulkInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -7846,15 +7846,15 @@ Unsubscribe contact from your communication by phone number.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $unsubscribe_contact_input_object = TextMagicClient::Object::UnsubscribeContactInputObject->new(); # UnsubscribeContactInputObject | 
+my $unsubscribe_contact_input_object = WWW::SwaggerClient::Object::UnsubscribeContactInputObject->new(); # UnsubscribeContactInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -7896,15 +7896,15 @@ Update balance notification settings
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $update_balance_notification_settings_input_object = TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject->new(); # UpdateBalanceNotificationSettingsInputObject | 
+my $update_balance_notification_settings_input_object = WWW::SwaggerClient::Object::UpdateBalanceNotificationSettingsInputObject->new(); # UpdateBalanceNotificationSettingsInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -7945,15 +7945,15 @@ Update callback URL settings
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $update_callback_settings_input_object = TextMagicClient::Object::UpdateCallbackSettingsInputObject->new(); # UpdateCallbackSettingsInputObject | 
+my $update_callback_settings_input_object = WWW::SwaggerClient::Object::UpdateCallbackSettingsInputObject->new(); # UpdateCallbackSettingsInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -7994,15 +7994,15 @@ Update chat desktop notification settings
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $update_chat_desktop_notification_settings_input_object = TextMagicClient::Object::UpdateChatDesktopNotificationSettingsInputObject->new(); # UpdateChatDesktopNotificationSettingsInputObject | 
+my $update_chat_desktop_notification_settings_input_object = WWW::SwaggerClient::Object::UpdateChatDesktopNotificationSettingsInputObject->new(); # UpdateChatDesktopNotificationSettingsInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -8043,15 +8043,15 @@ Update existing contact.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $update_contact_input_object = TextMagicClient::Object::UpdateContactInputObject->new(); # UpdateContactInputObject | 
+my $update_contact_input_object = WWW::SwaggerClient::Object::UpdateContactInputObject->new(); # UpdateContactInputObject | 
 my $id = 1; # int | 
 my $x_ignore_null_values = 1; # boolean | 
 
@@ -8095,15 +8095,15 @@ Update existing contact note.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $update_contact_note_input_object = TextMagicClient::Object::UpdateContactNoteInputObject->new(); # UpdateContactNoteInputObject | 
+my $update_contact_note_input_object = WWW::SwaggerClient::Object::UpdateContactNoteInputObject->new(); # UpdateContactNoteInputObject | 
 my $id = 1; # int | 
 my $x_ignore_null_values = 1; # boolean | 
 
@@ -8147,15 +8147,15 @@ Update current user info.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $update_current_user_input_object = TextMagicClient::Object::UpdateCurrentUserInputObject->new(); # UpdateCurrentUserInputObject | 
+my $update_current_user_input_object = WWW::SwaggerClient::Object::UpdateCurrentUserInputObject->new(); # UpdateCurrentUserInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -8197,15 +8197,15 @@ Update existing custom field.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $update_custom_field_input_object = TextMagicClient::Object::UpdateCustomFieldInputObject->new(); # UpdateCustomFieldInputObject | 
+my $update_custom_field_input_object = WWW::SwaggerClient::Object::UpdateCustomFieldInputObject->new(); # UpdateCustomFieldInputObject | 
 my $id = 1; # int | 
 my $x_ignore_null_values = 1; # boolean | 
 
@@ -8249,15 +8249,15 @@ Update contact's custom field value.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $update_custom_field_value_input_object = TextMagicClient::Object::UpdateCustomFieldValueInputObject->new(); # UpdateCustomFieldValueInputObject | 
+my $update_custom_field_value_input_object = WWW::SwaggerClient::Object::UpdateCustomFieldValueInputObject->new(); # UpdateCustomFieldValueInputObject | 
 my $id = 'id_example'; # string | 
 my $x_ignore_null_values = 1; # boolean | 
 
@@ -8301,15 +8301,15 @@ Update inbound messages notification settings
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $update_inbound_messages_notification_settings_input_object = TextMagicClient::Object::UpdateInboundMessagesNotificationSettingsInputObject->new(); # UpdateInboundMessagesNotificationSettingsInputObject | 
+my $update_inbound_messages_notification_settings_input_object = WWW::SwaggerClient::Object::UpdateInboundMessagesNotificationSettingsInputObject->new(); # UpdateInboundMessagesNotificationSettingsInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -8350,8 +8350,8 @@ Update existing list.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -8359,7 +8359,7 @@ my $api_instance = TextMagicClient::TextMagicApi->new(
 );
 
 my $id = 1; # int | 
-my $update_list_object = TextMagicClient::Object::UpdateListObject->new(); # UpdateListObject | 
+my $update_list_object = WWW::SwaggerClient::Object::UpdateListObject->new(); # UpdateListObject | 
 
 eval { 
     my $result = $api_instance->update_list(id => $id, update_list_object => $update_list_object);
@@ -8400,15 +8400,15 @@ Change user password.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $update_password_input_object = TextMagicClient::Object::UpdatePasswordInputObject->new(); # UpdatePasswordInputObject | 
+my $update_password_input_object = WWW::SwaggerClient::Object::UpdatePasswordInputObject->new(); # UpdatePasswordInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -8449,15 +8449,15 @@ Change sender settings for specified country.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $update_sender_setting_input_object = TextMagicClient::Object::UpdateSenderSettingInputObject->new(); # UpdateSenderSettingInputObject | 
+my $update_sender_setting_input_object = WWW::SwaggerClient::Object::UpdateSenderSettingInputObject->new(); # UpdateSenderSettingInputObject | 
 my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
@@ -8498,15 +8498,15 @@ Update existing survey.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $update_survey_input_object = TextMagicClient::Object::UpdateSurveyInputObject->new(); # UpdateSurveyInputObject | 
+my $update_survey_input_object = WWW::SwaggerClient::Object::UpdateSurveyInputObject->new(); # UpdateSurveyInputObject | 
 my $id = 1; # int | 
 my $x_ignore_null_values = 1; # boolean | 
 
@@ -8550,15 +8550,15 @@ Update existing node.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $update_survey_node_input_object = TextMagicClient::Object::UpdateSurveyNodeInputObject->new(); # UpdateSurveyNodeInputObject | 
+my $update_survey_node_input_object = WWW::SwaggerClient::Object::UpdateSurveyNodeInputObject->new(); # UpdateSurveyNodeInputObject | 
 my $id = 1; # int | 
 my $x_ignore_null_values = 1; # boolean | 
 
@@ -8602,15 +8602,15 @@ Update existing template.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $update_template_input_object = TextMagicClient::Object::UpdateTemplateInputObject->new(); # UpdateTemplateInputObject | 
+my $update_template_input_object = WWW::SwaggerClient::Object::UpdateTemplateInputObject->new(); # UpdateTemplateInputObject | 
 my $id = 1; # int | 
 my $x_ignore_null_values = 1; # boolean | 
 
@@ -8654,8 +8654,8 @@ Add an avatar for the current user.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -8701,8 +8701,8 @@ Add an avatar for the contact.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -8751,8 +8751,8 @@ Add an avatar for the list.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -8803,8 +8803,8 @@ Upload a new file to insert it as a link.
 ### Example 
 ```perl
 use Data::Dumper;
-use TextMagicClient::TextMagicApi;
-my $api_instance = TextMagicClient::TextMagicApi->new(
+use WWW::SwaggerClient::TextMagicApi;
+my $api_instance = WWW::SwaggerClient::TextMagicApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

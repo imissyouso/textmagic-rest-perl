@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::GetCallbackSettingsResponse');
+use_ok('WWW::SwaggerClient::Object::GetCallbackSettingsResponse');
 
-my $instance = TextMagicClient::Object::GetCallbackSettingsResponse->new();
+my $instance = WWW::SwaggerClient::Object::GetCallbackSettingsResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::GetCallbackSettingsResponse');
+isa_ok($instance, 'WWW::SwaggerClient::Object::GetCallbackSettingsResponse');
 

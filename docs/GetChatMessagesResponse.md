@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetChatMessagesResponse
+# WWW::SwaggerClient::Object::GetChatMessagesResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetChatMessagesResponse;
+use WWW::SwaggerClient::Object::GetChatMessagesResponse;
 ```
 
 ## Properties

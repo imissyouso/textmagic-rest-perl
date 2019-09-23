@@ -1,8 +1,8 @@
-# TextMagicClient::Object::DoCarrierLookupResponse
+# WWW::SwaggerClient::Object::DoCarrierLookupResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::DoCarrierLookupResponse;
+use WWW::SwaggerClient::Object::DoCarrierLookupResponse;
 ```
 
 ## Properties

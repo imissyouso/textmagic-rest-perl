@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::GetAvailableDedicatedNumbersResponse');
+use_ok('WWW::SwaggerClient::Object::GetAvailableDedicatedNumbersResponse');
 
-my $instance = TextMagicClient::Object::GetAvailableDedicatedNumbersResponse->new();
+my $instance = WWW::SwaggerClient::Object::GetAvailableDedicatedNumbersResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::GetAvailableDedicatedNumbersResponse');
+isa_ok($instance, 'WWW::SwaggerClient::Object::GetAvailableDedicatedNumbersResponse');
 

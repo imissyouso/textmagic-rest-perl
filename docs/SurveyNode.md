@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SurveyNode
+# WWW::SwaggerClient::Object::SurveyNode
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SurveyNode;
+use WWW::SwaggerClient::Object::SurveyNode;
 ```
 
 ## Properties

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::ResourceLinkResponse');
+use_ok('WWW::SwaggerClient::Object::ResourceLinkResponse');
 
-my $instance = TextMagicClient::Object::ResourceLinkResponse->new();
+my $instance = WWW::SwaggerClient::Object::ResourceLinkResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::ResourceLinkResponse');
+isa_ok($instance, 'WWW::SwaggerClient::Object::ResourceLinkResponse');
 

@@ -24,10 +24,10 @@ use lib 'lib';
 use strict;
 use warnings;
 
-use_ok('TextMagicClient::TextMagicApi');
+use_ok('WWW::SwaggerClient::TextMagicApi');
 
-my $api = TextMagicClient::TextMagicApi->new();
-isa_ok($api, 'TextMagicClient::TextMagicApi');
+my $api = WWW::SwaggerClient::TextMagicApi->new();
+isa_ok($api, 'WWW::SwaggerClient::TextMagicApi');
 
 #
 # assign_contacts_to_list test

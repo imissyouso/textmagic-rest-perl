@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::SubaccountWithToken');
+use_ok('WWW::SwaggerClient::Object::SubaccountWithToken');
 
-my $instance = TextMagicClient::Object::SubaccountWithToken->new();
+my $instance = WWW::SwaggerClient::Object::SubaccountWithToken->new();
 
-isa_ok($instance, 'TextMagicClient::Object::SubaccountWithToken');
+isa_ok($instance, 'WWW::SwaggerClient::Object::SubaccountWithToken');
 

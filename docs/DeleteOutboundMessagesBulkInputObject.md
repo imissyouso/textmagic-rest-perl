@@ -1,8 +1,8 @@
-# TextMagicClient::Object::DeleteOutboundMessagesBulkInputObject
+# WWW::SwaggerClient::Object::DeleteOutboundMessagesBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::DeleteOutboundMessagesBulkInputObject;
+use WWW::SwaggerClient::Object::DeleteOutboundMessagesBulkInputObject;
 ```
 
 ## Properties

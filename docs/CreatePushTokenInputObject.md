@@ -1,8 +1,8 @@
-# TextMagicClient::Object::CreatePushTokenInputObject
+# WWW::SwaggerClient::Object::CreatePushTokenInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::CreatePushTokenInputObject;
+use WWW::SwaggerClient::Object::CreatePushTokenInputObject;
 ```
 
 ## Properties

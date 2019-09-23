@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::DoEmailLookupResponse');
+use_ok('WWW::SwaggerClient::Object::DoEmailLookupResponse');
 
-my $instance = TextMagicClient::Object::DoEmailLookupResponse->new();
+my $instance = WWW::SwaggerClient::Object::DoEmailLookupResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::DoEmailLookupResponse');
+isa_ok($instance, 'WWW::SwaggerClient::Object::DoEmailLookupResponse');
 

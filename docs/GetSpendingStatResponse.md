@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetSpendingStatResponse
+# WWW::SwaggerClient::Object::GetSpendingStatResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetSpendingStatResponse;
+use WWW::SwaggerClient::Object::GetSpendingStatResponse;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetAvailableSenderSettingOptionsResponse
+# WWW::SwaggerClient::Object::GetAvailableSenderSettingOptionsResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetAvailableSenderSettingOptionsResponse;
+use WWW::SwaggerClient::Object::GetAvailableSenderSettingOptionsResponse;
 ```
 
 ## Properties

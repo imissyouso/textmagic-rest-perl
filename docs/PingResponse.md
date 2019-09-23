@@ -1,8 +1,8 @@
-# TextMagicClient::Object::PingResponse
+# WWW::SwaggerClient::Object::PingResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::PingResponse;
+use WWW::SwaggerClient::Object::PingResponse;
 ```
 
 ## Properties

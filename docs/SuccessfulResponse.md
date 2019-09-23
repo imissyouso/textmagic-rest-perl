@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SuccessfulResponse
+# WWW::SwaggerClient::Object::SuccessfulResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SuccessfulResponse;
+use WWW::SwaggerClient::Object::SuccessfulResponse;
 ```
 
 ## Properties

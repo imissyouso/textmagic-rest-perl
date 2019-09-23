@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetUnreadMessagesTotalResponse
+# WWW::SwaggerClient::Object::GetUnreadMessagesTotalResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetUnreadMessagesTotalResponse;
+use WWW::SwaggerClient::Object::GetUnreadMessagesTotalResponse;
 ```
 
 ## Properties

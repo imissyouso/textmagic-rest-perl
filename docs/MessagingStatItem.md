@@ -1,8 +1,8 @@
-# TextMagicClient::Object::MessagingStatItem
+# WWW::SwaggerClient::Object::MessagingStatItem
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::MessagingStatItem;
+use WWW::SwaggerClient::Object::MessagingStatItem;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SearchListsResponse
+# WWW::SwaggerClient::Object::SearchListsResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SearchListsResponse;
+use WWW::SwaggerClient::Object::SearchListsResponse;
 ```
 
 ## Properties

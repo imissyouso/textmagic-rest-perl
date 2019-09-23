@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetInboundMessagesNotificationSettingsResponse
+# WWW::SwaggerClient::Object::GetInboundMessagesNotificationSettingsResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetInboundMessagesNotificationSettingsResponse;
+use WWW::SwaggerClient::Object::GetInboundMessagesNotificationSettingsResponse;
 ```
 
 ## Properties

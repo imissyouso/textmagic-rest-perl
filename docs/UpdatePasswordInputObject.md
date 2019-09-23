@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UpdatePasswordInputObject
+# WWW::SwaggerClient::Object::UpdatePasswordInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UpdatePasswordInputObject;
+use WWW::SwaggerClient::Object::UpdatePasswordInputObject;
 ```
 
 ## Properties

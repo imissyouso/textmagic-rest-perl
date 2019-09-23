@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UserCustomField
+# WWW::SwaggerClient::Object::UserCustomField
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UserCustomField;
+use WWW::SwaggerClient::Object::UserCustomField;
 ```
 
 ## Properties

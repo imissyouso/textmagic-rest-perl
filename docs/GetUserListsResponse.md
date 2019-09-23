@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetUserListsResponse
+# WWW::SwaggerClient::Object::GetUserListsResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetUserListsResponse;
+use WWW::SwaggerClient::Object::GetUserListsResponse;
 ```
 
 ## Properties

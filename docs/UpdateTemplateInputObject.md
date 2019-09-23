@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UpdateTemplateInputObject
+# WWW::SwaggerClient::Object::UpdateTemplateInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UpdateTemplateInputObject;
+use WWW::SwaggerClient::Object::UpdateTemplateInputObject;
 ```
 
 ## Properties

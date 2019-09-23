@@ -1,8 +1,8 @@
-# TextMagicClient::Object::CloseChatsBulkInputObject
+# WWW::SwaggerClient::Object::CloseChatsBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::CloseChatsBulkInputObject;
+use WWW::SwaggerClient::Object::CloseChatsBulkInputObject;
 ```
 
 ## Properties

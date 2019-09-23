@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UnauthorizedResponse
+# WWW::SwaggerClient::Object::UnauthorizedResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UnauthorizedResponse;
+use WWW::SwaggerClient::Object::UnauthorizedResponse;
 ```
 
 ## Properties

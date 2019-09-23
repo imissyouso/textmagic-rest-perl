@@ -1,8 +1,8 @@
-# TextMagicClient::Object::BadRequestResponse
+# WWW::SwaggerClient::Object::BadRequestResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::BadRequestResponse;
+use WWW::SwaggerClient::Object::BadRequestResponse;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# TextMagicClient::Object::Country
+# WWW::SwaggerClient::Object::Country
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::Country;
+use WWW::SwaggerClient::Object::Country;
 ```
 
 ## Properties

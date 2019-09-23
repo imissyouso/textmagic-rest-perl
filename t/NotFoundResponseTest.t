@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::NotFoundResponse');
+use_ok('WWW::SwaggerClient::Object::NotFoundResponse');
 
-my $instance = TextMagicClient::Object::NotFoundResponse->new();
+my $instance = WWW::SwaggerClient::Object::NotFoundResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::NotFoundResponse');
+isa_ok($instance, 'WWW::SwaggerClient::Object::NotFoundResponse');
 

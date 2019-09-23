@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UnblockContactsBulkInputObject
+# WWW::SwaggerClient::Object::UnblockContactsBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UnblockContactsBulkInputObject;
+use WWW::SwaggerClient::Object::UnblockContactsBulkInputObject;
 ```
 
 ## Properties

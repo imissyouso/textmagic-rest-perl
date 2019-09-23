@@ -1,8 +1,8 @@
-# TextMagicClient::Object::MarkChatsUnreadBulkInputObject
+# WWW::SwaggerClient::Object::MarkChatsUnreadBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::MarkChatsUnreadBulkInputObject;
+use WWW::SwaggerClient::Object::MarkChatsUnreadBulkInputObject;
 ```
 
 ## Properties

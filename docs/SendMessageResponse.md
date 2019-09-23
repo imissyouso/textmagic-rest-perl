@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SendMessageResponse
+# WWW::SwaggerClient::Object::SendMessageResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SendMessageResponse;
+use WWW::SwaggerClient::Object::SendMessageResponse;
 ```
 
 ## Properties

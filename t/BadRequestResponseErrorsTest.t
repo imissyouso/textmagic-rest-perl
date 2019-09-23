@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::BadRequestResponseErrors');
+use_ok('WWW::SwaggerClient::Object::BadRequestResponseErrors');
 
-my $instance = TextMagicClient::Object::BadRequestResponseErrors->new();
+my $instance = WWW::SwaggerClient::Object::BadRequestResponseErrors->new();
 
-isa_ok($instance, 'TextMagicClient::Object::BadRequestResponseErrors');
+isa_ok($instance, 'WWW::SwaggerClient::Object::BadRequestResponseErrors');
 

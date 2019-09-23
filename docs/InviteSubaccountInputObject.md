@@ -1,8 +1,8 @@
-# TextMagicClient::Object::InviteSubaccountInputObject
+# WWW::SwaggerClient::Object::InviteSubaccountInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::InviteSubaccountInputObject;
+use WWW::SwaggerClient::Object::InviteSubaccountInputObject;
 ```
 
 ## Properties

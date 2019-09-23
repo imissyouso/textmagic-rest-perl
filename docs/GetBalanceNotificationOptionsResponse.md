@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetBalanceNotificationOptionsResponse
+# WWW::SwaggerClient::Object::GetBalanceNotificationOptionsResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetBalanceNotificationOptionsResponse;
+use WWW::SwaggerClient::Object::GetBalanceNotificationOptionsResponse;
 ```
 
 ## Properties

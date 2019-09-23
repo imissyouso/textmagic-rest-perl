@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::UpdateChatDesktopNotificationSettingsInputObject');
+use_ok('WWW::SwaggerClient::Object::UpdateChatDesktopNotificationSettingsInputObject');
 
-my $instance = TextMagicClient::Object::UpdateChatDesktopNotificationSettingsInputObject->new();
+my $instance = WWW::SwaggerClient::Object::UpdateChatDesktopNotificationSettingsInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::UpdateChatDesktopNotificationSettingsInputObject');
+isa_ok($instance, 'WWW::SwaggerClient::Object::UpdateChatDesktopNotificationSettingsInputObject');
 

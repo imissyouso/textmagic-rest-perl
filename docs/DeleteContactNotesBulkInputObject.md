@@ -1,8 +1,8 @@
-# TextMagicClient::Object::DeleteContactNotesBulkInputObject
+# WWW::SwaggerClient::Object::DeleteContactNotesBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::DeleteContactNotesBulkInputObject;
+use WWW::SwaggerClient::Object::DeleteContactNotesBulkInputObject;
 ```
 
 ## Properties

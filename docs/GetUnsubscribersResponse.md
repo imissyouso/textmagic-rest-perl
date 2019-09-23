@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetUnsubscribersResponse
+# WWW::SwaggerClient::Object::GetUnsubscribersResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetUnsubscribersResponse;
+use WWW::SwaggerClient::Object::GetUnsubscribersResponse;
 ```
 
 ## Properties

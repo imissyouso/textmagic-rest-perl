@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UpdateCurrentUserResponse
+# WWW::SwaggerClient::Object::UpdateCurrentUserResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UpdateCurrentUserResponse;
+use WWW::SwaggerClient::Object::UpdateCurrentUserResponse;
 ```
 
 ## Properties

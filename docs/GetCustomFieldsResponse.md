@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetCustomFieldsResponse
+# WWW::SwaggerClient::Object::GetCustomFieldsResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetCustomFieldsResponse;
+use WWW::SwaggerClient::Object::GetCustomFieldsResponse;
 ```
 
 ## Properties

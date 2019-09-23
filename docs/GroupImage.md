@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GroupImage
+# WWW::SwaggerClient::Object::GroupImage
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GroupImage;
+use WWW::SwaggerClient::Object::GroupImage;
 ```
 
 ## Properties

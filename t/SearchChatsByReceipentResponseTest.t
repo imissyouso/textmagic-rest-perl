@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::SearchChatsByReceipentResponse');
+use_ok('WWW::SwaggerClient::Object::SearchChatsByReceipentResponse');
 
-my $instance = TextMagicClient::Object::SearchChatsByReceipentResponse->new();
+my $instance = WWW::SwaggerClient::Object::SearchChatsByReceipentResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::SearchChatsByReceipentResponse');
+isa_ok($instance, 'WWW::SwaggerClient::Object::SearchChatsByReceipentResponse');
 

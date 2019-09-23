@@ -1,8 +1,8 @@
-# TextMagicClient::Object::DoEmailLookupResponse
+# WWW::SwaggerClient::Object::DoEmailLookupResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::DoEmailLookupResponse;
+use WWW::SwaggerClient::Object::DoEmailLookupResponse;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UnsubscribeContactInputObject
+# WWW::SwaggerClient::Object::UnsubscribeContactInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UnsubscribeContactInputObject;
+use WWW::SwaggerClient::Object::UnsubscribeContactInputObject;
 ```
 
 ## Properties

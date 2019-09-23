@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UpdateCallbackSettingsInputObject
+# WWW::SwaggerClient::Object::UpdateCallbackSettingsInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UpdateCallbackSettingsInputObject;
+use WWW::SwaggerClient::Object::UpdateCallbackSettingsInputObject;
 ```
 
 ## Properties

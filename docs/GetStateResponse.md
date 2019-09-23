@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetStateResponse
+# WWW::SwaggerClient::Object::GetStateResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetStateResponse;
+use WWW::SwaggerClient::Object::GetStateResponse;
 ```
 
 ## Properties

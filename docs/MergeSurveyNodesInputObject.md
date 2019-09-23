@@ -1,8 +1,8 @@
-# TextMagicClient::Object::MergeSurveyNodesInputObject
+# WWW::SwaggerClient::Object::MergeSurveyNodesInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::MergeSurveyNodesInputObject;
+use WWW::SwaggerClient::Object::MergeSurveyNodesInputObject;
 ```
 
 ## Properties

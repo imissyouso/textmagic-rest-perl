@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::Currency');
+use_ok('WWW::SwaggerClient::Object::Currency');
 
-my $instance = TextMagicClient::Object::Currency->new();
+my $instance = WWW::SwaggerClient::Object::Currency->new();
 
-isa_ok($instance, 'TextMagicClient::Object::Currency');
+isa_ok($instance, 'WWW::SwaggerClient::Object::Currency');
 

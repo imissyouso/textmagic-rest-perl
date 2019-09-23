@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::GetSurveysResponse');
+use_ok('WWW::SwaggerClient::Object::GetSurveysResponse');
 
-my $instance = TextMagicClient::Object::GetSurveysResponse->new();
+my $instance = WWW::SwaggerClient::Object::GetSurveysResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::GetSurveysResponse');
+isa_ok($instance, 'WWW::SwaggerClient::Object::GetSurveysResponse');
 

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::DoAuthResponse');
+use_ok('WWW::SwaggerClient::Object::DoAuthResponse');
 
-my $instance = TextMagicClient::Object::DoAuthResponse->new();
+my $instance = WWW::SwaggerClient::Object::DoAuthResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::DoAuthResponse');
+isa_ok($instance, 'WWW::SwaggerClient::Object::DoAuthResponse');
 

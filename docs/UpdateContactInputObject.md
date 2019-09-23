@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UpdateContactInputObject
+# WWW::SwaggerClient::Object::UpdateContactInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UpdateContactInputObject;
+use WWW::SwaggerClient::Object::UpdateContactInputObject;
 ```
 
 ## Properties

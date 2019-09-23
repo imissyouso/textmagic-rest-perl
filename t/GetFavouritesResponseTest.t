@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::GetFavouritesResponse');
+use_ok('WWW::SwaggerClient::Object::GetFavouritesResponse');
 
-my $instance = TextMagicClient::Object::GetFavouritesResponse->new();
+my $instance = WWW::SwaggerClient::Object::GetFavouritesResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::GetFavouritesResponse');
+isa_ok($instance, 'WWW::SwaggerClient::Object::GetFavouritesResponse');
 

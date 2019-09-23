@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::DoCarrierLookupResponse');
+use_ok('WWW::SwaggerClient::Object::DoCarrierLookupResponse');
 
-my $instance = TextMagicClient::Object::DoCarrierLookupResponse->new();
+my $instance = WWW::SwaggerClient::Object::DoCarrierLookupResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::DoCarrierLookupResponse');
+isa_ok($instance, 'WWW::SwaggerClient::Object::DoCarrierLookupResponse');
 

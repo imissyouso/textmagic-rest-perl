@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::GetBlockedContactsResponse');
+use_ok('WWW::SwaggerClient::Object::GetBlockedContactsResponse');
 
-my $instance = TextMagicClient::Object::GetBlockedContactsResponse->new();
+my $instance = WWW::SwaggerClient::Object::GetBlockedContactsResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::GetBlockedContactsResponse');
+isa_ok($instance, 'WWW::SwaggerClient::Object::GetBlockedContactsResponse');
 

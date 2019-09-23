@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::DeleteListsBulkInputObject');
+use_ok('WWW::SwaggerClient::Object::DeleteListsBulkInputObject');
 
-my $instance = TextMagicClient::Object::DeleteListsBulkInputObject->new();
+my $instance = WWW::SwaggerClient::Object::DeleteListsBulkInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::DeleteListsBulkInputObject');
+isa_ok($instance, 'WWW::SwaggerClient::Object::DeleteListsBulkInputObject');
 

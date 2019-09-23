@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetSurveyNodesResponse
+# WWW::SwaggerClient::Object::GetSurveyNodesResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetSurveyNodesResponse;
+use WWW::SwaggerClient::Object::GetSurveyNodesResponse;
 ```
 
 ## Properties

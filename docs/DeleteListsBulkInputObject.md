@@ -1,8 +1,8 @@
-# TextMagicClient::Object::DeleteListsBulkInputObject
+# WWW::SwaggerClient::Object::DeleteListsBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::DeleteListsBulkInputObject;
+use WWW::SwaggerClient::Object::DeleteListsBulkInputObject;
 ```
 
 ## Properties

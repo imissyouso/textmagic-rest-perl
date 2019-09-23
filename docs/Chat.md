@@ -1,8 +1,8 @@
-# TextMagicClient::Object::Chat
+# WWW::SwaggerClient::Object::Chat
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::Chat;
+use WWW::SwaggerClient::Object::Chat;
 ```
 
 ## Properties

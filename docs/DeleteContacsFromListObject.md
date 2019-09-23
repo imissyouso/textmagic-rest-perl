@@ -1,8 +1,8 @@
-# TextMagicClient::Object::DeleteContacsFromListObject
+# WWW::SwaggerClient::Object::DeleteContacsFromListObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::DeleteContacsFromListObject;
+use WWW::SwaggerClient::Object::DeleteContacsFromListObject;
 ```
 
 ## Properties

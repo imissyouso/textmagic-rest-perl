@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::CreateTemplateInputObject');
+use_ok('WWW::SwaggerClient::Object::CreateTemplateInputObject');
 
-my $instance = TextMagicClient::Object::CreateTemplateInputObject->new();
+my $instance = WWW::SwaggerClient::Object::CreateTemplateInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::CreateTemplateInputObject');
+isa_ok($instance, 'WWW::SwaggerClient::Object::CreateTemplateInputObject');
 

@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UpdateSurveyInputObject
+# WWW::SwaggerClient::Object::UpdateSurveyInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UpdateSurveyInputObject;
+use WWW::SwaggerClient::Object::UpdateSurveyInputObject;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# TextMagicClient::Object::CheckPhoneVerificationCodeInputObject
+# WWW::SwaggerClient::Object::CheckPhoneVerificationCodeInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::CheckPhoneVerificationCodeInputObject;
+use WWW::SwaggerClient::Object::CheckPhoneVerificationCodeInputObject;
 ```
 
 ## Properties

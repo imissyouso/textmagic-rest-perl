@@ -1,8 +1,8 @@
-# TextMagicClient::Object::ResourceLinkResponse
+# WWW::SwaggerClient::Object::ResourceLinkResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::ResourceLinkResponse;
+use WWW::SwaggerClient::Object::ResourceLinkResponse;
 ```
 
 ## Properties

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::GetMessagePricesResponse');
+use_ok('WWW::SwaggerClient::Object::GetMessagePricesResponse');
 
-my $instance = TextMagicClient::Object::GetMessagePricesResponse->new();
+my $instance = WWW::SwaggerClient::Object::GetMessagePricesResponse->new();
 
-isa_ok($instance, 'TextMagicClient::Object::GetMessagePricesResponse');
+isa_ok($instance, 'WWW::SwaggerClient::Object::GetMessagePricesResponse');
 

@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetMessagePriceResponse
+# WWW::SwaggerClient::Object::GetMessagePriceResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetMessagePriceResponse;
+use WWW::SwaggerClient::Object::GetMessagePriceResponse;
 ```
 
 ## Properties

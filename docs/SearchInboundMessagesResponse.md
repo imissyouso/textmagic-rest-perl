@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SearchInboundMessagesResponse
+# WWW::SwaggerClient::Object::SearchInboundMessagesResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SearchInboundMessagesResponse;
+use WWW::SwaggerClient::Object::SearchInboundMessagesResponse;
 ```
 
 ## Properties

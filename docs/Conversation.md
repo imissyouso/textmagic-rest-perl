@@ -1,8 +1,8 @@
-# TextMagicClient::Object::Conversation
+# WWW::SwaggerClient::Object::Conversation
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::Conversation;
+use WWW::SwaggerClient::Object::Conversation;
 ```
 
 ## Properties

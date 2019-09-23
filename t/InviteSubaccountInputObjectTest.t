@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::InviteSubaccountInputObject');
+use_ok('WWW::SwaggerClient::Object::InviteSubaccountInputObject');
 
-my $instance = TextMagicClient::Object::InviteSubaccountInputObject->new();
+my $instance = WWW::SwaggerClient::Object::InviteSubaccountInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::InviteSubaccountInputObject');
+isa_ok($instance, 'WWW::SwaggerClient::Object::InviteSubaccountInputObject');
 

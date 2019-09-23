@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetListsOfContactResponse
+# WWW::SwaggerClient::Object::GetListsOfContactResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetListsOfContactResponse;
+use WWW::SwaggerClient::Object::GetListsOfContactResponse;
 ```
 
 ## Properties

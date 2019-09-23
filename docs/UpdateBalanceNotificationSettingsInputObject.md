@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject
+# WWW::SwaggerClient::Object::UpdateBalanceNotificationSettingsInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject;
+use WWW::SwaggerClient::Object::UpdateBalanceNotificationSettingsInputObject;
 ```
 
 ## Properties

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::Group');
+use_ok('WWW::SwaggerClient::Object::Group');
 
-my $instance = TextMagicClient::Object::Group->new();
+my $instance = WWW::SwaggerClient::Object::Group->new();
 
-isa_ok($instance, 'TextMagicClient::Object::Group');
+isa_ok($instance, 'WWW::SwaggerClient::Object::Group');
 

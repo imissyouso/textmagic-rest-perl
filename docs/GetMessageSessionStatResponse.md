@@ -1,8 +1,8 @@
-# TextMagicClient::Object::GetMessageSessionStatResponse
+# WWW::SwaggerClient::Object::GetMessageSessionStatResponse
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::GetMessageSessionStatResponse;
+use WWW::SwaggerClient::Object::GetMessageSessionStatResponse;
 ```
 
 ## Properties

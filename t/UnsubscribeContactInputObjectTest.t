@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::UnsubscribeContactInputObject');
+use_ok('WWW::SwaggerClient::Object::UnsubscribeContactInputObject');
 
-my $instance = TextMagicClient::Object::UnsubscribeContactInputObject->new();
+my $instance = WWW::SwaggerClient::Object::UnsubscribeContactInputObject->new();
 
-isa_ok($instance, 'TextMagicClient::Object::UnsubscribeContactInputObject');
+isa_ok($instance, 'WWW::SwaggerClient::Object::UnsubscribeContactInputObject');
 

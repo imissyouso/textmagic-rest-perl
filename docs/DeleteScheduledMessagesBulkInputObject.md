@@ -1,8 +1,8 @@
-# TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject
+# WWW::SwaggerClient::Object::DeleteScheduledMessagesBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject;
+use WWW::SwaggerClient::Object::DeleteScheduledMessagesBulkInputObject;
 ```
 
 ## Properties

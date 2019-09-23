@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SenderId
+# WWW::SwaggerClient::Object::SenderId
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SenderId;
+use WWW::SwaggerClient::Object::SenderId;
 ```
 
 ## Properties

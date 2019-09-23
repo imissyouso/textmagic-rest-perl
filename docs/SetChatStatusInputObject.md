@@ -1,8 +1,8 @@
-# TextMagicClient::Object::SetChatStatusInputObject
+# WWW::SwaggerClient::Object::SetChatStatusInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::SetChatStatusInputObject;
+use WWW::SwaggerClient::Object::SetChatStatusInputObject;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# TextMagicClient::Object::UnmuteChatsBulkInputObject
+# WWW::SwaggerClient::Object::UnmuteChatsBulkInputObject
 
 ## Load the model package
 ```perl
-use TextMagicClient::Object::UnmuteChatsBulkInputObject;
+use WWW::SwaggerClient::Object::UnmuteChatsBulkInputObject;
 ```
 
 ## Properties

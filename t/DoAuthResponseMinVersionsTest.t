@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('TextMagicClient::Object::DoAuthResponseMinVersions');
+use_ok('WWW::SwaggerClient::Object::DoAuthResponseMinVersions');
 
-my $instance = TextMagicClient::Object::DoAuthResponseMinVersions->new();
+my $instance = WWW::SwaggerClient::Object::DoAuthResponseMinVersions->new();
 
-isa_ok($instance, 'TextMagicClient::Object::DoAuthResponseMinVersions');
+isa_ok($instance, 'WWW::SwaggerClient::Object::DoAuthResponseMinVersions');
 
