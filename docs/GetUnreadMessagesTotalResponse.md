@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetUnreadMessagesTotalResponse
+# Net::Sms::TextMagicClient::Object::GetUnreadMessagesTotalResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetUnreadMessagesTotalResponse;
+use Net::Sms::TextMagicClient::Object::GetUnreadMessagesTotalResponse;
 ```
 
 ## Properties

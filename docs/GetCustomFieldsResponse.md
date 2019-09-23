@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetCustomFieldsResponse
+# Net::Sms::TextMagicClient::Object::GetCustomFieldsResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetCustomFieldsResponse;
+use Net::Sms::TextMagicClient::Object::GetCustomFieldsResponse;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetMessagesBySessionIdResponse
+# Net::Sms::TextMagicClient::Object::GetMessagesBySessionIdResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetMessagesBySessionIdResponse;
+use Net::Sms::TextMagicClient::Object::GetMessagesBySessionIdResponse;
 ```
 
 ## Properties

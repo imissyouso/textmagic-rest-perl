@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::GetContactsAutocompleteResponse');
+use_ok('Net::Sms::TextMagicClient::Object::GetContactsAutocompleteResponse');
 
-my $instance = Net::SMS::TextMagicClient::Object::GetContactsAutocompleteResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::GetContactsAutocompleteResponse->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::GetContactsAutocompleteResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::GetContactsAutocompleteResponse');
 

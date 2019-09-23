@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::SearchContactsResponse
+# Net::Sms::TextMagicClient::Object::SearchContactsResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::SearchContactsResponse;
+use Net::Sms::TextMagicClient::Object::SearchContactsResponse;
 ```
 
 ## Properties

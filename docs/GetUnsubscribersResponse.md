@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetUnsubscribersResponse
+# Net::Sms::TextMagicClient::Object::GetUnsubscribersResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetUnsubscribersResponse;
+use Net::Sms::TextMagicClient::Object::GetUnsubscribersResponse;
 ```
 
 ## Properties

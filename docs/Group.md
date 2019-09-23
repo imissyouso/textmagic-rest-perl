@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::Group
+# Net::Sms::TextMagicClient::Object::Group
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::Group;
+use Net::Sms::TextMagicClient::Object::Group;
 ```
 
 ## Properties

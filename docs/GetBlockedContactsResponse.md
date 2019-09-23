@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetBlockedContactsResponse
+# Net::Sms::TextMagicClient::Object::GetBlockedContactsResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetBlockedContactsResponse;
+use Net::Sms::TextMagicClient::Object::GetBlockedContactsResponse;
 ```
 
 ## Properties

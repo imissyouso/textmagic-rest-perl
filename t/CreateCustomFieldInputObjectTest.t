@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::CreateCustomFieldInputObject');
+use_ok('Net::Sms::TextMagicClient::Object::CreateCustomFieldInputObject');
 
-my $instance = Net::SMS::TextMagicClient::Object::CreateCustomFieldInputObject->new();
+my $instance = Net::Sms::TextMagicClient::Object::CreateCustomFieldInputObject->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::CreateCustomFieldInputObject');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::CreateCustomFieldInputObject');
 

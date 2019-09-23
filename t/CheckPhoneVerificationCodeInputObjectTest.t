@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::CheckPhoneVerificationCodeInputObject');
+use_ok('Net::Sms::TextMagicClient::Object::CheckPhoneVerificationCodeInputObject');
 
-my $instance = Net::SMS::TextMagicClient::Object::CheckPhoneVerificationCodeInputObject->new();
+my $instance = Net::Sms::TextMagicClient::Object::CheckPhoneVerificationCodeInputObject->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::CheckPhoneVerificationCodeInputObject');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::CheckPhoneVerificationCodeInputObject');
 

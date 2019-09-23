@@ -24,10 +24,10 @@ use lib 'lib';
 use strict;
 use warnings;
 
-use_ok('Net::SMS::TextMagicClient::TextMagicApi');
+use_ok('Net::Sms::TextMagicClient::TextMagicApi');
 
-my $api = Net::SMS::TextMagicClient::TextMagicApi->new();
-isa_ok($api, 'Net::SMS::TextMagicClient::TextMagicApi');
+my $api = Net::Sms::TextMagicClient::TextMagicApi->new();
+isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 
 #
 # assign_contacts_to_list test

@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::DoEmailLookupResponse
+# Net::Sms::TextMagicClient::Object::DoEmailLookupResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::DoEmailLookupResponse;
+use Net::Sms::TextMagicClient::Object::DoEmailLookupResponse;
 ```
 
 ## Properties

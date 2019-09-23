@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetOutboundMessagesHistoryResponse
+# Net::Sms::TextMagicClient::Object::GetOutboundMessagesHistoryResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetOutboundMessagesHistoryResponse;
+use Net::Sms::TextMagicClient::Object::GetOutboundMessagesHistoryResponse;
 ```
 
 ## Properties

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::CreateListInputObject');
+use_ok('Net::Sms::TextMagicClient::Object::CreateListInputObject');
 
-my $instance = Net::SMS::TextMagicClient::Object::CreateListInputObject->new();
+my $instance = Net::Sms::TextMagicClient::Object::CreateListInputObject->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::CreateListInputObject');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::CreateListInputObject');
 

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::GetMessagePriceResponse');
+use_ok('Net::Sms::TextMagicClient::Object::GetMessagePriceResponse');
 
-my $instance = Net::SMS::TextMagicClient::Object::GetMessagePriceResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::GetMessagePriceResponse->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::GetMessagePriceResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::GetMessagePriceResponse');
 

@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetPushTokensResponse
+# Net::Sms::TextMagicClient::Object::GetPushTokensResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetPushTokensResponse;
+use Net::Sms::TextMagicClient::Object::GetPushTokensResponse;
 ```
 
 ## Properties

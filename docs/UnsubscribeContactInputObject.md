@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::UnsubscribeContactInputObject
+# Net::Sms::TextMagicClient::Object::UnsubscribeContactInputObject
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::UnsubscribeContactInputObject;
+use Net::Sms::TextMagicClient::Object::UnsubscribeContactInputObject;
 ```
 
 ## Properties

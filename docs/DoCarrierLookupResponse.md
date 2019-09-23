@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::DoCarrierLookupResponse
+# Net::Sms::TextMagicClient::Object::DoCarrierLookupResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::DoCarrierLookupResponse;
+use Net::Sms::TextMagicClient::Object::DoCarrierLookupResponse;
 ```
 
 ## Properties

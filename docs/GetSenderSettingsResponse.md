@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetSenderSettingsResponse
+# Net::Sms::TextMagicClient::Object::GetSenderSettingsResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetSenderSettingsResponse;
+use Net::Sms::TextMagicClient::Object::GetSenderSettingsResponse;
 ```
 
 ## Properties

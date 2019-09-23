@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::GetCustomFieldsResponse');
+use_ok('Net::Sms::TextMagicClient::Object::GetCustomFieldsResponse');
 
-my $instance = Net::SMS::TextMagicClient::Object::GetCustomFieldsResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::GetCustomFieldsResponse->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::GetCustomFieldsResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::GetCustomFieldsResponse');
 

@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetUserDedicatedNumbersResponse
+# Net::Sms::TextMagicClient::Object::GetUserDedicatedNumbersResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetUserDedicatedNumbersResponse;
+use Net::Sms::TextMagicClient::Object::GetUserDedicatedNumbersResponse;
 ```
 
 ## Properties

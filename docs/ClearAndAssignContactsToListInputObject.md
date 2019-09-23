@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::ClearAndAssignContactsToListInputObject
+# Net::Sms::TextMagicClient::Object::ClearAndAssignContactsToListInputObject
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::ClearAndAssignContactsToListInputObject;
+use Net::Sms::TextMagicClient::Object::ClearAndAssignContactsToListInputObject;
 ```
 
 ## Properties

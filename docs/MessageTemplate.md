@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::MessageTemplate
+# Net::Sms::TextMagicClient::Object::MessageTemplate
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::MessageTemplate;
+use Net::Sms::TextMagicClient::Object::MessageTemplate;
 ```
 
 ## Properties

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::ContactCustomField');
+use_ok('Net::Sms::TextMagicClient::Object::ContactCustomField');
 
-my $instance = Net::SMS::TextMagicClient::Object::ContactCustomField->new();
+my $instance = Net::Sms::TextMagicClient::Object::ContactCustomField->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::ContactCustomField');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::ContactCustomField');
 

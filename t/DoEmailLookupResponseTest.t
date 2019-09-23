@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::DoEmailLookupResponse');
+use_ok('Net::Sms::TextMagicClient::Object::DoEmailLookupResponse');
 
-my $instance = Net::SMS::TextMagicClient::Object::DoEmailLookupResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::DoEmailLookupResponse->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::DoEmailLookupResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::DoEmailLookupResponse');
 

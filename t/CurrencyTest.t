@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::Currency');
+use_ok('Net::Sms::TextMagicClient::Object::Currency');
 
-my $instance = Net::SMS::TextMagicClient::Object::Currency->new();
+my $instance = Net::Sms::TextMagicClient::Object::Currency->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::Currency');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::Currency');
 

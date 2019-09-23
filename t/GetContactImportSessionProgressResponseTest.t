@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::GetContactImportSessionProgressResponse');
+use_ok('Net::Sms::TextMagicClient::Object::GetContactImportSessionProgressResponse');
 
-my $instance = Net::SMS::TextMagicClient::Object::GetContactImportSessionProgressResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::GetContactImportSessionProgressResponse->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::GetContactImportSessionProgressResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::GetContactImportSessionProgressResponse');
 

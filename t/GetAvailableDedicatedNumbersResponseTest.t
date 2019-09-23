@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::GetAvailableDedicatedNumbersResponse');
+use_ok('Net::Sms::TextMagicClient::Object::GetAvailableDedicatedNumbersResponse');
 
-my $instance = Net::SMS::TextMagicClient::Object::GetAvailableDedicatedNumbersResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::GetAvailableDedicatedNumbersResponse->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::GetAvailableDedicatedNumbersResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::GetAvailableDedicatedNumbersResponse');
 

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::UnsubscribeContactInputObject');
+use_ok('Net::Sms::TextMagicClient::Object::UnsubscribeContactInputObject');
 
-my $instance = Net::SMS::TextMagicClient::Object::UnsubscribeContactInputObject->new();
+my $instance = Net::Sms::TextMagicClient::Object::UnsubscribeContactInputObject->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::UnsubscribeContactInputObject');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::UnsubscribeContactInputObject');
 

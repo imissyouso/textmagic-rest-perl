@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::SenderId');
+use_ok('Net::Sms::TextMagicClient::Object::SenderId');
 
-my $instance = Net::SMS::TextMagicClient::Object::SenderId->new();
+my $instance = Net::Sms::TextMagicClient::Object::SenderId->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::SenderId');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::SenderId');
 

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::CreateContactNoteInputObject');
+use_ok('Net::Sms::TextMagicClient::Object::CreateContactNoteInputObject');
 
-my $instance = Net::SMS::TextMagicClient::Object::CreateContactNoteInputObject->new();
+my $instance = Net::Sms::TextMagicClient::Object::CreateContactNoteInputObject->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::CreateContactNoteInputObject');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::CreateContactNoteInputObject');
 

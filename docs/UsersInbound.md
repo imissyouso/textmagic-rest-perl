@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::UsersInbound
+# Net::Sms::TextMagicClient::Object::UsersInbound
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::UsersInbound;
+use Net::Sms::TextMagicClient::Object::UsersInbound;
 ```
 
 ## Properties

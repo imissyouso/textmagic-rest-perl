@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::CreateSurveyInputObject
+# Net::Sms::TextMagicClient::Object::CreateSurveyInputObject
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::CreateSurveyInputObject;
+use Net::Sms::TextMagicClient::Object::CreateSurveyInputObject;
 ```
 
 ## Properties

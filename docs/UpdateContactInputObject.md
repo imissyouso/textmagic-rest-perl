@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::UpdateContactInputObject
+# Net::Sms::TextMagicClient::Object::UpdateContactInputObject
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::UpdateContactInputObject;
+use Net::Sms::TextMagicClient::Object::UpdateContactInputObject;
 ```
 
 ## Properties

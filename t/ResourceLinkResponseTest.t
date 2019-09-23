@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::ResourceLinkResponse');
+use_ok('Net::Sms::TextMagicClient::Object::ResourceLinkResponse');
 
-my $instance = Net::SMS::TextMagicClient::Object::ResourceLinkResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::ResourceLinkResponse->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::ResourceLinkResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::ResourceLinkResponse');
 

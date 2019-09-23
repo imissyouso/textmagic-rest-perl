@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetInvoicesResponse
+# Net::Sms::TextMagicClient::Object::GetInvoicesResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetInvoicesResponse;
+use Net::Sms::TextMagicClient::Object::GetInvoicesResponse;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetFavouritesResponse
+# Net::Sms::TextMagicClient::Object::GetFavouritesResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetFavouritesResponse;
+use Net::Sms::TextMagicClient::Object::GetFavouritesResponse;
 ```
 
 ## Properties

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::UploadMessageAttachmentResponse');
+use_ok('Net::Sms::TextMagicClient::Object::UploadMessageAttachmentResponse');
 
-my $instance = Net::SMS::TextMagicClient::Object::UploadMessageAttachmentResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::UploadMessageAttachmentResponse->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::UploadMessageAttachmentResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::UploadMessageAttachmentResponse');
 

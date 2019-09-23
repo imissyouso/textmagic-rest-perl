@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::UpdateCustomFieldInputObject
+# Net::Sms::TextMagicClient::Object::UpdateCustomFieldInputObject
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::UpdateCustomFieldInputObject;
+use Net::Sms::TextMagicClient::Object::UpdateCustomFieldInputObject;
 ```
 
 ## Properties

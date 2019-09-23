@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetMessagePreviewResponse
+# Net::Sms::TextMagicClient::Object::GetMessagePreviewResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetMessagePreviewResponse;
+use Net::Sms::TextMagicClient::Object::GetMessagePreviewResponse;
 ```
 
 ## Properties

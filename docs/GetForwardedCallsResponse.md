@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetForwardedCallsResponse
+# Net::Sms::TextMagicClient::Object::GetForwardedCallsResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetForwardedCallsResponse;
+use Net::Sms::TextMagicClient::Object::GetForwardedCallsResponse;
 ```
 
 ## Properties

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::MarkChatsUnreadBulkInputObject');
+use_ok('Net::Sms::TextMagicClient::Object::MarkChatsUnreadBulkInputObject');
 
-my $instance = Net::SMS::TextMagicClient::Object::MarkChatsUnreadBulkInputObject->new();
+my $instance = Net::Sms::TextMagicClient::Object::MarkChatsUnreadBulkInputObject->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::MarkChatsUnreadBulkInputObject');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::MarkChatsUnreadBulkInputObject');
 

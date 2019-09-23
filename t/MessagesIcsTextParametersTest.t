@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::MessagesIcsTextParameters');
+use_ok('Net::Sms::TextMagicClient::Object::MessagesIcsTextParameters');
 
-my $instance = Net::SMS::TextMagicClient::Object::MessagesIcsTextParameters->new();
+my $instance = Net::Sms::TextMagicClient::Object::MessagesIcsTextParameters->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::MessagesIcsTextParameters');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::MessagesIcsTextParameters');
 

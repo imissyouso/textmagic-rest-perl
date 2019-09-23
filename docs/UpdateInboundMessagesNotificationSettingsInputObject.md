@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::UpdateInboundMessagesNotificationSettingsInputObject
+# Net::Sms::TextMagicClient::Object::UpdateInboundMessagesNotificationSettingsInputObject
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::UpdateInboundMessagesNotificationSettingsInputObject;
+use Net::Sms::TextMagicClient::Object::UpdateInboundMessagesNotificationSettingsInputObject;
 ```
 
 ## Properties

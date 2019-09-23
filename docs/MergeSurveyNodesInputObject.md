@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::MergeSurveyNodesInputObject
+# Net::Sms::TextMagicClient::Object::MergeSurveyNodesInputObject
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::MergeSurveyNodesInputObject;
+use Net::Sms::TextMagicClient::Object::MergeSurveyNodesInputObject;
 ```
 
 ## Properties

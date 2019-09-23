@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::ContactImage
+# Net::Sms::TextMagicClient::Object::ContactImage
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::ContactImage;
+use Net::Sms::TextMagicClient::Object::ContactImage;
 ```
 
 ## Properties

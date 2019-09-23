@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::PushToken
+# Net::Sms::TextMagicClient::Object::PushToken
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::PushToken;
+use Net::Sms::TextMagicClient::Object::PushToken;
 ```
 
 ## Properties

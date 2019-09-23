@@ -15,14 +15,14 @@ my $my_app = $options{c} || 'My::App';
 if ($options{c}) {
 	eval <<LOAD;
 use $my_app;
-apply_all_roles($my_app, "Net::SMS::TextMagicClient::Role::AutoDoc");
+apply_all_roles($my_app, "Net::Sms::TextMagicClient::Role::AutoDoc");
 LOAD
 	die $@ if $@;
 }
 else {
 	package My::App;
 	use Moose;
-	with ('Net::SMS::TextMagicClient::Role', 'Net::SMS::TextMagicClient::Role::AutoDoc');
+	with ('Net::Sms::TextMagicClient::Role', 'Net::Sms::TextMagicClient::Role::AutoDoc');
 }
 
 package main;

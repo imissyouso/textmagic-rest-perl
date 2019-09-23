@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::SurveySenderCountries');
+use_ok('Net::Sms::TextMagicClient::Object::SurveySenderCountries');
 
-my $instance = Net::SMS::TextMagicClient::Object::SurveySenderCountries->new();
+my $instance = Net::Sms::TextMagicClient::Object::SurveySenderCountries->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::SurveySenderCountries');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::SurveySenderCountries');
 

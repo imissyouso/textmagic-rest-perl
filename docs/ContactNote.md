@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::ContactNote
+# Net::Sms::TextMagicClient::Object::ContactNote
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::ContactNote;
+use Net::Sms::TextMagicClient::Object::ContactNote;
 ```
 
 ## Properties

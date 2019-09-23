@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::SearchChatsByReceipentResponse');
+use_ok('Net::Sms::TextMagicClient::Object::SearchChatsByReceipentResponse');
 
-my $instance = Net::SMS::TextMagicClient::Object::SearchChatsByReceipentResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::SearchChatsByReceipentResponse->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::SearchChatsByReceipentResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::SearchChatsByReceipentResponse');
 

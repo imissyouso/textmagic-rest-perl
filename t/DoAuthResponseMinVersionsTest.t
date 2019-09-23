@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::DoAuthResponseMinVersions');
+use_ok('Net::Sms::TextMagicClient::Object::DoAuthResponseMinVersions');
 
-my $instance = Net::SMS::TextMagicClient::Object::DoAuthResponseMinVersions->new();
+my $instance = Net::Sms::TextMagicClient::Object::DoAuthResponseMinVersions->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::DoAuthResponseMinVersions');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::DoAuthResponseMinVersions');
 

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::GetSubaccountsWithTokensResponse');
+use_ok('Net::Sms::TextMagicClient::Object::GetSubaccountsWithTokensResponse');
 
-my $instance = Net::SMS::TextMagicClient::Object::GetSubaccountsWithTokensResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::GetSubaccountsWithTokensResponse->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::GetSubaccountsWithTokensResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::GetSubaccountsWithTokensResponse');
 

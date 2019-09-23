@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetMessagePriceResponse
+# Net::Sms::TextMagicClient::Object::GetMessagePriceResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetMessagePriceResponse;
+use Net::Sms::TextMagicClient::Object::GetMessagePriceResponse;
 ```
 
 ## Properties

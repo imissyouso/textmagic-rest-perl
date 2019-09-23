@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetBalanceNotificationOptionsResponse
+# Net::Sms::TextMagicClient::Object::GetBalanceNotificationOptionsResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetBalanceNotificationOptionsResponse;
+use Net::Sms::TextMagicClient::Object::GetBalanceNotificationOptionsResponse;
 ```
 
 ## Properties

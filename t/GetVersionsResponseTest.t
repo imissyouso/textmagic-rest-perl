@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::GetVersionsResponse');
+use_ok('Net::Sms::TextMagicClient::Object::GetVersionsResponse');
 
-my $instance = Net::SMS::TextMagicClient::Object::GetVersionsResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::GetVersionsResponse->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::GetVersionsResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::GetVersionsResponse');
 

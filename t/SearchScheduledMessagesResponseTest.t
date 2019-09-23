@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::SearchScheduledMessagesResponse');
+use_ok('Net::Sms::TextMagicClient::Object::SearchScheduledMessagesResponse');
 
-my $instance = Net::SMS::TextMagicClient::Object::SearchScheduledMessagesResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::SearchScheduledMessagesResponse->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::SearchScheduledMessagesResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::SearchScheduledMessagesResponse');
 

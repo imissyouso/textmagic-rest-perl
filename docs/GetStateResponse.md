@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetStateResponse
+# Net::Sms::TextMagicClient::Object::GetStateResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetStateResponse;
+use Net::Sms::TextMagicClient::Object::GetStateResponse;
 ```
 
 ## Properties

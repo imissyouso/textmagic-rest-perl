@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::UpdatePasswordInputObject
+# Net::Sms::TextMagicClient::Object::UpdatePasswordInputObject
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::UpdatePasswordInputObject;
+use Net::Sms::TextMagicClient::Object::UpdatePasswordInputObject;
 ```
 
 ## Properties

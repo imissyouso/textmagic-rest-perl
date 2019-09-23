@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::CreateListInputObject
+# Net::Sms::TextMagicClient::Object::CreateListInputObject
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::CreateListInputObject;
+use Net::Sms::TextMagicClient::Object::CreateListInputObject;
 ```
 
 ## Properties

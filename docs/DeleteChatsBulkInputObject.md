@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::DeleteChatsBulkInputObject
+# Net::Sms::TextMagicClient::Object::DeleteChatsBulkInputObject
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::DeleteChatsBulkInputObject;
+use Net::Sms::TextMagicClient::Object::DeleteChatsBulkInputObject;
 ```
 
 ## Properties

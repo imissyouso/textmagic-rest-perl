@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::SendMessageResponse
+# Net::Sms::TextMagicClient::Object::SendMessageResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::SendMessageResponse;
+use Net::Sms::TextMagicClient::Object::SendMessageResponse;
 ```
 
 ## Properties

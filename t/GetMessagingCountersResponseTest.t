@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::GetMessagingCountersResponse');
+use_ok('Net::Sms::TextMagicClient::Object::GetMessagingCountersResponse');
 
-my $instance = Net::SMS::TextMagicClient::Object::GetMessagingCountersResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::GetMessagingCountersResponse->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::GetMessagingCountersResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::GetMessagingCountersResponse');
 

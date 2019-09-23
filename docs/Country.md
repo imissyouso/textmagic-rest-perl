@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::Country
+# Net::Sms::TextMagicClient::Object::Country
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::Country;
+use Net::Sms::TextMagicClient::Object::Country;
 ```
 
 ## Properties

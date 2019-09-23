@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::UploadMessageAttachmentResponse
+# Net::Sms::TextMagicClient::Object::UploadMessageAttachmentResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::UploadMessageAttachmentResponse;
+use Net::Sms::TextMagicClient::Object::UploadMessageAttachmentResponse;
 ```
 
 ## Properties

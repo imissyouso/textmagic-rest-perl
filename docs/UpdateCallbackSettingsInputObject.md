@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::UpdateCallbackSettingsInputObject
+# Net::Sms::TextMagicClient::Object::UpdateCallbackSettingsInputObject
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::UpdateCallbackSettingsInputObject;
+use Net::Sms::TextMagicClient::Object::UpdateCallbackSettingsInputObject;
 ```
 
 ## Properties

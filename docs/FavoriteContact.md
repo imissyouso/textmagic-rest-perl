@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::FavoriteContact
+# Net::Sms::TextMagicClient::Object::FavoriteContact
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::FavoriteContact;
+use Net::Sms::TextMagicClient::Object::FavoriteContact;
 ```
 
 ## Properties

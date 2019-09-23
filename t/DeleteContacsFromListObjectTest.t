@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::DeleteContacsFromListObject');
+use_ok('Net::Sms::TextMagicClient::Object::DeleteContacsFromListObject');
 
-my $instance = Net::SMS::TextMagicClient::Object::DeleteContacsFromListObject->new();
+my $instance = Net::Sms::TextMagicClient::Object::DeleteContacsFromListObject->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::DeleteContacsFromListObject');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::DeleteContacsFromListObject');
 

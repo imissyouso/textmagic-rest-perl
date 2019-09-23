@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetInboundMessagesNotificationSettingsResponse
+# Net::Sms::TextMagicClient::Object::GetInboundMessagesNotificationSettingsResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetInboundMessagesNotificationSettingsResponse;
+use Net::Sms::TextMagicClient::Object::GetInboundMessagesNotificationSettingsResponse;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::BlockContactInputObject
+# Net::Sms::TextMagicClient::Object::BlockContactInputObject
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::BlockContactInputObject;
+use Net::Sms::TextMagicClient::Object::BlockContactInputObject;
 ```
 
 ## Properties

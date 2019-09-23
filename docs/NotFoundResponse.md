@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::NotFoundResponse
+# Net::Sms::TextMagicClient::Object::NotFoundResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::NotFoundResponse;
+use Net::Sms::TextMagicClient::Object::NotFoundResponse;
 ```
 
 ## Properties

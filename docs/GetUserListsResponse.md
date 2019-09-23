@@ -1,8 +1,8 @@
-# Net::SMS::TextMagicClient::Object::GetUserListsResponse
+# Net::Sms::TextMagicClient::Object::GetUserListsResponse
 
 ## Load the model package
 ```perl
-use Net::SMS::TextMagicClient::Object::GetUserListsResponse;
+use Net::Sms::TextMagicClient::Object::GetUserListsResponse;
 ```
 
 ## Properties

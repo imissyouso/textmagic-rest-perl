@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::SMS::TextMagicClient::Object::SearchContactsResponse');
+use_ok('Net::Sms::TextMagicClient::Object::SearchContactsResponse');
 
-my $instance = Net::SMS::TextMagicClient::Object::SearchContactsResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::SearchContactsResponse->new();
 
-isa_ok($instance, 'Net::SMS::TextMagicClient::Object::SearchContactsResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::SearchContactsResponse');
 
