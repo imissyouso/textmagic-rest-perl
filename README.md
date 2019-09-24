@@ -9,10 +9,10 @@ For detailed documentation, please visit [http://docs.textmagictesting.com/](htt
 ## Installation
 
 ```bash
-wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.353.tar.gz && \
-tar zxf v2.0.353.tar.gz && \
-rm -f v2.0.353.tar.gz && \
-cd textmagic-rest-perl-2.0.353 && \
+wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.356.tar.gz && \
+tar zxf v2.0.356.tar.gz && \
+rm -f v2.0.356.tar.gz && \
+cd textmagic-rest-perl-2.0.356 && \
 perl Makefile.pl && \
 make && \
 make install && \
