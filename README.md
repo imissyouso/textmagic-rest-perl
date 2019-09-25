@@ -1,18 +1,19 @@
 # TextMagic Perl SDK
 
-This library provides you with an easy solution to send SMS and receive replies by integrating TextMagic SMS Gateway to your Perl application.
-## What is TextMagic?
-TextMagic's application programming interface (API) provides the communication link between your application and TextMagic’s SMS Gateway, allowing you to send and receive text messages and to check the delivery status of text messages you’ve already sent.
+This library provides you with an easy way of sending SMS and receiving replies by integrating TextMagic SMS Gateway into your Perl application.
 
-For detailed documentation, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/)
+## What is TextMagic?
+TextMagic’s application programming interface (API) provides the communication link between your application and TextMagic’s SMS Gateway, allowing you to send and receive text messages and to check the delivery status of text messages you’ve already sent.
+
+For detailed documentation and more examples, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/).
 
 ## Installation
 
 ```bash
-wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.398.tar.gz && \
-tar zxf v2.0.398.tar.gz && \
-rm -f v2.0.398.tar.gz && \
-cd textmagic-rest-perl-2.0.398 && \
+wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.401.tar.gz && \
+tar zxf v2.0.401.tar.gz && \
+rm -f v2.0.401.tar.gz && \
+cd textmagic-rest-perl-2.0.401 && \
 perl Makefile.pl && \
 make && \
 make install && \
@@ -21,7 +22,7 @@ cpanm --installdeps .
 
 ## Usage Example
 
-Please follow the [installation](#installation) instruction and execute the following Perl code:
+Please follow the [installation](#installation) instructions and execute the following Perl code:
 
 ```perl
 use 5.010;
