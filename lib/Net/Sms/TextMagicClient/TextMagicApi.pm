@@ -3454,10 +3454,10 @@ sub duplicate_survey {
     __PACKAGE__->method_documentation->{ 'get_all_bulk_sessions' } = { 
     	summary => 'Get all bulk sending sessions.',
         params => $params,
-        returns => 'GetAllBulkSessionsResponse',
+        returns => 'GetAllBulkSessionsPaginatedResponse',
         };
 }
-# @return GetAllBulkSessionsResponse
+# @return GetAllBulkSessionsPaginatedResponse
 #
 sub get_all_bulk_sessions {
     my ($self, %args) = @_;
@@ -3498,7 +3498,7 @@ sub get_all_bulk_sessions {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetAllBulkSessionsResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetAllBulkSessionsPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -3549,10 +3549,10 @@ sub get_all_bulk_sessions {
     __PACKAGE__->method_documentation->{ 'get_all_chats' } = { 
     	summary => 'Get all user chats.',
         params => $params,
-        returns => 'GetAllChatsResponse',
+        returns => 'GetAllChatsPaginatedResponse',
         };
 }
-# @return GetAllChatsResponse
+# @return GetAllChatsPaginatedResponse
 #
 sub get_all_chats {
     my ($self, %args) = @_;
@@ -3613,7 +3613,7 @@ sub get_all_chats {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetAllChatsResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetAllChatsPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -3652,10 +3652,10 @@ sub get_all_chats {
     __PACKAGE__->method_documentation->{ 'get_all_inbound_messages' } = { 
     	summary => 'Get all inbox messages.',
         params => $params,
-        returns => 'GetAllInboundMessagesResponse',
+        returns => 'GetAllInboundMessagesPaginatedResponse',
         };
 }
-# @return GetAllInboundMessagesResponse
+# @return GetAllInboundMessagesPaginatedResponse
 #
 sub get_all_inbound_messages {
     my ($self, %args) = @_;
@@ -3706,7 +3706,7 @@ sub get_all_inbound_messages {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetAllInboundMessagesResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetAllInboundMessagesPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -3733,10 +3733,10 @@ sub get_all_inbound_messages {
     __PACKAGE__->method_documentation->{ 'get_all_message_sessions' } = { 
     	summary => 'Get all message sending sessions.',
         params => $params,
-        returns => 'GetAllMessageSessionsResponse',
+        returns => 'GetAllMessageSessionsPaginatedResponse',
         };
 }
-# @return GetAllMessageSessionsResponse
+# @return GetAllMessageSessionsPaginatedResponse
 #
 sub get_all_message_sessions {
     my ($self, %args) = @_;
@@ -3777,7 +3777,7 @@ sub get_all_message_sessions {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetAllMessageSessionsResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetAllMessageSessionsPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -3810,10 +3810,10 @@ sub get_all_message_sessions {
     __PACKAGE__->method_documentation->{ 'get_all_outbound_messages' } = { 
     	summary => 'Get all messages',
         params => $params,
-        returns => 'GetAllOutboundMessagesResponse',
+        returns => 'GetAllOutboundMessagesPaginatedResponse',
         };
 }
-# @return GetAllOutboundMessagesResponse
+# @return GetAllOutboundMessagesPaginatedResponse
 #
 sub get_all_outbound_messages {
     my ($self, %args) = @_;
@@ -3859,7 +3859,7 @@ sub get_all_outbound_messages {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetAllOutboundMessagesResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetAllOutboundMessagesPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -3904,10 +3904,10 @@ sub get_all_outbound_messages {
     __PACKAGE__->method_documentation->{ 'get_all_scheduled_messages' } = { 
     	summary => 'Get all scheduled messages.',
         params => $params,
-        returns => 'GetAllScheduledMessagesResponse',
+        returns => 'GetAllScheduledMessagesPaginatedResponse',
         };
 }
-# @return GetAllScheduledMessagesResponse
+# @return GetAllScheduledMessagesPaginatedResponse
 #
 sub get_all_scheduled_messages {
     my ($self, %args) = @_;
@@ -3963,7 +3963,7 @@ sub get_all_scheduled_messages {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetAllScheduledMessagesResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetAllScheduledMessagesPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -3990,10 +3990,10 @@ sub get_all_scheduled_messages {
     __PACKAGE__->method_documentation->{ 'get_all_templates' } = { 
     	summary => 'Get all user templates.',
         params => $params,
-        returns => 'GetAllTemplatesResponse',
+        returns => 'GetAllTemplatesPaginatedResponse',
         };
 }
-# @return GetAllTemplatesResponse
+# @return GetAllTemplatesPaginatedResponse
 #
 sub get_all_templates {
     my ($self, %args) = @_;
@@ -4034,7 +4034,7 @@ sub get_all_templates {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetAllTemplatesResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetAllTemplatesPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -4324,10 +4324,10 @@ sub get_balance_notification_settings {
     __PACKAGE__->method_documentation->{ 'get_blocked_contacts' } = { 
     	summary => 'Get blocked contacts.',
         params => $params,
-        returns => 'GetBlockedContactsResponse',
+        returns => 'GetBlockedContactsPaginatedResponse',
         };
 }
-# @return GetBlockedContactsResponse
+# @return GetBlockedContactsPaginatedResponse
 #
 sub get_blocked_contacts {
     my ($self, %args) = @_;
@@ -4383,7 +4383,7 @@ sub get_blocked_contacts {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetBlockedContactsResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetBlockedContactsPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -4514,10 +4514,10 @@ sub get_callback_settings {
     __PACKAGE__->method_documentation->{ 'get_calls_prices' } = { 
     	summary => 'Check pricing for a inbound/outbound call.',
         params => $params,
-        returns => 'HASH[string,object]',
+        returns => 'GetCallsPricesResponse',
         };
 }
-# @return HASH[string,object]
+# @return GetCallsPricesResponse
 #
 sub get_calls_prices {
     my ($self, %args) = @_;
@@ -4548,7 +4548,7 @@ sub get_calls_prices {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('HASH[string,object]', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetCallsPricesResponse', $response);
     return $_response_object;
 }
 
@@ -4767,10 +4767,10 @@ sub get_chat_by_phone {
     __PACKAGE__->method_documentation->{ 'get_chat_messages' } = { 
     	summary => 'Fetch messages from chat with specified chat id.',
         params => $params,
-        returns => 'GetChatMessagesResponse',
+        returns => 'GetChatMessagesPaginatedResponse',
         };
 }
-# @return GetChatMessagesResponse
+# @return GetChatMessagesPaginatedResponse
 #
 sub get_chat_messages {
     my ($self, %args) = @_;
@@ -4848,7 +4848,7 @@ sub get_chat_messages {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetChatMessagesResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetChatMessagesPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -5214,10 +5214,10 @@ sub get_contact_note {
     __PACKAGE__->method_documentation->{ 'get_contact_notes' } = { 
     	summary => 'Fetch notes assigned to the given contact.',
         params => $params,
-        returns => 'GetContactNotesResponse',
+        returns => 'GetContactNotesPaginatedResponse',
         };
 }
-# @return GetContactNotesResponse
+# @return GetContactNotesPaginatedResponse
 #
 sub get_contact_notes {
     my ($self, %args) = @_;
@@ -5270,7 +5270,7 @@ sub get_contact_notes {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetContactNotesResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetContactNotesPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -5315,10 +5315,10 @@ sub get_contact_notes {
     __PACKAGE__->method_documentation->{ 'get_contacts' } = { 
     	summary => 'Get all user contacts.',
         params => $params,
-        returns => 'GetContactsResponse',
+        returns => 'GetContactsPaginatedResponse',
         };
 }
-# @return GetContactsResponse
+# @return GetContactsPaginatedResponse
 #
 sub get_contacts {
     my ($self, %args) = @_;
@@ -5374,7 +5374,7 @@ sub get_contacts {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetContactsResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetContactsPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -5407,10 +5407,10 @@ sub get_contacts {
     __PACKAGE__->method_documentation->{ 'get_contacts_autocomplete' } = { 
     	summary => 'Get contacts autocomplete suggestions by given search term.',
         params => $params,
-        returns => 'ARRAY[GetContactsAutocompleteResponse]',
+        returns => 'GetContactsAutocompleteResponse',
         };
 }
-# @return ARRAY[GetContactsAutocompleteResponse]
+# @return GetContactsAutocompleteResponse
 #
 sub get_contacts_autocomplete {
     my ($self, %args) = @_;
@@ -5461,7 +5461,7 @@ sub get_contacts_autocomplete {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[GetContactsAutocompleteResponse]', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetContactsAutocompleteResponse', $response);
     return $_response_object;
 }
 
@@ -5506,10 +5506,10 @@ sub get_contacts_autocomplete {
     __PACKAGE__->method_documentation->{ 'get_contacts_by_list_id' } = { 
     	summary => 'Fetch user contacts by given group id.',
         params => $params,
-        returns => 'GetContactsByListIdResponse',
+        returns => 'GetContactsByListIdPaginatedResponse',
         };
 }
-# @return GetContactsByListIdResponse
+# @return GetContactsByListIdPaginatedResponse
 #
 sub get_contacts_by_list_id {
     my ($self, %args) = @_;
@@ -5572,7 +5572,7 @@ sub get_contacts_by_list_id {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetContactsByListIdResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetContactsByListIdPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -5587,10 +5587,10 @@ sub get_contacts_by_list_id {
     __PACKAGE__->method_documentation->{ 'get_countries' } = { 
     	summary => 'Return list of countries.',
         params => $params,
-        returns => 'ARRAY[Country]',
+        returns => 'GetCountriesResponse',
         };
 }
-# @return ARRAY[Country]
+# @return GetCountriesResponse
 #
 sub get_countries {
     my ($self, %args) = @_;
@@ -5621,7 +5621,7 @@ sub get_countries {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[Country]', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetCountriesResponse', $response);
     return $_response_object;
 }
 
@@ -5764,10 +5764,10 @@ sub get_custom_field {
     __PACKAGE__->method_documentation->{ 'get_custom_fields' } = { 
     	summary => 'Get all contact custom fields.',
         params => $params,
-        returns => 'GetCustomFieldsResponse',
+        returns => 'GetCustomFieldsPaginatedResponse',
         };
 }
-# @return GetCustomFieldsResponse
+# @return GetCustomFieldsPaginatedResponse
 #
 sub get_custom_fields {
     my ($self, %args) = @_;
@@ -5808,7 +5808,7 @@ sub get_custom_fields {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetCustomFieldsResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetCustomFieldsPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -5890,10 +5890,10 @@ sub get_dedicated_number {
     __PACKAGE__->method_documentation->{ 'get_disallowed_rules' } = { 
     	summary => 'Get an array of all rules that are disallowed to the current account.',
         params => $params,
-        returns => 'ARRAY[string]',
+        returns => 'GetDisallowedRulesResponse',
         };
 }
-# @return ARRAY[string]
+# @return GetDisallowedRulesResponse
 #
 sub get_disallowed_rules {
     my ($self, %args) = @_;
@@ -5924,7 +5924,7 @@ sub get_disallowed_rules {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[string]', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetDisallowedRulesResponse', $response);
     return $_response_object;
 }
 
@@ -5957,10 +5957,10 @@ sub get_disallowed_rules {
     __PACKAGE__->method_documentation->{ 'get_favourites' } = { 
     	summary => 'Get favorite contacts and lists.',
         params => $params,
-        returns => 'GetFavouritesResponse',
+        returns => 'GetFavouritesPaginatedResponse',
         };
 }
-# @return GetFavouritesResponse
+# @return GetFavouritesPaginatedResponse
 #
 sub get_favourites {
     my ($self, %args) = @_;
@@ -6006,7 +6006,7 @@ sub get_favourites {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetFavouritesResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetFavouritesPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -6033,10 +6033,10 @@ sub get_favourites {
     __PACKAGE__->method_documentation->{ 'get_forwarded_calls' } = { 
     	summary => 'Get all forwarded calls.',
         params => $params,
-        returns => 'GetForwardedCallsResponse',
+        returns => 'GetForwardedCallsPaginatedResponse',
         };
 }
-# @return GetForwardedCallsResponse
+# @return GetForwardedCallsPaginatedResponse
 #
 sub get_forwarded_calls {
     my ($self, %args) = @_;
@@ -6077,7 +6077,7 @@ sub get_forwarded_calls {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetForwardedCallsResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetForwardedCallsPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -6220,10 +6220,10 @@ sub get_inbound_messages_notification_settings {
     __PACKAGE__->method_documentation->{ 'get_invoices' } = { 
     	summary => 'Return account invoices.',
         params => $params,
-        returns => 'GetInvoicesResponse',
+        returns => 'GetInvoicesPaginatedResponse',
         };
 }
-# @return GetInvoicesResponse
+# @return GetInvoicesPaginatedResponse
 #
 sub get_invoices {
     my ($self, %args) = @_;
@@ -6264,7 +6264,7 @@ sub get_invoices {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetInvoicesResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetInvoicesPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -6431,10 +6431,10 @@ sub get_list_contacts_ids {
     __PACKAGE__->method_documentation->{ 'get_lists_of_contact' } = { 
     	summary => 'Return lists which contact belongs to.',
         params => $params,
-        returns => 'GetListsOfContactResponse',
+        returns => 'GetListsOfContactPaginatedResponse',
         };
 }
-# @return GetListsOfContactResponse
+# @return GetListsOfContactPaginatedResponse
 #
 sub get_lists_of_contact {
     my ($self, %args) = @_;
@@ -6487,7 +6487,7 @@ sub get_lists_of_contact {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetListsOfContactResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetListsOfContactPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -7209,10 +7209,10 @@ sub get_message_session_stat {
     __PACKAGE__->method_documentation->{ 'get_messages_by_session_id' } = { 
     	summary => 'Fetch messages by given session id.',
         params => $params,
-        returns => 'GetMessagesBySessionIdResponse',
+        returns => 'GetMessagesBySessionIdPaginatedResponse',
         };
 }
-# @return GetMessagesBySessionIdResponse
+# @return GetMessagesBySessionIdPaginatedResponse
 #
 sub get_messages_by_session_id {
     my ($self, %args) = @_;
@@ -7275,7 +7275,7 @@ sub get_messages_by_session_id {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetMessagesBySessionIdResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetMessagesBySessionIdPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -7518,10 +7518,10 @@ sub get_outbound_message {
     __PACKAGE__->method_documentation->{ 'get_outbound_messages_history' } = { 
     	summary => 'Get history',
         params => $params,
-        returns => 'GetOutboundMessagesHistoryResponse',
+        returns => 'GetOutboundMessagesHistoryPaginatedResponse',
         };
 }
-# @return GetOutboundMessagesHistoryResponse
+# @return GetOutboundMessagesHistoryPaginatedResponse
 #
 sub get_outbound_messages_history {
     my ($self, %args) = @_;
@@ -7577,7 +7577,7 @@ sub get_outbound_messages_history {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetOutboundMessagesHistoryResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetOutboundMessagesHistoryPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -7787,10 +7787,10 @@ sub get_sender_id {
     __PACKAGE__->method_documentation->{ 'get_sender_ids' } = { 
     	summary => 'Get all sender IDs of current user.',
         params => $params,
-        returns => 'GetSenderIdsResponse',
+        returns => 'GetSenderIdsPaginatedResponse',
         };
 }
-# @return GetSenderIdsResponse
+# @return GetSenderIdsPaginatedResponse
 #
 sub get_sender_ids {
     my ($self, %args) = @_;
@@ -7831,7 +7831,7 @@ sub get_sender_ids {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetSenderIdsResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetSenderIdsPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -7930,10 +7930,10 @@ sub get_sender_settings {
     __PACKAGE__->method_documentation->{ 'get_spending_stat' } = { 
     	summary => 'Return account spending statistics.',
         params => $params,
-        returns => 'GetSpendingStatResponse',
+        returns => 'GetSpendingStatPaginatedResponse',
         };
 }
-# @return GetSpendingStatResponse
+# @return GetSpendingStatPaginatedResponse
 #
 sub get_spending_stat {
     my ($self, %args) = @_;
@@ -7984,7 +7984,7 @@ sub get_spending_stat {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetSpendingStatResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetSpendingStatPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -8486,10 +8486,10 @@ sub get_survey_nodes {
     __PACKAGE__->method_documentation->{ 'get_surveys' } = { 
     	summary => 'Get all user surveys.',
         params => $params,
-        returns => 'GetSurveysResponse',
+        returns => 'GetSurveysPaginatedResponse',
         };
 }
-# @return GetSurveysResponse
+# @return GetSurveysPaginatedResponse
 #
 sub get_surveys {
     my ($self, %args) = @_;
@@ -8530,7 +8530,7 @@ sub get_surveys {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetSurveysResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetSurveysPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -8618,10 +8618,10 @@ sub get_template {
     __PACKAGE__->method_documentation->{ 'get_timezones' } = { 
     	summary => 'Return all available timezone IDs.',
         params => $params,
-        returns => 'object',
+        returns => 'GetTimezonesResponse',
         };
 }
-# @return object
+# @return GetTimezonesResponse
 #
 sub get_timezones {
     my ($self, %args) = @_;
@@ -8657,7 +8657,7 @@ sub get_timezones {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('object', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetTimezonesResponse', $response);
     return $_response_object;
 }
 
@@ -8800,10 +8800,10 @@ sub get_unsubscribed_contact {
     __PACKAGE__->method_documentation->{ 'get_unsubscribers' } = { 
     	summary => 'Get all contact have unsubscribed from your communication.',
         params => $params,
-        returns => 'GetUnsubscribersResponse',
+        returns => 'GetUnsubscribersPaginatedResponse',
         };
 }
-# @return GetUnsubscribersResponse
+# @return GetUnsubscribersPaginatedResponse
 #
 sub get_unsubscribers {
     my ($self, %args) = @_;
@@ -8844,7 +8844,7 @@ sub get_unsubscribers {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetUnsubscribersResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetUnsubscribersPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -8877,10 +8877,10 @@ sub get_unsubscribers {
     __PACKAGE__->method_documentation->{ 'get_user_dedicated_numbers' } = { 
     	summary => 'Get user&#39;s dedicated numbers.',
         params => $params,
-        returns => 'GetUserDedicatedNumbersResponse',
+        returns => 'GetUserDedicatedNumbersPaginatedResponse',
         };
 }
-# @return GetUserDedicatedNumbersResponse
+# @return GetUserDedicatedNumbersPaginatedResponse
 #
 sub get_user_dedicated_numbers {
     my ($self, %args) = @_;
@@ -8926,7 +8926,7 @@ sub get_user_dedicated_numbers {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetUserDedicatedNumbersResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetUserDedicatedNumbersPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -8977,10 +8977,10 @@ sub get_user_dedicated_numbers {
     __PACKAGE__->method_documentation->{ 'get_user_lists' } = { 
     	summary => 'Get all user lists.',
         params => $params,
-        returns => 'GetUserListsResponse',
+        returns => 'GetUserListsPaginatedResponse',
         };
 }
-# @return GetUserListsResponse
+# @return GetUserListsPaginatedResponse
 #
 sub get_user_lists {
     my ($self, %args) = @_;
@@ -9041,7 +9041,7 @@ sub get_user_lists {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('GetUserListsResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('GetUserListsPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -9800,10 +9800,10 @@ sub reset_survey {
     __PACKAGE__->method_documentation->{ 'search_chats' } = { 
     	summary => 'Find chats by inbound or outbound messages text.',
         params => $params,
-        returns => 'SearchChatsResponse',
+        returns => 'SearchChatsPaginatedResponse',
         };
 }
-# @return SearchChatsResponse
+# @return SearchChatsPaginatedResponse
 #
 sub search_chats {
     my ($self, %args) = @_;
@@ -9849,7 +9849,7 @@ sub search_chats {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('SearchChatsResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('SearchChatsPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -9882,10 +9882,10 @@ sub search_chats {
     __PACKAGE__->method_documentation->{ 'search_chats_by_ids' } = { 
     	summary => 'Find chats by IDs.',
         params => $params,
-        returns => 'SearchChatsByIdsResponse',
+        returns => 'SearchChatsByIdsPaginatedResponse',
         };
 }
-# @return SearchChatsByIdsResponse
+# @return SearchChatsByIdsPaginatedResponse
 #
 sub search_chats_by_ids {
     my ($self, %args) = @_;
@@ -9931,7 +9931,7 @@ sub search_chats_by_ids {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('SearchChatsByIdsResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('SearchChatsByIdsPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -9970,10 +9970,10 @@ sub search_chats_by_ids {
     __PACKAGE__->method_documentation->{ 'search_chats_by_receipent' } = { 
     	summary => 'Find chats by recipient (contact, list name or phone number).',
         params => $params,
-        returns => 'SearchChatsByReceipentResponse',
+        returns => 'SearchChatsByReceipentPaginatedResponse',
         };
 }
-# @return SearchChatsByReceipentResponse
+# @return SearchChatsByReceipentPaginatedResponse
 #
 sub search_chats_by_receipent {
     my ($self, %args) = @_;
@@ -10024,7 +10024,7 @@ sub search_chats_by_receipent {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('SearchChatsByReceipentResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('SearchChatsByReceipentPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -10105,10 +10105,10 @@ sub search_chats_by_receipent {
     __PACKAGE__->method_documentation->{ 'search_contacts' } = { 
     	summary => 'Find user contacts by given parameters.',
         params => $params,
-        returns => 'SearchContactsResponse',
+        returns => 'SearchContactsPaginatedResponse',
         };
 }
-# @return SearchContactsResponse
+# @return SearchContactsPaginatedResponse
 #
 sub search_contacts {
     my ($self, %args) = @_;
@@ -10194,7 +10194,7 @@ sub search_contacts {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('SearchContactsResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('SearchContactsPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -10251,10 +10251,10 @@ sub search_contacts {
     __PACKAGE__->method_documentation->{ 'search_inbound_messages' } = { 
     	summary => 'Find inbound messages by given parameters.',
         params => $params,
-        returns => 'SearchInboundMessagesResponse',
+        returns => 'SearchInboundMessagesPaginatedResponse',
         };
 }
-# @return SearchInboundMessagesResponse
+# @return SearchInboundMessagesPaginatedResponse
 #
 sub search_inbound_messages {
     my ($self, %args) = @_;
@@ -10320,7 +10320,7 @@ sub search_inbound_messages {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('SearchInboundMessagesResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('SearchInboundMessagesPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -10383,10 +10383,10 @@ sub search_inbound_messages {
     __PACKAGE__->method_documentation->{ 'search_lists' } = { 
     	summary => 'Find contact lists by given parameters.',
         params => $params,
-        returns => 'SearchListsResponse',
+        returns => 'SearchListsPaginatedResponse',
         };
 }
-# @return SearchListsResponse
+# @return SearchListsPaginatedResponse
 #
 sub search_lists {
     my ($self, %args) = @_;
@@ -10457,7 +10457,7 @@ sub search_lists {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('SearchListsResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('SearchListsPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -10520,10 +10520,10 @@ sub search_lists {
     __PACKAGE__->method_documentation->{ 'search_outbound_messages' } = { 
     	summary => 'Find messages',
         params => $params,
-        returns => 'SearchOutboundMessagesResponse',
+        returns => 'SearchOutboundMessagesPaginatedResponse',
         };
 }
-# @return SearchOutboundMessagesResponse
+# @return SearchOutboundMessagesPaginatedResponse
 #
 sub search_outbound_messages {
     my ($self, %args) = @_;
@@ -10594,7 +10594,7 @@ sub search_outbound_messages {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('SearchOutboundMessagesResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('SearchOutboundMessagesPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -10651,10 +10651,10 @@ sub search_outbound_messages {
     __PACKAGE__->method_documentation->{ 'search_scheduled_messages' } = { 
     	summary => 'Find scheduled messages by given parameters.',
         params => $params,
-        returns => 'SearchScheduledMessagesResponse',
+        returns => 'SearchScheduledMessagesPaginatedResponse',
         };
 }
-# @return SearchScheduledMessagesResponse
+# @return SearchScheduledMessagesPaginatedResponse
 #
 sub search_scheduled_messages {
     my ($self, %args) = @_;
@@ -10720,7 +10720,7 @@ sub search_scheduled_messages {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('SearchScheduledMessagesResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('SearchScheduledMessagesPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -10765,10 +10765,10 @@ sub search_scheduled_messages {
     __PACKAGE__->method_documentation->{ 'search_templates' } = { 
     	summary => 'Find user templates by given parameters.',
         params => $params,
-        returns => 'SearchTemplatesResponse',
+        returns => 'SearchTemplatesPaginatedResponse',
         };
 }
-# @return SearchTemplatesResponse
+# @return SearchTemplatesPaginatedResponse
 #
 sub search_templates {
     my ($self, %args) = @_;
@@ -10824,7 +10824,7 @@ sub search_templates {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('SearchTemplatesResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('SearchTemplatesPaginatedResponse', $response);
     return $_response_object;
 }
 

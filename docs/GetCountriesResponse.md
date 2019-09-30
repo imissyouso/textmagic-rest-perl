@@ -1,8 +1,8 @@
-# Net::Sms::TextMagicClient::Object::GetContactsAutocompleteResponse
+# Net::Sms::TextMagicClient::Object::GetCountriesResponse
 
 ## Load the model package
 ```perl
-use Net::Sms::TextMagicClient::Object::GetContactsAutocompleteResponse;
+use Net::Sms::TextMagicClient::Object::GetCountriesResponse;
 ```
 
 ## Properties
