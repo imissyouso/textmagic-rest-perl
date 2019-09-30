@@ -43,8 +43,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $block_contact_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->block_contact(block_contact_input_object => $block_contact_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->block_contact(block_contact_input_object => $block_contact_input_object);
 }
 
 #
@@ -52,8 +51,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $buy_dedicated_number_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->buy_dedicated_number(buy_dedicated_number_input_object => $buy_dedicated_number_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->buy_dedicated_number(buy_dedicated_number_input_object => $buy_dedicated_number_input_object);
 }
 
 #
@@ -69,8 +67,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $check_phone_verification_code_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->check_phone_verification_code(check_phone_verification_code_input_object => $check_phone_verification_code_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->check_phone_verification_code(check_phone_verification_code_input_object => $check_phone_verification_code_input_object);
 }
 
 #
@@ -87,8 +84,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $close_chats_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->close_chats_bulk(close_chats_bulk_input_object => $close_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->close_chats_bulk(close_chats_bulk_input_object => $close_chats_bulk_input_object);
 }
 
 #
@@ -111,8 +107,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $create_contact_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->create_contact(create_contact_input_object => $create_contact_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->create_contact(create_contact_input_object => $create_contact_input_object);
 }
 
 #
@@ -121,8 +116,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $create_contact_note_input_object = undef; # replace NULL with a proper value
     my $id = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->create_contact_note(create_contact_note_input_object => $create_contact_note_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->create_contact_note(create_contact_note_input_object => $create_contact_note_input_object, id => $id);
 }
 
 #
@@ -130,8 +124,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $create_custom_field_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->create_custom_field(create_custom_field_input_object => $create_custom_field_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->create_custom_field(create_custom_field_input_object => $create_custom_field_input_object);
 }
 
 #
@@ -139,8 +132,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $create_list_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->create_list(create_list_input_object => $create_list_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->create_list(create_list_input_object => $create_list_input_object);
 }
 
 #
@@ -148,8 +140,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $create_push_token_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->create_push_token(create_push_token_input_object => $create_push_token_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->create_push_token(create_push_token_input_object => $create_push_token_input_object);
 }
 
 #
@@ -157,8 +148,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $create_survey_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->create_survey(create_survey_input_object => $create_survey_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->create_survey(create_survey_input_object => $create_survey_input_object);
 }
 
 #
@@ -167,8 +157,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $create_survey_node_input_object = undef; # replace NULL with a proper value
     my $id = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->create_survey_node(create_survey_node_input_object => $create_survey_node_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->create_survey_node(create_survey_node_input_object => $create_survey_node_input_object, id => $id);
 }
 
 #
@@ -176,8 +165,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $create_template_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->create_template(create_template_input_object => $create_template_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->create_template(create_template_input_object => $create_template_input_object);
 }
 
 #
@@ -207,8 +195,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $delete_chat_messages_bulk_input_object = undef; # replace NULL with a proper value
     my $id = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->delete_chat_messages(delete_chat_messages_bulk_input_object => $delete_chat_messages_bulk_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->delete_chat_messages(delete_chat_messages_bulk_input_object => $delete_chat_messages_bulk_input_object, id => $id);
 }
 
 #
@@ -216,8 +203,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $delete_chats_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->delete_chats_bulk(delete_chats_bulk_input_object => $delete_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->delete_chats_bulk(delete_chats_bulk_input_object => $delete_chats_bulk_input_object);
 }
 
 #
@@ -250,8 +236,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $id = undef; # replace NULL with a proper value
     my $delete_contact_notes_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->delete_contact_notes_bulk(id => $id, delete_contact_notes_bulk_input_object => $delete_contact_notes_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->delete_contact_notes_bulk(id => $id, delete_contact_notes_bulk_input_object => $delete_contact_notes_bulk_input_object);
 }
 
 #
@@ -259,8 +244,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $delete_contacts_by_ids_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->delete_contacts_by_ids(delete_contacts_by_ids_input_object => $delete_contacts_by_ids_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->delete_contacts_by_ids(delete_contacts_by_ids_input_object => $delete_contacts_by_ids_input_object);
 }
 
 #
@@ -301,8 +285,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $delete_inbound_messages_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->delete_inbound_messages_bulk(delete_inbound_messages_bulk_input_object => $delete_inbound_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->delete_inbound_messages_bulk(delete_inbound_messages_bulk_input_object => $delete_inbound_messages_bulk_input_object);
 }
 
 #
@@ -327,8 +310,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $delete_list_contacts_bulk_input_object = undef; # replace NULL with a proper value
     my $id = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->delete_list_contacts_bulk(delete_list_contacts_bulk_input_object => $delete_list_contacts_bulk_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->delete_list_contacts_bulk(delete_list_contacts_bulk_input_object => $delete_list_contacts_bulk_input_object, id => $id);
 }
 
 #
@@ -336,8 +318,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $delete_lists_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->delete_lists_bulk(delete_lists_bulk_input_object => $delete_lists_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->delete_lists_bulk(delete_lists_bulk_input_object => $delete_lists_bulk_input_object);
 }
 
 #
@@ -353,8 +334,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $delete_message_sessions_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->delete_message_sessions_bulk(delete_message_sessions_bulk_input_object => $delete_message_sessions_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->delete_message_sessions_bulk(delete_message_sessions_bulk_input_object => $delete_message_sessions_bulk_input_object);
 }
 
 #
@@ -370,8 +350,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $delete_outbound_messages_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->delete_outbound_messages_bulk(delete_outbound_messages_bulk_input_object => $delete_outbound_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->delete_outbound_messages_bulk(delete_outbound_messages_bulk_input_object => $delete_outbound_messages_bulk_input_object);
 }
 
 #
@@ -396,8 +375,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $delete_scheduled_messages_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->delete_scheduled_messages_bulk(delete_scheduled_messages_bulk_input_object => $delete_scheduled_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->delete_scheduled_messages_bulk(delete_scheduled_messages_bulk_input_object => $delete_scheduled_messages_bulk_input_object);
 }
 
 #
@@ -437,8 +415,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $delete_templates_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->delete_templates_bulk(delete_templates_bulk_input_object => $delete_templates_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->delete_templates_bulk(delete_templates_bulk_input_object => $delete_templates_bulk_input_object);
 }
 
 #
@@ -446,8 +423,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $do_auth_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->do_auth(do_auth_input_object => $do_auth_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->do_auth(do_auth_input_object => $do_auth_input_object);
 }
 
 #
@@ -1050,8 +1026,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
     my $get_subaccounts_with_tokens_input_object = undef; # replace NULL with a proper value
     my $page = undef; # replace NULL with a proper value
     my $limit = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->get_subaccounts_with_tokens(get_subaccounts_with_tokens_input_object => $get_subaccounts_with_tokens_input_object, page => $page, limit => $limit, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->get_subaccounts_with_tokens(get_subaccounts_with_tokens_input_object => $get_subaccounts_with_tokens_input_object, page => $page, limit => $limit);
 }
 
 #
@@ -1162,8 +1137,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $invite_subaccount_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->invite_subaccount(invite_subaccount_input_object => $invite_subaccount_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->invite_subaccount(invite_subaccount_input_object => $invite_subaccount_input_object);
 }
 
 #
@@ -1171,8 +1145,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $mark_chats_read_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->mark_chats_read_bulk(mark_chats_read_bulk_input_object => $mark_chats_read_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->mark_chats_read_bulk(mark_chats_read_bulk_input_object => $mark_chats_read_bulk_input_object);
 }
 
 #
@@ -1180,8 +1153,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $mark_chats_unread_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->mark_chats_unread_bulk(mark_chats_unread_bulk_input_object => $mark_chats_unread_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->mark_chats_unread_bulk(mark_chats_unread_bulk_input_object => $mark_chats_unread_bulk_input_object);
 }
 
 #
@@ -1189,8 +1161,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $merge_survey_nodes_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->merge_survey_nodes(merge_survey_nodes_input_object => $merge_survey_nodes_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->merge_survey_nodes(merge_survey_nodes_input_object => $merge_survey_nodes_input_object);
 }
 
 #
@@ -1198,8 +1169,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $mute_chat_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->mute_chat(mute_chat_input_object => $mute_chat_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->mute_chat(mute_chat_input_object => $mute_chat_input_object);
 }
 
 #
@@ -1207,8 +1177,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $mute_chats_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->mute_chats_bulk(mute_chats_bulk_input_object => $mute_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->mute_chats_bulk(mute_chats_bulk_input_object => $mute_chats_bulk_input_object);
 }
 
 #
@@ -1223,8 +1192,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $reopen_chats_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->reopen_chats_bulk(reopen_chats_bulk_input_object => $reopen_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->reopen_chats_bulk(reopen_chats_bulk_input_object => $reopen_chats_bulk_input_object);
 }
 
 #
@@ -1232,8 +1200,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $request_new_subaccount_token_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->request_new_subaccount_token(request_new_subaccount_token_input_object => $request_new_subaccount_token_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->request_new_subaccount_token(request_new_subaccount_token_input_object => $request_new_subaccount_token_input_object);
 }
 
 #
@@ -1241,8 +1208,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $request_sender_id_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->request_sender_id(request_sender_id_input_object => $request_sender_id_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->request_sender_id(request_sender_id_input_object => $request_sender_id_input_object);
 }
 
 #
@@ -1384,8 +1350,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $send_message_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->send_message(send_message_input_object => $send_message_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->send_message(send_message_input_object => $send_message_input_object);
 }
 
 #
@@ -1400,8 +1365,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $set_chat_status_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->set_chat_status(set_chat_status_input_object => $set_chat_status_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->set_chat_status(set_chat_status_input_object => $set_chat_status_input_object);
 }
 
 #
@@ -1417,8 +1381,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $unblock_contact_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->unblock_contact(unblock_contact_input_object => $unblock_contact_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->unblock_contact(unblock_contact_input_object => $unblock_contact_input_object);
 }
 
 #
@@ -1426,8 +1389,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $unblock_contacts_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->unblock_contacts_bulk(unblock_contacts_bulk_input_object => $unblock_contacts_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->unblock_contacts_bulk(unblock_contacts_bulk_input_object => $unblock_contacts_bulk_input_object);
 }
 
 #
@@ -1435,8 +1397,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $unmute_chats_bulk_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->unmute_chats_bulk(unmute_chats_bulk_input_object => $unmute_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->unmute_chats_bulk(unmute_chats_bulk_input_object => $unmute_chats_bulk_input_object);
 }
 
 #
@@ -1444,8 +1405,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $unsubscribe_contact_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->unsubscribe_contact(unsubscribe_contact_input_object => $unsubscribe_contact_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->unsubscribe_contact(unsubscribe_contact_input_object => $unsubscribe_contact_input_object);
 }
 
 #
@@ -1453,8 +1413,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $update_balance_notification_settings_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->update_balance_notification_settings(update_balance_notification_settings_input_object => $update_balance_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->update_balance_notification_settings(update_balance_notification_settings_input_object => $update_balance_notification_settings_input_object);
 }
 
 #
@@ -1462,8 +1421,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $update_callback_settings_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->update_callback_settings(update_callback_settings_input_object => $update_callback_settings_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->update_callback_settings(update_callback_settings_input_object => $update_callback_settings_input_object);
 }
 
 #
@@ -1471,8 +1429,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $update_chat_desktop_notification_settings_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->update_chat_desktop_notification_settings(update_chat_desktop_notification_settings_input_object => $update_chat_desktop_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->update_chat_desktop_notification_settings(update_chat_desktop_notification_settings_input_object => $update_chat_desktop_notification_settings_input_object);
 }
 
 #
@@ -1481,8 +1438,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $update_contact_input_object = undef; # replace NULL with a proper value
     my $id = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->update_contact(update_contact_input_object => $update_contact_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->update_contact(update_contact_input_object => $update_contact_input_object, id => $id);
 }
 
 #
@@ -1491,8 +1447,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $update_contact_note_input_object = undef; # replace NULL with a proper value
     my $id = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->update_contact_note(update_contact_note_input_object => $update_contact_note_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->update_contact_note(update_contact_note_input_object => $update_contact_note_input_object, id => $id);
 }
 
 #
@@ -1500,8 +1455,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $update_current_user_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->update_current_user(update_current_user_input_object => $update_current_user_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->update_current_user(update_current_user_input_object => $update_current_user_input_object);
 }
 
 #
@@ -1510,8 +1464,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $update_custom_field_input_object = undef; # replace NULL with a proper value
     my $id = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->update_custom_field(update_custom_field_input_object => $update_custom_field_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->update_custom_field(update_custom_field_input_object => $update_custom_field_input_object, id => $id);
 }
 
 #
@@ -1520,8 +1473,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $update_custom_field_value_input_object = undef; # replace NULL with a proper value
     my $id = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->update_custom_field_value(update_custom_field_value_input_object => $update_custom_field_value_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->update_custom_field_value(update_custom_field_value_input_object => $update_custom_field_value_input_object, id => $id);
 }
 
 #
@@ -1529,8 +1481,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $update_inbound_messages_notification_settings_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->update_inbound_messages_notification_settings(update_inbound_messages_notification_settings_input_object => $update_inbound_messages_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->update_inbound_messages_notification_settings(update_inbound_messages_notification_settings_input_object => $update_inbound_messages_notification_settings_input_object);
 }
 
 #
@@ -1547,8 +1498,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $update_password_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->update_password(update_password_input_object => $update_password_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->update_password(update_password_input_object => $update_password_input_object);
 }
 
 #
@@ -1556,8 +1506,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $update_sender_setting_input_object = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->update_sender_setting(update_sender_setting_input_object => $update_sender_setting_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->update_sender_setting(update_sender_setting_input_object => $update_sender_setting_input_object);
 }
 
 #
@@ -1566,8 +1515,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $update_survey_input_object = undef; # replace NULL with a proper value
     my $id = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->update_survey(update_survey_input_object => $update_survey_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->update_survey(update_survey_input_object => $update_survey_input_object, id => $id);
 }
 
 #
@@ -1576,8 +1524,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $update_survey_node_input_object = undef; # replace NULL with a proper value
     my $id = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->update_survey_node(update_survey_node_input_object => $update_survey_node_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->update_survey_node(update_survey_node_input_object => $update_survey_node_input_object, id => $id);
 }
 
 #
@@ -1586,8 +1533,7 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $update_template_input_object = undef; # replace NULL with a proper value
     my $id = undef; # replace NULL with a proper value
-    my $x_ignore_null_values = undef; # replace NULL with a proper value
-    my $result = $api->update_template(update_template_input_object => $update_template_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api->update_template(update_template_input_object => $update_template_input_object, id => $id);
 }
 
 #

@@ -137,18 +137,12 @@ sub assign_contacts_to_list {
 # Block contact from inbound and outbound communication by phone number.
 # 
 # @param BlockContactInputObject $block_contact_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'block_contact_input_object' => {
         data_type => 'BlockContactInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'block_contact' } = { 
@@ -182,11 +176,6 @@ sub block_contact {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'block_contact_input_object'}) {
@@ -213,18 +202,12 @@ sub block_contact {
 # Buy a dedicated number and assign it to the specified account.
 # 
 # @param BuyDedicatedNumberInputObject $buy_dedicated_number_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'buy_dedicated_number_input_object' => {
         data_type => 'BuyDedicatedNumberInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'buy_dedicated_number' } = { 
@@ -257,11 +240,6 @@ sub buy_dedicated_number {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -352,18 +330,12 @@ sub cancel_survey {
 # Check user phone verification code
 # 
 # @param CheckPhoneVerificationCodeInputObject $check_phone_verification_code_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'check_phone_verification_code_input_object' => {
         data_type => 'CheckPhoneVerificationCodeInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'check_phone_verification_code' } = { 
@@ -396,11 +368,6 @@ sub check_phone_verification_code {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -507,18 +474,12 @@ sub clear_and_assign_contacts_to_list {
 # Close chats by chat ids or close all chats
 # 
 # @param CloseChatsBulkInputObject $close_chats_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'close_chats_bulk_input_object' => {
         data_type => 'CloseChatsBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'close_chats_bulk' } = { 
@@ -551,11 +512,6 @@ sub close_chats_bulk {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -687,18 +643,12 @@ sub close_subaccount {
 # Create a new contact from the submitted data.
 # 
 # @param CreateContactInputObject $create_contact_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'create_contact_input_object' => {
         data_type => 'CreateContactInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'create_contact' } = { 
@@ -732,11 +682,6 @@ sub create_contact {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'create_contact_input_object'}) {
@@ -764,7 +709,6 @@ sub create_contact {
 # 
 # @param CreateContactNoteInputObject $create_contact_note_input_object  (required)
 # @param int $id  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'create_contact_note_input_object' => {
@@ -776,11 +720,6 @@ sub create_contact {
         data_type => 'int',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'create_contact_note' } = { 
@@ -819,11 +758,6 @@ sub create_contact_note {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     # path params
     if ( exists $args{'id'}) {
         my $_base_variable = "{" . "id" . "}";
@@ -857,18 +791,12 @@ sub create_contact_note {
 # Create a new custom field from the submitted data.
 # 
 # @param CreateCustomFieldInputObject $create_custom_field_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'create_custom_field_input_object' => {
         data_type => 'CreateCustomFieldInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'create_custom_field' } = { 
@@ -902,11 +830,6 @@ sub create_custom_field {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'create_custom_field_input_object'}) {
@@ -933,18 +856,12 @@ sub create_custom_field {
 # Create a new list from the submitted data.
 # 
 # @param CreateListInputObject $create_list_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'create_list_input_object' => {
         data_type => 'CreateListInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'create_list' } = { 
@@ -978,11 +895,6 @@ sub create_list {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'create_list_input_object'}) {
@@ -1009,18 +921,12 @@ sub create_list {
 # Add or update a device token.
 # 
 # @param CreatePushTokenInputObject $create_push_token_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'create_push_token_input_object' => {
         data_type => 'CreatePushTokenInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'create_push_token' } = { 
@@ -1054,11 +960,6 @@ sub create_push_token {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'create_push_token_input_object'}) {
@@ -1081,18 +982,12 @@ sub create_push_token {
 # Create a new survey from the submitted data.
 # 
 # @param CreateSurveyInputObject $create_survey_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'create_survey_input_object' => {
         data_type => 'CreateSurveyInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'create_survey' } = { 
@@ -1126,11 +1021,6 @@ sub create_survey {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'create_survey_input_object'}) {
@@ -1158,7 +1048,6 @@ sub create_survey {
 # 
 # @param CreateSurveyNodeInputObject $create_survey_node_input_object  (required)
 # @param int $id  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'create_survey_node_input_object' => {
@@ -1170,11 +1059,6 @@ sub create_survey {
         data_type => 'int',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'create_survey_node' } = { 
@@ -1213,11 +1097,6 @@ sub create_survey_node {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     # path params
     if ( exists $args{'id'}) {
         my $_base_variable = "{" . "id" . "}";
@@ -1251,18 +1130,12 @@ sub create_survey_node {
 # Create a new template from the submitted data.
 # 
 # @param CreateTemplateInputObject $create_template_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'create_template_input_object' => {
         data_type => 'CreateTemplateInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'create_template' } = { 
@@ -1295,11 +1168,6 @@ sub create_template {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -1463,7 +1331,6 @@ sub delete_avatar {
 # 
 # @param DeleteChatMessagesBulkInputObject $delete_chat_messages_bulk_input_object  (required)
 # @param int $id  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'delete_chat_messages_bulk_input_object' => {
@@ -1475,11 +1342,6 @@ sub delete_avatar {
         data_type => 'int',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_chat_messages' } = { 
@@ -1518,11 +1380,6 @@ sub delete_chat_messages {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     # path params
     if ( exists $args{'id'}) {
         my $_base_variable = "{" . "id" . "}";
@@ -1552,18 +1409,12 @@ sub delete_chat_messages {
 # Delete chats by given ID(s) or delete all chats.
 # 
 # @param DeleteChatsBulkInputObject $delete_chats_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'delete_chats_bulk_input_object' => {
         data_type => 'DeleteChatsBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_chats_bulk' } = { 
@@ -1596,11 +1447,6 @@ sub delete_chats_bulk {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -1814,7 +1660,6 @@ sub delete_contact_note {
 # 
 # @param int $id  (required)
 # @param DeleteContactNotesBulkInputObject $delete_contact_notes_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'id' => {
@@ -1826,11 +1671,6 @@ sub delete_contact_note {
         data_type => 'DeleteContactNotesBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_contact_notes_bulk' } = { 
@@ -1869,11 +1709,6 @@ sub delete_contact_notes_bulk {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     # path params
     if ( exists $args{'id'}) {
         my $_base_variable = "{" . "id" . "}";
@@ -1903,18 +1738,12 @@ sub delete_contact_notes_bulk {
 # Delete contact by given ID(s) or delete all contacts.
 # 
 # @param DeleteContactsByIdsInputObject $delete_contacts_by_ids_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'delete_contacts_by_ids_input_object' => {
         data_type => 'DeleteContactsByIdsInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_contacts_by_ids' } = { 
@@ -1947,11 +1776,6 @@ sub delete_contacts_by_ids {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -2243,18 +2067,12 @@ sub delete_inbound_message {
 # Delete inbound messages by given ID(s) or delete all inbound messages.
 # 
 # @param DeleteInboundMessagesBulkInputObject $delete_inbound_messages_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'delete_inbound_messages_bulk_input_object' => {
         data_type => 'DeleteInboundMessagesBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_inbound_messages_bulk' } = { 
@@ -2287,11 +2105,6 @@ sub delete_inbound_messages_bulk {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -2442,7 +2255,6 @@ sub delete_list_avatar {
 # 
 # @param DeleteListContactsBulkInputObject $delete_list_contacts_bulk_input_object  (required)
 # @param int $id  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'delete_list_contacts_bulk_input_object' => {
@@ -2454,11 +2266,6 @@ sub delete_list_avatar {
         data_type => 'int',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_list_contacts_bulk' } = { 
@@ -2497,11 +2304,6 @@ sub delete_list_contacts_bulk {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     # path params
     if ( exists $args{'id'}) {
         my $_base_variable = "{" . "id" . "}";
@@ -2531,18 +2333,12 @@ sub delete_list_contacts_bulk {
 # Delete list by given ID(s) or delete all lists.
 # 
 # @param DeleteListsBulkInputObject $delete_lists_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'delete_lists_bulk_input_object' => {
         data_type => 'DeleteListsBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_lists_bulk' } = { 
@@ -2575,11 +2371,6 @@ sub delete_lists_bulk {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -2666,18 +2457,12 @@ sub delete_message_session {
 # Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
 # 
 # @param DeleteMessageSessionsBulkInputObject $delete_message_sessions_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'delete_message_sessions_bulk_input_object' => {
         data_type => 'DeleteMessageSessionsBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_message_sessions_bulk' } = { 
@@ -2710,11 +2495,6 @@ sub delete_message_sessions_bulk {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -2801,18 +2581,12 @@ sub delete_outbound_message {
 # Delete messages by IDs
 # 
 # @param DeleteOutboundMessagesBulkInputObject $delete_outbound_messages_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'delete_outbound_messages_bulk_input_object' => {
         data_type => 'DeleteOutboundMessagesBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_outbound_messages_bulk' } = { 
@@ -2845,11 +2619,6 @@ sub delete_outbound_messages_bulk {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -3017,18 +2786,12 @@ sub delete_scheduled_message {
 # Delete scheduled messages by given ID(s) or delete all scheduled messages.
 # 
 # @param DeleteScheduledMessagesBulkInputObject $delete_scheduled_messages_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'delete_scheduled_messages_bulk_input_object' => {
         data_type => 'DeleteScheduledMessagesBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_scheduled_messages_bulk' } = { 
@@ -3061,11 +2824,6 @@ sub delete_scheduled_messages_bulk {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -3341,18 +3099,12 @@ sub delete_template {
 # Delete template by given ID(s) or delete all templates.
 # 
 # @param DeleteTemplatesBulkInputObject $delete_templates_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'delete_templates_bulk_input_object' => {
         data_type => 'DeleteTemplatesBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_templates_bulk' } = { 
@@ -3386,11 +3138,6 @@ sub delete_templates_bulk {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'delete_templates_bulk_input_object'}) {
@@ -3413,18 +3160,12 @@ sub delete_templates_bulk {
 # Authenticate user by given username and password.
 # 
 # @param DoAuthInputObject $do_auth_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'do_auth_input_object' => {
         data_type => 'DoAuthInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'do_auth' } = { 
@@ -3457,11 +3198,6 @@ sub do_auth {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -8447,7 +8183,6 @@ sub get_subaccounts {
 # @param GetSubaccountsWithTokensInputObject $get_subaccounts_with_tokens_input_object  (required)
 # @param Number $page Fetch specified results page (optional, default to 1)
 # @param int $limit How many results to return (optional, default to 10)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'get_subaccounts_with_tokens_input_object' => {
@@ -8463,11 +8198,6 @@ sub get_subaccounts {
     'limit' => {
         data_type => 'int',
         description => 'How many results to return',
-        required => '0',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
         required => '0',
     },
     };
@@ -8510,11 +8240,6 @@ sub get_subaccounts_with_tokens {
     # query params
     if ( exists $args{'limit'}) {
         $query_params->{'limit'} = $self->{api_client}->to_query_value($args{'limit'});
-    }
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
     }
 
     my $_body_data;
@@ -9375,18 +9100,12 @@ sub get_versions {
 # Invite new subaccount.
 # 
 # @param InviteSubaccountInputObject $invite_subaccount_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'invite_subaccount_input_object' => {
         data_type => 'InviteSubaccountInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'invite_subaccount' } = { 
@@ -9420,11 +9139,6 @@ sub invite_subaccount {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'invite_subaccount_input_object'}) {
@@ -9447,18 +9161,12 @@ sub invite_subaccount {
 # Mark several chats as read by chat ids or mark all chats as read
 # 
 # @param MarkChatsReadBulkInputObject $mark_chats_read_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'mark_chats_read_bulk_input_object' => {
         data_type => 'MarkChatsReadBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'mark_chats_read_bulk' } = { 
@@ -9492,11 +9200,6 @@ sub mark_chats_read_bulk {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'mark_chats_read_bulk_input_object'}) {
@@ -9519,18 +9222,12 @@ sub mark_chats_read_bulk {
 # Mark several chats as UNread by chat ids or mark all chats as UNread
 # 
 # @param MarkChatsUnreadBulkInputObject $mark_chats_unread_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'mark_chats_unread_bulk_input_object' => {
         data_type => 'MarkChatsUnreadBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'mark_chats_unread_bulk' } = { 
@@ -9564,11 +9261,6 @@ sub mark_chats_unread_bulk {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'mark_chats_unread_bulk_input_object'}) {
@@ -9591,18 +9283,12 @@ sub mark_chats_unread_bulk {
 # Merge two question nodes.
 # 
 # @param MergeSurveyNodesInputObject $merge_survey_nodes_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'merge_survey_nodes_input_object' => {
         data_type => 'MergeSurveyNodesInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'merge_survey_nodes' } = { 
@@ -9636,11 +9322,6 @@ sub merge_survey_nodes {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'merge_survey_nodes_input_object'}) {
@@ -9663,18 +9344,12 @@ sub merge_survey_nodes {
 # Set mute mode.
 # 
 # @param MuteChatInputObject $mute_chat_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'mute_chat_input_object' => {
         data_type => 'MuteChatInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'mute_chat' } = { 
@@ -9708,11 +9383,6 @@ sub mute_chat {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'mute_chat_input_object'}) {
@@ -9739,18 +9409,12 @@ sub mute_chat {
 # Mute several chats by chat ids or mute all chats
 # 
 # @param MuteChatsBulkInputObject $mute_chats_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'mute_chats_bulk_input_object' => {
         data_type => 'MuteChatsBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'mute_chats_bulk' } = { 
@@ -9783,11 +9447,6 @@ sub mute_chats_bulk {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -9860,18 +9519,12 @@ sub ping {
 # Reopen chats by chat ids or reopen all chats
 # 
 # @param ReopenChatsBulkInputObject $reopen_chats_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'reopen_chats_bulk_input_object' => {
         data_type => 'ReopenChatsBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'reopen_chats_bulk' } = { 
@@ -9905,11 +9558,6 @@ sub reopen_chats_bulk {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'reopen_chats_bulk_input_object'}) {
@@ -9932,18 +9580,12 @@ sub reopen_chats_bulk {
 # Request a new REST API token for subaccount.
 # 
 # @param RequestNewSubaccountTokenInputObject $request_new_subaccount_token_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'request_new_subaccount_token_input_object' => {
         data_type => 'RequestNewSubaccountTokenInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'request_new_subaccount_token' } = { 
@@ -9977,11 +9619,6 @@ sub request_new_subaccount_token {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'request_new_subaccount_token_input_object'}) {
@@ -10008,18 +9645,12 @@ sub request_new_subaccount_token {
 # Request for a new Sender ID.
 # 
 # @param RequestSenderIdInputObject $request_sender_id_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'request_sender_id_input_object' => {
         data_type => 'RequestSenderIdInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'request_sender_id' } = { 
@@ -10052,11 +9683,6 @@ sub request_sender_id {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -11253,18 +10879,12 @@ sub send_email_verification_code {
 # Send message
 # 
 # @param SendMessageInputObject $send_message_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'send_message_input_object' => {
         data_type => 'SendMessageInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'send_message' } = { 
@@ -11297,11 +10917,6 @@ sub send_message {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -11374,18 +10989,12 @@ sub send_phone_verification_code {
 # Set status of the chat given by ID.
 # 
 # @param SetChatStatusInputObject $set_chat_status_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'set_chat_status_input_object' => {
         data_type => 'SetChatStatusInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'set_chat_status' } = { 
@@ -11418,11 +11027,6 @@ sub set_chat_status {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -11517,18 +11121,12 @@ sub start_survey {
 # Unblock contact by phone number.
 # 
 # @param UnblockContactInputObject $unblock_contact_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'unblock_contact_input_object' => {
         data_type => 'UnblockContactInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'unblock_contact' } = { 
@@ -11562,11 +11160,6 @@ sub unblock_contact {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'unblock_contact_input_object'}) {
@@ -11589,18 +11182,12 @@ sub unblock_contact {
 # Unblock several contacts by blocked contact ids or unblock all contacts
 # 
 # @param UnblockContactsBulkInputObject $unblock_contacts_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'unblock_contacts_bulk_input_object' => {
         data_type => 'UnblockContactsBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'unblock_contacts_bulk' } = { 
@@ -11634,11 +11221,6 @@ sub unblock_contacts_bulk {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'unblock_contacts_bulk_input_object'}) {
@@ -11661,18 +11243,12 @@ sub unblock_contacts_bulk {
 # Unmute several chats by chat ids or unmute all chats
 # 
 # @param UnmuteChatsBulkInputObject $unmute_chats_bulk_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'unmute_chats_bulk_input_object' => {
         data_type => 'UnmuteChatsBulkInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'unmute_chats_bulk' } = { 
@@ -11706,11 +11282,6 @@ sub unmute_chats_bulk {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'unmute_chats_bulk_input_object'}) {
@@ -11733,18 +11304,12 @@ sub unmute_chats_bulk {
 # Unsubscribe contact from your communication by phone number.
 # 
 # @param UnsubscribeContactInputObject $unsubscribe_contact_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'unsubscribe_contact_input_object' => {
         data_type => 'UnsubscribeContactInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'unsubscribe_contact' } = { 
@@ -11778,11 +11343,6 @@ sub unsubscribe_contact {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'unsubscribe_contact_input_object'}) {
@@ -11809,18 +11369,12 @@ sub unsubscribe_contact {
 # Update balance notification settings
 # 
 # @param UpdateBalanceNotificationSettingsInputObject $update_balance_notification_settings_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'update_balance_notification_settings_input_object' => {
         data_type => 'UpdateBalanceNotificationSettingsInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'update_balance_notification_settings' } = { 
@@ -11854,11 +11408,6 @@ sub update_balance_notification_settings {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'update_balance_notification_settings_input_object'}) {
@@ -11881,18 +11430,12 @@ sub update_balance_notification_settings {
 # Update callback URL settings
 # 
 # @param UpdateCallbackSettingsInputObject $update_callback_settings_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'update_callback_settings_input_object' => {
         data_type => 'UpdateCallbackSettingsInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'update_callback_settings' } = { 
@@ -11926,11 +11469,6 @@ sub update_callback_settings {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'update_callback_settings_input_object'}) {
@@ -11953,18 +11491,12 @@ sub update_callback_settings {
 # Update chat desktop notification settings
 # 
 # @param UpdateChatDesktopNotificationSettingsInputObject $update_chat_desktop_notification_settings_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'update_chat_desktop_notification_settings_input_object' => {
         data_type => 'UpdateChatDesktopNotificationSettingsInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'update_chat_desktop_notification_settings' } = { 
@@ -11998,11 +11530,6 @@ sub update_chat_desktop_notification_settings {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'update_chat_desktop_notification_settings_input_object'}) {
@@ -12026,7 +11553,6 @@ sub update_chat_desktop_notification_settings {
 # 
 # @param UpdateContactInputObject $update_contact_input_object  (required)
 # @param int $id  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'update_contact_input_object' => {
@@ -12038,11 +11564,6 @@ sub update_chat_desktop_notification_settings {
         data_type => 'int',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'update_contact' } = { 
@@ -12081,11 +11602,6 @@ sub update_contact {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     # path params
     if ( exists $args{'id'}) {
         my $_base_variable = "{" . "id" . "}";
@@ -12120,7 +11636,6 @@ sub update_contact {
 # 
 # @param UpdateContactNoteInputObject $update_contact_note_input_object  (required)
 # @param int $id  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'update_contact_note_input_object' => {
@@ -12132,11 +11647,6 @@ sub update_contact {
         data_type => 'int',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'update_contact_note' } = { 
@@ -12175,11 +11685,6 @@ sub update_contact_note {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     # path params
     if ( exists $args{'id'}) {
         my $_base_variable = "{" . "id" . "}";
@@ -12213,18 +11718,12 @@ sub update_contact_note {
 # Update current user info.
 # 
 # @param UpdateCurrentUserInputObject $update_current_user_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'update_current_user_input_object' => {
         data_type => 'UpdateCurrentUserInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'update_current_user' } = { 
@@ -12258,11 +11757,6 @@ sub update_current_user {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'update_current_user_input_object'}) {
@@ -12290,7 +11784,6 @@ sub update_current_user {
 # 
 # @param UpdateCustomFieldInputObject $update_custom_field_input_object  (required)
 # @param int $id  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'update_custom_field_input_object' => {
@@ -12302,11 +11795,6 @@ sub update_current_user {
         data_type => 'int',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'update_custom_field' } = { 
@@ -12345,11 +11833,6 @@ sub update_custom_field {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     # path params
     if ( exists $args{'id'}) {
         my $_base_variable = "{" . "id" . "}";
@@ -12384,7 +11867,6 @@ sub update_custom_field {
 # 
 # @param UpdateCustomFieldValueInputObject $update_custom_field_value_input_object  (required)
 # @param string $id  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'update_custom_field_value_input_object' => {
@@ -12396,11 +11878,6 @@ sub update_custom_field {
         data_type => 'string',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'update_custom_field_value' } = { 
@@ -12439,11 +11916,6 @@ sub update_custom_field_value {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     # path params
     if ( exists $args{'id'}) {
         my $_base_variable = "{" . "id" . "}";
@@ -12477,18 +11949,12 @@ sub update_custom_field_value {
 # Update inbound messages notification settings
 # 
 # @param UpdateInboundMessagesNotificationSettingsInputObject $update_inbound_messages_notification_settings_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'update_inbound_messages_notification_settings_input_object' => {
         data_type => 'UpdateInboundMessagesNotificationSettingsInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'update_inbound_messages_notification_settings' } = { 
@@ -12521,11 +11987,6 @@ sub update_inbound_messages_notification_settings {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     my $_body_data;
     # body params
@@ -12627,18 +12088,12 @@ sub update_list {
 # Change user password.
 # 
 # @param UpdatePasswordInputObject $update_password_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'update_password_input_object' => {
         data_type => 'UpdatePasswordInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'update_password' } = { 
@@ -12672,11 +12127,6 @@ sub update_password {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'update_password_input_object'}) {
@@ -12699,18 +12149,12 @@ sub update_password {
 # Change sender settings for specified country.
 # 
 # @param UpdateSenderSettingInputObject $update_sender_setting_input_object  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'update_sender_setting_input_object' => {
         data_type => 'UpdateSenderSettingInputObject',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'update_sender_setting' } = { 
@@ -12744,11 +12188,6 @@ sub update_sender_setting {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     my $_body_data;
     # body params
     if ( exists $args{'update_sender_setting_input_object'}) {
@@ -12772,7 +12211,6 @@ sub update_sender_setting {
 # 
 # @param UpdateSurveyInputObject $update_survey_input_object  (required)
 # @param int $id  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'update_survey_input_object' => {
@@ -12784,11 +12222,6 @@ sub update_sender_setting {
         data_type => 'int',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'update_survey' } = { 
@@ -12827,11 +12260,6 @@ sub update_survey {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     # path params
     if ( exists $args{'id'}) {
         my $_base_variable = "{" . "id" . "}";
@@ -12866,7 +12294,6 @@ sub update_survey {
 # 
 # @param UpdateSurveyNodeInputObject $update_survey_node_input_object  (required)
 # @param int $id  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'update_survey_node_input_object' => {
@@ -12878,11 +12305,6 @@ sub update_survey {
         data_type => 'int',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'update_survey_node' } = { 
@@ -12921,11 +12343,6 @@ sub update_survey_node {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
-
     # path params
     if ( exists $args{'id'}) {
         my $_base_variable = "{" . "id" . "}";
@@ -12960,7 +12377,6 @@ sub update_survey_node {
 # 
 # @param UpdateTemplateInputObject $update_template_input_object  (required)
 # @param int $id  (required)
-# @param boolean $x_ignore_null_values  (optional, default to true)
 {
     my $params = {
     'update_template_input_object' => {
@@ -12972,11 +12388,6 @@ sub update_survey_node {
         data_type => 'int',
         description => '',
         required => '1',
-    },
-    'x_ignore_null_values' => {
-        data_type => 'boolean',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'update_template' } = { 
@@ -13014,11 +12425,6 @@ sub update_template {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # header params
-    if ( exists $args{'x_ignore_null_values'}) {
-        $header_params->{'X-Ignore-Null-Values'} = $self->{api_client}->to_header_value($args{'x_ignore_null_values'});
-    }
 
     # path params
     if ( exists $args{'id'}) {

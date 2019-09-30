@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **block_contact**
-> ResourceLinkResponse block_contact(block_contact_input_object => $block_contact_input_object, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse block_contact(block_contact_input_object => $block_contact_input_object)
 
 Block contact from inbound and outbound communication by phone number.
 
@@ -251,10 +251,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $block_contact_input_object = Net::Sms::TextMagicClient::Object::BlockContactInputObject->new(); # BlockContactInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->block_contact(block_contact_input_object => $block_contact_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->block_contact(block_contact_input_object => $block_contact_input_object);
     print Dumper($result);
 };
 if ($@) {
@@ -267,7 +266,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **block_contact_input_object** | [**BlockContactInputObject**](BlockContactInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -285,7 +283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **buy_dedicated_number**
-> buy_dedicated_number(buy_dedicated_number_input_object => $buy_dedicated_number_input_object, x_ignore_null_values => $x_ignore_null_values)
+> buy_dedicated_number(buy_dedicated_number_input_object => $buy_dedicated_number_input_object)
 
 Buy a dedicated number and assign it to the specified account.
 
@@ -301,10 +299,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $buy_dedicated_number_input_object = Net::Sms::TextMagicClient::Object::BuyDedicatedNumberInputObject->new(); # BuyDedicatedNumberInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->buy_dedicated_number(buy_dedicated_number_input_object => $buy_dedicated_number_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->buy_dedicated_number(buy_dedicated_number_input_object => $buy_dedicated_number_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->buy_dedicated_number: $@\n";
@@ -316,7 +313,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **buy_dedicated_number_input_object** | [**BuyDedicatedNumberInputObject**](BuyDedicatedNumberInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -382,7 +378,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **check_phone_verification_code**
-> check_phone_verification_code(check_phone_verification_code_input_object => $check_phone_verification_code_input_object, x_ignore_null_values => $x_ignore_null_values)
+> check_phone_verification_code(check_phone_verification_code_input_object => $check_phone_verification_code_input_object)
 
 Check user phone verification code
 
@@ -398,10 +394,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $check_phone_verification_code_input_object = Net::Sms::TextMagicClient::Object::CheckPhoneVerificationCodeInputObject->new(); # CheckPhoneVerificationCodeInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->check_phone_verification_code(check_phone_verification_code_input_object => $check_phone_verification_code_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->check_phone_verification_code(check_phone_verification_code_input_object => $check_phone_verification_code_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->check_phone_verification_code: $@\n";
@@ -413,7 +408,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **check_phone_verification_code_input_object** | [**CheckPhoneVerificationCodeInputObject**](CheckPhoneVerificationCodeInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -481,7 +475,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **close_chats_bulk**
-> close_chats_bulk(close_chats_bulk_input_object => $close_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> close_chats_bulk(close_chats_bulk_input_object => $close_chats_bulk_input_object)
 
 Close chats by chat ids or close all chats
 
@@ -497,10 +491,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $close_chats_bulk_input_object = Net::Sms::TextMagicClient::Object::CloseChatsBulkInputObject->new(); # CloseChatsBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->close_chats_bulk(close_chats_bulk_input_object => $close_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->close_chats_bulk(close_chats_bulk_input_object => $close_chats_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->close_chats_bulk: $@\n";
@@ -512,7 +505,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **close_chats_bulk_input_object** | [**CloseChatsBulkInputObject**](CloseChatsBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -620,7 +612,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_contact**
-> ResourceLinkResponse create_contact(create_contact_input_object => $create_contact_input_object, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse create_contact(create_contact_input_object => $create_contact_input_object)
 
 Create a new contact from the submitted data.
 
@@ -636,10 +628,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $create_contact_input_object = Net::Sms::TextMagicClient::Object::CreateContactInputObject->new(); # CreateContactInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->create_contact(create_contact_input_object => $create_contact_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->create_contact(create_contact_input_object => $create_contact_input_object);
     print Dumper($result);
 };
 if ($@) {
@@ -652,7 +643,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_contact_input_object** | [**CreateContactInputObject**](CreateContactInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -670,7 +660,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_contact_note**
-> ResourceLinkResponse create_contact_note(create_contact_note_input_object => $create_contact_note_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse create_contact_note(create_contact_note_input_object => $create_contact_note_input_object, id => $id)
 
 Create a new contact note.
 
@@ -687,10 +677,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $create_contact_note_input_object = Net::Sms::TextMagicClient::Object::CreateContactNoteInputObject->new(); # CreateContactNoteInputObject | 
 my $id = 56; # int | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->create_contact_note(create_contact_note_input_object => $create_contact_note_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->create_contact_note(create_contact_note_input_object => $create_contact_note_input_object, id => $id);
     print Dumper($result);
 };
 if ($@) {
@@ -704,7 +693,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_contact_note_input_object** | [**CreateContactNoteInputObject**](CreateContactNoteInputObject.md)|  | 
  **id** | **int**|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -722,7 +710,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_custom_field**
-> ResourceLinkResponse create_custom_field(create_custom_field_input_object => $create_custom_field_input_object, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse create_custom_field(create_custom_field_input_object => $create_custom_field_input_object)
 
 Create a new custom field from the submitted data.
 
@@ -738,10 +726,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $create_custom_field_input_object = Net::Sms::TextMagicClient::Object::CreateCustomFieldInputObject->new(); # CreateCustomFieldInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->create_custom_field(create_custom_field_input_object => $create_custom_field_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->create_custom_field(create_custom_field_input_object => $create_custom_field_input_object);
     print Dumper($result);
 };
 if ($@) {
@@ -754,7 +741,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_custom_field_input_object** | [**CreateCustomFieldInputObject**](CreateCustomFieldInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -772,7 +758,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_list**
-> ResourceLinkResponse create_list(create_list_input_object => $create_list_input_object, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse create_list(create_list_input_object => $create_list_input_object)
 
 Create a new list from the submitted data.
 
@@ -788,10 +774,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $create_list_input_object = Net::Sms::TextMagicClient::Object::CreateListInputObject->new(); # CreateListInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->create_list(create_list_input_object => $create_list_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->create_list(create_list_input_object => $create_list_input_object);
     print Dumper($result);
 };
 if ($@) {
@@ -804,7 +789,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_list_input_object** | [**CreateListInputObject**](CreateListInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -822,7 +806,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_push_token**
-> create_push_token(create_push_token_input_object => $create_push_token_input_object, x_ignore_null_values => $x_ignore_null_values)
+> create_push_token(create_push_token_input_object => $create_push_token_input_object)
 
 Add or update a device token.
 
@@ -838,10 +822,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $create_push_token_input_object = Net::Sms::TextMagicClient::Object::CreatePushTokenInputObject->new(); # CreatePushTokenInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->create_push_token(create_push_token_input_object => $create_push_token_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->create_push_token(create_push_token_input_object => $create_push_token_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->create_push_token: $@\n";
@@ -853,7 +836,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_push_token_input_object** | [**CreatePushTokenInputObject**](CreatePushTokenInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -871,7 +853,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_survey**
-> ResourceLinkResponse create_survey(create_survey_input_object => $create_survey_input_object, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse create_survey(create_survey_input_object => $create_survey_input_object)
 
 Create a new survey from the submitted data.
 
@@ -887,10 +869,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $create_survey_input_object = Net::Sms::TextMagicClient::Object::CreateSurveyInputObject->new(); # CreateSurveyInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->create_survey(create_survey_input_object => $create_survey_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->create_survey(create_survey_input_object => $create_survey_input_object);
     print Dumper($result);
 };
 if ($@) {
@@ -903,7 +884,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_survey_input_object** | [**CreateSurveyInputObject**](CreateSurveyInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -921,7 +901,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_survey_node**
-> ResourceLinkResponse create_survey_node(create_survey_node_input_object => $create_survey_node_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse create_survey_node(create_survey_node_input_object => $create_survey_node_input_object, id => $id)
 
 Create a new node from the submitted data.
 
@@ -938,10 +918,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $create_survey_node_input_object = Net::Sms::TextMagicClient::Object::CreateSurveyNodeInputObject->new(); # CreateSurveyNodeInputObject | 
 my $id = 1; # int | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->create_survey_node(create_survey_node_input_object => $create_survey_node_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->create_survey_node(create_survey_node_input_object => $create_survey_node_input_object, id => $id);
     print Dumper($result);
 };
 if ($@) {
@@ -955,7 +934,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_survey_node_input_object** | [**CreateSurveyNodeInputObject**](CreateSurveyNodeInputObject.md)|  | 
  **id** | **int**|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -973,7 +951,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_template**
-> ResourceLinkResponse create_template(create_template_input_object => $create_template_input_object, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse create_template(create_template_input_object => $create_template_input_object)
 
 Create a new template from the submitted data.
 
@@ -989,10 +967,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $create_template_input_object = Net::Sms::TextMagicClient::Object::CreateTemplateInputObject->new(); # CreateTemplateInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->create_template(create_template_input_object => $create_template_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->create_template(create_template_input_object => $create_template_input_object);
     print Dumper($result);
 };
 if ($@) {
@@ -1005,7 +982,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_template_input_object** | [**CreateTemplateInputObject**](CreateTemplateInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1154,7 +1130,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_chat_messages**
-> delete_chat_messages(delete_chat_messages_bulk_input_object => $delete_chat_messages_bulk_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+> delete_chat_messages(delete_chat_messages_bulk_input_object => $delete_chat_messages_bulk_input_object, id => $id)
 
 Delete messages from chat by given messages ID(s).
 
@@ -1171,10 +1147,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $delete_chat_messages_bulk_input_object = Net::Sms::TextMagicClient::Object::DeleteChatMessagesBulkInputObject->new(); # DeleteChatMessagesBulkInputObject | 
 my $id = 1; # int | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->delete_chat_messages(delete_chat_messages_bulk_input_object => $delete_chat_messages_bulk_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->delete_chat_messages(delete_chat_messages_bulk_input_object => $delete_chat_messages_bulk_input_object, id => $id);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->delete_chat_messages: $@\n";
@@ -1187,7 +1162,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **delete_chat_messages_bulk_input_object** | [**DeleteChatMessagesBulkInputObject**](DeleteChatMessagesBulkInputObject.md)|  | 
  **id** | **int**|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1205,7 +1179,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_chats_bulk**
-> delete_chats_bulk(delete_chats_bulk_input_object => $delete_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> delete_chats_bulk(delete_chats_bulk_input_object => $delete_chats_bulk_input_object)
 
 Delete chats by given ID(s) or delete all chats.
 
@@ -1221,10 +1195,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $delete_chats_bulk_input_object = Net::Sms::TextMagicClient::Object::DeleteChatsBulkInputObject->new(); # DeleteChatsBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->delete_chats_bulk(delete_chats_bulk_input_object => $delete_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->delete_chats_bulk(delete_chats_bulk_input_object => $delete_chats_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->delete_chats_bulk: $@\n";
@@ -1236,7 +1209,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **delete_chats_bulk_input_object** | [**DeleteChatsBulkInputObject**](DeleteChatsBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1395,7 +1367,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_contact_notes_bulk**
-> delete_contact_notes_bulk(id => $id, delete_contact_notes_bulk_input_object => $delete_contact_notes_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> delete_contact_notes_bulk(id => $id, delete_contact_notes_bulk_input_object => $delete_contact_notes_bulk_input_object)
 
 Delete contact note by given ID(s) or delete all contact notes.
 
@@ -1412,10 +1384,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $id = 1; # int | 
 my $delete_contact_notes_bulk_input_object = Net::Sms::TextMagicClient::Object::DeleteContactNotesBulkInputObject->new(); # DeleteContactNotesBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->delete_contact_notes_bulk(id => $id, delete_contact_notes_bulk_input_object => $delete_contact_notes_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->delete_contact_notes_bulk(id => $id, delete_contact_notes_bulk_input_object => $delete_contact_notes_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->delete_contact_notes_bulk: $@\n";
@@ -1428,7 +1399,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **delete_contact_notes_bulk_input_object** | [**DeleteContactNotesBulkInputObject**](DeleteContactNotesBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1446,7 +1416,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_contacts_by_ids**
-> delete_contacts_by_ids(delete_contacts_by_ids_input_object => $delete_contacts_by_ids_input_object, x_ignore_null_values => $x_ignore_null_values)
+> delete_contacts_by_ids(delete_contacts_by_ids_input_object => $delete_contacts_by_ids_input_object)
 
 Delete contact by given ID(s) or delete all contacts.
 
@@ -1462,10 +1432,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $delete_contacts_by_ids_input_object = Net::Sms::TextMagicClient::Object::DeleteContactsByIdsInputObject->new(); # DeleteContactsByIdsInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->delete_contacts_by_ids(delete_contacts_by_ids_input_object => $delete_contacts_by_ids_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->delete_contacts_by_ids(delete_contacts_by_ids_input_object => $delete_contacts_by_ids_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->delete_contacts_by_ids: $@\n";
@@ -1477,7 +1446,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **delete_contacts_by_ids_input_object** | [**DeleteContactsByIdsInputObject**](DeleteContactsByIdsInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1685,7 +1653,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_inbound_messages_bulk**
-> delete_inbound_messages_bulk(delete_inbound_messages_bulk_input_object => $delete_inbound_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> delete_inbound_messages_bulk(delete_inbound_messages_bulk_input_object => $delete_inbound_messages_bulk_input_object)
 
 Delete inbound messages by given ID(s) or delete all inbound messages.
 
@@ -1701,10 +1669,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $delete_inbound_messages_bulk_input_object = Net::Sms::TextMagicClient::Object::DeleteInboundMessagesBulkInputObject->new(); # DeleteInboundMessagesBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->delete_inbound_messages_bulk(delete_inbound_messages_bulk_input_object => $delete_inbound_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->delete_inbound_messages_bulk(delete_inbound_messages_bulk_input_object => $delete_inbound_messages_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->delete_inbound_messages_bulk: $@\n";
@@ -1716,7 +1683,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **delete_inbound_messages_bulk_input_object** | [**DeleteInboundMessagesBulkInputObject**](DeleteInboundMessagesBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1828,7 +1794,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_list_contacts_bulk**
-> delete_list_contacts_bulk(delete_list_contacts_bulk_input_object => $delete_list_contacts_bulk_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+> delete_list_contacts_bulk(delete_list_contacts_bulk_input_object => $delete_list_contacts_bulk_input_object, id => $id)
 
 Delete contact from list by given ID(s) or all contacts from list.
 
@@ -1845,10 +1811,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $delete_list_contacts_bulk_input_object = Net::Sms::TextMagicClient::Object::DeleteListContactsBulkInputObject->new(); # DeleteListContactsBulkInputObject | 
 my $id = 1; # int | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->delete_list_contacts_bulk(delete_list_contacts_bulk_input_object => $delete_list_contacts_bulk_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->delete_list_contacts_bulk(delete_list_contacts_bulk_input_object => $delete_list_contacts_bulk_input_object, id => $id);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->delete_list_contacts_bulk: $@\n";
@@ -1861,7 +1826,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **delete_list_contacts_bulk_input_object** | [**DeleteListContactsBulkInputObject**](DeleteListContactsBulkInputObject.md)|  | 
  **id** | **int**|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1879,7 +1843,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_lists_bulk**
-> delete_lists_bulk(delete_lists_bulk_input_object => $delete_lists_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> delete_lists_bulk(delete_lists_bulk_input_object => $delete_lists_bulk_input_object)
 
 Delete list by given ID(s) or delete all lists.
 
@@ -1895,10 +1859,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $delete_lists_bulk_input_object = Net::Sms::TextMagicClient::Object::DeleteListsBulkInputObject->new(); # DeleteListsBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->delete_lists_bulk(delete_lists_bulk_input_object => $delete_lists_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->delete_lists_bulk(delete_lists_bulk_input_object => $delete_lists_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->delete_lists_bulk: $@\n";
@@ -1910,7 +1873,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **delete_lists_bulk_input_object** | [**DeleteListsBulkInputObject**](DeleteListsBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1975,7 +1937,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_message_sessions_bulk**
-> delete_message_sessions_bulk(delete_message_sessions_bulk_input_object => $delete_message_sessions_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> delete_message_sessions_bulk(delete_message_sessions_bulk_input_object => $delete_message_sessions_bulk_input_object)
 
 Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
 
@@ -1991,10 +1953,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $delete_message_sessions_bulk_input_object = Net::Sms::TextMagicClient::Object::DeleteMessageSessionsBulkInputObject->new(); # DeleteMessageSessionsBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->delete_message_sessions_bulk(delete_message_sessions_bulk_input_object => $delete_message_sessions_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->delete_message_sessions_bulk(delete_message_sessions_bulk_input_object => $delete_message_sessions_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->delete_message_sessions_bulk: $@\n";
@@ -2006,7 +1967,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **delete_message_sessions_bulk_input_object** | [**DeleteMessageSessionsBulkInputObject**](DeleteMessageSessionsBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -2073,7 +2033,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_outbound_messages_bulk**
-> delete_outbound_messages_bulk(delete_outbound_messages_bulk_input_object => $delete_outbound_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> delete_outbound_messages_bulk(delete_outbound_messages_bulk_input_object => $delete_outbound_messages_bulk_input_object)
 
 Delete messages by IDs
 
@@ -2091,10 +2051,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $delete_outbound_messages_bulk_input_object = Net::Sms::TextMagicClient::Object::DeleteOutboundMessagesBulkInputObject->new(); # DeleteOutboundMessagesBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->delete_outbound_messages_bulk(delete_outbound_messages_bulk_input_object => $delete_outbound_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->delete_outbound_messages_bulk(delete_outbound_messages_bulk_input_object => $delete_outbound_messages_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->delete_outbound_messages_bulk: $@\n";
@@ -2106,7 +2065,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **delete_outbound_messages_bulk_input_object** | [**DeleteOutboundMessagesBulkInputObject**](DeleteOutboundMessagesBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -2220,7 +2178,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_scheduled_messages_bulk**
-> delete_scheduled_messages_bulk(delete_scheduled_messages_bulk_input_object => $delete_scheduled_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> delete_scheduled_messages_bulk(delete_scheduled_messages_bulk_input_object => $delete_scheduled_messages_bulk_input_object)
 
 Delete scheduled messages by given ID(s) or delete all scheduled messages.
 
@@ -2236,10 +2194,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $delete_scheduled_messages_bulk_input_object = Net::Sms::TextMagicClient::Object::DeleteScheduledMessagesBulkInputObject->new(); # DeleteScheduledMessagesBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->delete_scheduled_messages_bulk(delete_scheduled_messages_bulk_input_object => $delete_scheduled_messages_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->delete_scheduled_messages_bulk(delete_scheduled_messages_bulk_input_object => $delete_scheduled_messages_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->delete_scheduled_messages_bulk: $@\n";
@@ -2251,7 +2208,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **delete_scheduled_messages_bulk_input_object** | [**DeleteScheduledMessagesBulkInputObject**](DeleteScheduledMessagesBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -2457,7 +2413,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_templates_bulk**
-> delete_templates_bulk(delete_templates_bulk_input_object => $delete_templates_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> delete_templates_bulk(delete_templates_bulk_input_object => $delete_templates_bulk_input_object)
 
 Delete template by given ID(s) or delete all templates.
 
@@ -2473,10 +2429,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $delete_templates_bulk_input_object = Net::Sms::TextMagicClient::Object::DeleteTemplatesBulkInputObject->new(); # DeleteTemplatesBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->delete_templates_bulk(delete_templates_bulk_input_object => $delete_templates_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->delete_templates_bulk(delete_templates_bulk_input_object => $delete_templates_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->delete_templates_bulk: $@\n";
@@ -2488,7 +2443,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **delete_templates_bulk_input_object** | [**DeleteTemplatesBulkInputObject**](DeleteTemplatesBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -2506,7 +2460,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **do_auth**
-> DoAuthResponse do_auth(do_auth_input_object => $do_auth_input_object, x_ignore_null_values => $x_ignore_null_values)
+> DoAuthResponse do_auth(do_auth_input_object => $do_auth_input_object)
 
 Authenticate user by given username and password.
 
@@ -2520,10 +2474,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $do_auth_input_object = Net::Sms::TextMagicClient::Object::DoAuthInputObject->new(); # DoAuthInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->do_auth(do_auth_input_object => $do_auth_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->do_auth(do_auth_input_object => $do_auth_input_object);
     print Dumper($result);
 };
 if ($@) {
@@ -2536,7 +2489,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **do_auth_input_object** | [**DoAuthInputObject**](DoAuthInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -5748,7 +5700,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_subaccounts_with_tokens**
-> GetSubaccountsWithTokensResponse get_subaccounts_with_tokens(get_subaccounts_with_tokens_input_object => $get_subaccounts_with_tokens_input_object, page => $page, limit => $limit, x_ignore_null_values => $x_ignore_null_values)
+> GetSubaccountsWithTokensResponse get_subaccounts_with_tokens(get_subaccounts_with_tokens_input_object => $get_subaccounts_with_tokens_input_object, page => $page, limit => $limit)
 
 Get all subaccounts with their REST API tokens associated with specified app name.
 
@@ -5768,10 +5720,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 my $get_subaccounts_with_tokens_input_object = Net::Sms::TextMagicClient::Object::GetSubaccountsWithTokensInputObject->new(); # GetSubaccountsWithTokensInputObject | 
 my $page = 8.14; # Number | Fetch specified results page
 my $limit = 56; # int | How many results to return
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->get_subaccounts_with_tokens(get_subaccounts_with_tokens_input_object => $get_subaccounts_with_tokens_input_object, page => $page, limit => $limit, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->get_subaccounts_with_tokens(get_subaccounts_with_tokens_input_object => $get_subaccounts_with_tokens_input_object, page => $page, limit => $limit);
     print Dumper($result);
 };
 if ($@) {
@@ -5786,7 +5737,6 @@ Name | Type | Description  | Notes
  **get_subaccounts_with_tokens_input_object** | [**GetSubaccountsWithTokensInputObject**](GetSubaccountsWithTokensInputObject.md)|  | 
  **page** | **Number**| Fetch specified results page | [optional] [default to 1]
  **limit** | **int**| How many results to return | [optional] [default to 10]
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -6390,7 +6340,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **invite_subaccount**
-> invite_subaccount(invite_subaccount_input_object => $invite_subaccount_input_object, x_ignore_null_values => $x_ignore_null_values)
+> invite_subaccount(invite_subaccount_input_object => $invite_subaccount_input_object)
 
 Invite new subaccount.
 
@@ -6406,10 +6356,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $invite_subaccount_input_object = Net::Sms::TextMagicClient::Object::InviteSubaccountInputObject->new(); # InviteSubaccountInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->invite_subaccount(invite_subaccount_input_object => $invite_subaccount_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->invite_subaccount(invite_subaccount_input_object => $invite_subaccount_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->invite_subaccount: $@\n";
@@ -6421,7 +6370,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invite_subaccount_input_object** | [**InviteSubaccountInputObject**](InviteSubaccountInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -6439,7 +6387,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **mark_chats_read_bulk**
-> mark_chats_read_bulk(mark_chats_read_bulk_input_object => $mark_chats_read_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> mark_chats_read_bulk(mark_chats_read_bulk_input_object => $mark_chats_read_bulk_input_object)
 
 Mark several chats as read by chat ids or mark all chats as read
 
@@ -6455,10 +6403,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $mark_chats_read_bulk_input_object = Net::Sms::TextMagicClient::Object::MarkChatsReadBulkInputObject->new(); # MarkChatsReadBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->mark_chats_read_bulk(mark_chats_read_bulk_input_object => $mark_chats_read_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->mark_chats_read_bulk(mark_chats_read_bulk_input_object => $mark_chats_read_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->mark_chats_read_bulk: $@\n";
@@ -6470,7 +6417,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mark_chats_read_bulk_input_object** | [**MarkChatsReadBulkInputObject**](MarkChatsReadBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -6488,7 +6434,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **mark_chats_unread_bulk**
-> mark_chats_unread_bulk(mark_chats_unread_bulk_input_object => $mark_chats_unread_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> mark_chats_unread_bulk(mark_chats_unread_bulk_input_object => $mark_chats_unread_bulk_input_object)
 
 Mark several chats as UNread by chat ids or mark all chats as UNread
 
@@ -6504,10 +6450,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $mark_chats_unread_bulk_input_object = Net::Sms::TextMagicClient::Object::MarkChatsUnreadBulkInputObject->new(); # MarkChatsUnreadBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->mark_chats_unread_bulk(mark_chats_unread_bulk_input_object => $mark_chats_unread_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->mark_chats_unread_bulk(mark_chats_unread_bulk_input_object => $mark_chats_unread_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->mark_chats_unread_bulk: $@\n";
@@ -6519,7 +6464,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mark_chats_unread_bulk_input_object** | [**MarkChatsUnreadBulkInputObject**](MarkChatsUnreadBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -6537,7 +6481,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **merge_survey_nodes**
-> merge_survey_nodes(merge_survey_nodes_input_object => $merge_survey_nodes_input_object, x_ignore_null_values => $x_ignore_null_values)
+> merge_survey_nodes(merge_survey_nodes_input_object => $merge_survey_nodes_input_object)
 
 Merge two question nodes.
 
@@ -6553,10 +6497,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $merge_survey_nodes_input_object = Net::Sms::TextMagicClient::Object::MergeSurveyNodesInputObject->new(); # MergeSurveyNodesInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->merge_survey_nodes(merge_survey_nodes_input_object => $merge_survey_nodes_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->merge_survey_nodes(merge_survey_nodes_input_object => $merge_survey_nodes_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->merge_survey_nodes: $@\n";
@@ -6568,7 +6511,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **merge_survey_nodes_input_object** | [**MergeSurveyNodesInputObject**](MergeSurveyNodesInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -6586,7 +6528,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **mute_chat**
-> ResourceLinkResponse mute_chat(mute_chat_input_object => $mute_chat_input_object, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse mute_chat(mute_chat_input_object => $mute_chat_input_object)
 
 Set mute mode.
 
@@ -6602,10 +6544,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $mute_chat_input_object = Net::Sms::TextMagicClient::Object::MuteChatInputObject->new(); # MuteChatInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->mute_chat(mute_chat_input_object => $mute_chat_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->mute_chat(mute_chat_input_object => $mute_chat_input_object);
     print Dumper($result);
 };
 if ($@) {
@@ -6618,7 +6559,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mute_chat_input_object** | [**MuteChatInputObject**](MuteChatInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -6636,7 +6576,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **mute_chats_bulk**
-> mute_chats_bulk(mute_chats_bulk_input_object => $mute_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> mute_chats_bulk(mute_chats_bulk_input_object => $mute_chats_bulk_input_object)
 
 Mute several chats by chat ids or mute all chats
 
@@ -6652,10 +6592,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $mute_chats_bulk_input_object = Net::Sms::TextMagicClient::Object::MuteChatsBulkInputObject->new(); # MuteChatsBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->mute_chats_bulk(mute_chats_bulk_input_object => $mute_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->mute_chats_bulk(mute_chats_bulk_input_object => $mute_chats_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->mute_chats_bulk: $@\n";
@@ -6667,7 +6606,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mute_chats_bulk_input_object** | [**MuteChatsBulkInputObject**](MuteChatsBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -6729,7 +6667,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **reopen_chats_bulk**
-> reopen_chats_bulk(reopen_chats_bulk_input_object => $reopen_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> reopen_chats_bulk(reopen_chats_bulk_input_object => $reopen_chats_bulk_input_object)
 
 Reopen chats by chat ids or reopen all chats
 
@@ -6745,10 +6683,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $reopen_chats_bulk_input_object = Net::Sms::TextMagicClient::Object::ReopenChatsBulkInputObject->new(); # ReopenChatsBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->reopen_chats_bulk(reopen_chats_bulk_input_object => $reopen_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->reopen_chats_bulk(reopen_chats_bulk_input_object => $reopen_chats_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->reopen_chats_bulk: $@\n";
@@ -6760,7 +6697,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reopen_chats_bulk_input_object** | [**ReopenChatsBulkInputObject**](ReopenChatsBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -6778,7 +6714,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **request_new_subaccount_token**
-> User request_new_subaccount_token(request_new_subaccount_token_input_object => $request_new_subaccount_token_input_object, x_ignore_null_values => $x_ignore_null_values)
+> User request_new_subaccount_token(request_new_subaccount_token_input_object => $request_new_subaccount_token_input_object)
 
 Request a new REST API token for subaccount.
 
@@ -6796,10 +6732,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $request_new_subaccount_token_input_object = Net::Sms::TextMagicClient::Object::RequestNewSubaccountTokenInputObject->new(); # RequestNewSubaccountTokenInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->request_new_subaccount_token(request_new_subaccount_token_input_object => $request_new_subaccount_token_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->request_new_subaccount_token(request_new_subaccount_token_input_object => $request_new_subaccount_token_input_object);
     print Dumper($result);
 };
 if ($@) {
@@ -6812,7 +6747,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request_new_subaccount_token_input_object** | [**RequestNewSubaccountTokenInputObject**](RequestNewSubaccountTokenInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -6830,7 +6764,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **request_sender_id**
-> ResourceLinkResponse request_sender_id(request_sender_id_input_object => $request_sender_id_input_object, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse request_sender_id(request_sender_id_input_object => $request_sender_id_input_object)
 
 Request for a new Sender ID.
 
@@ -6846,10 +6780,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $request_sender_id_input_object = Net::Sms::TextMagicClient::Object::RequestSenderIdInputObject->new(); # RequestSenderIdInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->request_sender_id(request_sender_id_input_object => $request_sender_id_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->request_sender_id(request_sender_id_input_object => $request_sender_id_input_object);
     print Dumper($result);
 };
 if ($@) {
@@ -6862,7 +6795,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request_sender_id_input_object** | [**RequestSenderIdInputObject**](RequestSenderIdInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -7499,7 +7431,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **send_message**
-> SendMessageResponse send_message(send_message_input_object => $send_message_input_object, x_ignore_null_values => $x_ignore_null_values)
+> SendMessageResponse send_message(send_message_input_object => $send_message_input_object)
 
 Send message
 
@@ -7517,10 +7449,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $send_message_input_object = Net::Sms::TextMagicClient::Object::SendMessageInputObject->new(); # SendMessageInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->send_message(send_message_input_object => $send_message_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->send_message(send_message_input_object => $send_message_input_object);
     print Dumper($result);
 };
 if ($@) {
@@ -7533,7 +7464,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **send_message_input_object** | [**SendMessageInputObject**](SendMessageInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -7594,7 +7524,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_chat_status**
-> ResourceLinkResponse set_chat_status(set_chat_status_input_object => $set_chat_status_input_object, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse set_chat_status(set_chat_status_input_object => $set_chat_status_input_object)
 
 Set status of the chat given by ID.
 
@@ -7610,10 +7540,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $set_chat_status_input_object = Net::Sms::TextMagicClient::Object::SetChatStatusInputObject->new(); # SetChatStatusInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->set_chat_status(set_chat_status_input_object => $set_chat_status_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->set_chat_status(set_chat_status_input_object => $set_chat_status_input_object);
     print Dumper($result);
 };
 if ($@) {
@@ -7626,7 +7555,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **set_chat_status_input_object** | [**SetChatStatusInputObject**](SetChatStatusInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -7692,7 +7620,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **unblock_contact**
-> unblock_contact(unblock_contact_input_object => $unblock_contact_input_object, x_ignore_null_values => $x_ignore_null_values)
+> unblock_contact(unblock_contact_input_object => $unblock_contact_input_object)
 
 Unblock contact by phone number.
 
@@ -7708,10 +7636,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $unblock_contact_input_object = Net::Sms::TextMagicClient::Object::UnblockContactInputObject->new(); # UnblockContactInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->unblock_contact(unblock_contact_input_object => $unblock_contact_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->unblock_contact(unblock_contact_input_object => $unblock_contact_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->unblock_contact: $@\n";
@@ -7723,7 +7650,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **unblock_contact_input_object** | [**UnblockContactInputObject**](UnblockContactInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -7741,7 +7667,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **unblock_contacts_bulk**
-> unblock_contacts_bulk(unblock_contacts_bulk_input_object => $unblock_contacts_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> unblock_contacts_bulk(unblock_contacts_bulk_input_object => $unblock_contacts_bulk_input_object)
 
 Unblock several contacts by blocked contact ids or unblock all contacts
 
@@ -7757,10 +7683,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $unblock_contacts_bulk_input_object = Net::Sms::TextMagicClient::Object::UnblockContactsBulkInputObject->new(); # UnblockContactsBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->unblock_contacts_bulk(unblock_contacts_bulk_input_object => $unblock_contacts_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->unblock_contacts_bulk(unblock_contacts_bulk_input_object => $unblock_contacts_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->unblock_contacts_bulk: $@\n";
@@ -7772,7 +7697,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **unblock_contacts_bulk_input_object** | [**UnblockContactsBulkInputObject**](UnblockContactsBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -7790,7 +7714,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **unmute_chats_bulk**
-> unmute_chats_bulk(unmute_chats_bulk_input_object => $unmute_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values)
+> unmute_chats_bulk(unmute_chats_bulk_input_object => $unmute_chats_bulk_input_object)
 
 Unmute several chats by chat ids or unmute all chats
 
@@ -7806,10 +7730,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $unmute_chats_bulk_input_object = Net::Sms::TextMagicClient::Object::UnmuteChatsBulkInputObject->new(); # UnmuteChatsBulkInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->unmute_chats_bulk(unmute_chats_bulk_input_object => $unmute_chats_bulk_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->unmute_chats_bulk(unmute_chats_bulk_input_object => $unmute_chats_bulk_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->unmute_chats_bulk: $@\n";
@@ -7821,7 +7744,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **unmute_chats_bulk_input_object** | [**UnmuteChatsBulkInputObject**](UnmuteChatsBulkInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -7839,7 +7761,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **unsubscribe_contact**
-> ResourceLinkResponse unsubscribe_contact(unsubscribe_contact_input_object => $unsubscribe_contact_input_object, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse unsubscribe_contact(unsubscribe_contact_input_object => $unsubscribe_contact_input_object)
 
 Unsubscribe contact from your communication by phone number.
 
@@ -7855,10 +7777,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $unsubscribe_contact_input_object = Net::Sms::TextMagicClient::Object::UnsubscribeContactInputObject->new(); # UnsubscribeContactInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->unsubscribe_contact(unsubscribe_contact_input_object => $unsubscribe_contact_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->unsubscribe_contact(unsubscribe_contact_input_object => $unsubscribe_contact_input_object);
     print Dumper($result);
 };
 if ($@) {
@@ -7871,7 +7792,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **unsubscribe_contact_input_object** | [**UnsubscribeContactInputObject**](UnsubscribeContactInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -7889,7 +7809,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_balance_notification_settings**
-> update_balance_notification_settings(update_balance_notification_settings_input_object => $update_balance_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values)
+> update_balance_notification_settings(update_balance_notification_settings_input_object => $update_balance_notification_settings_input_object)
 
 Update balance notification settings
 
@@ -7905,10 +7825,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $update_balance_notification_settings_input_object = Net::Sms::TextMagicClient::Object::UpdateBalanceNotificationSettingsInputObject->new(); # UpdateBalanceNotificationSettingsInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->update_balance_notification_settings(update_balance_notification_settings_input_object => $update_balance_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->update_balance_notification_settings(update_balance_notification_settings_input_object => $update_balance_notification_settings_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->update_balance_notification_settings: $@\n";
@@ -7920,7 +7839,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_balance_notification_settings_input_object** | [**UpdateBalanceNotificationSettingsInputObject**](UpdateBalanceNotificationSettingsInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -7938,7 +7856,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_callback_settings**
-> update_callback_settings(update_callback_settings_input_object => $update_callback_settings_input_object, x_ignore_null_values => $x_ignore_null_values)
+> update_callback_settings(update_callback_settings_input_object => $update_callback_settings_input_object)
 
 Update callback URL settings
 
@@ -7954,10 +7872,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $update_callback_settings_input_object = Net::Sms::TextMagicClient::Object::UpdateCallbackSettingsInputObject->new(); # UpdateCallbackSettingsInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->update_callback_settings(update_callback_settings_input_object => $update_callback_settings_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->update_callback_settings(update_callback_settings_input_object => $update_callback_settings_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->update_callback_settings: $@\n";
@@ -7969,7 +7886,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_callback_settings_input_object** | [**UpdateCallbackSettingsInputObject**](UpdateCallbackSettingsInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -7987,7 +7903,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_chat_desktop_notification_settings**
-> update_chat_desktop_notification_settings(update_chat_desktop_notification_settings_input_object => $update_chat_desktop_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values)
+> update_chat_desktop_notification_settings(update_chat_desktop_notification_settings_input_object => $update_chat_desktop_notification_settings_input_object)
 
 Update chat desktop notification settings
 
@@ -8003,10 +7919,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $update_chat_desktop_notification_settings_input_object = Net::Sms::TextMagicClient::Object::UpdateChatDesktopNotificationSettingsInputObject->new(); # UpdateChatDesktopNotificationSettingsInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->update_chat_desktop_notification_settings(update_chat_desktop_notification_settings_input_object => $update_chat_desktop_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->update_chat_desktop_notification_settings(update_chat_desktop_notification_settings_input_object => $update_chat_desktop_notification_settings_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->update_chat_desktop_notification_settings: $@\n";
@@ -8018,7 +7933,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_chat_desktop_notification_settings_input_object** | [**UpdateChatDesktopNotificationSettingsInputObject**](UpdateChatDesktopNotificationSettingsInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8036,7 +7950,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_contact**
-> ResourceLinkResponse update_contact(update_contact_input_object => $update_contact_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse update_contact(update_contact_input_object => $update_contact_input_object, id => $id)
 
 Update existing contact.
 
@@ -8053,10 +7967,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $update_contact_input_object = Net::Sms::TextMagicClient::Object::UpdateContactInputObject->new(); # UpdateContactInputObject | 
 my $id = 1; # int | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->update_contact(update_contact_input_object => $update_contact_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->update_contact(update_contact_input_object => $update_contact_input_object, id => $id);
     print Dumper($result);
 };
 if ($@) {
@@ -8070,7 +7983,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_contact_input_object** | [**UpdateContactInputObject**](UpdateContactInputObject.md)|  | 
  **id** | **int**|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8088,7 +8000,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_contact_note**
-> ResourceLinkResponse update_contact_note(update_contact_note_input_object => $update_contact_note_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse update_contact_note(update_contact_note_input_object => $update_contact_note_input_object, id => $id)
 
 Update existing contact note.
 
@@ -8105,10 +8017,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $update_contact_note_input_object = Net::Sms::TextMagicClient::Object::UpdateContactNoteInputObject->new(); # UpdateContactNoteInputObject | 
 my $id = 1; # int | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->update_contact_note(update_contact_note_input_object => $update_contact_note_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->update_contact_note(update_contact_note_input_object => $update_contact_note_input_object, id => $id);
     print Dumper($result);
 };
 if ($@) {
@@ -8122,7 +8033,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_contact_note_input_object** | [**UpdateContactNoteInputObject**](UpdateContactNoteInputObject.md)|  | 
  **id** | **int**|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8140,7 +8050,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_current_user**
-> UpdateCurrentUserResponse update_current_user(update_current_user_input_object => $update_current_user_input_object, x_ignore_null_values => $x_ignore_null_values)
+> UpdateCurrentUserResponse update_current_user(update_current_user_input_object => $update_current_user_input_object)
 
 Update current user info.
 
@@ -8156,10 +8066,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $update_current_user_input_object = Net::Sms::TextMagicClient::Object::UpdateCurrentUserInputObject->new(); # UpdateCurrentUserInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->update_current_user(update_current_user_input_object => $update_current_user_input_object, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->update_current_user(update_current_user_input_object => $update_current_user_input_object);
     print Dumper($result);
 };
 if ($@) {
@@ -8172,7 +8081,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_current_user_input_object** | [**UpdateCurrentUserInputObject**](UpdateCurrentUserInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8190,7 +8098,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_custom_field**
-> ResourceLinkResponse update_custom_field(update_custom_field_input_object => $update_custom_field_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse update_custom_field(update_custom_field_input_object => $update_custom_field_input_object, id => $id)
 
 Update existing custom field.
 
@@ -8207,10 +8115,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $update_custom_field_input_object = Net::Sms::TextMagicClient::Object::UpdateCustomFieldInputObject->new(); # UpdateCustomFieldInputObject | 
 my $id = 1; # int | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->update_custom_field(update_custom_field_input_object => $update_custom_field_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->update_custom_field(update_custom_field_input_object => $update_custom_field_input_object, id => $id);
     print Dumper($result);
 };
 if ($@) {
@@ -8224,7 +8131,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_custom_field_input_object** | [**UpdateCustomFieldInputObject**](UpdateCustomFieldInputObject.md)|  | 
  **id** | **int**|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8242,7 +8148,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_custom_field_value**
-> ResourceLinkResponse update_custom_field_value(update_custom_field_value_input_object => $update_custom_field_value_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse update_custom_field_value(update_custom_field_value_input_object => $update_custom_field_value_input_object, id => $id)
 
 Update contact's custom field value.
 
@@ -8259,10 +8165,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $update_custom_field_value_input_object = Net::Sms::TextMagicClient::Object::UpdateCustomFieldValueInputObject->new(); # UpdateCustomFieldValueInputObject | 
 my $id = 'id_example'; # string | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->update_custom_field_value(update_custom_field_value_input_object => $update_custom_field_value_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->update_custom_field_value(update_custom_field_value_input_object => $update_custom_field_value_input_object, id => $id);
     print Dumper($result);
 };
 if ($@) {
@@ -8276,7 +8181,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_custom_field_value_input_object** | [**UpdateCustomFieldValueInputObject**](UpdateCustomFieldValueInputObject.md)|  | 
  **id** | **string**|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8294,7 +8198,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_inbound_messages_notification_settings**
-> update_inbound_messages_notification_settings(update_inbound_messages_notification_settings_input_object => $update_inbound_messages_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values)
+> update_inbound_messages_notification_settings(update_inbound_messages_notification_settings_input_object => $update_inbound_messages_notification_settings_input_object)
 
 Update inbound messages notification settings
 
@@ -8310,10 +8214,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $update_inbound_messages_notification_settings_input_object = Net::Sms::TextMagicClient::Object::UpdateInboundMessagesNotificationSettingsInputObject->new(); # UpdateInboundMessagesNotificationSettingsInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->update_inbound_messages_notification_settings(update_inbound_messages_notification_settings_input_object => $update_inbound_messages_notification_settings_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->update_inbound_messages_notification_settings(update_inbound_messages_notification_settings_input_object => $update_inbound_messages_notification_settings_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->update_inbound_messages_notification_settings: $@\n";
@@ -8325,7 +8228,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_inbound_messages_notification_settings_input_object** | [**UpdateInboundMessagesNotificationSettingsInputObject**](UpdateInboundMessagesNotificationSettingsInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8393,7 +8295,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_password**
-> update_password(update_password_input_object => $update_password_input_object, x_ignore_null_values => $x_ignore_null_values)
+> update_password(update_password_input_object => $update_password_input_object)
 
 Change user password.
 
@@ -8409,10 +8311,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $update_password_input_object = Net::Sms::TextMagicClient::Object::UpdatePasswordInputObject->new(); # UpdatePasswordInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->update_password(update_password_input_object => $update_password_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->update_password(update_password_input_object => $update_password_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->update_password: $@\n";
@@ -8424,7 +8325,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_password_input_object** | [**UpdatePasswordInputObject**](UpdatePasswordInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8442,7 +8342,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_sender_setting**
-> update_sender_setting(update_sender_setting_input_object => $update_sender_setting_input_object, x_ignore_null_values => $x_ignore_null_values)
+> update_sender_setting(update_sender_setting_input_object => $update_sender_setting_input_object)
 
 Change sender settings for specified country.
 
@@ -8458,10 +8358,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $update_sender_setting_input_object = Net::Sms::TextMagicClient::Object::UpdateSenderSettingInputObject->new(); # UpdateSenderSettingInputObject | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    $api_instance->update_sender_setting(update_sender_setting_input_object => $update_sender_setting_input_object, x_ignore_null_values => $x_ignore_null_values);
+    $api_instance->update_sender_setting(update_sender_setting_input_object => $update_sender_setting_input_object);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->update_sender_setting: $@\n";
@@ -8473,7 +8372,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_sender_setting_input_object** | [**UpdateSenderSettingInputObject**](UpdateSenderSettingInputObject.md)|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8491,7 +8389,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_survey**
-> ResourceLinkResponse update_survey(update_survey_input_object => $update_survey_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse update_survey(update_survey_input_object => $update_survey_input_object, id => $id)
 
 Update existing survey.
 
@@ -8508,10 +8406,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $update_survey_input_object = Net::Sms::TextMagicClient::Object::UpdateSurveyInputObject->new(); # UpdateSurveyInputObject | 
 my $id = 1; # int | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->update_survey(update_survey_input_object => $update_survey_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->update_survey(update_survey_input_object => $update_survey_input_object, id => $id);
     print Dumper($result);
 };
 if ($@) {
@@ -8525,7 +8422,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_survey_input_object** | [**UpdateSurveyInputObject**](UpdateSurveyInputObject.md)|  | 
  **id** | **int**|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8543,7 +8439,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_survey_node**
-> ResourceLinkResponse update_survey_node(update_survey_node_input_object => $update_survey_node_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse update_survey_node(update_survey_node_input_object => $update_survey_node_input_object, id => $id)
 
 Update existing node.
 
@@ -8560,10 +8456,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $update_survey_node_input_object = Net::Sms::TextMagicClient::Object::UpdateSurveyNodeInputObject->new(); # UpdateSurveyNodeInputObject | 
 my $id = 1; # int | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->update_survey_node(update_survey_node_input_object => $update_survey_node_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->update_survey_node(update_survey_node_input_object => $update_survey_node_input_object, id => $id);
     print Dumper($result);
 };
 if ($@) {
@@ -8577,7 +8472,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_survey_node_input_object** | [**UpdateSurveyNodeInputObject**](UpdateSurveyNodeInputObject.md)|  | 
  **id** | **int**|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8595,7 +8489,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_template**
-> ResourceLinkResponse update_template(update_template_input_object => $update_template_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values)
+> ResourceLinkResponse update_template(update_template_input_object => $update_template_input_object, id => $id)
 
 Update existing template.
 
@@ -8612,10 +8506,9 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $update_template_input_object = Net::Sms::TextMagicClient::Object::UpdateTemplateInputObject->new(); # UpdateTemplateInputObject | 
 my $id = 1; # int | 
-my $x_ignore_null_values = 1; # boolean | 
 
 eval { 
-    my $result = $api_instance->update_template(update_template_input_object => $update_template_input_object, id => $id, x_ignore_null_values => $x_ignore_null_values);
+    my $result = $api_instance->update_template(update_template_input_object => $update_template_input_object, id => $id);
     print Dumper($result);
 };
 if ($@) {
@@ -8629,7 +8522,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_template_input_object** | [**UpdateTemplateInputObject**](UpdateTemplateInputObject.md)|  | 
  **id** | **int**|  | 
- **x_ignore_null_values** | **boolean**|  | [optional] [default to true]
 
 ### Return type
 
