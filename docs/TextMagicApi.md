@@ -189,6 +189,8 @@ Method | HTTP request | Description
 
 Assign contacts to the specified list.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -239,6 +241,8 @@ Name | Type | Description  | Notes
 
 Block contact from inbound and outbound communication by phone number.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -287,6 +291,8 @@ Name | Type | Description  | Notes
 
 Buy a dedicated number and assign it to the specified account.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -333,6 +339,8 @@ void (empty response body)
 > ResourceLinkResponse cancel_survey(id => $id)
 
 Cancel a survey.
+
+
 
 ### Example 
 ```perl
@@ -382,6 +390,8 @@ Name | Type | Description  | Notes
 
 Check user phone verification code
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -428,6 +438,8 @@ void (empty response body)
 > ResourceLinkResponse clear_and_assign_contacts_to_list(clear_and_assign_contacts_to_list_input_object => $clear_and_assign_contacts_to_list_input_object, id => $id)
 
 Reset list members to the specified contacts.
+
+
 
 ### Example 
 ```perl
@@ -479,6 +491,8 @@ Name | Type | Description  | Notes
 
 Close chats by chat ids or close all chats
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -526,6 +540,8 @@ void (empty response body)
 
 Close all chats that have no unread messages.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -568,6 +584,8 @@ void (empty response body)
 > close_subaccount(id => $id)
 
 Close subaccount.
+
+
 
 ### Example 
 ```perl
@@ -616,6 +634,8 @@ void (empty response body)
 
 Create a new contact from the submitted data.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -663,6 +683,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse create_contact_note(create_contact_note_input_object => $create_contact_note_input_object, id => $id)
 
 Create a new contact note.
+
+
 
 ### Example 
 ```perl
@@ -714,6 +736,8 @@ Name | Type | Description  | Notes
 
 Create a new custom field from the submitted data.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -761,6 +785,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse create_list(create_list_input_object => $create_list_input_object)
 
 Create a new list from the submitted data.
+
+
 
 ### Example 
 ```perl
@@ -810,6 +836,8 @@ Name | Type | Description  | Notes
 
 Add or update a device token.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -856,6 +884,8 @@ void (empty response body)
 > ResourceLinkResponse create_survey(create_survey_input_object => $create_survey_input_object)
 
 Create a new survey from the submitted data.
+
+
 
 ### Example 
 ```perl
@@ -904,6 +934,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse create_survey_node(create_survey_node_input_object => $create_survey_node_input_object, id => $id)
 
 Create a new node from the submitted data.
+
+
 
 ### Example 
 ```perl
@@ -955,6 +987,8 @@ Name | Type | Description  | Notes
 
 Create a new template from the submitted data.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -1003,6 +1037,8 @@ Name | Type | Description  | Notes
 
 Delete all contacts.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -1046,7 +1082,7 @@ void (empty response body)
 
 Delete all messages
 
-Delete all messages.
+
 
 ### Example 
 ```perl
@@ -1091,6 +1127,8 @@ void (empty response body)
 
 Delete an avatar for the current user.\\
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -1133,6 +1171,8 @@ void (empty response body)
 > delete_chat_messages(delete_chat_messages_bulk_input_object => $delete_chat_messages_bulk_input_object, id => $id)
 
 Delete messages from chat by given messages ID(s).
+
+
 
 ### Example 
 ```perl
@@ -1183,6 +1223,8 @@ void (empty response body)
 
 Delete chats by given ID(s) or delete all chats.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -1229,6 +1271,8 @@ void (empty response body)
 > delete_contact(id => $id)
 
 Delete a single contact.
+
+
 
 ### Example 
 ```perl
@@ -1277,6 +1321,8 @@ void (empty response body)
 
 Delete an avatar for the contact.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -1324,6 +1370,8 @@ void (empty response body)
 
 Delete a single contact note.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -1370,6 +1418,8 @@ void (empty response body)
 > delete_contact_notes_bulk(id => $id, delete_contact_notes_bulk_input_object => $delete_contact_notes_bulk_input_object)
 
 Delete contact note by given ID(s) or delete all contact notes.
+
+
 
 ### Example 
 ```perl
@@ -1420,6 +1470,8 @@ void (empty response body)
 
 Delete contact by given ID(s) or delete all contacts.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -1466,6 +1518,8 @@ void (empty response body)
 > delete_contacts_from_list(delete_contacs_from_list_object => $delete_contacs_from_list_object, id => $id)
 
 Unassign contacts from the specified list.
+
+
 
 ### Example 
 ```perl
@@ -1516,6 +1570,8 @@ void (empty response body)
 
 Delete a single custom field.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -1562,6 +1618,8 @@ void (empty response body)
 > delete_dedicated_number(id => $id)
 
 Cancel dedicated number subscription.
+
+
 
 ### Example 
 ```perl
@@ -1610,6 +1668,8 @@ void (empty response body)
 
 Delete the incoming message.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -1656,6 +1716,8 @@ void (empty response body)
 > delete_inbound_messages_bulk(delete_inbound_messages_bulk_input_object => $delete_inbound_messages_bulk_input_object)
 
 Delete inbound messages by given ID(s) or delete all inbound messages.
+
+
 
 ### Example 
 ```perl
@@ -1704,6 +1766,8 @@ void (empty response body)
 
 Delete a single list.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -1751,6 +1815,8 @@ void (empty response body)
 
 Delete an avatar for the list.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -1797,6 +1863,8 @@ void (empty response body)
 > delete_list_contacts_bulk(delete_list_contacts_bulk_input_object => $delete_list_contacts_bulk_input_object, id => $id)
 
 Delete contact from list by given ID(s) or all contacts from list.
+
+
 
 ### Example 
 ```perl
@@ -1847,6 +1915,8 @@ void (empty response body)
 
 Delete list by given ID(s) or delete all lists.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -1893,6 +1963,8 @@ void (empty response body)
 > delete_message_session(id => $id)
 
 Delete a message session, together with all nested messages.
+
+
 
 ### Example 
 ```perl
@@ -1941,6 +2013,8 @@ void (empty response body)
 
 Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -1988,7 +2062,7 @@ void (empty response body)
 
 Delete message
 
-Delete a single message.
+
 
 ### Example 
 ```perl
@@ -2037,7 +2111,7 @@ void (empty response body)
 
 Delete messages by IDs
 
-Delete outbound messages by given ID(s) or delete all outbound messages.
+
 
 ### Example 
 ```perl
@@ -2085,6 +2159,8 @@ void (empty response body)
 > delete_push_token(type => $type, device_id => $device_id)
 
 Delete a push notification device token.
+
+
 
 ### Example 
 ```perl
@@ -2135,6 +2211,8 @@ void (empty response body)
 
 Delete a message session, together with all nested messages.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -2181,6 +2259,8 @@ void (empty response body)
 > delete_scheduled_messages_bulk(delete_scheduled_messages_bulk_input_object => $delete_scheduled_messages_bulk_input_object)
 
 Delete scheduled messages by given ID(s) or delete all scheduled messages.
+
+
 
 ### Example 
 ```perl
@@ -2229,6 +2309,8 @@ void (empty response body)
 
 Delete a Sender ID.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -2275,6 +2357,8 @@ void (empty response body)
 > delete_survey(id => $id)
 
 Delete a survey.
+
+
 
 ### Example 
 ```perl
@@ -2323,6 +2407,8 @@ void (empty response body)
 
 Delete a node.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -2369,6 +2455,8 @@ void (empty response body)
 > delete_template(id => $id)
 
 Delete a single template.
+
+
 
 ### Example 
 ```perl
@@ -2417,6 +2505,8 @@ void (empty response body)
 
 Delete template by given ID(s) or delete all templates.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -2464,7 +2554,7 @@ void (empty response body)
 
 Authenticate user by given username and password.
 
-Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
+
 
 ### Example 
 ```perl
@@ -2509,6 +2599,8 @@ No authorization required
 > DoCarrierLookupResponse do_carrier_lookup(phone => $phone, country => $country)
 
 Carrier Lookup
+
+
 
 ### Example 
 ```perl
@@ -2560,6 +2652,8 @@ Name | Type | Description  | Notes
 
 Validate Email address using Email Lookup tool
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -2608,6 +2702,8 @@ Name | Type | Description  | Notes
 
 Duplicate a survey.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -2655,6 +2751,8 @@ Name | Type | Description  | Notes
 > GetAllBulkSessionsPaginatedResponse get_all_bulk_sessions(page => $page, limit => $limit)
 
 Get all bulk sending sessions.
+
+
 
 ### Example 
 ```perl
@@ -2705,6 +2803,8 @@ Name | Type | Description  | Notes
 > GetAllChatsPaginatedResponse get_all_chats(status => $status, page => $page, limit => $limit, order_by => $order_by, voice => $voice, flat => $flat)
 
 Get all user chats.
+
+
 
 ### Example 
 ```perl
@@ -2764,6 +2864,8 @@ Name | Type | Description  | Notes
 
 Get all inbox messages.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -2818,6 +2920,8 @@ Name | Type | Description  | Notes
 
 Get all message sending sessions.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -2868,7 +2972,7 @@ Name | Type | Description  | Notes
 
 Get all messages
 
-Get all user oubound messages.
+
 
 ### Example 
 ```perl
@@ -2921,6 +3025,8 @@ Name | Type | Description  | Notes
 > GetAllScheduledMessagesPaginatedResponse get_all_scheduled_messages(page => $page, limit => $limit, status => $status, order_by => $order_by, direction => $direction)
 
 Get all scheduled messages.
+
+
 
 ### Example 
 ```perl
@@ -2978,6 +3084,8 @@ Name | Type | Description  | Notes
 
 Get all user templates.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -3027,6 +3135,8 @@ Name | Type | Description  | Notes
 > GetAvailableDedicatedNumbersResponse get_available_dedicated_numbers(country => $country, prefix => $prefix, tollfree => $tollfree)
 
 Find available dedicated numbers to buy.
+
+
 
 ### Example 
 ```perl
@@ -3080,6 +3190,8 @@ Name | Type | Description  | Notes
 
 Get all available sender setting options which could be used in \"from\" parameter of POST messages method.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -3128,6 +3240,8 @@ Name | Type | Description  | Notes
 
 Returns the list of available balance options which can be used as a bound to determine when to send email to user with low balance notification. See https://my.textmagic.com/online/account/notifications/balance
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -3172,6 +3286,8 @@ This endpoint does not need any parameter.
 
 Get balance notification settings
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -3215,6 +3331,8 @@ This endpoint does not need any parameter.
 > GetBlockedContactsPaginatedResponse get_blocked_contacts(page => $page, limit => $limit, query => $query, order_by => $order_by, direction => $direction)
 
 Get blocked contacts.
+
+
 
 ### Example 
 ```perl
@@ -3272,6 +3390,8 @@ Name | Type | Description  | Notes
 
 Get bulk message session status.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -3320,6 +3440,8 @@ Name | Type | Description  | Notes
 
 Fetch callback URL settings
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -3364,6 +3486,8 @@ This endpoint does not need any parameter.
 
 Check pricing for a inbound/outbound call.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -3407,6 +3531,8 @@ This endpoint does not need any parameter.
 > Chat get_chat(id => $id)
 
 Get a single chat.
+
+
 
 ### Example 
 ```perl
@@ -3455,6 +3581,8 @@ Name | Type | Description  | Notes
 > Chat get_chat_by_phone(phone => $phone, upsert => $upsert, reopen => $reopen)
 
 Find chats by phone.
+
+
 
 ### Example 
 ```perl
@@ -3507,6 +3635,8 @@ Name | Type | Description  | Notes
 > GetChatMessagesPaginatedResponse get_chat_messages(id => $id, page => $page, limit => $limit, query => $query, start => $start, end => $end, direction => $direction, voice => $voice)
 
 Fetch messages from chat with specified chat id.
+
+
 
 ### Example 
 ```perl
@@ -3570,6 +3700,8 @@ Name | Type | Description  | Notes
 
 Get a single contact.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -3617,6 +3749,8 @@ Name | Type | Description  | Notes
 > Contact get_contact_by_phone(phone => $phone)
 
 Get a single contact by phone number.
+
+
 
 ### Example 
 ```perl
@@ -3666,6 +3800,8 @@ Name | Type | Description  | Notes
 
 Check is that phone number blocked
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -3713,6 +3849,8 @@ Name | Type | Description  | Notes
 > GetContactImportSessionProgressResponse get_contact_import_session_progress(id => $id)
 
 Get contact import session progress.
+
+
 
 ### Example 
 ```perl
@@ -3762,6 +3900,8 @@ Name | Type | Description  | Notes
 
 Get a single contact note.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -3809,6 +3949,8 @@ Name | Type | Description  | Notes
 > GetContactNotesPaginatedResponse get_contact_notes(id => $id, page => $page, limit => $limit)
 
 Fetch notes assigned to the given contact.
+
+
 
 ### Example 
 ```perl
@@ -3861,6 +4003,8 @@ Name | Type | Description  | Notes
 > GetContactsPaginatedResponse get_contacts(page => $page, limit => $limit, shared => $shared, order_by => $order_by, direction => $direction)
 
 Get all user contacts.
+
+
 
 ### Example 
 ```perl
@@ -3918,6 +4062,8 @@ Name | Type | Description  | Notes
 
 Get contacts autocomplete suggestions by given search term.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -3970,7 +4116,7 @@ Name | Type | Description  | Notes
 
 Fetch user contacts by given group id.
 
-A useful synonym for \"contacts/search\" command with provided \"listId\" parameter.
+
 
 ### Example 
 ```perl
@@ -4028,6 +4174,8 @@ Name | Type | Description  | Notes
 
 Return list of countries.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -4072,6 +4220,8 @@ This endpoint does not need any parameter.
 
 Get current user info.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -4115,6 +4265,8 @@ This endpoint does not need any parameter.
 > UserCustomField get_custom_field(id => $id)
 
 Get a single custom field.
+
+
 
 ### Example 
 ```perl
@@ -4163,6 +4315,8 @@ Name | Type | Description  | Notes
 > GetCustomFieldsPaginatedResponse get_custom_fields(page => $page, limit => $limit)
 
 Get all contact custom fields.
+
+
 
 ### Example 
 ```perl
@@ -4214,6 +4368,8 @@ Name | Type | Description  | Notes
 
 Get a single dedicated number.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -4262,6 +4418,8 @@ Name | Type | Description  | Notes
 
 Get an array of all rules that are disallowed to the current account.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -4305,6 +4463,8 @@ This endpoint does not need any parameter.
 > GetFavouritesPaginatedResponse get_favourites(page => $page, limit => $limit, query => $query)
 
 Get favorite contacts and lists.
+
+
 
 ### Example 
 ```perl
@@ -4358,6 +4518,8 @@ Name | Type | Description  | Notes
 
 Get all forwarded calls.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -4408,6 +4570,8 @@ Name | Type | Description  | Notes
 
 Get a single inbox message.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -4456,6 +4620,8 @@ Name | Type | Description  | Notes
 
 Get inbound messages notification settings
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -4499,6 +4665,8 @@ This endpoint does not need any parameter.
 > GetInvoicesPaginatedResponse get_invoices(page => $page, limit => $limit)
 
 Return account invoices.
+
+
 
 ### Example 
 ```perl
@@ -4550,6 +4718,8 @@ Name | Type | Description  | Notes
 
 Get a single list.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -4598,6 +4768,8 @@ Name | Type | Description  | Notes
 
 Fetch all contacts IDs belonging to the list with ID.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -4645,6 +4817,8 @@ Name | Type | Description  | Notes
 > GetListsOfContactPaginatedResponse get_lists_of_contact(id => $id, page => $page, limit => $limit)
 
 Return lists which contact belongs to.
+
+
 
 ### Example 
 ```perl
@@ -4698,7 +4872,7 @@ Name | Type | Description  | Notes
 
 Preview message
 
-Get messages preview (with tags merged) up to 100 messages per session.
+
 
 ### Example 
 ```perl
@@ -4780,7 +4954,7 @@ Name | Type | Description  | Notes
 
 Check price
 
-Check pricing for a new outbound message.
+
 
 ### Example 
 ```perl
@@ -4864,7 +5038,7 @@ Name | Type | Description  | Notes
 
 Get pricing
 
-Get message prices for all countries.
+
 
 ### Example 
 ```perl
@@ -4909,6 +5083,8 @@ This endpoint does not need any parameter.
 > MessageSession get_message_session(id => $id)
 
 Get a message session.
+
+
 
 ### Example 
 ```perl
@@ -4957,6 +5133,8 @@ Name | Type | Description  | Notes
 > GetMessageSessionStatResponse get_message_session_stat(id => $id, include_deleted => $include_deleted)
 
 Get sending session statistics.
+
+
 
 ### Example 
 ```perl
@@ -5008,7 +5186,7 @@ Name | Type | Description  | Notes
 
 Fetch messages by given session id.
 
-A useful synonym for \"messages/search\" command with provided \"sessionId\" parameter.
+
 
 ### Example 
 ```perl
@@ -5066,6 +5244,8 @@ Name | Type | Description  | Notes
 
 Return counters for messaging data views.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -5109,6 +5289,8 @@ This endpoint does not need any parameter.
 > GetMessagingStatResponse get_messaging_stat(by => $by, start => $start, end => $end)
 
 Return messaging statistics.
+
+
 
 ### Example 
 ```perl
@@ -5162,7 +5344,7 @@ Name | Type | Description  | Notes
 
 Get a single message
 
-Get a single outgoing message.
+
 
 ### Example 
 ```perl
@@ -5212,7 +5394,7 @@ Name | Type | Description  | Notes
 
 Get history
 
-Get outbound messages history.
+
 
 ### Example 
 ```perl
@@ -5270,6 +5452,8 @@ Name | Type | Description  | Notes
 
 Get all device tokens assigned to the current account
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -5313,6 +5497,8 @@ This endpoint does not need any parameter.
 > MessagesIcs get_scheduled_message(id => $id)
 
 Get message schedule.
+
+
 
 ### Example 
 ```perl
@@ -5362,6 +5548,8 @@ Name | Type | Description  | Notes
 
 Get a single Sender ID.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -5409,6 +5597,8 @@ Name | Type | Description  | Notes
 > GetSenderIdsPaginatedResponse get_sender_ids(page => $page, limit => $limit)
 
 Get all sender IDs of current user.
+
+
 
 ### Example 
 ```perl
@@ -5460,6 +5650,8 @@ Name | Type | Description  | Notes
 
 Get current user sender settings.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -5507,6 +5699,8 @@ Name | Type | Description  | Notes
 > GetSpendingStatPaginatedResponse get_spending_stat(page => $page, limit => $limit, start => $start, end => $end)
 
 Return account spending statistics.
+
+
 
 ### Example 
 ```perl
@@ -5562,6 +5756,8 @@ Name | Type | Description  | Notes
 
 Get current entities state
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -5605,6 +5801,8 @@ This endpoint does not need any parameter.
 > User get_subaccount(id => $id)
 
 Get a single subaccount.
+
+
 
 ### Example 
 ```perl
@@ -5653,6 +5851,8 @@ Name | Type | Description  | Notes
 > User get_subaccounts(page => $page, limit => $limit)
 
 Get all subaccounts of current user.
+
+
 
 ### Example 
 ```perl
@@ -5704,7 +5904,7 @@ Name | Type | Description  | Notes
 
 Get all subaccounts with their REST API tokens associated with specified app name.
 
-When more than one token related to app name, last key will be returned.
+
 
 ### Example 
 ```perl
@@ -5758,6 +5958,8 @@ Name | Type | Description  | Notes
 
 Get a survey by id.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -5805,6 +6007,8 @@ Name | Type | Description  | Notes
 > SurveyNode get_survey_node(id => $id)
 
 Get a node by id.
+
+
 
 ### Example 
 ```perl
@@ -5854,6 +6058,8 @@ Name | Type | Description  | Notes
 
 Fetch nodes by given survey id.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -5901,6 +6107,8 @@ Name | Type | Description  | Notes
 > GetSurveysPaginatedResponse get_surveys(page => $page, limit => $limit)
 
 Get all user surveys.
+
+
 
 ### Example 
 ```perl
@@ -5952,6 +6160,8 @@ Name | Type | Description  | Notes
 
 Get a single template.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -5999,6 +6209,8 @@ Name | Type | Description  | Notes
 > GetTimezonesResponse get_timezones(full => $full)
 
 Return all available timezone IDs.
+
+
 
 ### Example 
 ```perl
@@ -6048,6 +6260,8 @@ Name | Type | Description  | Notes
 
 Get total amount of unread messages in the current user chats.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -6091,6 +6305,8 @@ This endpoint does not need any parameter.
 > UnsubscribedContact get_unsubscribed_contact(id => $id)
 
 Get a single unsubscribed contact.
+
+
 
 ### Example 
 ```perl
@@ -6139,6 +6355,8 @@ Name | Type | Description  | Notes
 > GetUnsubscribersPaginatedResponse get_unsubscribers(page => $page, limit => $limit)
 
 Get all contact have unsubscribed from your communication.
+
+
 
 ### Example 
 ```perl
@@ -6189,6 +6407,8 @@ Name | Type | Description  | Notes
 > GetUserDedicatedNumbersPaginatedResponse get_user_dedicated_numbers(page => $page, limit => $limit, survey_id => $survey_id)
 
 Get user's dedicated numbers.
+
+
 
 ### Example 
 ```perl
@@ -6241,6 +6461,8 @@ Name | Type | Description  | Notes
 > GetUserListsPaginatedResponse get_user_lists(page => $page, limit => $limit, order_by => $order_by, direction => $direction, favorite_only => $favorite_only, only_mine => $only_mine)
 
 Get all user lists.
+
+
 
 ### Example 
 ```perl
@@ -6300,6 +6522,8 @@ Name | Type | Description  | Notes
 
 Get minimal valid apps versions
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -6343,6 +6567,8 @@ This endpoint does not need any parameter.
 > invite_subaccount(invite_subaccount_input_object => $invite_subaccount_input_object)
 
 Invite new subaccount.
+
+
 
 ### Example 
 ```perl
@@ -6391,6 +6617,8 @@ void (empty response body)
 
 Mark several chats as read by chat ids or mark all chats as read
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -6437,6 +6665,8 @@ void (empty response body)
 > mark_chats_unread_bulk(mark_chats_unread_bulk_input_object => $mark_chats_unread_bulk_input_object)
 
 Mark several chats as UNread by chat ids or mark all chats as UNread
+
+
 
 ### Example 
 ```perl
@@ -6485,6 +6715,8 @@ void (empty response body)
 
 Merge two question nodes.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -6531,6 +6763,8 @@ void (empty response body)
 > ResourceLinkResponse mute_chat(mute_chat_input_object => $mute_chat_input_object)
 
 Set mute mode.
+
+
 
 ### Example 
 ```perl
@@ -6580,6 +6814,8 @@ Name | Type | Description  | Notes
 
 Mute several chats by chat ids or mute all chats
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -6627,6 +6863,8 @@ void (empty response body)
 
 Just does a pong.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -6670,6 +6908,8 @@ This endpoint does not need any parameter.
 > reopen_chats_bulk(reopen_chats_bulk_input_object => $reopen_chats_bulk_input_object)
 
 Reopen chats by chat ids or reopen all chats
+
+
 
 ### Example 
 ```perl
@@ -6718,7 +6958,7 @@ void (empty response body)
 
 Request a new REST API token for subaccount.
 
-Returning user object, key and app name.
+
 
 ### Example 
 ```perl
@@ -6768,6 +7008,8 @@ Name | Type | Description  | Notes
 
 Request for a new Sender ID.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -6816,6 +7058,8 @@ Name | Type | Description  | Notes
 
 Reset a survey flow.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -6863,6 +7107,8 @@ Name | Type | Description  | Notes
 > SearchChatsPaginatedResponse search_chats(page => $page, limit => $limit, query => $query)
 
 Find chats by inbound or outbound messages text.
+
+
 
 ### Example 
 ```perl
@@ -6916,6 +7162,8 @@ Name | Type | Description  | Notes
 
 Find chats by IDs.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -6967,6 +7215,8 @@ Name | Type | Description  | Notes
 > SearchChatsByReceipentPaginatedResponse search_chats_by_receipent(page => $page, limit => $limit, query => $query, order_by => $order_by)
 
 Find chats by recipient (contact, list name or phone number).
+
+
 
 ### Example 
 ```perl
@@ -7021,6 +7271,8 @@ Name | Type | Description  | Notes
 > SearchContactsPaginatedResponse search_contacts(page => $page, limit => $limit, shared => $shared, ids => $ids, list_id => $list_id, include_blocked => $include_blocked, query => $query, local => $local, country => $country, order_by => $order_by, direction => $direction)
 
 Find user contacts by given parameters.
+
+
 
 ### Example 
 ```perl
@@ -7090,6 +7342,8 @@ Name | Type | Description  | Notes
 
 Find inbound messages by given parameters.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -7149,6 +7403,8 @@ Name | Type | Description  | Notes
 > SearchListsPaginatedResponse search_lists(page => $page, limit => $limit, ids => $ids, query => $query, only_mine => $only_mine, only_default => $only_default, order_by => $order_by, direction => $direction)
 
 Find contact lists by given parameters.
+
+
 
 ### Example 
 ```perl
@@ -7212,7 +7468,7 @@ Name | Type | Description  | Notes
 
 Find messages
 
-Find outbound messages by given parameters.
+
 
 ### Example 
 ```perl
@@ -7276,6 +7532,8 @@ Name | Type | Description  | Notes
 
 Find scheduled messages by given parameters.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -7336,6 +7594,8 @@ Name | Type | Description  | Notes
 
 Find user templates by given parameters.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -7392,6 +7652,8 @@ Name | Type | Description  | Notes
 
 Send user email verification
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -7435,7 +7697,7 @@ void (empty response body)
 
 Send message
 
-The main entrypoint to send messages. See examples above for the reference.
+
 
 ### Example 
 ```perl
@@ -7485,6 +7747,8 @@ Name | Type | Description  | Notes
 
 Send user phone verification
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -7527,6 +7791,8 @@ void (empty response body)
 > ResourceLinkResponse set_chat_status(set_chat_status_input_object => $set_chat_status_input_object)
 
 Set status of the chat given by ID.
+
+
 
 ### Example 
 ```perl
@@ -7576,6 +7842,8 @@ Name | Type | Description  | Notes
 
 Start a survey.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -7624,6 +7892,8 @@ Name | Type | Description  | Notes
 
 Unblock contact by phone number.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -7670,6 +7940,8 @@ void (empty response body)
 > unblock_contacts_bulk(unblock_contacts_bulk_input_object => $unblock_contacts_bulk_input_object)
 
 Unblock several contacts by blocked contact ids or unblock all contacts
+
+
 
 ### Example 
 ```perl
@@ -7718,6 +7990,8 @@ void (empty response body)
 
 Unmute several chats by chat ids or unmute all chats
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -7764,6 +8038,8 @@ void (empty response body)
 > ResourceLinkResponse unsubscribe_contact(unsubscribe_contact_input_object => $unsubscribe_contact_input_object)
 
 Unsubscribe contact from your communication by phone number.
+
+
 
 ### Example 
 ```perl
@@ -7813,6 +8089,8 @@ Name | Type | Description  | Notes
 
 Update balance notification settings
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -7859,6 +8137,8 @@ void (empty response body)
 > update_callback_settings(update_callback_settings_input_object => $update_callback_settings_input_object)
 
 Update callback URL settings
+
+
 
 ### Example 
 ```perl
@@ -7907,6 +8187,8 @@ void (empty response body)
 
 Update chat desktop notification settings
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -7953,6 +8235,8 @@ void (empty response body)
 > ResourceLinkResponse update_contact(update_contact_input_object => $update_contact_input_object, id => $id)
 
 Update existing contact.
+
+
 
 ### Example 
 ```perl
@@ -8004,6 +8288,8 @@ Name | Type | Description  | Notes
 
 Update existing contact note.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -8054,6 +8340,8 @@ Name | Type | Description  | Notes
 
 Update current user info.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -8101,6 +8389,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse update_custom_field(update_custom_field_input_object => $update_custom_field_input_object, id => $id)
 
 Update existing custom field.
+
+
 
 ### Example 
 ```perl
@@ -8152,6 +8442,8 @@ Name | Type | Description  | Notes
 
 Update contact's custom field value.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -8202,6 +8494,8 @@ Name | Type | Description  | Notes
 
 Update inbound messages notification settings
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -8248,6 +8542,8 @@ void (empty response body)
 > ResourceLinkResponse update_list(id => $id, update_list_object => $update_list_object)
 
 Update existing list.
+
+
 
 ### Example 
 ```perl
@@ -8299,6 +8595,8 @@ Name | Type | Description  | Notes
 
 Change user password.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -8346,6 +8644,8 @@ void (empty response body)
 
 Change sender settings for specified country.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -8392,6 +8692,8 @@ void (empty response body)
 > ResourceLinkResponse update_survey(update_survey_input_object => $update_survey_input_object, id => $id)
 
 Update existing survey.
+
+
 
 ### Example 
 ```perl
@@ -8443,6 +8745,8 @@ Name | Type | Description  | Notes
 
 Update existing node.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -8492,6 +8796,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse update_template(update_template_input_object => $update_template_input_object, id => $id)
 
 Update existing template.
+
+
 
 ### Example 
 ```perl
@@ -8543,6 +8849,8 @@ Name | Type | Description  | Notes
 
 Add an avatar for the current user.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -8589,6 +8897,8 @@ void (empty response body)
 > ResourceLinkResponse upload_contact_avatar(image => $image, id => $id)
 
 Add an avatar for the contact.
+
+
 
 ### Example 
 ```perl
@@ -8640,6 +8950,8 @@ Name | Type | Description  | Notes
 
 Add an avatar for the list.
 
+
+
 ### Example 
 ```perl
 use Data::Dumper;
@@ -8690,7 +9002,7 @@ Name | Type | Description  | Notes
 
 Upload message attachment
 
-Upload a new file to insert it as a link.
+
 
 ### Example 
 ```perl
