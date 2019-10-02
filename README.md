@@ -10,10 +10,10 @@ For detailed documentation and more examples, please visit [http://docs.textmagi
 ## Installation
 
 ```bash
-wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.441.tar.gz && \
-tar zxf v2.0.441.tar.gz && \
-rm -f v2.0.441.tar.gz && \
-cd textmagic-rest-perl-2.0.441 && \
+wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.443.tar.gz && \
+tar zxf v2.0.443.tar.gz && \
+rm -f v2.0.443.tar.gz && \
+cd textmagic-rest-perl-2.0.443 && \
 perl Makefile.pl && \
 make && \
 make install && \

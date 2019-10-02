@@ -147,14 +147,14 @@ __PACKAGE__->method_documentation({
     'id' => {
     	datatype => 'int',
     	base_name => 'id',
-    	description => '',
+    	description => 'Numeric sender ID.',
     	format => '',
     	read_only => '',
     		},
     'sender_id' => {
     	datatype => 'string',
     	base_name => 'senderId',
-    	description => '',
+    	description => 'Alphanumeric ID.',
     	format => '',
     	read_only => '',
     		},
@@ -168,7 +168,7 @@ __PACKAGE__->method_documentation({
     'status' => {
     	datatype => 'string',
     	base_name => 'status',
-    	description => 'A - accepted, R - rejected, P - pending',
+    	description => '*   **P** for Pending. This Sender ID is being reviewed by our support team. *   **R** for Rejected. Our support team rejected your application for this Sender ID. *   **A** for Active. ',
     	format => '',
     	read_only => '',
     		},

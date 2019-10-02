@@ -148,7 +148,14 @@ __PACKAGE__->method_documentation({
     'id' => {
     	datatype => 'int',
     	base_name => 'id',
-    	description => '',
+    	description => 'Dedicated number ID.',
+    	format => '',
+    	read_only => '',
+    		},
+    'phone' => {
+    	datatype => 'string',
+    	base_name => 'phone',
+    	description => 'Dedicated phone number.',
     	format => '',
     	read_only => '',
     		},
@@ -162,21 +169,21 @@ __PACKAGE__->method_documentation({
     'purchased_at' => {
     	datatype => 'DateTime',
     	base_name => 'purchasedAt',
-    	description => '',
+    	description => 'Time when the dedicated number was purchased.',
     	format => '',
     	read_only => '',
     		},
     'expire_at' => {
     	datatype => 'DateTime',
     	base_name => 'expireAt',
-    	description => '',
+    	description => 'Dedicated number subscription expiration time.',
     	format => '',
     	read_only => '',
     		},
     'status' => {
     	datatype => 'string',
     	base_name => 'status',
-    	description => 'A - active, in use (at least one message was sent/received from/to this number), U - never used before',
+    	description => 'Number status: *   **U** for Unused. No messages have been sent from (or received to) this number. *   **A** for Active. ',
     	format => '',
     	read_only => '',
     		},
@@ -187,33 +194,26 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
-    'phone' => {
-    	datatype => 'string',
-    	base_name => 'phone',
-    	description => '',
-    	format => '',
-    	read_only => '',
-    		},
 });
 
 __PACKAGE__->swagger_types( {
     'id' => 'int',
+    'phone' => 'string',
     'user' => 'User',
     'purchased_at' => 'DateTime',
     'expire_at' => 'DateTime',
     'status' => 'string',
-    'country' => 'Country',
-    'phone' => 'string'
+    'country' => 'Country'
 } );
 
 __PACKAGE__->attribute_map( {
     'id' => 'id',
+    'phone' => 'phone',
     'user' => 'user',
     'purchased_at' => 'purchasedAt',
     'expire_at' => 'expireAt',
     'status' => 'status',
-    'country' => 'country',
-    'phone' => 'phone'
+    'country' => 'country'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});

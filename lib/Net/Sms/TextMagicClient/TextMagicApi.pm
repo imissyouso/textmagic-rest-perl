@@ -199,7 +199,7 @@ sub block_contact {
 #
 # buy_dedicated_number
 #
-# Buy a dedicated number and assign it to the specified account.
+# Buy a dedicated number
 # 
 # @param BuyDedicatedNumberInputObject $buy_dedicated_number_input_object  (required)
 {
@@ -211,7 +211,7 @@ sub block_contact {
     },
     };
     __PACKAGE__->method_documentation->{ 'buy_dedicated_number' } = { 
-    	summary => 'Buy a dedicated number and assign it to the specified account.',
+    	summary => 'Buy a dedicated number',
         params => $params,
         returns => undef,
         };
@@ -2062,7 +2062,7 @@ sub delete_custom_field {
 #
 # delete_dedicated_number
 #
-# Cancel dedicated number subscription.
+# Cancel dedicated number subscription
 # 
 # @param int $id  (required)
 {
@@ -2074,7 +2074,7 @@ sub delete_custom_field {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_dedicated_number' } = { 
-    	summary => 'Cancel dedicated number subscription.',
+    	summary => 'Cancel dedicated number subscription',
         params => $params,
         returns => undef,
         };
@@ -2968,7 +2968,7 @@ sub delete_scheduled_messages_bulk {
 #
 # delete_sender_id
 #
-# Delete a Sender ID.
+# Delete a Sender ID
 # 
 # @param int $id  (required)
 {
@@ -2980,7 +2980,7 @@ sub delete_scheduled_messages_bulk {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_sender_id' } = { 
-    	summary => 'Delete a Sender ID.',
+    	summary => 'Delete a Sender ID',
         params => $params,
         returns => undef,
         };
@@ -4165,31 +4165,31 @@ sub get_all_templates {
 #
 # get_available_dedicated_numbers
 #
-# Find available dedicated numbers to buy.
+# Find dedicated numbers available for purchase
 # 
-# @param string $country Dedicated number country. Two letters in upper case (required)
-# @param int $prefix Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree &#x3D; 1 parameter and there are available tollfree numbers, this parameter will be ignore. (optional, default to 1)
-# @param int $tollfree Should we show only tollfree numbers (tollfree available only for US). Default is false. (optional, default to 0)
+# @param string $country Two-letter dedicated number country ISO code. (required)
+# @param int $prefix Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)
+# @param int $tollfree Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)
 {
     my $params = {
     'country' => {
         data_type => 'string',
-        description => 'Dedicated number country. Two letters in upper case',
+        description => 'Two-letter dedicated number country ISO code.',
         required => '1',
     },
     'prefix' => {
         data_type => 'int',
-        description => 'Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree &#x3D; 1 parameter and there are available tollfree numbers, this parameter will be ignore.',
+        description => 'Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country.',
         required => '0',
     },
     'tollfree' => {
         data_type => 'int',
-        description => 'Should we show only tollfree numbers (tollfree available only for US). Default is false.',
+        description => 'Should we show only tollfree numbers (tollfree available only for US).',
         required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'get_available_dedicated_numbers' } = { 
-    	summary => 'Find available dedicated numbers to buy.',
+    	summary => 'Find dedicated numbers available for purchase',
         params => $params,
         returns => 'GetAvailableDedicatedNumbersResponse',
         };
@@ -4252,19 +4252,19 @@ sub get_available_dedicated_numbers {
 #
 # get_available_sender_setting_options
 #
-# Get all available sender setting options which could be used in \"from\" parameter of POST messages method.
+# Get available sender settings
 # 
-# @param string $country Return sender setting options available in specific country only. Two upper case characters (optional)
+# @param string $country Two-letter ISO country ID. If not specified, it returns all the available sender settings. (optional)
 {
     my $params = {
     'country' => {
         data_type => 'string',
-        description => 'Return sender setting options available in specific country only. Two upper case characters',
+        description => 'Two-letter ISO country ID. If not specified, it returns all the available sender settings.',
         required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'get_available_sender_setting_options' } = { 
-    	summary => 'Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.',
+    	summary => 'Get available sender settings',
         params => $params,
         returns => 'GetAvailableSenderSettingOptionsResponse',
         };
@@ -5939,7 +5939,7 @@ sub get_custom_fields {
 #
 # get_dedicated_number
 #
-# Get a single dedicated number.
+# Get the details of a specific dedicated number
 # 
 # @param int $id  (required)
 {
@@ -5951,7 +5951,7 @@ sub get_custom_fields {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_dedicated_number' } = { 
-    	summary => 'Get a single dedicated number.',
+    	summary => 'Get the details of a specific dedicated number',
         params => $params,
         returns => 'UsersInbound',
         };
@@ -7753,7 +7753,7 @@ sub get_scheduled_message {
 #
 # get_sender_id
 #
-# Get a single Sender ID.
+# Get the details of a specific Sender ID
 # 
 # @param int $id  (required)
 {
@@ -7765,7 +7765,7 @@ sub get_scheduled_message {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_sender_id' } = { 
-    	summary => 'Get a single Sender ID.',
+    	summary => 'Get the details of a specific Sender ID',
         params => $params,
         returns => 'SenderId',
         };
@@ -7820,7 +7820,7 @@ sub get_sender_id {
 #
 # get_sender_ids
 #
-# Get all sender IDs of current user.
+# Get all your approved Sender IDs
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
@@ -7838,7 +7838,7 @@ sub get_sender_id {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_sender_ids' } = { 
-    	summary => 'Get all sender IDs of current user.',
+    	summary => 'Get all your approved Sender IDs',
         params => $params,
         returns => 'GetSenderIdsPaginatedResponse',
         };
@@ -7891,7 +7891,7 @@ sub get_sender_ids {
 #
 # get_sender_settings
 #
-# Get current user sender settings.
+# Get current sender settings
 # 
 # @param string $country Return sender settings enabled for sending to specified country. Two upper case characters (optional)
 {
@@ -7903,7 +7903,7 @@ sub get_sender_ids {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_sender_settings' } = { 
-    	summary => 'Get current user sender settings.',
+    	summary => 'Get current sender settings',
         params => $params,
         returns => 'GetSenderSettingsResponse',
         };
@@ -8904,7 +8904,7 @@ sub get_unsubscribers {
 #
 # get_user_dedicated_numbers
 #
-# Get user's dedicated numbers.
+# Get all your dedicated numbers
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
@@ -8928,7 +8928,7 @@ sub get_unsubscribers {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_user_dedicated_numbers' } = { 
-    	summary => 'Get user&#39;s dedicated numbers.',
+    	summary => 'Get all your dedicated numbers',
         params => $params,
         returns => 'GetUserDedicatedNumbersPaginatedResponse',
         };
@@ -9695,7 +9695,7 @@ sub request_new_subaccount_token {
 #
 # request_sender_id
 #
-# Request for a new Sender ID.
+# Apply for a new Sender ID
 # 
 # @param RequestSenderIdInputObject $request_sender_id_input_object  (required)
 {
@@ -9707,7 +9707,7 @@ sub request_new_subaccount_token {
     },
     };
     __PACKAGE__->method_documentation->{ 'request_sender_id' } = { 
-    	summary => 'Request for a new Sender ID.',
+    	summary => 'Apply for a new Sender ID',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -12264,7 +12264,7 @@ sub update_password {
 #
 # update_sender_setting
 #
-# Change sender settings for specified country.
+# Change sender settings
 # 
 # @param UpdateSenderSettingInputObject $update_sender_setting_input_object  (required)
 {
@@ -12276,7 +12276,7 @@ sub update_password {
     },
     };
     __PACKAGE__->method_documentation->{ 'update_sender_setting' } = { 
-    	summary => 'Change sender settings for specified country.',
+    	summary => 'Change sender settings',
         params => $params,
         returns => undef,
         };

@@ -146,14 +146,14 @@ __PACKAGE__->method_documentation({
     'sender_id' => {
     	datatype => 'string',
     	base_name => 'senderId',
-    	description => 'Alphanumeric Sender ID (maximum 11 characters)',
+    	description => 'Sender ID that you are applying for. *   11 characters maximum *   Only Latin based characters and digits are allowed *   Should contain at least one letter ',
     	format => '',
     	read_only => '',
     		},
     'explanation' => {
     	datatype => 'string',
     	base_name => 'explanation',
-    	description => 'Explain why do you need this Sender ID',
+    	description => 'Explanation why do you need this Sender ID.',
     	format => '',
     	read_only => '',
     		},

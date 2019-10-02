@@ -146,14 +146,14 @@ __PACKAGE__->method_documentation({
     'numbers' => {
     	datatype => 'ARRAY[string]',
     	base_name => 'numbers',
-    	description => '',
+    	description => 'Array of phone number strings.',
     	format => '',
     	read_only => '',
     		},
     'price' => {
     	datatype => 'double',
     	base_name => 'price',
-    	description => '',
+    	description => 'Dedicated number monthly fee for this country. Returned in current [account](/docs/api/account/) currency.@TODO',
     	format => '',
     	read_only => '',
     		},

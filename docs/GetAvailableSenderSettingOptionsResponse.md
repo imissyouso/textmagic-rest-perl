@@ -8,10 +8,10 @@ use Net::Sms::TextMagicClient::Object::GetAvailableSenderSettingOptionsResponse;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dedicated** | **ARRAY[string]** |  | 
-**user** | **ARRAY[string]** |  | 
-**shared** | **ARRAY[string]** |  | 
-**sender_ids** | **ARRAY[string]** |  | 
+**dedicated** | **ARRAY[string]** | Array of dedicated numbers strings. | 
+**user** | **ARRAY[string]** | Array of verified account phone numbers (currently only one). | 
+**shared** | **ARRAY[string]** | Array of shared numbers strings. | 
+**sender_ids** | **ARRAY[string]** | Array of alphanumeric sender IDs. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
