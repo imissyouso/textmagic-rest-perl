@@ -160,7 +160,7 @@ __PACKAGE__->method_documentation({
     'content' => {
     	datatype => 'string',
     	base_name => 'content',
-    	description => 'Template text. May contain the tags listed below @TODO.',
+    	description => 'Template text. May contain the tags listed below TODO.',
     	format => '',
     	read_only => '',
     		},

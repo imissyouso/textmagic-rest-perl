@@ -153,7 +153,7 @@ __PACKAGE__->method_documentation({
     'price' => {
     	datatype => 'double',
     	base_name => 'price',
-    	description => 'Dedicated number monthly fee for this country. Returned in current [account](/docs/api/account/) currency.@TODO',
+    	description => 'Dedicated number monthly fee for this country. Returned in current [account](/docs/api/account/) currency.TODO',
     	format => '',
     	read_only => '',
     		},

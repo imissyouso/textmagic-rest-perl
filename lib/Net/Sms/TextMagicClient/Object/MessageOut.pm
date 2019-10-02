@@ -174,7 +174,7 @@ __PACKAGE__->method_documentation({
     'status' => {
     	datatype => 'string',
     	base_name => 'status',
-    	description => 'Delivery status of the message. @TODO: Please see the table below to see different delivery statuses. ',
+    	description => 'Delivery status of the message. TODO: Please see the table below to see different delivery statuses. ',
     	format => '',
     	read_only => '',
     		},
@@ -230,7 +230,7 @@ __PACKAGE__->method_documentation({
     'first_name' => {
     	datatype => 'string',
     	base_name => 'firstName',
-    	description => '@TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID). ',
+    	description => 'TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID). ',
     	format => '',
     	read_only => '',
     		},

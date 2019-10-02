@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **sender** | **string** | Message sender (phone number or alphanumeric Sender ID). | [optional] 
 **receiver** | **string** | Recipient phone number. | [optional] 
 **text** | **string** |  | 
-**status** | **string** | Delivery status of the message. @TODO: Please see the table below to see different delivery statuses.  | 
+**status** | **string** | Delivery status of the message. TODO: Please see the table below to see different delivery statuses.  | 
 **contact_id** | **int** |  | 
 **session_id** | **int** |  | 
 **message_time** | **DateTime** | Sending time. | 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **deleted** | **boolean** |  | [optional] 
 **charset** | **string** | Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS  | 
 **charset_label** | **string** |  | 
-**first_name** | **string** | @TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID).  | 
+**first_name** | **string** | TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID).  | 
 **last_name** | **string** | Contact last name. | 
 **country** | **string** | Two-letter ISO country code of the recipient phone number.  | 
 **phone** | **string** |  | [optional] 
