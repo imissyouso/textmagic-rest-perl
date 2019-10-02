@@ -8,11 +8,11 @@ use Net::Sms::TextMagicClient::Object::MessageIn;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | 
-**sender** | **string** |  | 
-**receiver** | **string** |  | 
-**message_time** | **DateTime** |  | 
-**text** | **string** |  | 
+**id** | **int** | The ID of the inbound message. | 
+**sender** | **string** | The sender’s phone number. | 
+**receiver** | **string** | The receiver’s phone number (i.e. your dedicated or shared reply number). | 
+**message_time** | **DateTime** | The time when the message reached the TextMagic API endpoint. | 
+**text** | **string** | The text from the received message. | 
 **contact_id** | **int** |  | [optional] 
 **first_name** | **string** |  | [optional] 
 **last_name** | **string** |  | [optional] 

@@ -154,14 +154,14 @@ __PACKAGE__->method_documentation({
     'page_count' => {
     	datatype => 'int',
     	base_name => 'pageCount',
-    	description => '',
+    	description => 'The total number of pages.',
     	format => '',
     	read_only => '',
     		},
     'limit' => {
     	datatype => 'int',
     	base_name => 'limit',
-    	description => '',
+    	description => 'The number of results per page.',
     	format => '',
     	read_only => '',
     		},

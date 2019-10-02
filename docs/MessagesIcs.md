@@ -8,9 +8,9 @@ use Net::Sms::TextMagicClient::Object::MessagesIcs;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | 
-**next_send** | **DateTime** |  | 
-**rrule** | **string** |  | 
+**id** | **int** | Schedule ID. | 
+**next_send** | **DateTime** | Next send date in [ISO 8601](https://en.wikipedia.org/?title&#x3D;ISO_8601) format.  | 
+**rrule** | **string** | [iCal RRULE](http://www.kanzaki.com/docs/ical/rrule.html) string.  | 
 **session** | [**MessageSession**](MessageSession.md) |  | 
 **last_sent** | **DateTime** |  | 
 **contact_name** | **string** |  | 

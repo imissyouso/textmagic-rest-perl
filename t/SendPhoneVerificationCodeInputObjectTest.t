@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::Sms::TextMagicClient::Object::GetForwardedCallsPaginatedResponse');
+use_ok('Net::Sms::TextMagicClient::Object::SendPhoneVerificationCodeInputObject');
 
-my $instance = Net::Sms::TextMagicClient::Object::GetForwardedCallsPaginatedResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::SendPhoneVerificationCodeInputObject->new();
 
-isa_ok($instance, 'Net::Sms::TextMagicClient::Object::GetForwardedCallsPaginatedResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::SendPhoneVerificationCodeInputObject');
 

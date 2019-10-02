@@ -8,13 +8,13 @@ use Net::Sms::TextMagicClient::Object::Chat;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | 
+**id** | **int** | Chat ID. | 
 **original_id** | **int** |  | 
-**phone** | **string** |  | 
+**phone** | **string** | Chat partner phone number. | 
 **contact** | [**Contact**](Contact.md) |  | 
 **unsubscribed_contact_id** | **int** |  | 
-**unread** | **int** |  | 
-**updated_at** | **DateTime** |  | 
+**unread** | **int** | Unread incoming messages count. | 
+**updated_at** | **DateTime** | Time when last incoming message arrived at this chat. | 
 **status** | **string** |  | 
 **mute** | **int** |  | 
 **last_message** | **string** |  | 

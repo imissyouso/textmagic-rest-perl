@@ -63,11 +63,27 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
+# cancel_verification test
+#
+{
+    my $verify_id = undef; # replace NULL with a proper value
+    my $result = $api->cancel_verification(verify_id => $verify_id);
+}
+
+#
 # check_phone_verification_code test
 #
 {
     my $check_phone_verification_code_input_object = undef; # replace NULL with a proper value
     my $result = $api->check_phone_verification_code(check_phone_verification_code_input_object => $check_phone_verification_code_input_object);
+}
+
+#
+# check_phone_verification_code_1 test
+#
+{
+    my $check_phone_verification_code_input_object = undef; # replace NULL with a proper value
+    my $result = $api->check_phone_verification_code_1(check_phone_verification_code_input_object => $check_phone_verification_code_input_object);
 }
 
 #
@@ -764,15 +780,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# get_forwarded_calls test
-#
-{
-    my $page = undef; # replace NULL with a proper value
-    my $limit = undef; # replace NULL with a proper value
-    my $result = $api->get_forwarded_calls(page => $page, limit => $limit);
-}
-
-#
 # get_inbound_message test
 #
 {
@@ -1358,6 +1365,14 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $result = $api->send_phone_verification_code();
+}
+
+#
+# send_phone_verification_code_2 test
+#
+{
+    my $send_phone_verification_code_input_object = undef; # replace NULL with a proper value
+    my $result = $api->send_phone_verification_code_2(send_phone_verification_code_input_object => $send_phone_verification_code_input_object);
 }
 
 #

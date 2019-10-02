@@ -161,7 +161,7 @@ __PACKAGE__->method_documentation({
     'limit' => {
     	datatype => 'int',
     	base_name => 'limit',
-    	description => '',
+    	description => 'The number of results per page.',
     	format => '',
     	read_only => '',
     		},

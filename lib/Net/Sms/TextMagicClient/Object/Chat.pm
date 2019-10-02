@@ -148,7 +148,7 @@ __PACKAGE__->method_documentation({
     'id' => {
     	datatype => 'int',
     	base_name => 'id',
-    	description => '',
+    	description => 'Chat ID.',
     	format => '',
     	read_only => '',
     		},
@@ -162,7 +162,7 @@ __PACKAGE__->method_documentation({
     'phone' => {
     	datatype => 'string',
     	base_name => 'phone',
-    	description => '',
+    	description => 'Chat partner phone number.',
     	format => '',
     	read_only => '',
     		},
@@ -183,14 +183,14 @@ __PACKAGE__->method_documentation({
     'unread' => {
     	datatype => 'int',
     	base_name => 'unread',
-    	description => '',
+    	description => 'Unread incoming messages count.',
     	format => '',
     	read_only => '',
     		},
     'updated_at' => {
     	datatype => 'DateTime',
     	base_name => 'updatedAt',
-    	description => '',
+    	description => 'Time when last incoming message arrived at this chat.',
     	format => '',
     	read_only => '',
     		},

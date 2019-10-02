@@ -9,14 +9,14 @@ use Net::Sms::TextMagicClient::Object::Conversation;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | 
-**direction** | **string** |  | 
-**sender** | **string** |  | 
-**message_time** | **DateTime** |  | 
-**text** | **string** |  | 
-**receiver** | **string** |  | 
-**status** | **string** |  | 
-**first_name** | **string** |  | 
-**last_name** | **string** |  | 
+**direction** | **string** | Message type: inbound or outbound.  | 
+**sender** | **string** | Sender phone number. | 
+**message_time** | **DateTime** | Time when message arrived at TextMagic. | 
+**text** | **string** | Message text. | 
+**receiver** | **string** | Receiver phone number. | 
+**status** | **string** | Message status (for chats outbound only). See [message delivery statuses](/docs/api/sms-sessions/#message-delivery-statuses) for details. | 
+**first_name** | **string** | Contact first name. | 
+**last_name** | **string** | Contact last name. | 
 **session_id** | **int** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

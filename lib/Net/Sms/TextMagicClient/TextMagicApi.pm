@@ -325,6 +325,69 @@ sub cancel_survey {
 }
 
 #
+# cancel_verification
+#
+# Cancel verification process
+# 
+# @param string $verify_id the verifyId that you received in Step 1. (required)
+{
+    my $params = {
+    'verify_id' => {
+        data_type => 'string',
+        description => 'the verifyId that you received in Step 1.',
+        required => '1',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'cancel_verification' } = { 
+    	summary => 'Cancel verification process',
+        params => $params,
+        returns => undef,
+        };
+}
+# @return void
+#
+sub cancel_verification {
+    my ($self, %args) = @_;
+
+    # verify the required parameter 'verify_id' is set
+    unless (exists $args{'verify_id'}) {
+      croak("Missing the required parameter 'verify_id' when calling cancel_verification");
+    }
+
+    # parse inputs
+    my $_resource_path = '/api/v2/verify/{verifyId}';
+
+    my $_method = 'DELETE';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # path params
+    if ( exists $args{'verify_id'}) {
+        my $_base_variable = "{" . "verifyId" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'verify_id'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw(BasicAuth )];
+
+    # make the API Call
+    $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    return;
+}
+
+#
 # check_phone_verification_code
 #
 # Check user phone verification code
@@ -356,6 +419,67 @@ sub check_phone_verification_code {
 
     # parse inputs
     my $_resource_path = '/api/v2/user/phone/verification';
+
+    my $_method = 'PUT';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    my $_body_data;
+    # body params
+    if ( exists $args{'check_phone_verification_code_input_object'}) {
+        $_body_data = $args{'check_phone_verification_code_input_object'};
+    }
+
+    # authentication setting, if any
+    my $auth_settings = [qw(BasicAuth )];
+
+    # make the API Call
+    $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    return;
+}
+
+#
+# check_phone_verification_code_0
+#
+# Step 2: Check the verification code 
+# 
+# @param CheckPhoneVerificationCodeInputObject1 $check_phone_verification_code_input_object  (required)
+{
+    my $params = {
+    'check_phone_verification_code_input_object' => {
+        data_type => 'CheckPhoneVerificationCodeInputObject1',
+        description => '',
+        required => '1',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'check_phone_verification_code_0' } = { 
+    	summary => 'Step 2: Check the verification code ',
+        params => $params,
+        returns => undef,
+        };
+}
+# @return void
+#
+sub check_phone_verification_code_0 {
+    my ($self, %args) = @_;
+
+    # verify the required parameter 'check_phone_verification_code_input_object' is set
+    unless (exists $args{'check_phone_verification_code_input_object'}) {
+      croak("Missing the required parameter 'check_phone_verification_code_input_object' when calling check_phone_verification_code_0");
+    }
+
+    # parse inputs
+    my $_resource_path = '/api/v2/verify';
 
     my $_method = 'PUT';
     my $query_params = {};
@@ -471,7 +595,7 @@ sub clear_and_assign_contacts_to_list {
 #
 # close_chats_bulk
 #
-# Close chats by chat ids or close all chats
+# Close chats (bulk)
 # 
 # @param CloseChatsBulkInputObject $close_chats_bulk_input_object  (required)
 {
@@ -483,7 +607,7 @@ sub clear_and_assign_contacts_to_list {
     },
     };
     __PACKAGE__->method_documentation->{ 'close_chats_bulk' } = { 
-    	summary => 'Close chats by chat ids or close all chats',
+    	summary => 'Close chats (bulk)',
         params => $params,
         returns => undef,
         };
@@ -532,13 +656,13 @@ sub close_chats_bulk {
 #
 # close_read_chats
 #
-# Close all chats that have no unread messages.
+# Close read chats
 # 
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'close_read_chats' } = { 
-    	summary => 'Close all chats that have no unread messages.',
+    	summary => 'Close read chats',
         params => $params,
         returns => undef,
         };
@@ -1127,7 +1251,7 @@ sub create_survey_node {
 #
 # create_template
 #
-# Create a new template from the submitted data.
+# Create a template
 # 
 # @param CreateTemplateInputObject $create_template_input_object  (required)
 {
@@ -1139,7 +1263,7 @@ sub create_survey_node {
     },
     };
     __PACKAGE__->method_documentation->{ 'create_template' } = { 
-    	summary => 'Create a new template from the submitted data.',
+    	summary => 'Create a template',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -1327,7 +1451,7 @@ sub delete_avatar {
 #
 # delete_chat_messages
 #
-# Delete messages from chat by given messages ID(s).
+# Delete chat messages by ID(s)
 # 
 # @param DeleteChatMessagesBulkInputObject $delete_chat_messages_bulk_input_object  (required)
 # @param int $id  (required)
@@ -1345,7 +1469,7 @@ sub delete_avatar {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_chat_messages' } = { 
-    	summary => 'Delete messages from chat by given messages ID(s).',
+    	summary => 'Delete chat messages by ID(s)',
         params => $params,
         returns => undef,
         };
@@ -1406,7 +1530,7 @@ sub delete_chat_messages {
 #
 # delete_chats_bulk
 #
-# Delete chats by given ID(s) or delete all chats.
+# Delete chats (bulk)
 # 
 # @param DeleteChatsBulkInputObject $delete_chats_bulk_input_object  (required)
 {
@@ -1418,7 +1542,7 @@ sub delete_chat_messages {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_chats_bulk' } = { 
-    	summary => 'Delete chats by given ID(s) or delete all chats.',
+    	summary => 'Delete chats (bulk)',
         params => $params,
         returns => undef,
         };
@@ -2001,19 +2125,19 @@ sub delete_dedicated_number {
 #
 # delete_inbound_message
 #
-# Delete the incoming message.
+# Delete a single inbound message
 # 
-# @param int $id  (required)
+# @param int $id The unique numeric ID for the inbound message. (required)
 {
     my $params = {
     'id' => {
         data_type => 'int',
-        description => '',
+        description => 'The unique numeric ID for the inbound message.',
         required => '1',
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_inbound_message' } = { 
-    	summary => 'Delete the incoming message.',
+    	summary => 'Delete a single inbound message',
         params => $params,
         returns => undef,
         };
@@ -2064,7 +2188,7 @@ sub delete_inbound_message {
 #
 # delete_inbound_messages_bulk
 #
-# Delete inbound messages by given ID(s) or delete all inbound messages.
+# Delete inbound messages (bulk)
 # 
 # @param DeleteInboundMessagesBulkInputObject $delete_inbound_messages_bulk_input_object  (required)
 {
@@ -2076,7 +2200,7 @@ sub delete_inbound_message {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_inbound_messages_bulk' } = { 
-    	summary => 'Delete inbound messages by given ID(s) or delete all inbound messages.',
+    	summary => 'Delete inbound messages (bulk)',
         params => $params,
         returns => undef,
         };
@@ -2391,7 +2515,7 @@ sub delete_lists_bulk {
 #
 # delete_message_session
 #
-# Delete a message session, together with all nested messages.
+# Delete a session
 # 
 # @param int $id  (required)
 {
@@ -2403,7 +2527,7 @@ sub delete_lists_bulk {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_message_session' } = { 
-    	summary => 'Delete a message session, together with all nested messages.',
+    	summary => 'Delete a session',
         params => $params,
         returns => undef,
         };
@@ -2454,7 +2578,7 @@ sub delete_message_session {
 #
 # delete_message_sessions_bulk
 #
-# Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+# Delete sessions (bulk)
 # 
 # @param DeleteMessageSessionsBulkInputObject $delete_message_sessions_bulk_input_object  (required)
 {
@@ -2466,7 +2590,7 @@ sub delete_message_session {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_message_sessions_bulk' } = { 
-    	summary => 'Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.',
+    	summary => 'Delete sessions (bulk)',
         params => $params,
         returns => undef,
         };
@@ -2578,7 +2702,7 @@ sub delete_outbound_message {
 #
 # delete_outbound_messages_bulk
 #
-# Delete messages by IDs
+# Delete messages (bulk)
 # 
 # @param DeleteOutboundMessagesBulkInputObject $delete_outbound_messages_bulk_input_object  (required)
 {
@@ -2590,7 +2714,7 @@ sub delete_outbound_message {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_outbound_messages_bulk' } = { 
-    	summary => 'Delete messages by IDs',
+    	summary => 'Delete messages (bulk)',
         params => $params,
         returns => undef,
         };
@@ -2720,7 +2844,7 @@ sub delete_push_token {
 #
 # delete_scheduled_message
 #
-# Delete a message session, together with all nested messages.
+# Delete a single scheduled message
 # 
 # @param int $id  (required)
 {
@@ -2732,7 +2856,7 @@ sub delete_push_token {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_scheduled_message' } = { 
-    	summary => 'Delete a message session, together with all nested messages.',
+    	summary => 'Delete a single scheduled message',
         params => $params,
         returns => undef,
         };
@@ -2783,7 +2907,7 @@ sub delete_scheduled_message {
 #
 # delete_scheduled_messages_bulk
 #
-# Delete scheduled messages by given ID(s) or delete all scheduled messages.
+# Delete scheduled messages (bulk)
 # 
 # @param DeleteScheduledMessagesBulkInputObject $delete_scheduled_messages_bulk_input_object  (required)
 {
@@ -2795,7 +2919,7 @@ sub delete_scheduled_message {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_scheduled_messages_bulk' } = { 
-    	summary => 'Delete scheduled messages by given ID(s) or delete all scheduled messages.',
+    	summary => 'Delete scheduled messages (bulk)',
         params => $params,
         returns => undef,
         };
@@ -3033,7 +3157,7 @@ sub delete_survey_node {
 #
 # delete_template
 #
-# Delete a single template.
+# Delete a template
 # 
 # @param int $id  (required)
 {
@@ -3045,7 +3169,7 @@ sub delete_survey_node {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_template' } = { 
-    	summary => 'Delete a single template.',
+    	summary => 'Delete a template',
         params => $params,
         returns => undef,
         };
@@ -3096,7 +3220,7 @@ sub delete_template {
 #
 # delete_templates_bulk
 #
-# Delete template by given ID(s) or delete all templates.
+# Delete templates (bulk)
 # 
 # @param DeleteTemplatesBulkInputObject $delete_templates_bulk_input_object  (required)
 {
@@ -3108,7 +3232,7 @@ sub delete_template {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_templates_bulk' } = { 
-    	summary => 'Delete template by given ID(s) or delete all templates.',
+    	summary => 'Delete templates (bulk)',
         params => $params,
         returns => undef,
         };
@@ -3436,18 +3560,18 @@ sub duplicate_survey {
 #
 # Get all bulk sending sessions.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     };
@@ -3505,11 +3629,11 @@ sub get_all_bulk_sessions {
 #
 # get_all_chats
 #
-# Get all user chats.
+# Get all chats
 # 
 # @param string $status Fetch only (a)ctive, (c)losed or (d)eleted chats (optional)
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $order_by Order results by some field. Default is id (optional, default to id)
 # @param int $voice Fetch results with voice calls (optional, default to 0)
 # @param int $flat Should additional contact info be included (optional, default to 0)
@@ -3522,12 +3646,12 @@ sub get_all_bulk_sessions {
     },
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'order_by' => {
@@ -3547,7 +3671,7 @@ sub get_all_bulk_sessions {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_all_chats' } = { 
-    	summary => 'Get all user chats.',
+    	summary => 'Get all chats',
         params => $params,
         returns => 'GetAllChatsPaginatedResponse',
         };
@@ -3620,22 +3744,22 @@ sub get_all_chats {
 #
 # get_all_inbound_messages
 #
-# Get all inbox messages.
+# Get all inbound messages
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $order_by Order results by some field. Default is id (optional, default to id)
 # @param string $direction Order direction. Default is desc (optional, default to desc)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'order_by' => {
@@ -3650,7 +3774,7 @@ sub get_all_chats {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_all_inbound_messages' } = { 
-    	summary => 'Get all inbox messages.',
+    	summary => 'Get all inbound messages',
         params => $params,
         returns => 'GetAllInboundMessagesPaginatedResponse',
         };
@@ -3713,25 +3837,25 @@ sub get_all_inbound_messages {
 #
 # get_all_message_sessions
 #
-# Get all message sending sessions.
+# Get all sessions
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'get_all_message_sessions' } = { 
-    	summary => 'Get all message sending sessions.',
+    	summary => 'Get all sessions',
         params => $params,
         returns => 'GetAllMessageSessionsPaginatedResponse',
         };
@@ -3786,19 +3910,19 @@ sub get_all_message_sessions {
 #
 # Get all messages
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param int $last_id Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'last_id' => {
@@ -3866,10 +3990,10 @@ sub get_all_outbound_messages {
 #
 # get_all_scheduled_messages
 #
-# Get all scheduled messages.
+# Get all scheduled messages
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $status Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)
 # @param string $order_by Order results by some field. Default is id (optional, default to id)
 # @param string $direction Order direction. Default is desc (optional, default to desc)
@@ -3877,12 +4001,12 @@ sub get_all_outbound_messages {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'status' => {
@@ -3902,7 +4026,7 @@ sub get_all_outbound_messages {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_all_scheduled_messages' } = { 
-    	summary => 'Get all scheduled messages.',
+    	summary => 'Get all scheduled messages',
         params => $params,
         returns => 'GetAllScheduledMessagesPaginatedResponse',
         };
@@ -3970,25 +4094,25 @@ sub get_all_scheduled_messages {
 #
 # get_all_templates
 #
-# Get all user templates.
+# Get all templates
 # 
-# @param int $page Fetch specified results page (optional)
-# @param int $limit How many results to return (optional)
+# @param int $page Fetch specified results page. (optional)
+# @param int $limit The number of results per page. (optional)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'get_all_templates' } = { 
-    	summary => 'Get all user templates.',
+    	summary => 'Get all templates',
         params => $params,
         returns => 'GetAllTemplatesPaginatedResponse',
         };
@@ -4288,8 +4412,8 @@ sub get_balance_notification_settings {
 #
 # Get blocked contacts.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $query Find blocked contacts by specified search query (optional)
 # @param string $order_by Order results by some field. Default is id (optional, default to id)
 # @param string $direction Order direction. Default is desc (optional, default to desc)
@@ -4297,12 +4421,12 @@ sub get_balance_notification_settings {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'query' => {
@@ -4555,7 +4679,7 @@ sub get_calls_prices {
 #
 # get_chat
 #
-# Get a single chat.
+# Get a single chat
 # 
 # @param int $id  (required)
 {
@@ -4567,7 +4691,7 @@ sub get_calls_prices {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_chat' } = { 
-    	summary => 'Get a single chat.',
+    	summary => 'Get a single chat',
         params => $params,
         returns => 'Chat',
         };
@@ -4622,7 +4746,7 @@ sub get_chat {
 #
 # get_chat_by_phone
 #
-# Find chats by phone.
+# Find chats by phone
 # 
 # @param string $phone  (required)
 # @param int $upsert Create a new chat if not found (optional, default to 0)
@@ -4646,7 +4770,7 @@ sub get_chat {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_chat_by_phone' } = { 
-    	summary => 'Find chats by phone.',
+    	summary => 'Find chats by phone',
         params => $params,
         returns => 'Chat',
         };
@@ -4711,11 +4835,11 @@ sub get_chat_by_phone {
 #
 # get_chat_messages
 #
-# Fetch messages from chat with specified chat id.
+# Get chat messages
 # 
 # @param int $id  (required)
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $query Find messages by specified search query (optional)
 # @param int $start Return messages since specified timestamp only (optional)
 # @param int $end Return messages up to specified timestamp only (optional)
@@ -4730,12 +4854,12 @@ sub get_chat_by_phone {
     },
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'query' => {
@@ -4765,7 +4889,7 @@ sub get_chat_by_phone {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_chat_messages' } = { 
-    	summary => 'Fetch messages from chat with specified chat id.',
+    	summary => 'Get chat messages',
         params => $params,
         returns => 'GetChatMessagesPaginatedResponse',
         };
@@ -5191,8 +5315,8 @@ sub get_contact_note {
 # Fetch notes assigned to the given contact.
 # 
 # @param int $id  (required)
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 {
     my $params = {
     'id' => {
@@ -5202,12 +5326,12 @@ sub get_contact_note {
     },
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     };
@@ -5279,8 +5403,8 @@ sub get_contact_notes {
 #
 # Get all user contacts.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param int $shared Should shared contacts to be included (optional, default to 0)
 # @param string $order_by Order results by some field. Default is id (optional, default to id)
 # @param string $direction Order direction. Default is desc (optional, default to desc)
@@ -5288,12 +5412,12 @@ sub get_contact_notes {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'shared' => {
@@ -5384,7 +5508,7 @@ sub get_contacts {
 # Get contacts autocomplete suggestions by given search term.
 # 
 # @param string $query Find recipients by specified search query (required)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param int $lists Should lists be returned or not (optional, default to 0)
 {
     my $params = {
@@ -5395,7 +5519,7 @@ sub get_contacts {
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'lists' => {
@@ -5471,8 +5595,8 @@ sub get_contacts_autocomplete {
 # Fetch user contacts by given group id.
 # 
 # @param int $id Given group Id. (required)
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $order_by Order results by some field. Default is id (optional, default to id)
 # @param string $direction Order direction. Default is desc (optional, default to desc)
 {
@@ -5484,12 +5608,12 @@ sub get_contacts_autocomplete {
     },
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'order_by' => {
@@ -5746,18 +5870,18 @@ sub get_custom_field {
 #
 # Get all contact custom fields.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     };
@@ -5933,19 +6057,19 @@ sub get_disallowed_rules {
 #
 # Get favorite contacts and lists.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $query Find contacts or lists by specified search query (optional, default to A)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'query' => {
@@ -6011,92 +6135,21 @@ sub get_favourites {
 }
 
 #
-# get_forwarded_calls
-#
-# Get all forwarded calls.
-# 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
-{
-    my $params = {
-    'page' => {
-        data_type => 'int',
-        description => 'Fetch specified results page',
-        required => '0',
-    },
-    'limit' => {
-        data_type => 'int',
-        description => 'How many results to return',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'get_forwarded_calls' } = { 
-    	summary => 'Get all forwarded calls.',
-        params => $params,
-        returns => 'GetForwardedCallsPaginatedResponse',
-        };
-}
-# @return GetForwardedCallsPaginatedResponse
-#
-sub get_forwarded_calls {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/api/v2/calls';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # query params
-    if ( exists $args{'page'}) {
-        $query_params->{'page'} = $self->{api_client}->to_query_value($args{'page'});
-    }
-
-    # query params
-    if ( exists $args{'limit'}) {
-        $query_params->{'limit'} = $self->{api_client}->to_query_value($args{'limit'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw(BasicAuth )];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('GetForwardedCallsPaginatedResponse', $response);
-    return $_response_object;
-}
-
-#
 # get_inbound_message
 #
-# Get a single inbox message.
+# Get a single inbound message
 # 
-# @param int $id  (required)
+# @param int $id The unique numeric ID for the inbound message. (required)
 {
     my $params = {
     'id' => {
         data_type => 'int',
-        description => '',
+        description => 'The unique numeric ID for the inbound message.',
         required => '1',
     },
     };
     __PACKAGE__->method_documentation->{ 'get_inbound_message' } = { 
-    	summary => 'Get a single inbox message.',
+    	summary => 'Get a single inbound message',
         params => $params,
         returns => 'MessageIn',
         };
@@ -6202,18 +6255,18 @@ sub get_inbound_messages_notification_settings {
 #
 # Return account invoices.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     };
@@ -6408,8 +6461,8 @@ sub get_list_contacts_ids {
 # Return lists which contact belongs to.
 # 
 # @param int $id  (required)
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 {
     my $params = {
     'id' => {
@@ -6419,12 +6472,12 @@ sub get_list_contacts_ids {
     },
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     };
@@ -7026,19 +7079,19 @@ sub get_message_prices {
 #
 # get_message_session
 #
-# Get a message session.
+# Get a session details
 # 
-# @param int $id  (required)
+# @param int $id a session ID (required)
 {
     my $params = {
     'id' => {
         data_type => 'int',
-        description => '',
+        description => 'a session ID',
         required => '1',
     },
     };
     __PACKAGE__->method_documentation->{ 'get_message_session' } = { 
-    	summary => 'Get a message session.',
+    	summary => 'Get a session details',
         params => $params,
         returns => 'MessageSession',
         };
@@ -7093,7 +7146,7 @@ sub get_message_session {
 #
 # get_message_session_stat
 #
-# Get sending session statistics.
+# Get a session statistics
 # 
 # @param int $id  (required)
 # @param int $include_deleted Search also in deleted messages (optional, default to 0)
@@ -7111,7 +7164,7 @@ sub get_message_session {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_message_session_stat' } = { 
-    	summary => 'Get sending session statistics.',
+    	summary => 'Get a session statistics',
         params => $params,
         returns => 'GetMessageSessionStatResponse',
         };
@@ -7171,11 +7224,11 @@ sub get_message_session_stat {
 #
 # get_messages_by_session_id
 #
-# Fetch messages by given session id.
+# Get a session messages
 # 
 # @param int $id  (required)
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $statuses Find messages by status (optional)
 # @param int $include_deleted Search also in deleted messages (optional, default to 0)
 {
@@ -7187,12 +7240,12 @@ sub get_message_session_stat {
     },
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'statuses' => {
@@ -7207,7 +7260,7 @@ sub get_message_session_stat {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_messages_by_session_id' } = { 
-    	summary => 'Fetch messages by given session id.',
+    	summary => 'Get a session messages',
         params => $params,
         returns => 'GetMessagesBySessionIdPaginatedResponse',
         };
@@ -7482,7 +7535,7 @@ sub get_outbound_message {
 #
 # Get history
 # 
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param int $last_id Filter results by ID, selecting all values lesser than the specified ID. (optional)
 # @param string $query Find message by specified search query (optional)
 # @param string $order_by Order results by some field. Default is id (optional, default to id)
@@ -7491,7 +7544,7 @@ sub get_outbound_message {
     my $params = {
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'last_id' => {
@@ -7633,7 +7686,7 @@ sub get_push_tokens {
 #
 # get_scheduled_message
 #
-# Get message schedule.
+# Get a single scheduled message
 # 
 # @param int $id  (required)
 {
@@ -7645,7 +7698,7 @@ sub get_push_tokens {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_scheduled_message' } = { 
-    	summary => 'Get message schedule.',
+    	summary => 'Get a single scheduled message',
         params => $params,
         returns => 'MessagesIcs',
         };
@@ -7769,18 +7822,18 @@ sub get_sender_id {
 #
 # Get all sender IDs of current user.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     };
@@ -7900,20 +7953,20 @@ sub get_sender_settings {
 #
 # Return account spending statistics.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param int $start Optional. Start date in unix timestamp format. Default is 7 days ago (optional)
 # @param int $end Optional. End date in unix timestamp format. Default is now (optional)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'start' => {
@@ -8109,18 +8162,18 @@ sub get_subaccount {
 #
 # Get all subaccounts of current user.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     };
@@ -8181,8 +8234,8 @@ sub get_subaccounts {
 # Get all subaccounts with their REST API tokens associated with specified app name.
 # 
 # @param GetSubaccountsWithTokensInputObject $get_subaccounts_with_tokens_input_object  (required)
-# @param Number $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param Number $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 {
     my $params = {
     'get_subaccounts_with_tokens_input_object' => {
@@ -8192,12 +8245,12 @@ sub get_subaccounts {
     },
     'page' => {
         data_type => 'Number',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     };
@@ -8468,18 +8521,18 @@ sub get_survey_nodes {
 #
 # Get all user surveys.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     };
@@ -8537,7 +8590,7 @@ sub get_surveys {
 #
 # get_template
 #
-# Get a single template.
+# Get a template details
 # 
 # @param int $id  (required)
 {
@@ -8549,7 +8602,7 @@ sub get_surveys {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_template' } = { 
-    	summary => 'Get a single template.',
+    	summary => 'Get a template details',
         params => $params,
         returns => 'MessageTemplate',
         };
@@ -8664,13 +8717,13 @@ sub get_timezones {
 #
 # get_unread_messages_total
 #
-# Get total amount of unread messages in the current user chats.
+# Get unread messages number
 # 
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'get_unread_messages_total' } = { 
-    	summary => 'Get total amount of unread messages in the current user chats.',
+    	summary => 'Get unread messages number',
         params => $params,
         returns => 'GetUnreadMessagesTotalResponse',
         };
@@ -8782,18 +8835,18 @@ sub get_unsubscribed_contact {
 #
 # Get all contact have unsubscribed from your communication.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     };
@@ -8853,19 +8906,19 @@ sub get_unsubscribers {
 #
 # Get user's dedicated numbers.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param int $survey_id Fetch only that numbers which are ready for the survey (optional)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'survey_id' => {
@@ -8935,8 +8988,8 @@ sub get_user_dedicated_numbers {
 #
 # Get all user lists.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $order_by Order results by some field. Default is id (optional, default to id)
 # @param string $direction Order direction. Default is desc (optional, default to desc)
 # @param int $favorite_only Return only favorite lists (optional, default to 0)
@@ -8945,12 +8998,12 @@ sub get_user_dedicated_numbers {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'order_by' => {
@@ -9158,7 +9211,7 @@ sub invite_subaccount {
 #
 # mark_chats_read_bulk
 #
-# Mark several chats as read by chat ids or mark all chats as read
+# Mark chats as read (bulk)
 # 
 # @param MarkChatsReadBulkInputObject $mark_chats_read_bulk_input_object  (required)
 {
@@ -9170,7 +9223,7 @@ sub invite_subaccount {
     },
     };
     __PACKAGE__->method_documentation->{ 'mark_chats_read_bulk' } = { 
-    	summary => 'Mark several chats as read by chat ids or mark all chats as read',
+    	summary => 'Mark chats as read (bulk)',
         params => $params,
         returns => undef,
         };
@@ -9219,7 +9272,7 @@ sub mark_chats_read_bulk {
 #
 # mark_chats_unread_bulk
 #
-# Mark several chats as UNread by chat ids or mark all chats as UNread
+# Mark chats as unread (bulk)
 # 
 # @param MarkChatsUnreadBulkInputObject $mark_chats_unread_bulk_input_object  (required)
 {
@@ -9231,7 +9284,7 @@ sub mark_chats_read_bulk {
     },
     };
     __PACKAGE__->method_documentation->{ 'mark_chats_unread_bulk' } = { 
-    	summary => 'Mark several chats as UNread by chat ids or mark all chats as UNread',
+    	summary => 'Mark chats as unread (bulk)',
         params => $params,
         returns => undef,
         };
@@ -9341,7 +9394,7 @@ sub merge_survey_nodes {
 #
 # mute_chat
 #
-# Set mute mode.
+# Mute chat sounds
 # 
 # @param MuteChatInputObject $mute_chat_input_object  (required)
 {
@@ -9353,7 +9406,7 @@ sub merge_survey_nodes {
     },
     };
     __PACKAGE__->method_documentation->{ 'mute_chat' } = { 
-    	summary => 'Set mute mode.',
+    	summary => 'Mute chat sounds',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -9406,7 +9459,7 @@ sub mute_chat {
 #
 # mute_chats_bulk
 #
-# Mute several chats by chat ids or mute all chats
+# Mute chats (bulk)
 # 
 # @param MuteChatsBulkInputObject $mute_chats_bulk_input_object  (required)
 {
@@ -9418,7 +9471,7 @@ sub mute_chat {
     },
     };
     __PACKAGE__->method_documentation->{ 'mute_chats_bulk' } = { 
-    	summary => 'Mute several chats by chat ids or mute all chats',
+    	summary => 'Mute chats (bulk)',
         params => $params,
         returns => undef,
         };
@@ -9516,7 +9569,7 @@ sub ping {
 #
 # reopen_chats_bulk
 #
-# Reopen chats by chat ids or reopen all chats
+# Reopen chats (bulk)
 # 
 # @param ReopenChatsBulkInputObject $reopen_chats_bulk_input_object  (required)
 {
@@ -9528,7 +9581,7 @@ sub ping {
     },
     };
     __PACKAGE__->method_documentation->{ 'reopen_chats_bulk' } = { 
-    	summary => 'Reopen chats by chat ids or reopen all chats',
+    	summary => 'Reopen chats (bulk)',
         params => $params,
         returns => undef,
         };
@@ -9774,21 +9827,21 @@ sub reset_survey {
 #
 # search_chats
 #
-# Find chats by inbound or outbound messages text.
+# Find chats by message text
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $query Find chats by specified search query (optional)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'query' => {
@@ -9798,7 +9851,7 @@ sub reset_survey {
     },
     };
     __PACKAGE__->method_documentation->{ 'search_chats' } = { 
-    	summary => 'Find chats by inbound or outbound messages text.',
+    	summary => 'Find chats by message text',
         params => $params,
         returns => 'SearchChatsPaginatedResponse',
         };
@@ -9856,21 +9909,21 @@ sub search_chats {
 #
 # search_chats_by_ids
 #
-# Find chats by IDs.
+# Find chats (bulk)
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $ids Find chats by ID(s) (optional)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'ids' => {
@@ -9880,7 +9933,7 @@ sub search_chats {
     },
     };
     __PACKAGE__->method_documentation->{ 'search_chats_by_ids' } = { 
-    	summary => 'Find chats by IDs.',
+    	summary => 'Find chats (bulk)',
         params => $params,
         returns => 'SearchChatsByIdsPaginatedResponse',
         };
@@ -9938,22 +9991,22 @@ sub search_chats_by_ids {
 #
 # search_chats_by_receipent
 #
-# Find chats by recipient (contact, list name or phone number).
+# Find chats by recipient
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $query Find chats by specified search query (optional)
 # @param string $order_by Order results by some field. Default is id (optional, default to id)
 {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'query' => {
@@ -9968,7 +10021,7 @@ sub search_chats_by_ids {
     },
     };
     __PACKAGE__->method_documentation->{ 'search_chats_by_receipent' } = { 
-    	summary => 'Find chats by recipient (contact, list name or phone number).',
+    	summary => 'Find chats by recipient',
         params => $params,
         returns => 'SearchChatsByReceipentPaginatedResponse',
         };
@@ -10033,8 +10086,8 @@ sub search_chats_by_receipent {
 #
 # Find user contacts by given parameters.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param int $shared Should shared contacts to be included (optional, default to 0)
 # @param string $ids Find contact by ID(s) (optional)
 # @param int $list_id Find contact by List ID (optional)
@@ -10048,12 +10101,12 @@ sub search_chats_by_receipent {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'shared' => {
@@ -10201,10 +10254,10 @@ sub search_contacts {
 #
 # search_inbound_messages
 #
-# Find inbound messages by given parameters.
+# Find inbound messages
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $ids Find message by ID(s) (optional)
 # @param string $query Find recipients by specified search query (optional)
 # @param string $order_by Order results by some field. Default is id (optional, default to id)
@@ -10214,12 +10267,12 @@ sub search_contacts {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'ids' => {
@@ -10249,7 +10302,7 @@ sub search_contacts {
     },
     };
     __PACKAGE__->method_documentation->{ 'search_inbound_messages' } = { 
-    	summary => 'Find inbound messages by given parameters.',
+    	summary => 'Find inbound messages',
         params => $params,
         returns => 'SearchInboundMessagesPaginatedResponse',
         };
@@ -10329,8 +10382,8 @@ sub search_inbound_messages {
 #
 # Find contact lists by given parameters.
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $ids Find lists by ID(s) (optional)
 # @param string $query Find lists by specified search query (optional)
 # @param int $only_mine Return only current user lists (optional, default to 0)
@@ -10341,12 +10394,12 @@ sub search_inbound_messages {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'ids' => {
@@ -10466,8 +10519,8 @@ sub search_lists {
 #
 # Find messages
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param int $last_id Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)
 # @param string $ids Find message by ID(s) (optional)
 # @param int $session_id Find messages by session ID (optional)
@@ -10478,12 +10531,12 @@ sub search_lists {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'last_id' => {
@@ -10601,10 +10654,10 @@ sub search_outbound_messages {
 #
 # search_scheduled_messages
 #
-# Find scheduled messages by given parameters.
+# Find scheduled messages
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $query Find messages by specified search query (optional)
 # @param string $ids Find schedules by ID(s) (optional)
 # @param string $status Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)
@@ -10614,12 +10667,12 @@ sub search_outbound_messages {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'query' => {
@@ -10649,7 +10702,7 @@ sub search_outbound_messages {
     },
     };
     __PACKAGE__->method_documentation->{ 'search_scheduled_messages' } = { 
-    	summary => 'Find scheduled messages by given parameters.',
+    	summary => 'Find scheduled messages',
         params => $params,
         returns => 'SearchScheduledMessagesPaginatedResponse',
         };
@@ -10727,10 +10780,10 @@ sub search_scheduled_messages {
 #
 # search_templates
 #
-# Find user templates by given parameters.
+# Find templates by criteria
 # 
-# @param int $page Fetch specified results page (optional, default to 1)
-# @param int $limit How many results to return (optional, default to 10)
+# @param int $page Fetch specified results page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
 # @param string $ids Find template by ID(s) (optional)
 # @param string $name Find template by name (optional)
 # @param string $content Find template by content (optional)
@@ -10738,12 +10791,12 @@ sub search_scheduled_messages {
     my $params = {
     'page' => {
         data_type => 'int',
-        description => 'Fetch specified results page',
+        description => 'Fetch specified results page.',
         required => '0',
     },
     'limit' => {
         data_type => 'int',
-        description => 'How many results to return',
+        description => 'The number of results per page.',
         required => '0',
     },
     'ids' => {
@@ -10763,7 +10816,7 @@ sub search_scheduled_messages {
     },
     };
     __PACKAGE__->method_documentation->{ 'search_templates' } = { 
-    	summary => 'Find user templates by given parameters.',
+    	summary => 'Find templates by criteria',
         params => $params,
         returns => 'SearchTemplatesPaginatedResponse',
         };
@@ -10984,9 +11037,74 @@ sub send_phone_verification_code {
 }
 
 #
+# send_phone_verification_code_0
+#
+# Step 1: Send a verification code 
+# 
+# @param SendPhoneVerificationCodeInputObject $send_phone_verification_code_input_object  (required)
+{
+    my $params = {
+    'send_phone_verification_code_input_object' => {
+        data_type => 'SendPhoneVerificationCodeInputObject',
+        description => '',
+        required => '1',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'send_phone_verification_code_0' } = { 
+    	summary => 'Step 1: Send a verification code ',
+        params => $params,
+        returns => 'SendPhoneVerificationCodeResponse',
+        };
+}
+# @return SendPhoneVerificationCodeResponse
+#
+sub send_phone_verification_code_0 {
+    my ($self, %args) = @_;
+
+    # verify the required parameter 'send_phone_verification_code_input_object' is set
+    unless (exists $args{'send_phone_verification_code_input_object'}) {
+      croak("Missing the required parameter 'send_phone_verification_code_input_object' when calling send_phone_verification_code_0");
+    }
+
+    # parse inputs
+    my $_resource_path = '/api/v2/verify';
+
+    my $_method = 'POST';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    my $_body_data;
+    # body params
+    if ( exists $args{'send_phone_verification_code_input_object'}) {
+        $_body_data = $args{'send_phone_verification_code_input_object'};
+    }
+
+    # authentication setting, if any
+    my $auth_settings = [qw(BasicAuth )];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('SendPhoneVerificationCodeResponse', $response);
+    return $_response_object;
+}
+
+#
 # set_chat_status
 #
-# Set status of the chat given by ID.
+# Change chat status
 # 
 # @param SetChatStatusInputObject $set_chat_status_input_object  (required)
 {
@@ -10998,7 +11116,7 @@ sub send_phone_verification_code {
     },
     };
     __PACKAGE__->method_documentation->{ 'set_chat_status' } = { 
-    	summary => 'Set status of the chat given by ID.',
+    	summary => 'Change chat status',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -11240,7 +11358,7 @@ sub unblock_contacts_bulk {
 #
 # unmute_chats_bulk
 #
-# Unmute several chats by chat ids or unmute all chats
+# Unmute chats (bulk)
 # 
 # @param UnmuteChatsBulkInputObject $unmute_chats_bulk_input_object  (required)
 {
@@ -11252,7 +11370,7 @@ sub unblock_contacts_bulk {
     },
     };
     __PACKAGE__->method_documentation->{ 'unmute_chats_bulk' } = { 
-    	summary => 'Unmute several chats by chat ids or unmute all chats',
+    	summary => 'Unmute chats (bulk)',
         params => $params,
         returns => undef,
         };
@@ -12373,7 +12491,7 @@ sub update_survey_node {
 #
 # update_template
 #
-# Update existing template.
+# Update a template
 # 
 # @param UpdateTemplateInputObject $update_template_input_object  (required)
 # @param int $id  (required)
@@ -12391,7 +12509,7 @@ sub update_survey_node {
     },
     };
     __PACKAGE__->method_documentation->{ 'update_template' } = { 
-    	summary => 'Update existing template.',
+    	summary => 'Update a template',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
