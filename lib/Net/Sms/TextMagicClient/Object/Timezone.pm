@@ -146,21 +146,21 @@ __PACKAGE__->method_documentation({
     'id' => {
     	datatype => 'int',
     	base_name => 'id',
-    	description => '',
+    	description => 'Internal timezone ID.',
     	format => '',
     	read_only => '',
     		},
     'area' => {
     	datatype => 'string',
     	base_name => 'area',
-    	description => '',
+    	description => 'Timezone area.',
     	format => '',
     	read_only => '',
     		},
     'dst' => {
     	datatype => 'int',
     	base_name => 'dst',
-    	description => '',
+    	description => 'Is Daylight saving time used in this timezone?',
     	format => '',
     	read_only => '',
     		},
@@ -174,7 +174,7 @@ __PACKAGE__->method_documentation({
     'timezone' => {
     	datatype => 'string',
     	base_name => 'timezone',
-    	description => '',
+    	description => 'User-friendly timezone name (with spaces replaced by underscores).',
     	format => '',
     	read_only => '',
     		},

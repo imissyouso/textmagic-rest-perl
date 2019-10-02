@@ -153,14 +153,14 @@ __PACKAGE__->method_documentation({
     'first_name' => {
     	datatype => 'string',
     	base_name => 'firstName',
-    	description => '',
+    	description => 'Account first name.',
     	format => '',
     	read_only => '',
     		},
     'last_name' => {
     	datatype => 'string',
     	base_name => 'lastName',
-    	description => '',
+    	description => 'Account last name.',
     	format => '',
     	read_only => '',
     		},
@@ -181,14 +181,14 @@ __PACKAGE__->method_documentation({
     'company' => {
     	datatype => 'string',
     	base_name => 'company',
-    	description => '',
+    	description => 'Account company name.',
     	format => '',
     	read_only => '',
     		},
     'timezone' => {
     	datatype => 'int',
     	base_name => 'timezone',
-    	description => 'timezone id',
+    	description => 'The timezome internal id',
     	format => '',
     	read_only => '',
     		},

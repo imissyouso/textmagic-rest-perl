@@ -146,14 +146,14 @@ __PACKAGE__->method_documentation({
     'email' => {
     	datatype => 'string',
     	base_name => 'email',
-    	description => 'Subaccount email',
+    	description => 'Invitation email will be sent to this email address.',
     	format => '',
     	read_only => '',
     		},
     'role' => {
     	datatype => 'string',
     	base_name => 'role',
-    	description => 'Subaccount role: A for administrator or U for regular user',
+    	description => 'Type of account: *   **A** for Administrator sub-account *   **U** for Regular User ',
     	format => '',
     	read_only => '',
     		},

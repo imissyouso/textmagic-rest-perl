@@ -701,7 +701,7 @@ sub close_read_chats {
 #
 # close_subaccount
 #
-# Close subaccount.
+# Close sub-account
 # 
 # @param int $id  (required)
 {
@@ -713,7 +713,7 @@ sub close_read_chats {
     },
     };
     __PACKAGE__->method_documentation->{ 'close_subaccount' } = { 
-    	summary => 'Close subaccount.',
+    	summary => 'Close sub-account',
         params => $params,
         returns => undef,
         };
@@ -1406,13 +1406,13 @@ sub delete_all_outbound_messages {
 #
 # delete_avatar
 #
-# Delete an avatar for the current user.\\
+# Delete an avatar
 # 
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'delete_avatar' } = { 
-    	summary => 'Delete an avatar for the current user.\\',
+    	summary => 'Delete an avatar',
         params => $params,
         returns => undef,
         };
@@ -5752,13 +5752,13 @@ sub get_countries {
 #
 # get_current_user
 #
-# Get current user info.
+# Get current account information
 # 
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'get_current_user' } = { 
-    	summary => 'Get current user info.',
+    	summary => 'Get current account information',
         params => $params,
         returns => 'User',
         };
@@ -6006,13 +6006,13 @@ sub get_dedicated_number {
 #
 # get_disallowed_rules
 #
-# Get an array of all rules that are disallowed to the current account.
+# Get disallowed permissions
 # 
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'get_disallowed_rules' } = { 
-    	summary => 'Get an array of all rules that are disallowed to the current account.',
+    	summary => 'Get disallowed permissions',
         params => $params,
         returns => 'GetDisallowedRulesResponse',
         };
@@ -6253,7 +6253,7 @@ sub get_inbound_messages_notification_settings {
 #
 # get_invoices
 #
-# Return account invoices.
+# Get all invoices
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
@@ -6271,7 +6271,7 @@ sub get_inbound_messages_notification_settings {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_invoices' } = { 
-    	summary => 'Return account invoices.',
+    	summary => 'Get all invoices',
         params => $params,
         returns => 'GetInvoicesPaginatedResponse',
         };
@@ -7335,13 +7335,13 @@ sub get_messages_by_session_id {
 #
 # get_messaging_counters
 #
-# Return counters for messaging data views.
+# Get sent/received messages counters values
 # 
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'get_messaging_counters' } = { 
-    	summary => 'Return counters for messaging data views.',
+    	summary => 'Get sent/received messages counters values',
         params => $params,
         returns => 'GetMessagingCountersResponse',
         };
@@ -7384,31 +7384,31 @@ sub get_messaging_counters {
 #
 # get_messaging_stat
 #
-# Return messaging statistics.
+# Get messaging statistics
 # 
-# @param string $by Group results by specified period: off, day, month or year. Default is off (optional, default to off)
-# @param int $start Start date in unix timestamp format. Default is 7 days ago (optional)
-# @param string $end End date in unix timestamp format. Default is now (optional)
+# @param string $by *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year  (optional, default to off)
+# @param int $start Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)
+# @param string $end Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)
 {
     my $params = {
     'by' => {
         data_type => 'string',
-        description => 'Group results by specified period: off, day, month or year. Default is off',
+        description => '*   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year ',
         required => '0',
     },
     'start' => {
         data_type => 'int',
-        description => 'Start date in unix timestamp format. Default is 7 days ago',
+        description => 'Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. ',
         required => '0',
     },
     'end' => {
         data_type => 'string',
-        description => 'End date in unix timestamp format. Default is now',
+        description => 'Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. ',
         required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'get_messaging_stat' } = { 
-    	summary => 'Return messaging statistics.',
+    	summary => 'Get messaging statistics',
         params => $params,
         returns => 'GetMessagingStatResponse',
         };
@@ -7951,12 +7951,12 @@ sub get_sender_settings {
 #
 # get_spending_stat
 #
-# Return account spending statistics.
+# Get spending statistics
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
-# @param int $start Optional. Start date in unix timestamp format. Default is 7 days ago (optional)
-# @param int $end Optional. End date in unix timestamp format. Default is now (optional)
+# @param int $start Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)
+# @param string $end Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)
 {
     my $params = {
     'page' => {
@@ -7971,17 +7971,17 @@ sub get_sender_settings {
     },
     'start' => {
         data_type => 'int',
-        description => 'Optional. Start date in unix timestamp format. Default is 7 days ago',
+        description => 'Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. ',
         required => '0',
     },
     'end' => {
-        data_type => 'int',
-        description => 'Optional. End date in unix timestamp format. Default is now',
+        data_type => 'string',
+        description => 'Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. ',
         required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'get_spending_stat' } = { 
-    	summary => 'Return account spending statistics.',
+    	summary => 'Get spending statistics',
         params => $params,
         returns => 'GetSpendingStatPaginatedResponse',
         };
@@ -8093,7 +8093,7 @@ sub get_state {
 #
 # get_subaccount
 #
-# Get a single subaccount.
+# Get sub-account information
 # 
 # @param int $id  (required)
 {
@@ -8105,7 +8105,7 @@ sub get_state {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_subaccount' } = { 
-    	summary => 'Get a single subaccount.',
+    	summary => 'Get sub-account information',
         params => $params,
         returns => 'User',
         };
@@ -8160,7 +8160,7 @@ sub get_subaccount {
 #
 # get_subaccounts
 #
-# Get all subaccounts of current user.
+# Get sub-accounts list
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
@@ -8178,7 +8178,7 @@ sub get_subaccount {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_subaccounts' } = { 
-    	summary => 'Get all subaccounts of current user.',
+    	summary => 'Get sub-accounts list',
         params => $params,
         returns => 'User',
         };
@@ -8231,7 +8231,7 @@ sub get_subaccounts {
 #
 # get_subaccounts_with_tokens
 #
-# Get all subaccounts with their REST API tokens associated with specified app name.
+# Get all sub-accounts with their REST API tokens associated with app name
 # 
 # @param GetSubaccountsWithTokensInputObject $get_subaccounts_with_tokens_input_object  (required)
 # @param Number $page Fetch specified results page. (optional, default to 1)
@@ -8255,7 +8255,7 @@ sub get_subaccounts {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_subaccounts_with_tokens' } = { 
-    	summary => 'Get all subaccounts with their REST API tokens associated with specified app name.',
+    	summary => 'Get all sub-accounts with their REST API tokens associated with app name',
         params => $params,
         returns => 'GetSubaccountsWithTokensResponse',
         };
@@ -9150,7 +9150,7 @@ sub get_versions {
 #
 # invite_subaccount
 #
-# Invite new subaccount.
+# Invite a new sub-account
 # 
 # @param InviteSubaccountInputObject $invite_subaccount_input_object  (required)
 {
@@ -9162,7 +9162,7 @@ sub get_versions {
     },
     };
     __PACKAGE__->method_documentation->{ 'invite_subaccount' } = { 
-    	summary => 'Invite new subaccount.',
+    	summary => 'Invite a new sub-account',
         params => $params,
         returns => undef,
         };
@@ -9630,7 +9630,7 @@ sub reopen_chats_bulk {
 #
 # request_new_subaccount_token
 #
-# Request a new REST API token for subaccount.
+# Request a new REST API token for sub-account
 # 
 # @param RequestNewSubaccountTokenInputObject $request_new_subaccount_token_input_object  (required)
 {
@@ -9642,7 +9642,7 @@ sub reopen_chats_bulk {
     },
     };
     __PACKAGE__->method_documentation->{ 'request_new_subaccount_token' } = { 
-    	summary => 'Request a new REST API token for subaccount.',
+    	summary => 'Request a new REST API token for sub-account',
         params => $params,
         returns => 'User',
         };
@@ -11833,7 +11833,7 @@ sub update_contact_note {
 #
 # update_current_user
 #
-# Update current user info.
+# Edit current account info
 # 
 # @param UpdateCurrentUserInputObject $update_current_user_input_object  (required)
 {
@@ -11845,7 +11845,7 @@ sub update_contact_note {
     },
     };
     __PACKAGE__->method_documentation->{ 'update_current_user' } = { 
-    	summary => 'Update current user info.',
+    	summary => 'Edit current account info',
         params => $params,
         returns => 'UpdateCurrentUserResponse',
         };
@@ -12574,7 +12574,7 @@ sub update_template {
 #
 # upload_avatar
 #
-# Add an avatar for the current user.
+# Upload an avatar
 # 
 # @param File $image User avatar. Should be PNG or JPG file not more than 10 MB (required)
 {
@@ -12586,7 +12586,7 @@ sub update_template {
     },
     };
     __PACKAGE__->method_documentation->{ 'upload_avatar' } = { 
-    	summary => 'Add an avatar for the current user.',
+    	summary => 'Upload an avatar',
         params => $params,
         returns => undef,
         };

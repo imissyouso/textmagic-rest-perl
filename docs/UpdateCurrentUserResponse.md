@@ -8,13 +8,13 @@ use Net::Sms::TextMagicClient::Object::UpdateCurrentUserResponse;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**username** | **string** |  | [optional] 
-**first_name** | **string** |  | [optional] 
-**last_name** | **string** |  | [optional] 
-**email** | **string** |  | [optional] 
+**username** | **string** | Username. | [optional] 
+**first_name** | **string** | Account first name. | [optional] 
+**last_name** | **string** | Account last name. | [optional] 
+**email** | **string** | User email address. | [optional] 
 **phone** | **string** |  | [optional] 
-**company** | **string** |  | [optional] 
-**timezone** | **int** | timezone id | [optional] 
+**company** | **string** | Account company name. | [optional] 
+**timezone** | **int** | Internal timezone ID | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
