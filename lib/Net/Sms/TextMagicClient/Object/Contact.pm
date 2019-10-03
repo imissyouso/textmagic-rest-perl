@@ -34,7 +34,7 @@ use Net::Sms::TextMagicClient::Object::ContactCustomField;
 use Net::Sms::TextMagicClient::Object::ContactImage;
 use Net::Sms::TextMagicClient::Object::ContactNote;
 use Net::Sms::TextMagicClient::Object::Country;
-use Net::Sms::TextMagicClient::Object::Group;
+use Net::Sms::TextMagicClient::Object::List;
 use Net::Sms::TextMagicClient::Object::User;
 
 use base ("Class::Accessor", "Class::Data::Inheritable");
@@ -227,7 +227,7 @@ __PACKAGE__->method_documentation({
     	read_only => '',
     		},
     'lists' => {
-    	datatype => 'ARRAY[Group]',
+    	datatype => 'ARRAY[List]',
     	base_name => 'lists',
     	description => '',
     	format => '',
@@ -268,7 +268,7 @@ __PACKAGE__->swagger_types( {
     'country' => 'Country',
     'custom_fields' => 'ARRAY[ContactCustomField]',
     'user' => 'User',
-    'lists' => 'ARRAY[Group]',
+    'lists' => 'ARRAY[List]',
     'phone_type' => 'string',
     'avatar' => 'ContactImage',
     'notes' => 'ARRAY[ContactNote]'

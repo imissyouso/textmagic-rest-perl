@@ -5,7 +5,7 @@
 use Net::Sms::TextMagicClient::Object::TextMagicApi;
 ```
 
-All URIs are relative to *http://my.textmagic.com*
+All URIs are relative to *http://rest.textmagic.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**cancel_survey**](TextMagicApi.md#cancel_survey) | **PUT** /api/v2/surveys/{id}/cancel | Cancel a survey.
 [**cancel_verification**](TextMagicApi.md#cancel_verification) | **DELETE** /api/v2/verify/{verifyId} | Cancel verification process
 [**check_phone_verification_code**](TextMagicApi.md#check_phone_verification_code) | **PUT** /api/v2/user/phone/verification | Check user phone verification code
-[**check_phone_verification_code_0**](TextMagicApi.md#check_phone_verification_code_0) | **PUT** /api/v2/verify | Step 2: Check the verification code 
+[**check_phone_verification_code_tfa**](TextMagicApi.md#check_phone_verification_code_tfa) | **PUT** /api/v2/verify | Step 2: Check the verification code 
 [**clear_and_assign_contacts_to_list**](TextMagicApi.md#clear_and_assign_contacts_to_list) | **POST** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts.
 [**close_chats_bulk**](TextMagicApi.md#close_chats_bulk) | **POST** /api/v2/chats/close/bulk | Close chats (bulk)
 [**close_read_chats**](TextMagicApi.md#close_read_chats) | **POST** /api/v2/chats/close/read | Close read chats
@@ -23,7 +23,7 @@ Method | HTTP request | Description
 [**create_contact**](TextMagicApi.md#create_contact) | **POST** /api/v2/contacts | Create a new contact from the submitted data.
 [**create_contact_note**](TextMagicApi.md#create_contact_note) | **POST** /api/v2/contacts/{id}/notes | Create a new contact note.
 [**create_custom_field**](TextMagicApi.md#create_custom_field) | **POST** /api/v2/customfields | Create a new custom field from the submitted data.
-[**create_list**](TextMagicApi.md#create_list) | **POST** /api/v2/lists | Create a new list from the submitted data.
+[**create_list**](TextMagicApi.md#create_list) | **POST** /api/v2/lists | Create a new list
 [**create_push_token**](TextMagicApi.md#create_push_token) | **POST** /api/v2/push/tokens | Add or update a device token.
 [**create_survey**](TextMagicApi.md#create_survey) | **POST** /api/v2/surveys | Create a new survey from the submitted data.
 [**create_survey_node**](TextMagicApi.md#create_survey_node) | **POST** /api/v2/surveys/{id}/nodes | Create a new node from the submitted data.
@@ -100,8 +100,9 @@ Method | HTTP request | Description
 [**get_inbound_message**](TextMagicApi.md#get_inbound_message) | **GET** /api/v2/replies/{id} | Get a single inbound message
 [**get_inbound_messages_notification_settings**](TextMagicApi.md#get_inbound_messages_notification_settings) | **GET** /api/v2/user/notification/inbound | Get inbound messages notification settings
 [**get_invoices**](TextMagicApi.md#get_invoices) | **GET** /api/v2/invoices | Get all invoices
-[**get_list**](TextMagicApi.md#get_list) | **GET** /api/v2/lists/{id} | Get a single list.
+[**get_list**](TextMagicApi.md#get_list) | **GET** /api/v2/lists/{id} | Get the details of a specific list
 [**get_list_contacts_ids**](TextMagicApi.md#get_list_contacts_ids) | **GET** /api/v2/lists/{id}/contacts/ids | Fetch all contacts IDs belonging to the list with ID.
+[**get_lists**](TextMagicApi.md#get_lists) | **GET** /api/v2/lists | Get all lists
 [**get_lists_of_contact**](TextMagicApi.md#get_lists_of_contact) | **GET** /api/v2/contacts/{id}/lists | Return lists which contact belongs to.
 [**get_message_preview**](TextMagicApi.md#get_message_preview) | **GET** /api/v2/messages/preview | Preview message
 [**get_message_price**](TextMagicApi.md#get_message_price) | **GET** /api/v2/messages/price | Check price
@@ -133,7 +134,6 @@ Method | HTTP request | Description
 [**get_unsubscribed_contact**](TextMagicApi.md#get_unsubscribed_contact) | **GET** /api/v2/unsubscribers/{id} | Get a single unsubscribed contact.
 [**get_unsubscribers**](TextMagicApi.md#get_unsubscribers) | **GET** /api/v2/unsubscribers | Get all contact have unsubscribed from your communication.
 [**get_user_dedicated_numbers**](TextMagicApi.md#get_user_dedicated_numbers) | **GET** /api/v2/numbers | Get all your dedicated numbers
-[**get_user_lists**](TextMagicApi.md#get_user_lists) | **GET** /api/v2/lists | Get all user lists.
 [**get_versions**](TextMagicApi.md#get_versions) | **GET** /api/v2/versions | Get minimal valid apps versions
 [**invite_subaccount**](TextMagicApi.md#invite_subaccount) | **POST** /api/v2/subaccounts | Invite a new sub-account
 [**mark_chats_read_bulk**](TextMagicApi.md#mark_chats_read_bulk) | **POST** /api/v2/chats/read/bulk | Mark chats as read (bulk)
@@ -158,7 +158,7 @@ Method | HTTP request | Description
 [**send_email_verification_code**](TextMagicApi.md#send_email_verification_code) | **GET** /api/v2/user/email/verification | Send user email verification
 [**send_message**](TextMagicApi.md#send_message) | **POST** /api/v2/messages | Send message
 [**send_phone_verification_code**](TextMagicApi.md#send_phone_verification_code) | **GET** /api/v2/user/phone/verification | Send user phone verification
-[**send_phone_verification_code_0**](TextMagicApi.md#send_phone_verification_code_0) | **POST** /api/v2/verify | Step 1: Send a verification code 
+[**send_phone_verification_code_tfa**](TextMagicApi.md#send_phone_verification_code_tfa) | **POST** /api/v2/verify | Step 1: Send a verification code 
 [**set_chat_status**](TextMagicApi.md#set_chat_status) | **POST** /api/v2/chats/status | Change chat status
 [**start_survey**](TextMagicApi.md#start_survey) | **PUT** /api/v2/surveys/{id}/start | Start a survey.
 [**unblock_contact**](TextMagicApi.md#unblock_contact) | **POST** /api/v2/contacts/unblock | Unblock contact by phone number.
@@ -485,8 +485,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **check_phone_verification_code_0**
-> check_phone_verification_code_0(check_phone_verification_code_input_object => $check_phone_verification_code_input_object)
+# **check_phone_verification_code_tfa**
+> check_phone_verification_code_tfa(check_phone_verification_code_input_object => $check_phone_verification_code_input_object)
 
 Step 2: Check the verification code 
 
@@ -506,10 +506,10 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 my $check_phone_verification_code_input_object = Net::Sms::TextMagicClient::Object::CheckPhoneVerificationCodeInputObject1->new(); # CheckPhoneVerificationCodeInputObject1 | 
 
 eval { 
-    $api_instance->check_phone_verification_code_0(check_phone_verification_code_input_object => $check_phone_verification_code_input_object);
+    $api_instance->check_phone_verification_code_tfa(check_phone_verification_code_input_object => $check_phone_verification_code_input_object);
 };
 if ($@) {
-    warn "Exception when calling TextMagicApi->check_phone_verification_code_0: $@\n";
+    warn "Exception when calling TextMagicApi->check_phone_verification_code_tfa: $@\n";
 }
 ```
 
@@ -884,7 +884,7 @@ Name | Type | Description  | Notes
 # **create_list**
 > ResourceLinkResponse create_list(create_list_input_object => $create_list_input_object)
 
-Create a new list from the submitted data.
+Create a new list
 
 
 
@@ -4762,9 +4762,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_list**
-> Group get_list(id => $id)
+> List get_list(id => $id)
 
-Get a single list.
+Get the details of a specific list
 
 
 
@@ -4798,7 +4798,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Group**](Group.md)
+[**List**](List.md)
 
 ### Authorization
 
@@ -4849,6 +4849,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetListContactsIdsResponse**](GetListContactsIdsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_lists**
+> GetListsPaginatedResponse get_lists(page => $page, limit => $limit, order_by => $order_by, direction => $direction, favorite_only => $favorite_only, only_mine => $only_mine)
+
+Get all lists
+
+
+
+### Example 
+```perl
+use Data::Dumper;
+use Net::Sms::TextMagicClient::TextMagicApi;
+my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $page = 56; # int | The current fetched page.
+my $limit = 56; # int | The number of results per page.
+my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
+my $direction = 'direction_example'; # string | Order direction. Default is desc
+my $favorite_only = 56; # int | Return only favorite lists
+my $only_mine = 56; # int | Return only current user lists
+
+eval { 
+    my $result = $api_instance->get_lists(page => $page, limit => $limit, order_by => $order_by, direction => $direction, favorite_only => $favorite_only, only_mine => $only_mine);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_lists: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| The current fetched page. | [optional] [default to 1]
+ **limit** | **int**| The number of results per page. | [optional] [default to 10]
+ **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **favorite_only** | **int**| Return only favorite lists | [optional] [default to 0]
+ **only_mine** | **int**| Return only current user lists | [optional] [default to 0]
+
+### Return type
+
+[**GetListsPaginatedResponse**](GetListsPaginatedResponse.md)
 
 ### Authorization
 
@@ -6505,66 +6565,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_user_lists**
-> GetUserListsPaginatedResponse get_user_lists(page => $page, limit => $limit, order_by => $order_by, direction => $direction, favorite_only => $favorite_only, only_mine => $only_mine)
-
-Get all user lists.
-
-
-
-### Example 
-```perl
-use Data::Dumper;
-use Net::Sms::TextMagicClient::TextMagicApi;
-my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
-
-    # Configure HTTP basic authorization: BasicAuth
-    username => 'YOUR_USERNAME',
-    password => 'YOUR_PASSWORD',
-);
-
-my $page = 56; # int | Fetch specified results page.
-my $limit = 56; # int | The number of results per page.
-my $order_by = 'order_by_example'; # string | Order results by some field. Default is id
-my $direction = 'direction_example'; # string | Order direction. Default is desc
-my $favorite_only = 56; # int | Return only favorite lists
-my $only_mine = 56; # int | Return only current user lists
-
-eval { 
-    my $result = $api_instance->get_user_lists(page => $page, limit => $limit, order_by => $order_by, direction => $direction, favorite_only => $favorite_only, only_mine => $only_mine);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling TextMagicApi->get_user_lists: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int**| Fetch specified results page. | [optional] [default to 1]
- **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **order_by** | **string**| Order results by some field. Default is id | [optional] [default to id]
- **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
- **favorite_only** | **int**| Return only favorite lists | [optional] [default to 0]
- **only_mine** | **int**| Return only current user lists | [optional] [default to 0]
-
-### Return type
-
-[**GetUserListsPaginatedResponse**](GetUserListsPaginatedResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **get_versions**
 > GetVersionsResponse get_versions()
 
@@ -7835,8 +7835,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **send_phone_verification_code_0**
-> SendPhoneVerificationCodeResponse send_phone_verification_code_0(send_phone_verification_code_input_object => $send_phone_verification_code_input_object)
+# **send_phone_verification_code_tfa**
+> SendPhoneVerificationCodeResponse send_phone_verification_code_tfa(send_phone_verification_code_input_object => $send_phone_verification_code_input_object)
 
 Step 1: Send a verification code 
 
@@ -7856,11 +7856,11 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 my $send_phone_verification_code_input_object = Net::Sms::TextMagicClient::Object::SendPhoneVerificationCodeInputObject->new(); # SendPhoneVerificationCodeInputObject | 
 
 eval { 
-    my $result = $api_instance->send_phone_verification_code_0(send_phone_verification_code_input_object => $send_phone_verification_code_input_object);
+    my $result = $api_instance->send_phone_verification_code_tfa(send_phone_verification_code_input_object => $send_phone_verification_code_input_object);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling TextMagicApi->send_phone_verification_code_0: $@\n";
+    warn "Exception when calling TextMagicApi->send_phone_verification_code_tfa: $@\n";
 }
 ```
 

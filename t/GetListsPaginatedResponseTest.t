@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::Sms::TextMagicClient::Object::GetUserListsPaginatedResponse');
+use_ok('Net::Sms::TextMagicClient::Object::GetListsPaginatedResponse');
 
-my $instance = Net::Sms::TextMagicClient::Object::GetUserListsPaginatedResponse->new();
+my $instance = Net::Sms::TextMagicClient::Object::GetListsPaginatedResponse->new();
 
-isa_ok($instance, 'Net::Sms::TextMagicClient::Object::GetUserListsPaginatedResponse');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::GetListsPaginatedResponse');
 

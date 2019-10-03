@@ -147,14 +147,14 @@ __PACKAGE__->method_documentation({
     'code' => {
     	datatype => 'int',
     	base_name => 'code',
-    	description => '',
+    	description => 'HTTP error code.',
     	format => '',
     	read_only => '',
     		},
     'message' => {
     	datatype => 'string',
     	base_name => 'message',
-    	description => '',
+    	description => 'Brief error message. You could display this message to your user or save it in a log.',
     	format => '',
     	read_only => '',
     		},

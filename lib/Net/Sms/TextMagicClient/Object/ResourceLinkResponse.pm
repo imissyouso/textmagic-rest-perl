@@ -146,14 +146,14 @@ __PACKAGE__->method_documentation({
     'id' => {
     	datatype => 'int',
     	base_name => 'id',
-    	description => '',
+    	description => 'Resource ID.',
     	format => '',
     	read_only => '',
     		},
     'href' => {
     	datatype => 'string',
     	base_name => 'href',
-    	description => '',
+    	description => 'A link to this resource. If you want to fetch it, just **GET** this address.',
     	format => '',
     	read_only => '',
     		},

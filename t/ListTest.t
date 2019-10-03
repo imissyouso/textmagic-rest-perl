@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::Sms::TextMagicClient::Object::Group');
+use_ok('Net::Sms::TextMagicClient::Object::List');
 
-my $instance = Net::Sms::TextMagicClient::Object::Group->new();
+my $instance = Net::Sms::TextMagicClient::Object::List->new();
 
-isa_ok($instance, 'Net::Sms::TextMagicClient::Object::Group');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::List');
 

@@ -1,8 +1,8 @@
-# Net::Sms::TextMagicClient::Object::GroupImage
+# Net::Sms::TextMagicClient::Object::ListImage
 
 ## Load the model package
 ```perl
-use Net::Sms::TextMagicClient::Object::GroupImage;
+use Net::Sms::TextMagicClient::Object::ListImage;
 ```
 
 ## Properties

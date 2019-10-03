@@ -449,7 +449,7 @@ sub check_phone_verification_code {
 }
 
 #
-# check_phone_verification_code_0
+# check_phone_verification_code_tfa
 #
 # Step 2: Check the verification code 
 # 
@@ -462,7 +462,7 @@ sub check_phone_verification_code {
         required => '1',
     },
     };
-    __PACKAGE__->method_documentation->{ 'check_phone_verification_code_0' } = { 
+    __PACKAGE__->method_documentation->{ 'check_phone_verification_code_tfa' } = { 
     	summary => 'Step 2: Check the verification code ',
         params => $params,
         returns => undef,
@@ -470,12 +470,12 @@ sub check_phone_verification_code {
 }
 # @return void
 #
-sub check_phone_verification_code_0 {
+sub check_phone_verification_code_tfa {
     my ($self, %args) = @_;
 
     # verify the required parameter 'check_phone_verification_code_input_object' is set
     unless (exists $args{'check_phone_verification_code_input_object'}) {
-      croak("Missing the required parameter 'check_phone_verification_code_input_object' when calling check_phone_verification_code_0");
+      croak("Missing the required parameter 'check_phone_verification_code_input_object' when calling check_phone_verification_code_tfa");
     }
 
     # parse inputs
@@ -977,7 +977,7 @@ sub create_custom_field {
 #
 # create_list
 #
-# Create a new list from the submitted data.
+# Create a new list
 # 
 # @param CreateListInputObject $create_list_input_object  (required)
 {
@@ -989,7 +989,7 @@ sub create_custom_field {
     },
     };
     __PACKAGE__->method_documentation->{ 'create_list' } = { 
-    	summary => 'Create a new list from the submitted data.',
+    	summary => 'Create a new list',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -6324,7 +6324,7 @@ sub get_invoices {
 #
 # get_list
 #
-# Get a single list.
+# Get the details of a specific list
 # 
 # @param int $id  (required)
 {
@@ -6336,12 +6336,12 @@ sub get_invoices {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_list' } = { 
-    	summary => 'Get a single list.',
+    	summary => 'Get the details of a specific list',
         params => $params,
-        returns => 'Group',
+        returns => 'List',
         };
 }
-# @return Group
+# @return List
 #
 sub get_list {
     my ($self, %args) = @_;
@@ -6384,7 +6384,7 @@ sub get_list {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('Group', $response);
+    my $_response_object = $self->{api_client}->deserialize('List', $response);
     return $_response_object;
 }
 
@@ -6452,6 +6452,121 @@ sub get_list_contacts_ids {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('GetListContactsIdsResponse', $response);
+    return $_response_object;
+}
+
+#
+# get_lists
+#
+# Get all lists
+# 
+# @param int $page The current fetched page. (optional, default to 1)
+# @param int $limit The number of results per page. (optional, default to 10)
+# @param string $order_by Order results by some field. Default is id (optional, default to id)
+# @param string $direction Order direction. Default is desc (optional, default to desc)
+# @param int $favorite_only Return only favorite lists (optional, default to 0)
+# @param int $only_mine Return only current user lists (optional, default to 0)
+{
+    my $params = {
+    'page' => {
+        data_type => 'int',
+        description => 'The current fetched page.',
+        required => '0',
+    },
+    'limit' => {
+        data_type => 'int',
+        description => 'The number of results per page.',
+        required => '0',
+    },
+    'order_by' => {
+        data_type => 'string',
+        description => 'Order results by some field. Default is id',
+        required => '0',
+    },
+    'direction' => {
+        data_type => 'string',
+        description => 'Order direction. Default is desc',
+        required => '0',
+    },
+    'favorite_only' => {
+        data_type => 'int',
+        description => 'Return only favorite lists',
+        required => '0',
+    },
+    'only_mine' => {
+        data_type => 'int',
+        description => 'Return only current user lists',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'get_lists' } = { 
+    	summary => 'Get all lists',
+        params => $params,
+        returns => 'GetListsPaginatedResponse',
+        };
+}
+# @return GetListsPaginatedResponse
+#
+sub get_lists {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/api/v2/lists';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # query params
+    if ( exists $args{'page'}) {
+        $query_params->{'page'} = $self->{api_client}->to_query_value($args{'page'});
+    }
+
+    # query params
+    if ( exists $args{'limit'}) {
+        $query_params->{'limit'} = $self->{api_client}->to_query_value($args{'limit'});
+    }
+
+    # query params
+    if ( exists $args{'order_by'}) {
+        $query_params->{'orderBy'} = $self->{api_client}->to_query_value($args{'order_by'});
+    }
+
+    # query params
+    if ( exists $args{'direction'}) {
+        $query_params->{'direction'} = $self->{api_client}->to_query_value($args{'direction'});
+    }
+
+    # query params
+    if ( exists $args{'favorite_only'}) {
+        $query_params->{'favoriteOnly'} = $self->{api_client}->to_query_value($args{'favorite_only'});
+    }
+
+    # query params
+    if ( exists $args{'only_mine'}) {
+        $query_params->{'onlyMine'} = $self->{api_client}->to_query_value($args{'only_mine'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw(BasicAuth )];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('GetListsPaginatedResponse', $response);
     return $_response_object;
 }
 
@@ -8984,121 +9099,6 @@ sub get_user_dedicated_numbers {
 }
 
 #
-# get_user_lists
-#
-# Get all user lists.
-# 
-# @param int $page Fetch specified results page. (optional, default to 1)
-# @param int $limit The number of results per page. (optional, default to 10)
-# @param string $order_by Order results by some field. Default is id (optional, default to id)
-# @param string $direction Order direction. Default is desc (optional, default to desc)
-# @param int $favorite_only Return only favorite lists (optional, default to 0)
-# @param int $only_mine Return only current user lists (optional, default to 0)
-{
-    my $params = {
-    'page' => {
-        data_type => 'int',
-        description => 'Fetch specified results page.',
-        required => '0',
-    },
-    'limit' => {
-        data_type => 'int',
-        description => 'The number of results per page.',
-        required => '0',
-    },
-    'order_by' => {
-        data_type => 'string',
-        description => 'Order results by some field. Default is id',
-        required => '0',
-    },
-    'direction' => {
-        data_type => 'string',
-        description => 'Order direction. Default is desc',
-        required => '0',
-    },
-    'favorite_only' => {
-        data_type => 'int',
-        description => 'Return only favorite lists',
-        required => '0',
-    },
-    'only_mine' => {
-        data_type => 'int',
-        description => 'Return only current user lists',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'get_user_lists' } = { 
-    	summary => 'Get all user lists.',
-        params => $params,
-        returns => 'GetUserListsPaginatedResponse',
-        };
-}
-# @return GetUserListsPaginatedResponse
-#
-sub get_user_lists {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/api/v2/lists';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # query params
-    if ( exists $args{'page'}) {
-        $query_params->{'page'} = $self->{api_client}->to_query_value($args{'page'});
-    }
-
-    # query params
-    if ( exists $args{'limit'}) {
-        $query_params->{'limit'} = $self->{api_client}->to_query_value($args{'limit'});
-    }
-
-    # query params
-    if ( exists $args{'order_by'}) {
-        $query_params->{'orderBy'} = $self->{api_client}->to_query_value($args{'order_by'});
-    }
-
-    # query params
-    if ( exists $args{'direction'}) {
-        $query_params->{'direction'} = $self->{api_client}->to_query_value($args{'direction'});
-    }
-
-    # query params
-    if ( exists $args{'favorite_only'}) {
-        $query_params->{'favoriteOnly'} = $self->{api_client}->to_query_value($args{'favorite_only'});
-    }
-
-    # query params
-    if ( exists $args{'only_mine'}) {
-        $query_params->{'onlyMine'} = $self->{api_client}->to_query_value($args{'only_mine'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw(BasicAuth )];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('GetUserListsPaginatedResponse', $response);
-    return $_response_object;
-}
-
-#
 # get_versions
 #
 # Get minimal valid apps versions
@@ -11037,7 +11037,7 @@ sub send_phone_verification_code {
 }
 
 #
-# send_phone_verification_code_0
+# send_phone_verification_code_tfa
 #
 # Step 1: Send a verification code 
 # 
@@ -11050,7 +11050,7 @@ sub send_phone_verification_code {
         required => '1',
     },
     };
-    __PACKAGE__->method_documentation->{ 'send_phone_verification_code_0' } = { 
+    __PACKAGE__->method_documentation->{ 'send_phone_verification_code_tfa' } = { 
     	summary => 'Step 1: Send a verification code ',
         params => $params,
         returns => 'SendPhoneVerificationCodeResponse',
@@ -11058,12 +11058,12 @@ sub send_phone_verification_code {
 }
 # @return SendPhoneVerificationCodeResponse
 #
-sub send_phone_verification_code_0 {
+sub send_phone_verification_code_tfa {
     my ($self, %args) = @_;
 
     # verify the required parameter 'send_phone_verification_code_input_object' is set
     unless (exists $args{'send_phone_verification_code_input_object'}) {
-      croak("Missing the required parameter 'send_phone_verification_code_input_object' when calling send_phone_verification_code_0");
+      croak("Missing the required parameter 'send_phone_verification_code_input_object' when calling send_phone_verification_code_tfa");
     }
 
     # parse inputs

@@ -79,11 +79,11 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# check_phone_verification_code_1 test
+# check_phone_verification_code_tfa test
 #
 {
     my $check_phone_verification_code_input_object = undef; # replace NULL with a proper value
-    my $result = $api->check_phone_verification_code_1(check_phone_verification_code_input_object => $check_phone_verification_code_input_object);
+    my $result = $api->check_phone_verification_code_tfa(check_phone_verification_code_input_object => $check_phone_verification_code_input_object);
 }
 
 #
@@ -820,6 +820,19 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
+# get_lists test
+#
+{
+    my $page = undef; # replace NULL with a proper value
+    my $limit = undef; # replace NULL with a proper value
+    my $order_by = undef; # replace NULL with a proper value
+    my $direction = undef; # replace NULL with a proper value
+    my $favorite_only = undef; # replace NULL with a proper value
+    my $only_mine = undef; # replace NULL with a proper value
+    my $result = $api->get_lists(page => $page, limit => $limit, order_by => $order_by, direction => $direction, favorite_only => $favorite_only, only_mine => $only_mine);
+}
+
+#
 # get_lists_of_contact test
 #
 {
@@ -1120,19 +1133,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# get_user_lists test
-#
-{
-    my $page = undef; # replace NULL with a proper value
-    my $limit = undef; # replace NULL with a proper value
-    my $order_by = undef; # replace NULL with a proper value
-    my $direction = undef; # replace NULL with a proper value
-    my $favorite_only = undef; # replace NULL with a proper value
-    my $only_mine = undef; # replace NULL with a proper value
-    my $result = $api->get_user_lists(page => $page, limit => $limit, order_by => $order_by, direction => $direction, favorite_only => $favorite_only, only_mine => $only_mine);
-}
-
-#
 # get_versions test
 #
 {
@@ -1368,11 +1368,11 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# send_phone_verification_code_2 test
+# send_phone_verification_code_tfa test
 #
 {
     my $send_phone_verification_code_input_object = undef; # replace NULL with a proper value
-    my $result = $api->send_phone_verification_code_2(send_phone_verification_code_input_object => $send_phone_verification_code_input_object);
+    my $result = $api->send_phone_verification_code_tfa(send_phone_verification_code_input_object => $send_phone_verification_code_input_object);
 }
 
 #

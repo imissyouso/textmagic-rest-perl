@@ -8,10 +8,10 @@ use Net::Sms::TextMagicClient::Object::CreateListInputObject;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** | List name | 
-**shared** | **boolean** | Should this list be shared with sub-accounts | 
-**favorited** | **boolean** | Is list favorited. Default is false | [optional] [default to false]
-**is_default** | **boolean** | Is list default for new contacts (web only). | [optional] [default to false]
+**name** | **string** | List name. | 
+**shared** | **boolean** | Should new list be shared among all the sub-accounts? The default is 0 (false). | [optional] [default to false]
+**favorited** | **boolean** | Is list favorited. Default is false. | [optional] [default to false]
+**is_default** | **boolean** | Is list default for new contacts (web only). Default is false. | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

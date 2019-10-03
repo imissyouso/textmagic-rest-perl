@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::Sms::TextMagicClient::Object::GroupImage');
+use_ok('Net::Sms::TextMagicClient::Object::ListImage');
 
-my $instance = Net::Sms::TextMagicClient::Object::GroupImage->new();
+my $instance = Net::Sms::TextMagicClient::Object::ListImage->new();
 
-isa_ok($instance, 'Net::Sms::TextMagicClient::Object::GroupImage');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::ListImage');
 

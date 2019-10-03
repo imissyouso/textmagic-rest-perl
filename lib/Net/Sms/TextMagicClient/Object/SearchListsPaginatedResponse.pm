@@ -30,7 +30,7 @@ use Log::Any qw($log);
 use Date::Parse;
 use DateTime;
 
-use Net::Sms::TextMagicClient::Object::Group;
+use Net::Sms::TextMagicClient::Object::List;
 
 use base ("Class::Accessor", "Class::Data::Inheritable");
 
@@ -166,7 +166,7 @@ __PACKAGE__->method_documentation({
     	read_only => '',
     		},
     'resources' => {
-    	datatype => 'ARRAY[Group]',
+    	datatype => 'ARRAY[List]',
     	base_name => 'resources',
     	description => '',
     	format => '',
@@ -178,7 +178,7 @@ __PACKAGE__->swagger_types( {
     'page' => 'int',
     'page_count' => 'int',
     'limit' => 'int',
-    'resources' => 'ARRAY[Group]'
+    'resources' => 'ARRAY[List]'
 } );
 
 __PACKAGE__->attribute_map( {

@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **country** | [**Country**](Country.md) |  | 
 **custom_fields** | [**ARRAY[ContactCustomField]**](ContactCustomField.md) |  | 
 **user** | [**User**](User.md) |  | 
-**lists** | [**ARRAY[Group]**](Group.md) |  | 
+**lists** | [**ARRAY[List]**](List.md) |  | 
 **phone_type** | **string** |  | 
 **avatar** | [**ContactImage**](ContactImage.md) |  | 
 **notes** | [**ARRAY[ContactNote]**](ContactNote.md) |  | 
