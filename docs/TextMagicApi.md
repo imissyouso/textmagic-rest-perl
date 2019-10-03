@@ -106,7 +106,6 @@ Method | HTTP request | Description
 [**get_lists_of_contact**](TextMagicApi.md#get_lists_of_contact) | **GET** /api/v2/contacts/{id}/lists | Return lists which contact belongs to.
 [**get_message_preview**](TextMagicApi.md#get_message_preview) | **GET** /api/v2/messages/preview | Preview message
 [**get_message_price**](TextMagicApi.md#get_message_price) | **GET** /api/v2/messages/price | Check price
-[**get_message_prices**](TextMagicApi.md#get_message_prices) | **GET** /api/v2/messages/prices | Get pricing
 [**get_message_session**](TextMagicApi.md#get_message_session) | **GET** /api/v2/sessions/{id} | Get a session details
 [**get_message_session_stat**](TextMagicApi.md#get_message_session_stat) | **GET** /api/v2/sessions/{id}/stat | Get a session statistics
 [**get_messages_by_session_id**](TextMagicApi.md#get_messages_by_session_id) | **GET** /api/v2/sessions/{id}/messages | Get a session messages
@@ -5129,52 +5128,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetMessagePriceResponse**](GetMessagePriceResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_message_prices**
-> GetMessagePricesResponse get_message_prices()
-
-Get pricing
-
-Get message prices for all countries.
-
-### Example 
-```perl
-use Data::Dumper;
-use Net::Sms::TextMagicClient::TextMagicApi;
-my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
-
-    # Configure HTTP basic authorization: BasicAuth
-    username => 'YOUR_USERNAME',
-    password => 'YOUR_PASSWORD',
-);
-
-
-eval { 
-    my $result = $api_instance->get_message_prices();
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling TextMagicApi->get_message_prices: $@\n";
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**GetMessagePricesResponse**](GetMessagePricesResponse.md)
 
 ### Authorization
 

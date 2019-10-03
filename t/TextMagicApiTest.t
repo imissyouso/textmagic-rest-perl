@@ -892,13 +892,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# get_message_prices test
-#
-{
-    my $result = $api->get_message_prices();
-}
-
-#
 # get_message_session test
 #
 {
