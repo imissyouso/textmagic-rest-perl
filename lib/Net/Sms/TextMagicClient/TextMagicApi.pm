@@ -51,7 +51,7 @@ sub new {
 #
 # assign_contacts_to_list
 #
-# Assign contacts to the specified list.
+# Assign contacts to a list
 # 
 # @param AssignContactsToListInputObject $assign_contacts_to_list_input_object Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user (required)
 # @param int $id  (required)
@@ -69,7 +69,7 @@ sub new {
     },
     };
     __PACKAGE__->method_documentation->{ 'assign_contacts_to_list' } = { 
-    	summary => 'Assign contacts to the specified list.',
+    	summary => 'Assign contacts to a list',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -512,7 +512,7 @@ sub check_phone_verification_code_tfa {
 #
 # clear_and_assign_contacts_to_list
 #
-# Reset list members to the specified contacts.
+# Reset list members to the specified contacts
 # 
 # @param ClearAndAssignContactsToListInputObject $clear_and_assign_contacts_to_list_input_object Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user (required)
 # @param int $id  (required)
@@ -530,7 +530,7 @@ sub check_phone_verification_code_tfa {
     },
     };
     __PACKAGE__->method_documentation->{ 'clear_and_assign_contacts_to_list' } = { 
-    	summary => 'Reset list members to the specified contacts.',
+    	summary => 'Reset list members to the specified contacts',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -1920,7 +1920,7 @@ sub delete_contacts_by_ids {
 #
 # delete_contacts_from_list
 #
-# Unassign contacts from the specified list.
+# Unassign contacts from a list
 # 
 # @param DeleteContacsFromListObject $delete_contacs_from_list_object Contact ID(s), separated by comma (required)
 # @param int $id  (required)
@@ -1938,7 +1938,7 @@ sub delete_contacts_by_ids {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_contacts_from_list' } = { 
-    	summary => 'Unassign contacts from the specified list.',
+    	summary => 'Unassign contacts from a list',
         params => $params,
         returns => undef,
         };
@@ -2249,7 +2249,7 @@ sub delete_inbound_messages_bulk {
 #
 # delete_list
 #
-# Delete a single list.
+# Delete a single list
 # 
 # @param int $id  (required)
 {
@@ -2261,7 +2261,7 @@ sub delete_inbound_messages_bulk {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_list' } = { 
-    	summary => 'Delete a single list.',
+    	summary => 'Delete a single list',
         params => $params,
         returns => undef,
         };
@@ -2312,7 +2312,7 @@ sub delete_list {
 #
 # delete_list_avatar
 #
-# Delete an avatar for the list.
+# Delete an avatar for the list
 # 
 # @param int $id  (required)
 {
@@ -2324,7 +2324,7 @@ sub delete_list {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_list_avatar' } = { 
-    	summary => 'Delete an avatar for the list.',
+    	summary => 'Delete an avatar for the list',
         params => $params,
         returns => undef,
         };
@@ -2375,7 +2375,7 @@ sub delete_list_avatar {
 #
 # delete_list_contacts_bulk
 #
-# Delete contact from list by given ID(s) or all contacts from list.
+# Delete contact from list by given ID(s) or all contacts from list
 # 
 # @param DeleteListContactsBulkInputObject $delete_list_contacts_bulk_input_object  (required)
 # @param int $id  (required)
@@ -2393,7 +2393,7 @@ sub delete_list_avatar {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_list_contacts_bulk' } = { 
-    	summary => 'Delete contact from list by given ID(s) or all contacts from list.',
+    	summary => 'Delete contact from list by given ID(s) or all contacts from list',
         params => $params,
         returns => undef,
         };
@@ -2454,7 +2454,7 @@ sub delete_list_contacts_bulk {
 #
 # delete_lists_bulk
 #
-# Delete list by given ID(s) or delete all lists.
+# Delete list by given ID(s) or delete all lists
 # 
 # @param DeleteListsBulkInputObject $delete_lists_bulk_input_object  (required)
 {
@@ -2466,7 +2466,7 @@ sub delete_list_contacts_bulk {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_lists_bulk' } = { 
-    	summary => 'Delete list by given ID(s) or delete all lists.',
+    	summary => 'Delete list by given ID(s) or delete all lists',
         params => $params,
         returns => undef,
         };
@@ -5592,7 +5592,7 @@ sub get_contacts_autocomplete {
 #
 # get_contacts_by_list_id
 #
-# Fetch user contacts by given group id.
+# Get all contacts in a list
 # 
 # @param int $id Given group Id. (required)
 # @param int $page Fetch specified results page. (optional, default to 1)
@@ -5628,7 +5628,7 @@ sub get_contacts_autocomplete {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_contacts_by_list_id' } = { 
-    	summary => 'Fetch user contacts by given group id.',
+    	summary => 'Get all contacts in a list',
         params => $params,
         returns => 'GetContactsByListIdPaginatedResponse',
         };
@@ -6391,7 +6391,7 @@ sub get_list {
 #
 # get_list_contacts_ids
 #
-# Fetch all contacts IDs belonging to the list with ID.
+# Fetch all contacts IDs belonging to the list with ID
 # 
 # @param int $id  (required)
 {
@@ -6403,7 +6403,7 @@ sub get_list {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_list_contacts_ids' } = { 
-    	summary => 'Fetch all contacts IDs belonging to the list with ID.',
+    	summary => 'Fetch all contacts IDs belonging to the list with ID',
         params => $params,
         returns => 'GetListContactsIdsResponse',
         };
@@ -10331,7 +10331,7 @@ sub search_inbound_messages {
 #
 # search_lists
 #
-# Find contact lists by given parameters.
+# Find contact lists by given parameters
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
@@ -10385,7 +10385,7 @@ sub search_inbound_messages {
     },
     };
     __PACKAGE__->method_documentation->{ 'search_lists' } = { 
-    	summary => 'Find contact lists by given parameters.',
+    	summary => 'Find contact lists by given parameters',
         params => $params,
         returns => 'SearchListsPaginatedResponse',
         };
@@ -12076,7 +12076,7 @@ sub update_inbound_messages_notification_settings {
 #
 # update_list
 #
-# Update existing list.
+# Update existing list
 # 
 # @param int $id  (required)
 # @param UpdateListObject $update_list_object  (optional)
@@ -12094,7 +12094,7 @@ sub update_inbound_messages_notification_settings {
     },
     };
     __PACKAGE__->method_documentation->{ 'update_list' } = { 
-    	summary => 'Update existing list.',
+    	summary => 'Update existing list',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -12671,7 +12671,7 @@ sub upload_contact_avatar {
 #
 # upload_list_avatar
 #
-# Add an avatar for the list.
+# Add an avatar for the list
 # 
 # @param File $image List avatar. Should be PNG or JPG file not more than 10 MB (required)
 # @param int $id  (required)
@@ -12689,7 +12689,7 @@ sub upload_contact_avatar {
     },
     };
     __PACKAGE__->method_documentation->{ 'upload_list_avatar' } = { 
-    	summary => 'Add an avatar for the list.',
+    	summary => 'Add an avatar for the list',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
