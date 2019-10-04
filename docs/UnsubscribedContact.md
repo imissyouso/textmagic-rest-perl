@@ -8,11 +8,11 @@ use Net::Sms::TextMagicClient::Object::UnsubscribedContact;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | 
-**phone** | **string** |  | 
-**unsubscribe_time** | **DateTime** |  | 
-**first_name** | **string** |  | 
-**last_name** | **string** |  | 
+**id** | **int** | Unsubscribed contact ID. | 
+**phone** | **string** | Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164). | 
+**unsubscribe_time** | **DateTime** | Time when contact has been opted-out. | 
+**first_name** | **string** | Unsubscribed contact first name. | 
+**last_name** | **string** | Unsubscribed contact last name. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

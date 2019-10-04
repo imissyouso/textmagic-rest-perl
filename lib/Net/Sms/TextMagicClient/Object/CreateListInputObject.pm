@@ -153,7 +153,7 @@ __PACKAGE__->method_documentation({
     'shared' => {
     	datatype => 'boolean',
     	base_name => 'shared',
-    	description => 'Should new list be shared among all the sub-accounts? The default is 0 (false).',
+    	description => 'Should new list be **shared** among all the sub-accounts?',
     	format => '',
     	read_only => '',
     		},
@@ -167,7 +167,7 @@ __PACKAGE__->method_documentation({
     'is_default' => {
     	datatype => 'boolean',
     	base_name => 'isDefault',
-    	description => 'Is list default for new contacts (web only). Default is false.',
+    	description => 'Is list default for new contacts (web only).',
     	format => '',
     	read_only => '',
     		},

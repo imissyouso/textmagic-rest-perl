@@ -30,7 +30,7 @@ use Log::Any qw($log);
 use Date::Parse;
 use DateTime;
 
-use Net::Sms::TextMagicClient::Object::GetContactsAutocompleteResponse;
+use Net::Sms::TextMagicClient::Object::GetContactsAutocompleteResponseItem;
 
 use base ("Class::Accessor", "Class::Data::Inheritable");
 

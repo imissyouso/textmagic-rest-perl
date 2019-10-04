@@ -53,13 +53,13 @@ sub new {
 #
 # Assign contacts to a list
 # 
-# @param AssignContactsToListInputObject $assign_contacts_to_list_input_object Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user (required)
+# @param AssignContactsToListInputObject $assign_contacts_to_list_input_object  (required)
 # @param int $id  (required)
 {
     my $params = {
     'assign_contacts_to_list_input_object' => {
         data_type => 'AssignContactsToListInputObject',
-        description => 'Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user',
+        description => '',
         required => '1',
     },
     'id' => {
@@ -134,7 +134,7 @@ sub assign_contacts_to_list {
 #
 # block_contact
 #
-# Block contact from inbound and outbound communication by phone number.
+# Block contact by phone number
 # 
 # @param BlockContactInputObject $block_contact_input_object  (required)
 {
@@ -146,7 +146,7 @@ sub assign_contacts_to_list {
     },
     };
     __PACKAGE__->method_documentation->{ 'block_contact' } = { 
-    	summary => 'Block contact from inbound and outbound communication by phone number.',
+    	summary => 'Block contact by phone number',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -764,7 +764,7 @@ sub close_subaccount {
 #
 # create_contact
 #
-# Create a new contact from the submitted data.
+# Add a new contact
 # 
 # @param CreateContactInputObject $create_contact_input_object  (required)
 {
@@ -776,7 +776,7 @@ sub close_subaccount {
     },
     };
     __PACKAGE__->method_documentation->{ 'create_contact' } = { 
-    	summary => 'Create a new contact from the submitted data.',
+    	summary => 'Add a new contact',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -912,7 +912,7 @@ sub create_contact_note {
 #
 # create_custom_field
 #
-# Create a new custom field from the submitted data.
+# Add a new custom field
 # 
 # @param CreateCustomFieldInputObject $create_custom_field_input_object  (required)
 {
@@ -924,7 +924,7 @@ sub create_contact_note {
     },
     };
     __PACKAGE__->method_documentation->{ 'create_custom_field' } = { 
-    	summary => 'Create a new custom field from the submitted data.',
+    	summary => 'Add a new custom field',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -1316,13 +1316,13 @@ sub create_template {
 #
 # delete_all_contacts
 #
-# Delete all contacts.
+# Delete contacts (bulk)
 # 
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'delete_all_contacts' } = { 
-    	summary => 'Delete all contacts.',
+    	summary => 'Delete contacts (bulk)',
         params => $params,
         returns => undef,
         };
@@ -1591,7 +1591,7 @@ sub delete_chats_bulk {
 #
 # delete_contact
 #
-# Delete a single contact.
+# Delete a contact
 # 
 # @param int $id  (required)
 {
@@ -1603,7 +1603,7 @@ sub delete_chats_bulk {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_contact' } = { 
-    	summary => 'Delete a single contact.',
+    	summary => 'Delete a contact',
         params => $params,
         returns => undef,
         };
@@ -1654,7 +1654,7 @@ sub delete_contact {
 #
 # delete_contact_avatar
 #
-# Delete an avatar for the contact.
+# Delete an avatar
 # 
 # @param int $id  (required)
 {
@@ -1666,7 +1666,7 @@ sub delete_contact {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_contact_avatar' } = { 
-    	summary => 'Delete an avatar for the contact.',
+    	summary => 'Delete an avatar',
         params => $params,
         returns => undef,
         };
@@ -1859,7 +1859,7 @@ sub delete_contact_notes_bulk {
 #
 # delete_contacts_by_ids
 #
-# Delete contact by given ID(s) or delete all contacts.
+# Delete contacts by IDs (bulk)
 # 
 # @param DeleteContactsByIdsInputObject $delete_contacts_by_ids_input_object  (required)
 {
@@ -1871,7 +1871,7 @@ sub delete_contact_notes_bulk {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_contacts_by_ids' } = { 
-    	summary => 'Delete contact by given ID(s) or delete all contacts.',
+    	summary => 'Delete contacts by IDs (bulk)',
         params => $params,
         returns => undef,
         };
@@ -1922,13 +1922,13 @@ sub delete_contacts_by_ids {
 #
 # Unassign contacts from a list
 # 
-# @param DeleteContacsFromListObject $delete_contacs_from_list_object Contact ID(s), separated by comma (required)
+# @param DeleteContacsFromListObject $delete_contacs_from_list_object  (required)
 # @param int $id  (required)
 {
     my $params = {
     'delete_contacs_from_list_object' => {
         data_type => 'DeleteContacsFromListObject',
-        description => 'Contact ID(s), separated by comma',
+        description => '',
         required => '1',
     },
     'id' => {
@@ -1999,7 +1999,7 @@ sub delete_contacts_from_list {
 #
 # delete_custom_field
 #
-# Delete a single custom field.
+# Delete a custom field
 # 
 # @param int $id  (required)
 {
@@ -2011,7 +2011,7 @@ sub delete_contacts_from_list {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_custom_field' } = { 
-    	summary => 'Delete a single custom field.',
+    	summary => 'Delete a custom field',
         params => $params,
         returns => undef,
         };
@@ -2249,7 +2249,7 @@ sub delete_inbound_messages_bulk {
 #
 # delete_list
 #
-# Delete a single list
+# Delete a list
 # 
 # @param int $id  (required)
 {
@@ -2261,7 +2261,7 @@ sub delete_inbound_messages_bulk {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_list' } = { 
-    	summary => 'Delete a single list',
+    	summary => 'Delete a list',
         params => $params,
         returns => undef,
         };
@@ -2375,7 +2375,7 @@ sub delete_list_avatar {
 #
 # delete_list_contacts_bulk
 #
-# Delete contact from list by given ID(s) or all contacts from list
+# Delete contacts from list (bulk)
 # 
 # @param DeleteListContactsBulkInputObject $delete_list_contacts_bulk_input_object  (required)
 # @param int $id  (required)
@@ -2393,7 +2393,7 @@ sub delete_list_avatar {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_list_contacts_bulk' } = { 
-    	summary => 'Delete contact from list by given ID(s) or all contacts from list',
+    	summary => 'Delete contacts from list (bulk)',
         params => $params,
         returns => undef,
         };
@@ -2454,7 +2454,7 @@ sub delete_list_contacts_bulk {
 #
 # delete_lists_bulk
 #
-# Delete list by given ID(s) or delete all lists
+# Delete lists (bulk)
 # 
 # @param DeleteListsBulkInputObject $delete_lists_bulk_input_object  (required)
 {
@@ -2466,7 +2466,7 @@ sub delete_list_contacts_bulk {
     },
     };
     __PACKAGE__->method_documentation->{ 'delete_lists_bulk' } = { 
-    	summary => 'Delete list by given ID(s) or delete all lists',
+    	summary => 'Delete lists (bulk)',
         params => $params,
         returns => undef,
         };
@@ -4410,7 +4410,7 @@ sub get_balance_notification_settings {
 #
 # get_blocked_contacts
 #
-# Get blocked contacts.
+# Get blocked contacts
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
@@ -4446,7 +4446,7 @@ sub get_balance_notification_settings {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_blocked_contacts' } = { 
-    	summary => 'Get blocked contacts.',
+    	summary => 'Get blocked contacts',
         params => $params,
         returns => 'GetBlockedContactsPaginatedResponse',
         };
@@ -4979,7 +4979,7 @@ sub get_chat_messages {
 #
 # get_contact
 #
-# Get a single contact.
+# Get the details of a specific contact
 # 
 # @param int $id The contact id (required)
 {
@@ -4991,7 +4991,7 @@ sub get_chat_messages {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_contact' } = { 
-    	summary => 'Get a single contact.',
+    	summary => 'Get the details of a specific contact',
         params => $params,
         returns => 'Contact',
         };
@@ -5046,7 +5046,7 @@ sub get_contact {
 #
 # get_contact_by_phone
 #
-# Get a single contact by phone number.
+# Get the details of a specific contact by phone number
 # 
 # @param string $phone  (required)
 {
@@ -5058,7 +5058,7 @@ sub get_contact {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_contact_by_phone' } = { 
-    	summary => 'Get a single contact by phone number.',
+    	summary => 'Get the details of a specific contact by phone number',
         params => $params,
         returns => 'Contact',
         };
@@ -5401,7 +5401,7 @@ sub get_contact_notes {
 #
 # get_contacts
 #
-# Get all user contacts.
+# Get all contacts
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
@@ -5437,7 +5437,7 @@ sub get_contact_notes {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_contacts' } = { 
-    	summary => 'Get all user contacts.',
+    	summary => 'Get all contacts',
         params => $params,
         returns => 'GetContactsPaginatedResponse',
         };
@@ -5505,7 +5505,7 @@ sub get_contacts {
 #
 # get_contacts_autocomplete
 #
-# Get contacts autocomplete suggestions by given search term.
+# Get contacts autocomplete suggestions
 # 
 # @param string $query Find recipients by specified search query (required)
 # @param int $limit The number of results per page. (optional, default to 10)
@@ -5529,7 +5529,7 @@ sub get_contacts {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_contacts_autocomplete' } = { 
-    	summary => 'Get contacts autocomplete suggestions by given search term.',
+    	summary => 'Get contacts autocomplete suggestions',
         params => $params,
         returns => 'GetContactsAutocompleteResponse',
         };
@@ -5801,7 +5801,7 @@ sub get_current_user {
 #
 # get_custom_field
 #
-# Get a single custom field.
+# Get the details of a specific custom field
 # 
 # @param int $id  (required)
 {
@@ -5813,7 +5813,7 @@ sub get_current_user {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_custom_field' } = { 
-    	summary => 'Get a single custom field.',
+    	summary => 'Get the details of a specific custom field',
         params => $params,
         returns => 'UserCustomField',
         };
@@ -5868,7 +5868,7 @@ sub get_custom_field {
 #
 # get_custom_fields
 #
-# Get all contact custom fields.
+# Get all custom fields
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
@@ -5886,7 +5886,7 @@ sub get_custom_field {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_custom_fields' } = { 
-    	summary => 'Get all contact custom fields.',
+    	summary => 'Get all custom fields',
         params => $params,
         returns => 'GetCustomFieldsPaginatedResponse',
         };
@@ -6055,7 +6055,7 @@ sub get_disallowed_rules {
 #
 # get_favourites
 #
-# Get favorite contacts and lists.
+# Get favorite contacts and lists
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
@@ -6079,7 +6079,7 @@ sub get_disallowed_rules {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_favourites' } = { 
-    	summary => 'Get favorite contacts and lists.',
+    	summary => 'Get favorite contacts and lists',
         params => $params,
         returns => 'GetFavouritesPaginatedResponse',
         };
@@ -6391,7 +6391,7 @@ sub get_list {
 #
 # get_list_contacts_ids
 #
-# Fetch all contacts IDs belonging to the list with ID
+# Get all contacts IDs in a list
 # 
 # @param int $id  (required)
 {
@@ -6403,7 +6403,7 @@ sub get_list {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_list_contacts_ids' } = { 
-    	summary => 'Fetch all contacts IDs belonging to the list with ID',
+    	summary => 'Get all contacts IDs in a list',
         params => $params,
         returns => 'GetListContactsIdsResponse',
         };
@@ -6573,7 +6573,7 @@ sub get_lists {
 #
 # get_lists_of_contact
 #
-# Return lists which contact belongs to.
+# Get contact's lists
 # 
 # @param int $id  (required)
 # @param int $page Fetch specified results page. (optional, default to 1)
@@ -6597,7 +6597,7 @@ sub get_lists {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_lists_of_contact' } = { 
-    	summary => 'Return lists which contact belongs to.',
+    	summary => 'Get contact&#39;s lists',
         params => $params,
         returns => 'GetListsOfContactPaginatedResponse',
         };
@@ -8832,7 +8832,7 @@ sub get_unread_messages_total {
 #
 # get_unsubscribed_contact
 #
-# Get a single unsubscribed contact.
+# Get the details of a specific unsubscribed contact
 # 
 # @param int $id  (required)
 {
@@ -8844,7 +8844,7 @@ sub get_unread_messages_total {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_unsubscribed_contact' } = { 
-    	summary => 'Get a single unsubscribed contact.',
+    	summary => 'Get the details of a specific unsubscribed contact',
         params => $params,
         returns => 'UnsubscribedContact',
         };
@@ -8899,7 +8899,7 @@ sub get_unsubscribed_contact {
 #
 # get_unsubscribers
 #
-# Get all contact have unsubscribed from your communication.
+# Get all unsubscribed contacts
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
@@ -8917,7 +8917,7 @@ sub get_unsubscribed_contact {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_unsubscribers' } = { 
-    	summary => 'Get all contact have unsubscribed from your communication.',
+    	summary => 'Get all unsubscribed contacts',
         params => $params,
         returns => 'GetUnsubscribersPaginatedResponse',
         };
@@ -10035,7 +10035,7 @@ sub search_chats_by_receipent {
 #
 # search_contacts
 #
-# Find user contacts by given parameters.
+# Find contacts by given criteria
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
@@ -10107,7 +10107,7 @@ sub search_chats_by_receipent {
     },
     };
     __PACKAGE__->method_documentation->{ 'search_contacts' } = { 
-    	summary => 'Find user contacts by given parameters.',
+    	summary => 'Find contacts by given criteria',
         params => $params,
         returns => 'SearchContactsPaginatedResponse',
         };
@@ -10331,7 +10331,7 @@ sub search_inbound_messages {
 #
 # search_lists
 #
-# Find contact lists by given parameters
+# Find lists by given criteria
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
@@ -10385,7 +10385,7 @@ sub search_inbound_messages {
     },
     };
     __PACKAGE__->method_documentation->{ 'search_lists' } = { 
-    	summary => 'Find contact lists by given parameters',
+    	summary => 'Find lists by given criteria',
         params => $params,
         returns => 'SearchListsPaginatedResponse',
         };
@@ -11248,7 +11248,7 @@ sub unblock_contact {
 #
 # unblock_contacts_bulk
 #
-# Unblock several contacts by blocked contact ids or unblock all contacts
+# Unblock contacts (bulk)
 # 
 # @param UnblockContactsBulkInputObject $unblock_contacts_bulk_input_object  (required)
 {
@@ -11260,7 +11260,7 @@ sub unblock_contact {
     },
     };
     __PACKAGE__->method_documentation->{ 'unblock_contacts_bulk' } = { 
-    	summary => 'Unblock several contacts by blocked contact ids or unblock all contacts',
+    	summary => 'Unblock contacts (bulk)',
         params => $params,
         returns => undef,
         };
@@ -11370,7 +11370,7 @@ sub unmute_chats_bulk {
 #
 # unsubscribe_contact
 #
-# Unsubscribe contact from your communication by phone number.
+# Manually unsubscribe a contact
 # 
 # @param UnsubscribeContactInputObject $unsubscribe_contact_input_object  (required)
 {
@@ -11382,7 +11382,7 @@ sub unmute_chats_bulk {
     },
     };
     __PACKAGE__->method_documentation->{ 'unsubscribe_contact' } = { 
-    	summary => 'Unsubscribe contact from your communication by phone number.',
+    	summary => 'Manually unsubscribe a contact',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -11618,7 +11618,7 @@ sub update_chat_desktop_notification_settings {
 #
 # update_contact
 #
-# Update existing contact.
+# Edit a contact
 # 
 # @param UpdateContactInputObject $update_contact_input_object  (required)
 # @param int $id  (required)
@@ -11636,7 +11636,7 @@ sub update_chat_desktop_notification_settings {
     },
     };
     __PACKAGE__->method_documentation->{ 'update_contact' } = { 
-    	summary => 'Update existing contact.',
+    	summary => 'Edit a contact',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -11849,7 +11849,7 @@ sub update_current_user {
 #
 # update_custom_field
 #
-# Update existing custom field.
+# Edit a custom field
 # 
 # @param UpdateCustomFieldInputObject $update_custom_field_input_object  (required)
 # @param int $id  (required)
@@ -11867,7 +11867,7 @@ sub update_current_user {
     },
     };
     __PACKAGE__->method_documentation->{ 'update_custom_field' } = { 
-    	summary => 'Update existing custom field.',
+    	summary => 'Edit a custom field',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -11932,7 +11932,7 @@ sub update_custom_field {
 #
 # update_custom_field_value
 #
-# Update contact's custom field value.
+# Edit the custom field value of a specified contact
 # 
 # @param UpdateCustomFieldValueInputObject $update_custom_field_value_input_object  (required)
 # @param string $id  (required)
@@ -11950,7 +11950,7 @@ sub update_custom_field {
     },
     };
     __PACKAGE__->method_documentation->{ 'update_custom_field_value' } = { 
-    	summary => 'Update contact&#39;s custom field value.',
+    	summary => 'Edit the custom field value of a specified contact',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -12076,7 +12076,7 @@ sub update_inbound_messages_notification_settings {
 #
 # update_list
 #
-# Update existing list
+# Edit a list
 # 
 # @param int $id  (required)
 # @param UpdateListObject $update_list_object  (optional)
@@ -12094,7 +12094,7 @@ sub update_inbound_messages_notification_settings {
     },
     };
     __PACKAGE__->method_documentation->{ 'update_list' } = { 
-    	summary => 'Update existing list',
+    	summary => 'Edit a list',
         params => $params,
         returns => 'ResourceLinkResponse',
         };
@@ -12587,7 +12587,7 @@ sub upload_avatar {
 #
 # upload_contact_avatar
 #
-# Add an avatar for the contact.
+# Upload an avatar
 # 
 # @param File $image Contact avatar. Should be PNG or JPG file not more than 10 MB (required)
 # @param int $id  (required)
@@ -12605,7 +12605,7 @@ sub upload_avatar {
     },
     };
     __PACKAGE__->method_documentation->{ 'upload_contact_avatar' } = { 
-    	summary => 'Add an avatar for the contact.',
+    	summary => 'Upload an avatar',
         params => $params,
         returns => 'ResourceLinkResponse',
         };

@@ -8,14 +8,14 @@ use Net::Sms::TextMagicClient::Object::List;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | 
-**name** | **string** |  | 
-**description** | **string** |  | 
+**id** | **int** | List ID. | 
+**name** | **string** | List name. | 
+**description** | **string** | List description. | 
 **favorited** | **boolean** |  | 
-**members_count** | **int** |  | 
+**members_count** | **int** | List members count. | 
 **user** | [**User**](User.md) |  | 
 **service** | **boolean** |  | 
-**shared** | **boolean** |  | 
+**shared** | **boolean** | Is the list **shared** among all sub-accounts? | 
 **avatar** | [**ListImage**](ListImage.md) |  | 
 **is_default** | **boolean** |  | 
 

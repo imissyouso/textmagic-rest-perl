@@ -8,16 +8,16 @@ use Net::Sms::TextMagicClient::Object::Contact;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | 
+**id** | **int** | Contact ID. | 
 **favorited** | **boolean** |  | 
 **blocked** | **boolean** |  | 
-**first_name** | **string** |  | 
-**last_name** | **string** |  | 
-**company_name** | **string** |  | 
-**phone** | **string** |  | 
-**email** | **string** |  | 
-**country** | [**Country**](Country.md) |  | 
-**custom_fields** | [**ARRAY[ContactCustomField]**](ContactCustomField.md) |  | 
+**first_name** | **string** | Contact first name. | 
+**last_name** | **string** | Contact last name. | 
+**company_name** | **string** | Company name. | 
+**phone** | **string** | Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164). | 
+**email** | **string** | Contact email address. | 
+**country** | [**Country**](Country.md) | Contact country. | 
+**custom_fields** | [**ARRAY[ContactCustomField]**](ContactCustomField.md) | See [Custom Fields](/docs/api/custom-fields/) section. | 
 **user** | [**User**](User.md) |  | 
 **lists** | [**ARRAY[List]**](List.md) |  | 
 **phone_type** | **string** |  | 

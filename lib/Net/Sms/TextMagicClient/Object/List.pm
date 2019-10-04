@@ -148,21 +148,21 @@ __PACKAGE__->method_documentation({
     'id' => {
     	datatype => 'int',
     	base_name => 'id',
-    	description => '',
+    	description => 'List ID.',
     	format => '',
     	read_only => '',
     		},
     'name' => {
     	datatype => 'string',
     	base_name => 'name',
-    	description => '',
+    	description => 'List name.',
     	format => '',
     	read_only => '',
     		},
     'description' => {
     	datatype => 'string',
     	base_name => 'description',
-    	description => '',
+    	description => 'List description.',
     	format => '',
     	read_only => '',
     		},
@@ -176,7 +176,7 @@ __PACKAGE__->method_documentation({
     'members_count' => {
     	datatype => 'int',
     	base_name => 'membersCount',
-    	description => '',
+    	description => 'List members count.',
     	format => '',
     	read_only => '',
     		},
@@ -197,7 +197,7 @@ __PACKAGE__->method_documentation({
     'shared' => {
     	datatype => 'boolean',
     	base_name => 'shared',
-    	description => '',
+    	description => 'Is the list **shared** among all sub-accounts?',
     	format => '',
     	read_only => '',
     		},

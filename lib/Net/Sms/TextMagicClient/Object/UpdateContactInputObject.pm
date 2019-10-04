@@ -160,14 +160,14 @@ __PACKAGE__->method_documentation({
     'phone' => {
     	datatype => 'string',
     	base_name => 'phone',
-    	description => 'Contact phone number in E.164 (international) format without leading + or zeroes',
+    	description => 'Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).',
     	format => '',
     	read_only => '',
     		},
     'email' => {
     	datatype => 'string',
     	base_name => 'email',
-    	description => 'Contact email',
+    	description => 'Contact email address.',
     	format => '',
     	read_only => '',
     		},
@@ -181,7 +181,7 @@ __PACKAGE__->method_documentation({
     'lists' => {
     	datatype => 'string',
     	base_name => 'lists',
-    	description => 'Array of list resources id contact will be assigned to',
+    	description => 'Comma-separated [list](/docs/api/lists/) ID. Each contact must be assigned to at least one list.',
     	format => '',
     	read_only => '',
     		},

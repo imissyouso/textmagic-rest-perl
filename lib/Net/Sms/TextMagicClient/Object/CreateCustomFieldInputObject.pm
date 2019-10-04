@@ -146,7 +146,7 @@ __PACKAGE__->method_documentation({
     'name' => {
     	datatype => 'string',
     	base_name => 'name',
-    	description => 'Custom field name',
+    	description => 'Custom field name.',
     	format => '',
     	read_only => '',
     		},

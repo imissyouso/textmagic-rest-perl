@@ -167,7 +167,7 @@ __PACKAGE__->method_documentation({
     'offset' => {
     	datatype => 'int',
     	base_name => 'offset',
-    	description => '',
+    	description => 'Offset from UTC time in seconds. In this example it is 21600/60/60&#x3D;6 hours.',
     	format => '',
     	read_only => '',
     		},
