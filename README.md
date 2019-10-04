@@ -1,3 +1,4 @@
+[comment]: <> (HEAD)
 # TextMagic Perl SDK
 
 This library provides you with an easy way of sending SMS and receiving replies by integrating TextMagic SMS Gateway into your Perl application.
@@ -7,13 +8,14 @@ TextMagic’s application programming interface (API) provides the communication
 
 For detailed documentation and more examples, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/).
 
+[comment]: <> (/HEAD)
 ## Installation
 
 ```bash
-wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.473.tar.gz && \
-tar zxf v2.0.473.tar.gz && \
-rm -f v2.0.473.tar.gz && \
-cd textmagic-rest-perl-2.0.473 && \
+wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.475.tar.gz && \
+tar zxf v2.0.475.tar.gz && \
+rm -f v2.0.475.tar.gz && \
+cd textmagic-rest-perl-2.0.475 && \
 perl Makefile.pl && \
 make && \
 make install && \
@@ -86,6 +88,8 @@ if ($@) {
 }
 
 ```
-
+[comment]: <> (FOOTER)
 ## License
 The library is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+[comment]: <> (/FOOTER)
