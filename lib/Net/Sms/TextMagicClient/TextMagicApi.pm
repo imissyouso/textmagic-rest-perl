@@ -6898,7 +6898,7 @@ sub get_message_preview {
 #
 # get_message_price
 #
-# Check price
+# Check message price
 # 
 # @param int $include_blocked Should we show pricing for the blocked contacts. (optional, default to 0)
 # @param string $text Message text. Required if template_id is not set (optional)
@@ -7012,7 +7012,7 @@ sub get_message_preview {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_message_price' } = { 
-    	summary => 'Check price',
+    	summary => 'Check message price',
         params => $params,
         returns => 'GetMessagePriceResponse',
         };
