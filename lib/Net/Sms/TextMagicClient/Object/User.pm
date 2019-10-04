@@ -155,6 +155,13 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'display_time_format' => {
+    	datatype => 'string',
+    	base_name => 'displayTimeFormat',
+    	description => 'Format for representation of time',
+    	format => '',
+    	read_only => '',
+    		},
     'username' => {
     	datatype => 'string',
     	base_name => 'username',
@@ -264,6 +271,7 @@ __PACKAGE__->method_documentation({
 
 __PACKAGE__->swagger_types( {
     'id' => 'int',
+    'display_time_format' => 'string',
     'username' => 'string',
     'first_name' => 'string',
     'last_name' => 'string',
@@ -283,6 +291,7 @@ __PACKAGE__->swagger_types( {
 
 __PACKAGE__->attribute_map( {
     'id' => 'id',
+    'display_time_format' => 'displayTimeFormat',
     'username' => 'username',
     'first_name' => 'firstName',
     'last_name' => 'lastName',

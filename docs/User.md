@@ -9,6 +9,7 @@ use Net::Sms::TextMagicClient::Object::User;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | User ID. | 
+**display_time_format** | **string** | Format for representation of time | [optional] 
 **username** | **string** | Username. | 
 **first_name** | **string** | Account first name. | 
 **last_name** | **string** | Account last name. | 

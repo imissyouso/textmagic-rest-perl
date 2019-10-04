@@ -152,6 +152,13 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'display_time_format' => {
+    	datatype => 'string',
+    	base_name => 'displayTimeFormat',
+    	description => 'Format for representation of time',
+    	format => '',
+    	read_only => '',
+    		},
     'phone' => {
     	datatype => 'string',
     	base_name => 'phone',
@@ -198,6 +205,7 @@ __PACKAGE__->method_documentation({
 
 __PACKAGE__->swagger_types( {
     'id' => 'int',
+    'display_time_format' => 'string',
     'phone' => 'string',
     'user' => 'User',
     'purchased_at' => 'DateTime',
@@ -208,6 +216,7 @@ __PACKAGE__->swagger_types( {
 
 __PACKAGE__->attribute_map( {
     'id' => 'id',
+    'display_time_format' => 'displayTimeFormat',
     'phone' => 'phone',
     'user' => 'user',
     'purchased_at' => 'purchasedAt',

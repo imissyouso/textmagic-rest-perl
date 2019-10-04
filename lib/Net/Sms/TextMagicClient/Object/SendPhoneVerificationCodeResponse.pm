@@ -31,6 +31,7 @@ use Date::Parse;
 use DateTime;
 
 use Net::Sms::TextMagicClient::Object::Number;
+use Net::Sms::TextMagicClient::Object::UUID;
 
 use base ("Class::Accessor", "Class::Data::Inheritable");
 
@@ -145,7 +146,7 @@ __PACKAGE__->class_documentation({description => '',
 
 __PACKAGE__->method_documentation({
     'verify_id' => {
-    	datatype => 'string',
+    	datatype => 'UUID',
     	base_name => 'verifyId',
     	description => 'The ID of a verification request. This is required to finish the verification request in the next step.',
     	format => '',
@@ -161,7 +162,7 @@ __PACKAGE__->method_documentation({
 });
 
 __PACKAGE__->swagger_types( {
-    'verify_id' => 'string',
+    'verify_id' => 'UUID',
     'price' => 'Number'
 } );
 
