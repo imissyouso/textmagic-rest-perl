@@ -5,7 +5,7 @@
 use Net::Sms::TextMagicClient::Object::TextMagicApi;
 ```
 
-All URIs are relative to *http://rest.textmagic.com*
+All URIs are relative to *https://rest.textmagic.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -2916,7 +2916,7 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $status = 'status_example'; # string | Fetch only (a)ctive, (c)losed or (d)eleted chats
+my $status = '"a"'; # string | Fetch only (a)ctive, (c)losed or (d)eleted chats
 my $page = 56; # int | Fetch specified results page.
 my $limit = 56; # int | The number of results per page.
 my $order_by = 'order_by_example'; # string | Order results by some field. Default is id

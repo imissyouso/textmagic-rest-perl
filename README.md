@@ -6,16 +6,15 @@ This library provides you with an easy way of sending SMS and receiving replies 
 ## What is TextMagic?
 TextMagic’s application programming interface (API) provides the communication link between your application and TextMagic’s SMS Gateway, allowing you to send and receive text messages and to check the delivery status of text messages you’ve already sent.
 
-For detailed documentation and more examples, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/).
 
 [comment]: <> (/HEAD)
 ## Installation
 
 ```bash
-wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.496.tar.gz && \
-tar zxf v2.0.496.tar.gz && \
-rm -f v2.0.496.tar.gz && \
-cd textmagic-rest-perl-2.0.496 && \
+wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.500.tar.gz && \
+tar zxf v2.0.500.tar.gz && \
+rm -f v2.0.500.tar.gz && \
+cd textmagic-rest-perl-2.0.500 && \
 perl Makefile.pl && \
 make && \
 make install && \
