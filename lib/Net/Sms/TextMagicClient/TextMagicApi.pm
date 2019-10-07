@@ -3348,18 +3348,18 @@ sub do_auth {
 #
 # Carrier Lookup
 # 
-# @param string $phone  (required)
-# @param string $country Country code for local formatted numbers (optional, default to US)
+# @param string $phone Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers).  (required)
+# @param string $country This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.  (optional)
 {
     my $params = {
     'phone' => {
         data_type => 'string',
-        description => '',
+        description => 'Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). ',
         required => '1',
     },
     'country' => {
         data_type => 'string',
-        description => 'Country code for local formatted numbers',
+        description => 'This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. ',
         required => '0',
     },
     };
@@ -3424,19 +3424,19 @@ sub do_carrier_lookup {
 #
 # do_email_lookup
 #
-# Validate Email address using Email Lookup tool
+# Email Lookup
 # 
-# @param string $email  (required)
+# @param string $email Email address. (required)
 {
     my $params = {
     'email' => {
         data_type => 'string',
-        description => '',
+        description => 'Email address.',
         required => '1',
     },
     };
     __PACKAGE__->method_documentation->{ 'do_email_lookup' } = { 
-    	summary => 'Validate Email address using Email Lookup tool',
+    	summary => 'Email Lookup',
         params => $params,
         returns => 'DoEmailLookupResponse',
         };
@@ -5703,13 +5703,13 @@ sub get_contacts_by_list_id {
 #
 # get_countries
 #
-# Return list of countries.
+# Get countries
 # 
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'get_countries' } = { 
-    	summary => 'Return list of countries.',
+    	summary => 'Get countries',
         params => $params,
         returns => 'GetCountriesResponse',
         };
@@ -8723,7 +8723,7 @@ sub get_template {
 #
 # get_timezones
 #
-# Return all available timezone IDs.
+# Get timezones
 # 
 # @param int $full Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)
 {
@@ -8735,7 +8735,7 @@ sub get_template {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_timezones' } = { 
-    	summary => 'Return all available timezone IDs.',
+    	summary => 'Get timezones',
         params => $params,
         returns => 'GetTimezonesResponse',
         };
@@ -9471,13 +9471,13 @@ sub mute_chats_bulk {
 #
 # ping
 #
-# Just does a pong.
+# Ping
 # 
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'ping' } = { 
-    	summary => 'Just does a pong.',
+    	summary => 'Ping',
         params => $params,
         returns => 'PingResponse',
         };

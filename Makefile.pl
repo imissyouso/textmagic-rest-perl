@@ -2,7 +2,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME            => 'Net::Sms::TextMagicClient',
-    VERSION => 2.0.488,
+    VERSION => 2.0.496,
     PREREQ_PM  => {
         "URI::Query" => 0,
         "Log::Any" => 0,
