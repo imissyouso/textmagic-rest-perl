@@ -26,7 +26,7 @@ use utf8;
 use Log::Any qw($log);
 use Carp;
 
-use constant VERSION => '2.0.501';
+use constant VERSION => '2.0.509';
 
 =head1 Name
 
@@ -84,7 +84,7 @@ String. The OAuth access token.
 
 String. The base URL of the API
 
-default: https://rest.textmagic.com
+default: http://rest.textmagic.com
 
 =back
 
@@ -110,7 +110,7 @@ sub new {
 	$p{access_token} //= '';
 
 	# base_url
-        $p{base_url} //= 'https://rest.textmagic.com';
+        $p{base_url} //= 'http://rest.textmagic.com';
 
 	return bless \%p => $self;
 }
