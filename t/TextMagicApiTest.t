@@ -55,27 +55,11 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# cancel_survey test
-#
-{
-    my $id = undef; # replace NULL with a proper value
-    my $result = $api->cancel_survey(id => $id);
-}
-
-#
 # cancel_verification test
 #
 {
     my $verify_id = undef; # replace NULL with a proper value
     my $result = $api->cancel_verification(verify_id => $verify_id);
-}
-
-#
-# check_phone_verification_code test
-#
-{
-    my $check_phone_verification_code_input_object = undef; # replace NULL with a proper value
-    my $result = $api->check_phone_verification_code(check_phone_verification_code_input_object => $check_phone_verification_code_input_object);
 }
 
 #
@@ -149,31 +133,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $create_list_input_object = undef; # replace NULL with a proper value
     my $result = $api->create_list(create_list_input_object => $create_list_input_object);
-}
-
-#
-# create_push_token test
-#
-{
-    my $create_push_token_input_object = undef; # replace NULL with a proper value
-    my $result = $api->create_push_token(create_push_token_input_object => $create_push_token_input_object);
-}
-
-#
-# create_survey test
-#
-{
-    my $create_survey_input_object = undef; # replace NULL with a proper value
-    my $result = $api->create_survey(create_survey_input_object => $create_survey_input_object);
-}
-
-#
-# create_survey_node test
-#
-{
-    my $create_survey_node_input_object = undef; # replace NULL with a proper value
-    my $id = undef; # replace NULL with a proper value
-    my $result = $api->create_survey_node(create_survey_node_input_object => $create_survey_node_input_object, id => $id);
 }
 
 #
@@ -370,15 +329,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# delete_push_token test
-#
-{
-    my $type = undef; # replace NULL with a proper value
-    my $device_id = undef; # replace NULL with a proper value
-    my $result = $api->delete_push_token(type => $type, device_id => $device_id);
-}
-
-#
 # delete_scheduled_message test
 #
 {
@@ -403,22 +353,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# delete_survey test
-#
-{
-    my $id = undef; # replace NULL with a proper value
-    my $result = $api->delete_survey(id => $id);
-}
-
-#
-# delete_survey_node test
-#
-{
-    my $id = undef; # replace NULL with a proper value
-    my $result = $api->delete_survey_node(id => $id);
-}
-
-#
 # delete_template test
 #
 {
@@ -432,14 +366,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $delete_templates_bulk_input_object = undef; # replace NULL with a proper value
     my $result = $api->delete_templates_bulk(delete_templates_bulk_input_object => $delete_templates_bulk_input_object);
-}
-
-#
-# do_auth test
-#
-{
-    my $do_auth_input_object = undef; # replace NULL with a proper value
-    my $result = $api->do_auth(do_auth_input_object => $do_auth_input_object);
 }
 
 #
@@ -457,14 +383,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $email = undef; # replace NULL with a proper value
     my $result = $api->do_email_lookup(email => $email);
-}
-
-#
-# duplicate_survey test
-#
-{
-    my $id = undef; # replace NULL with a proper value
-    my $result = $api->duplicate_survey(id => $id);
 }
 
 #
@@ -943,13 +861,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# get_push_tokens test
-#
-{
-    my $result = $api->get_push_tokens();
-}
-
-#
 # get_scheduled_message test
 #
 {
@@ -1018,39 +929,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
     my $page = undef; # replace NULL with a proper value
     my $limit = undef; # replace NULL with a proper value
     my $result = $api->get_subaccounts_with_tokens(get_subaccounts_with_tokens_input_object => $get_subaccounts_with_tokens_input_object, page => $page, limit => $limit);
-}
-
-#
-# get_survey test
-#
-{
-    my $id = undef; # replace NULL with a proper value
-    my $result = $api->get_survey(id => $id);
-}
-
-#
-# get_survey_node test
-#
-{
-    my $id = undef; # replace NULL with a proper value
-    my $result = $api->get_survey_node(id => $id);
-}
-
-#
-# get_survey_nodes test
-#
-{
-    my $id = undef; # replace NULL with a proper value
-    my $result = $api->get_survey_nodes(id => $id);
-}
-
-#
-# get_surveys test
-#
-{
-    my $page = undef; # replace NULL with a proper value
-    my $limit = undef; # replace NULL with a proper value
-    my $result = $api->get_surveys(page => $page, limit => $limit);
 }
 
 #
@@ -1128,14 +1006,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# merge_survey_nodes test
-#
-{
-    my $merge_survey_nodes_input_object = undef; # replace NULL with a proper value
-    my $result = $api->merge_survey_nodes(merge_survey_nodes_input_object => $merge_survey_nodes_input_object);
-}
-
-#
 # mute_chat test
 #
 {
@@ -1173,14 +1043,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $request_sender_id_input_object = undef; # replace NULL with a proper value
     my $result = $api->request_sender_id(request_sender_id_input_object => $request_sender_id_input_object);
-}
-
-#
-# reset_survey test
-#
-{
-    my $id = undef; # replace NULL with a proper value
-    my $result = $api->reset_survey(id => $id);
 }
 
 #
@@ -1303,25 +1165,11 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# send_email_verification_code test
-#
-{
-    my $result = $api->send_email_verification_code();
-}
-
-#
 # send_message test
 #
 {
     my $send_message_input_object = undef; # replace NULL with a proper value
     my $result = $api->send_message(send_message_input_object => $send_message_input_object);
-}
-
-#
-# send_phone_verification_code test
-#
-{
-    my $result = $api->send_phone_verification_code();
 }
 
 #
@@ -1338,14 +1186,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $set_chat_status_input_object = undef; # replace NULL with a proper value
     my $result = $api->set_chat_status(set_chat_status_input_object => $set_chat_status_input_object);
-}
-
-#
-# start_survey test
-#
-{
-    my $id = undef; # replace NULL with a proper value
-    my $result = $api->start_survey(id => $id);
 }
 
 #
@@ -1466,37 +1306,11 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# update_password test
-#
-{
-    my $update_password_input_object = undef; # replace NULL with a proper value
-    my $result = $api->update_password(update_password_input_object => $update_password_input_object);
-}
-
-#
 # update_sender_setting test
 #
 {
     my $update_sender_setting_input_object = undef; # replace NULL with a proper value
     my $result = $api->update_sender_setting(update_sender_setting_input_object => $update_sender_setting_input_object);
-}
-
-#
-# update_survey test
-#
-{
-    my $update_survey_input_object = undef; # replace NULL with a proper value
-    my $id = undef; # replace NULL with a proper value
-    my $result = $api->update_survey(update_survey_input_object => $update_survey_input_object, id => $id);
-}
-
-#
-# update_survey_node test
-#
-{
-    my $update_survey_node_input_object = undef; # replace NULL with a proper value
-    my $id = undef; # replace NULL with a proper value
-    my $result = $api->update_survey_node(update_survey_node_input_object => $update_survey_node_input_object, id => $id);
 }
 
 #
