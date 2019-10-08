@@ -4628,55 +4628,6 @@ sub get_callback_settings {
 }
 
 #
-# get_calls_prices
-#
-# Check pricing for a inbound/outbound call.
-# 
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'get_calls_prices' } = { 
-    	summary => 'Check pricing for a inbound/outbound call.',
-        params => $params,
-        returns => 'GetCallsPricesResponse',
-        };
-}
-# @return GetCallsPricesResponse
-#
-sub get_calls_prices {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/api/v2/calls/price';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw(BasicAuth )];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('GetCallsPricesResponse', $response);
-    return $_response_object;
-}
-
-#
 # get_chat
 #
 # Get a single chat
@@ -5172,73 +5123,6 @@ sub get_contact_if_blocked {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('Contact', $response);
-    return $_response_object;
-}
-
-#
-# get_contact_import_session_progress
-#
-# Get contact import session progress.
-# 
-# @param int $id  (required)
-{
-    my $params = {
-    'id' => {
-        data_type => 'int',
-        description => '',
-        required => '1',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'get_contact_import_session_progress' } = { 
-    	summary => 'Get contact import session progress.',
-        params => $params,
-        returns => 'GetContactImportSessionProgressResponse',
-        };
-}
-# @return GetContactImportSessionProgressResponse
-#
-sub get_contact_import_session_progress {
-    my ($self, %args) = @_;
-
-    # verify the required parameter 'id' is set
-    unless (exists $args{'id'}) {
-      croak("Missing the required parameter 'id' when calling get_contact_import_session_progress");
-    }
-
-    # parse inputs
-    my $_resource_path = '/api/v2/contacts/import/progress/{id}';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # path params
-    if ( exists $args{'id'}) {
-        my $_base_variable = "{" . "id" . "}";
-        my $_base_value = $self->{api_client}->to_path_value($args{'id'});
-        $_resource_path =~ s/$_base_variable/$_base_value/g;
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw(BasicAuth )];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('GetContactImportSessionProgressResponse', $response);
     return $_response_object;
 }
 

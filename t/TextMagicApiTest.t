@@ -600,13 +600,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# get_calls_prices test
-#
-{
-    my $result = $api->get_calls_prices();
-}
-
-#
 # get_chat test
 #
 {
@@ -661,14 +654,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $phone = undef; # replace NULL with a proper value
     my $result = $api->get_contact_if_blocked(phone => $phone);
-}
-
-#
-# get_contact_import_session_progress test
-#
-{
-    my $id = undef; # replace NULL with a proper value
-    my $result = $api->get_contact_import_session_progress(id => $id);
 }
 
 #
