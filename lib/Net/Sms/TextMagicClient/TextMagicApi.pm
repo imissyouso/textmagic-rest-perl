@@ -8108,55 +8108,6 @@ sub get_spending_stat {
 }
 
 #
-# get_state
-#
-# Get current entities state
-# 
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'get_state' } = { 
-    	summary => 'Get current entities state',
-        params => $params,
-        returns => 'GetStateResponse',
-        };
-}
-# @return GetStateResponse
-#
-sub get_state {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/api/v2/state';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw(BasicAuth )];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('GetStateResponse', $response);
-    return $_response_object;
-}
-
-#
 # get_subaccount
 #
 # Get sub-account information
@@ -9050,55 +9001,6 @@ sub get_user_dedicated_numbers {
 }
 
 #
-# get_versions
-#
-# Get minimal valid apps versions
-# 
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'get_versions' } = { 
-    	summary => 'Get minimal valid apps versions',
-        params => $params,
-        returns => 'GetVersionsResponse',
-        };
-}
-# @return GetVersionsResponse
-#
-sub get_versions {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/api/v2/versions';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw(BasicAuth )];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('GetVersionsResponse', $response);
-    return $_response_object;
-}
-
-#
 # invite_subaccount
 #
 # Invite a new sub-account
@@ -9466,55 +9368,6 @@ sub mute_chats_bulk {
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
     return;
-}
-
-#
-# ping
-#
-# Ping
-# 
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'ping' } = { 
-    	summary => 'Ping',
-        params => $params,
-        returns => 'PingResponse',
-        };
-}
-# @return PingResponse
-#
-sub ping {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/api/v2/ping';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw(BasicAuth )];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('PingResponse', $response);
-    return $_response_object;
 }
 
 #

@@ -1009,13 +1009,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# get_state test
-#
-{
-    my $result = $api->get_state();
-}
-
-#
 # get_subaccount test
 #
 {
@@ -1126,13 +1119,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# get_versions test
-#
-{
-    my $result = $api->get_versions();
-}
-
-#
 # invite_subaccount test
 #
 {
@@ -1178,13 +1164,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $mute_chats_bulk_input_object = undef; # replace NULL with a proper value
     my $result = $api->mute_chats_bulk(mute_chats_bulk_input_object => $mute_chats_bulk_input_object);
-}
-
-#
-# ping test
-#
-{
-    my $result = $api->ping();
 }
 
 #
