@@ -215,7 +215,7 @@ __PACKAGE__->method_documentation({
     'custom_fields' => {
     	datatype => 'ARRAY[ContactCustomField]',
     	base_name => 'customFields',
-    	description => 'See [Custom Fields](http://docs.textmagictesting.com/tag#Custom-Fields) section.',
+    	description => 'See [Custom Fields](http://docs.textmagictesting.com/#tag/Custom-Fields) section.',
     	format => '',
     	read_only => '',
     		},

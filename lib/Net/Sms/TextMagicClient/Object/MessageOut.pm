@@ -230,7 +230,7 @@ __PACKAGE__->method_documentation({
     'first_name' => {
     	datatype => 'string',
     	base_name => 'firstName',
-    	description => 'Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/tag#Contacts) (even if you submitted phone number instead of contact ID). ',
+    	description => 'Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted phone number instead of contact ID). ',
     	format => '',
     	read_only => '',
     		},

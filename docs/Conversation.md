@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **message_time** | **DateTime** | Time when message arrived at TextMagic. | 
 **text** | **string** | Message text. | 
 **receiver** | **string** | Receiver phone number. | 
-**status** | **string** | Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/section#Delivery-status-codes) for details. | 
+**status** | **string** | Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details. | 
 **first_name** | **string** | Contact first name. | 
 **last_name** | **string** | Contact last name. | 
 **session_id** | **int** |  | 
