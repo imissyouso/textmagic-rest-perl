@@ -146,7 +146,7 @@ __PACKAGE__->method_documentation({
     'contacts' => {
     	datatype => 'string',
     	base_name => 'contacts',
-    	description => 'Comma-separated array of [Contacts](/docs/api/contacts/) IDs. ',
+    	description => 'Comma-separated array of [Contacts](http://docs.textmagictesting.com/tag#Contacts) IDs. ',
     	format => '',
     	read_only => '',
     		},

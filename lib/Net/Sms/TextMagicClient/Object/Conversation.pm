@@ -188,7 +188,7 @@ __PACKAGE__->method_documentation({
     'status' => {
     	datatype => 'string',
     	base_name => 'status',
-    	description => 'Message status (for chats outbound only). See [message delivery statuses](/docs/api/sms-sessions/#message-delivery-statuses) for details.',
+    	description => 'Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/section#Delivery-status-codes) for details.',
     	format => '',
     	read_only => '',
     		},
