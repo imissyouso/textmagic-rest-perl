@@ -9,8 +9,8 @@ use Net::Sms::TextMagicClient::Object::Contact;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Contact ID. | 
-**favorited** | **boolean** |  | 
-**blocked** | **boolean** |  | 
+**favorited** | **boolean** | Is the Contact favourite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavourites). | 
+**blocked** | **boolean** | Is the Contact blocked? [Custom fields list](http://docs.textmagictesting.com/#operation/getBlockedContacts). | 
 **first_name** | **string** | Contact first name. | 
 **last_name** | **string** | Contact last name. | 
 **company_name** | **string** | Company name. | 

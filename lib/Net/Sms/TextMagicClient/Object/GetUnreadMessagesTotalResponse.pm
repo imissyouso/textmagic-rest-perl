@@ -146,7 +146,7 @@ __PACKAGE__->method_documentation({
     'total' => {
     	datatype => 'int',
     	base_name => 'total',
-    	description => '',
+    	description => 'Amount of unread messages.',
     	format => '',
     	read_only => '',
     		},

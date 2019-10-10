@@ -146,7 +146,7 @@ __PACKAGE__->method_documentation({
     'phone' => {
     	datatype => 'string',
     	base_name => 'phone',
-    	description => 'Contact phone number',
+    	description => 'Contact phone number.',
     	format => '',
     	read_only => '',
     		},

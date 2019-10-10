@@ -159,14 +159,14 @@ __PACKAGE__->method_documentation({
     'favorited' => {
     	datatype => 'boolean',
     	base_name => 'favorited',
-    	description => '',
+    	description => 'Is the Contact favourite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavourites).',
     	format => '',
     	read_only => '',
     		},
     'blocked' => {
     	datatype => 'boolean',
     	base_name => 'blocked',
-    	description => '',
+    	description => 'Is the Contact blocked? [Custom fields list](http://docs.textmagictesting.com/#operation/getBlockedContacts).',
     	format => '',
     	read_only => '',
     		},

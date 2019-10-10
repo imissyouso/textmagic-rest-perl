@@ -209,7 +209,7 @@ __PACKAGE__->method_documentation({
     'session_id' => {
     	datatype => 'int',
     	base_name => 'sessionId',
-    	description => '',
+    	description => 'Session ID of a message. See [message sessions](http://docs.textmagictesting.com/#tag/Outbound-Message-Sessions) for details.',
     	format => '',
     	read_only => '',
     		},

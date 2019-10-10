@@ -146,14 +146,14 @@ __PACKAGE__->method_documentation({
     'id' => {
     	datatype => 'int',
     	base_name => 'id',
-    	description => 'Chat ID',
+    	description => 'Chat ID.',
     	format => '',
     	read_only => '',
     		},
     'status' => {
     	datatype => 'string',
     	base_name => 'status',
-    	description => 'Status',
+    	description => 'Chat status:   * **a** - Active   * **c** - Closed   * **d** - Deleted ',
     	format => '',
     	read_only => '',
     		},

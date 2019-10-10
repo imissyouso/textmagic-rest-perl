@@ -196,7 +196,7 @@ __PACKAGE__->method_documentation({
     'destination' => {
     	datatype => 'string',
     	base_name => 'destination',
-    	description => '',
+    	description => 'Destination type of a Message Session: * **t** - text SMS * **s** - text to speech * **v** - voice broadcast ',
     	format => '',
     	read_only => '',
     		},

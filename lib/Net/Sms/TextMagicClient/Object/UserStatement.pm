@@ -146,14 +146,14 @@ __PACKAGE__->method_documentation({
     'id' => {
     	datatype => 'int',
     	base_name => 'id',
-    	description => '',
+    	description => 'User statement ID.',
     	format => '',
     	read_only => '',
     		},
     'user_id' => {
     	datatype => 'int',
     	base_name => 'userId',
-    	description => 'User statement ID.',
+    	description => 'User ID.',
     	format => '',
     	read_only => '',
     		},

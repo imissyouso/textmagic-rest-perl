@@ -153,7 +153,7 @@ __PACKAGE__->method_documentation({
     'processed' => {
     	datatype => 'int',
     	base_name => 'processed',
-    	description => 'How many contacts have been imported',
+    	description => 'How many contacts have been imported.',
     	format => '',
     	read_only => '',
     		},

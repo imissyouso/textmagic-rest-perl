@@ -146,7 +146,7 @@ __PACKAGE__->method_documentation({
     'href' => {
     	datatype => 'string',
     	base_name => 'href',
-    	description => '',
+    	description => 'URI of a user avatar.',
     	format => '',
     	read_only => '',
     		},

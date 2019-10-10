@@ -147,7 +147,7 @@ __PACKAGE__->method_documentation({
     'text' => {
     	datatype => 'string',
     	base_name => 'text',
-    	description => '',
+    	description => 'Scheduled message text.',
     	format => '',
     	read_only => '',
     		},

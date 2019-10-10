@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **status** | **string** | Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details. | 
 **first_name** | **string** | Contact first name. | 
 **last_name** | **string** | Contact last name. | 
-**session_id** | **int** |  | 
+**session_id** | **int** | Session ID of a message. See [message sessions](http://docs.textmagictesting.com/#tag/Outbound-Message-Sessions) for details. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -146,7 +146,7 @@ __PACKAGE__->method_documentation({
     'numbers' => {
     	datatype => 'ARRAY[string]',
     	base_name => 'numbers',
-    	description => 'Array of phone number strings.',
+    	description => 'Array of phone numbers.',
     	format => '',
     	read_only => '',
     		},

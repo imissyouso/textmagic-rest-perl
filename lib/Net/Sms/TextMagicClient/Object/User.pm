@@ -158,7 +158,7 @@ __PACKAGE__->method_documentation({
     'display_time_format' => {
     	datatype => 'string',
     	base_name => 'displayTimeFormat',
-    	description => 'Format for representation of time',
+    	description => 'User&#39;s prefered format of time display * *12h* - AM/PM format * *24h* - 24 hour clock format ',
     	format => '',
     	read_only => '',
     		},
@@ -207,7 +207,7 @@ __PACKAGE__->method_documentation({
     'phone' => {
     	datatype => 'string',
     	base_name => 'phone',
-    	description => '',
+    	description => 'User phone number',
     	format => '',
     	read_only => '',
     		},
@@ -249,14 +249,14 @@ __PACKAGE__->method_documentation({
     'email_accepted' => {
     	datatype => 'boolean',
     	base_name => 'emailAccepted',
-    	description => '',
+    	description => 'Is account has confirmed Email.',
     	format => '',
     	read_only => '',
     		},
     'phone_accepted' => {
     	datatype => 'boolean',
     	base_name => 'phoneAccepted',
-    	description => '',
+    	description => 'Is account has confirmed Phone number.',
     	format => '',
     	read_only => '',
     		},

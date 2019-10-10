@@ -146,14 +146,14 @@ __PACKAGE__->method_documentation({
     'phone' => {
     	datatype => 'string',
     	base_name => 'phone',
-    	description => 'Contact phone number',
+    	description => 'Contact phone number.',
     	format => '',
     	read_only => '',
     		},
     'block_incoming' => {
     	datatype => 'int',
     	base_name => 'blockIncoming',
-    	description => 'Default is 0 (false). If set to 1 incoming messages from this number will be blocked.',
+    	description => 'If set to 1 incoming messages from this number will be blocked.',
     	format => '',
     	read_only => '',
     		},

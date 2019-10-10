@@ -162,14 +162,14 @@ __PACKAGE__->method_documentation({
     'description' => {
     	datatype => 'string',
     	base_name => 'description',
-    	description => 'List description.',
+    	description => 'Description of the list.',
     	format => '',
     	read_only => '',
     		},
     'favorited' => {
     	datatype => 'boolean',
     	base_name => 'favorited',
-    	description => '',
+    	description => 'Is the List favourite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavourites).',
     	format => '',
     	read_only => '',
     		},
@@ -211,7 +211,7 @@ __PACKAGE__->method_documentation({
     'is_default' => {
     	datatype => 'boolean',
     	base_name => 'isDefault',
-    	description => '',
+    	description => 'Indicates that List is used as a default. All new contacts will be added in this List by default.',
     	format => '',
     	read_only => '',
     		},

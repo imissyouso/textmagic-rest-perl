@@ -146,7 +146,7 @@ __PACKAGE__->method_documentation({
     'contacts' => {
     	datatype => 'string',
     	base_name => 'contacts',
-    	description => '',
+    	description => 'Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user',
     	format => '',
     	read_only => '',
     		},

@@ -8,8 +8,8 @@ use Net::Sms::TextMagicClient::Object::UserStatement;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | 
-**user_id** | **int** | User statement ID. | 
+**id** | **int** | User statement ID. | 
+**user_id** | **int** | User ID. | 
 **date** | **DateTime** | User statement date. | 
 **balance** | **double** |  | 
 **delta** | **double** | Balance change amount. | 

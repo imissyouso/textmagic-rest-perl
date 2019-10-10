@@ -146,14 +146,14 @@ __PACKAGE__->method_documentation({
     'play_sound' => {
     	datatype => 'boolean',
     	base_name => 'playSound',
-    	description => 'Notification sound is enable/disabled',
+    	description => 'Enable notification sound?',
     	format => '',
     	read_only => '',
     		},
     'show_notifications' => {
     	datatype => 'boolean',
     	base_name => 'showNotifications',
-    	description => 'Show desktop notifications about new messages',
+    	description => 'Show desktop notifications about new messages.',
     	format => '',
     	read_only => '',
     		},
@@ -167,7 +167,7 @@ __PACKAGE__->method_documentation({
     'sound_id' => {
     	datatype => 'int',
     	base_name => 'soundId',
-    	description => 'Sound Id of a notification',
+    	description => 'Sound Id of a notification.',
     	format => '',
     	read_only => '',
     		},

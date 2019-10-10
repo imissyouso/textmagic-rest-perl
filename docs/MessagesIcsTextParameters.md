@@ -8,10 +8,10 @@ use Net::Sms::TextMagicClient::Object::MessagesIcsTextParameters;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cost** | [**Number**](Number.md) |  | 
-**parts** | **int** |  | 
+**cost** | [**Number**](Number.md) | Cost to check one number is constant – 0.04 in your account currency. | 
+**parts** | **int** | Message parts (multiples of 160 characters) count. | 
 **chars** | **int** |  | 
-**encoding** | **string** |  | 
+**encoding** | **string** | Message charset. Could be: * **ISO-8859-1** for plaintext SMS * **UTF-16BE** for Unicode SMS  | 
 **countries** | **ARRAY[string]** |  | 
 **charset_label** | **string** |  | 
 

@@ -146,7 +146,7 @@ __PACKAGE__->method_documentation({
     'note' => {
     	datatype => 'string',
     	base_name => 'note',
-    	description => '',
+    	description => 'Contact Note text.',
     	format => '',
     	read_only => '',
     		},

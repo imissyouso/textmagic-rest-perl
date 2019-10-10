@@ -160,7 +160,7 @@ __PACKAGE__->method_documentation({
     'content' => {
     	datatype => 'string',
     	base_name => 'content',
-    	description => 'Template text. May contain the tags listed below TODO.',
+    	description => 'Template text. May contain the tags. See [Custom fields list](http://docs.textmagictesting.com/#section/Custom-fields-list-(Merge-tags)).',
     	format => '',
     	read_only => '',
     		},
