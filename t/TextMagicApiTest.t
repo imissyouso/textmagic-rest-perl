@@ -1022,6 +1022,13 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
+# ping test
+#
+{
+    my $result = $api->ping();
+}
+
+#
 # reopen_chats_bulk test
 #
 {

@@ -178,7 +178,7 @@ __PACKAGE__->method_documentation({
     'email' => {
     	datatype => 'string',
     	base_name => 'email',
-    	description => '',
+    	description => 'Account Email address.',
     	format => '',
     	read_only => '',
     		},

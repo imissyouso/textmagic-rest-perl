@@ -8197,6 +8197,55 @@ sub mute_chats_bulk {
 }
 
 #
+# ping
+#
+# Ping
+# 
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'ping' } = { 
+    	summary => 'Ping',
+        params => $params,
+        returns => 'PingResponse',
+        };
+}
+# @return PingResponse
+#
+sub ping {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/api/v2/ping';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw(BasicAuth )];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('PingResponse', $response);
+    return $_response_object;
+}
+
+#
 # reopen_chats_bulk
 #
 # Reopen chats (bulk)

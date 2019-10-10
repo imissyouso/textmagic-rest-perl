@@ -146,14 +146,14 @@ __PACKAGE__->method_documentation({
     'type' => {
     	datatype => 'string',
     	base_name => 'type',
-    	description => '',
+    	description => 'type of the token: * **GCM** — Google Cloud Messaging * **APN** — Apple Push Notification * **FCM** — Firebase Cloud Messaging ',
     	format => '',
     	read_only => '',
     		},
     'token' => {
     	datatype => 'string',
     	base_name => 'token',
-    	description => '',
+    	description => 'Push token value.',
     	format => '',
     	read_only => '',
     		},

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **username** | **string** | Username. | 
 **first_name** | **string** | Account first name. | 
 **last_name** | **string** | Account last name. | 
-**email** | **string** |  | 
+**email** | **string** | Account Email address. | 
 **status** | **string** | Current account status: * **A** for Active * **T** for Trial.  | 
 **balance** | **double** | Account balance (in account currency). | 
 **phone** | **string** | Contact phone number. | 

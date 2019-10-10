@@ -146,7 +146,7 @@ __PACKAGE__->method_documentation({
     'reply_rate' => {
     	datatype => 'double',
     	base_name => 'replyRate',
-    	description => 'the number of incoming messages divided by the number of total messages.',
+    	description => 'The number of incoming messages divided by the number of total messages.',
     	format => '',
     	read_only => '',
     		},
