@@ -30,6 +30,7 @@ use Log::Any qw($log);
 use Date::Parse;
 use DateTime;
 
+use Net::Sms::TextMagicClient::Object::CustomFieldListItem;
 
 use base ("Class::Accessor", "Class::Data::Inheritable");
 
@@ -207,7 +208,7 @@ __PACKAGE__->method_documentation({
     	read_only => '',
     		},
     'custom_field_values' => {
-    	datatype => 'object',
+    	datatype => 'ARRAY[CustomFieldListItem]',
     	base_name => 'customFieldValues',
     	description => '',
     	format => '',
@@ -239,7 +240,7 @@ __PACKAGE__->swagger_types( {
     'favorited' => 'boolean',
     'blocked' => 'boolean',
     'type' => 'int',
-    'custom_field_values' => 'object',
+    'custom_field_values' => 'ARRAY[CustomFieldListItem]',
     'local' => 'int',
     'country' => 'string'
 } );

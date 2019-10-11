@@ -664,7 +664,7 @@ sub create_contact {
     }
 
     # parse inputs
-    my $_resource_path = '/api/v2/contacts';
+    my $_resource_path = '/api/v2/contacts/normalized';
 
     my $_method = 'POST';
     my $query_params = {};
@@ -6231,7 +6231,7 @@ sub get_message_price {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/api/v2/messages/price';
+    my $_resource_path = '/api/v2/messages/price/normalized';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -7139,7 +7139,7 @@ sub get_sender_settings {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/api/v2/sender/settings';
+    my $_resource_path = '/api/v2/sender/settings/normalized';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -10161,7 +10161,7 @@ sub update_contact {
     }
 
     # parse inputs
-    my $_resource_path = '/api/v2/contacts/{id}';
+    my $_resource_path = '/api/v2/contact/{id}/normalized';
 
     my $_method = 'PUT';
     my $query_params = {};
@@ -10686,7 +10686,7 @@ sub update_sender_setting {
     }
 
     # parse inputs
-    my $_resource_path = '/api/v2/sender/settings';
+    my $_resource_path = '/api/v2/sender/settings/normalized';
 
     my $_method = 'PUT';
     my $query_params = {};

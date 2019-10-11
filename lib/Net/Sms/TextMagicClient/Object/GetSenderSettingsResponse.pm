@@ -30,6 +30,7 @@ use Log::Any qw($log);
 use Date::Parse;
 use DateTime;
 
+use Net::Sms::TextMagicClient::Object::SenderSettingsItem;
 
 use base ("Class::Accessor", "Class::Data::Inheritable");
 
@@ -144,21 +145,21 @@ __PACKAGE__->class_documentation({description => '',
 
 __PACKAGE__->method_documentation({
     'user' => {
-    	datatype => 'object',
+    	datatype => 'ARRAY[SenderSettingsItem]',
     	base_name => 'user',
     	description => '',
     	format => '',
     	read_only => '',
     		},
     'special' => {
-    	datatype => 'object',
+    	datatype => 'ARRAY[SenderSettingsItem]',
     	base_name => 'special',
     	description => '',
     	format => '',
     	read_only => '',
     		},
     'other' => {
-    	datatype => 'object',
+    	datatype => 'ARRAY[SenderSettingsItem]',
     	base_name => 'other',
     	description => '',
     	format => '',
@@ -167,9 +168,9 @@ __PACKAGE__->method_documentation({
 });
 
 __PACKAGE__->swagger_types( {
-    'user' => 'object',
-    'special' => 'object',
-    'other' => 'object'
+    'user' => 'ARRAY[SenderSettingsItem]',
+    'special' => 'ARRAY[SenderSettingsItem]',
+    'other' => 'ARRAY[SenderSettingsItem]'
 } );
 
 __PACKAGE__->attribute_map( {
