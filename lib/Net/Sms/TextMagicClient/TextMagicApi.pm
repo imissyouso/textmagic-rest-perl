@@ -7929,7 +7929,7 @@ sub import_contacts {
     }
 
     # parse inputs
-    my $_resource_path = '/api/v2/contacts/import';
+    my $_resource_path = '/api/v2/contacts/import/normalized';
 
     my $_method = 'POST';
     my $query_params = {};
