@@ -258,7 +258,7 @@ __PACKAGE__->method_documentation({
     'has_aa' => {
     	datatype => 'boolean',
     	base_name => 'hasAa',
-    	description => '',
+    	description => '&#x60;true&#x60; if the email address domain has an A record (IPv4). ',
     	format => '',
     	read_only => '',
     		},

@@ -11,10 +11,10 @@ TextMagic’s application programming interface (API) provides the communication
 ## Installation
 
 ```bash
-wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.611.tar.gz && \
-tar zxf v2.0.611.tar.gz && \
-rm -f v2.0.611.tar.gz && \
-cd textmagic-rest-perl-2.0.611 && \
+wget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.612.tar.gz && \
+tar zxf v2.0.612.tar.gz && \
+rm -f v2.0.612.tar.gz && \
+cd textmagic-rest-perl-2.0.612 && \
 perl Makefile.pl && \
 make && \
 make install && \
