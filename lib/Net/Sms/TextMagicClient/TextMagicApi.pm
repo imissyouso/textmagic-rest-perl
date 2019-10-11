@@ -10161,7 +10161,7 @@ sub update_contact {
     }
 
     # parse inputs
-    my $_resource_path = '/api/v2/contact/{id}/normalized';
+    my $_resource_path = '/api/v2/contacts/{id}/normalized';
 
     my $_method = 'PUT';
     my $query_params = {};
