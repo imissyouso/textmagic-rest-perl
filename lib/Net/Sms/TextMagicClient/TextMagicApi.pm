@@ -7893,7 +7893,7 @@ sub get_user_dedicated_numbers {
 # Import contacts from the CSV, XLS or XLSX file.
 # 
 # @param File $file File containing contacts in csv or xls(x) formats (required)
-# @param string $column  (required)
+# @param string $column  (optional)
 # @param string $list_name List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)
 # @param int $list_id List ID contacts will be imported to. (optional)
 {
@@ -7906,7 +7906,7 @@ sub get_user_dedicated_numbers {
     'column' => {
         data_type => 'string',
         description => '',
-        required => '1',
+        required => '0',
     },
     'list_name' => {
         data_type => 'string',
@@ -7933,11 +7933,6 @@ sub import_contacts {
     # verify the required parameter 'file' is set
     unless (exists $args{'file'}) {
       croak("Missing the required parameter 'file' when calling import_contacts");
-    }
-
-    # verify the required parameter 'column' is set
-    unless (exists $args{'column'}) {
-      croak("Missing the required parameter 'column' when calling import_contacts");
     }
 
     # parse inputs

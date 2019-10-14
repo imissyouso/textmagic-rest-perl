@@ -5643,7 +5643,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **File**| File containing contacts in csv or xls(x) formats | 
- **column** | **string**|  | 
+ **column** | **string**|  | [optional] 
  **list_name** | **string**| List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. | [optional] 
  **list_id** | **int**| List ID contacts will be imported to. | [optional] 
 
