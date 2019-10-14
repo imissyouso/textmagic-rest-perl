@@ -982,15 +982,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# import_contacts test
-#
-{
-    my $import_contacts_input_object = undef; # replace NULL with a proper value
-    my $file = undef; # replace NULL with a proper value
-    my $result = $api->import_contacts(import_contacts_input_object => $import_contacts_input_object, file => $file);
-}
-
-#
 # invite_subaccount test
 #
 {
