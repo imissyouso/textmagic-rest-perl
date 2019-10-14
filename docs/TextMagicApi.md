@@ -5608,7 +5608,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **import_contacts**
-> import_contacts(file => $file, import_contacts_input_object => $import_contacts_input_object)
+> import_contacts(file => $file, column => $column)
 
 Import contacts from the CSV, XLS or XLSX file.
 
@@ -5626,10 +5626,10 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $file = '/path/to/file.txt'; # File | File containing contacts in csv or xls(x) formats
-my $import_contacts_input_object = Net::Sms::TextMagicClient::Object::ImportContactsInputObject->new(); # ImportContactsInputObject | 
+my $column = []; # ARRAY[ImportColumnMappingItem] | 
 
 eval { 
-    $api_instance->import_contacts(file => $file, import_contacts_input_object => $import_contacts_input_object);
+    $api_instance->import_contacts(file => $file, column => $column);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->import_contacts: $@\n";
@@ -5641,7 +5641,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **File**| File containing contacts in csv or xls(x) formats | 
- **import_contacts_input_object** | [**ImportContactsInputObject**](ImportContactsInputObject.md)|  | 
+ **column** | [**ARRAY[ImportColumnMappingItem]**](ImportColumnMappingItem.md)|  | 
 
 ### Return type
 

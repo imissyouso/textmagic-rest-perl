@@ -986,8 +986,8 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 #
 {
     my $file = undef; # replace NULL with a proper value
-    my $import_contacts_input_object = undef; # replace NULL with a proper value
-    my $result = $api->import_contacts(file => $file, import_contacts_input_object => $import_contacts_input_object);
+    my $column = undef; # replace NULL with a proper value
+    my $result = $api->import_contacts(file => $file, column => $column);
 }
 
 #

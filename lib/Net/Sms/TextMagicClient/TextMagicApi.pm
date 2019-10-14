@@ -7893,7 +7893,7 @@ sub get_user_dedicated_numbers {
 # Import contacts from the CSV, XLS or XLSX file.
 # 
 # @param File $file File containing contacts in csv or xls(x) formats (required)
-# @param ImportContactsInputObject $import_contacts_input_object  (required)
+# @param ARRAY[ImportColumnMappingItem] $column  (required)
 {
     my $params = {
     'file' => {
@@ -7901,8 +7901,8 @@ sub get_user_dedicated_numbers {
         description => 'File containing contacts in csv or xls(x) formats',
         required => '1',
     },
-    'import_contacts_input_object' => {
-        data_type => 'ImportContactsInputObject',
+    'column' => {
+        data_type => 'ARRAY[ImportColumnMappingItem]',
         description => '',
         required => '1',
     },
@@ -7923,9 +7923,9 @@ sub import_contacts {
       croak("Missing the required parameter 'file' when calling import_contacts");
     }
 
-    # verify the required parameter 'import_contacts_input_object' is set
-    unless (exists $args{'import_contacts_input_object'}) {
-      croak("Missing the required parameter 'import_contacts_input_object' when calling import_contacts");
+    # verify the required parameter 'column' is set
+    unless (exists $args{'column'}) {
+      croak("Missing the required parameter 'column' when calling import_contacts");
     }
 
     # parse inputs
@@ -7949,12 +7949,12 @@ sub import_contacts {
         push @{$form_params->{'file'}}, $args{'file'};
             }
     
-    my $_body_data;
-    # body params
-    if ( exists $args{'import_contacts_input_object'}) {
-        $_body_data = $args{'import_contacts_input_object'};
+    # form params
+    if ( exists $args{'column'} ) {
+                $form_params->{'column'} = $self->{api_client}->to_form_value($args{'column'});
     }
-
+    
+    my $_body_data;
     # authentication setting, if any
     my $auth_settings = [qw(BasicAuth )];
 
