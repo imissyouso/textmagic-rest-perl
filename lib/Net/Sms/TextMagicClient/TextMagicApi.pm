@@ -7893,7 +7893,9 @@ sub get_user_dedicated_numbers {
 # Import contacts from the CSV, XLS or XLSX file.
 # 
 # @param File $file File containing contacts in csv or xls(x) formats (required)
-# @param ARRAY[ImportColumnMappingItem] $column  (required)
+# @param string $column  (required)
+# @param string $list_name List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)
+# @param int $list_id List ID contacts will be imported to. (optional)
 {
     my $params = {
     'file' => {
@@ -7902,9 +7904,19 @@ sub get_user_dedicated_numbers {
         required => '1',
     },
     'column' => {
-        data_type => 'ARRAY[ImportColumnMappingItem]',
+        data_type => 'string',
         description => '',
         required => '1',
+    },
+    'list_name' => {
+        data_type => 'string',
+        description => 'List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end.',
+        required => '0',
+    },
+    'list_id' => {
+        data_type => 'int',
+        description => 'List ID contacts will be imported to.',
+        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'import_contacts' } = { 
@@ -7943,16 +7955,26 @@ sub import_contacts {
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('multipart/form-data');
 
+    # query params
+    if ( exists $args{'column'}) {
+        $query_params->{'column'} = $self->{api_client}->to_query_value($args{'column'});
+    }
+
+    # query params
+    if ( exists $args{'list_name'}) {
+        $query_params->{'listName'} = $self->{api_client}->to_query_value($args{'list_name'});
+    }
+
+    # query params
+    if ( exists $args{'list_id'}) {
+        $query_params->{'listId'} = $self->{api_client}->to_query_value($args{'list_id'});
+    }
+
     # form params
     if ( exists $args{'file'} ) {
         $form_params->{'file'} = [] unless defined $form_params->{'file'};
         push @{$form_params->{'file'}}, $args{'file'};
             }
-    
-    # form params
-    if ( exists $args{'column'} ) {
-                $form_params->{'column'} = $self->{api_client}->to_form_value($args{'column'});
-    }
     
     my $_body_data;
     # authentication setting, if any
