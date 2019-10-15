@@ -26,7 +26,7 @@ use utf8;
 use Log::Any qw($log);
 use Carp;
 
-use constant VERSION => '2.0.626';
+use constant VERSION => '2.0.629';
 
 =head1 Name
 
