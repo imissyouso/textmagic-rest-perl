@@ -153,14 +153,14 @@ __PACKAGE__->method_documentation({
     		},
     'country_name' => {
     	datatype => 'string',
-    	base_name => 'country_name',
+    	base_name => 'countryName',
     	description => 'Country name',
     	format => '',
     	read_only => '',
     		},
     'allow_dedicated' => {
     	datatype => 'boolean',
-    	base_name => 'allow_dedicated',
+    	base_name => 'allowDedicated',
     	description => 'Is allow to use dedicated number',
     	format => '',
     	read_only => '',
@@ -207,8 +207,8 @@ __PACKAGE__->swagger_types( {
 
 __PACKAGE__->attribute_map( {
     'country' => 'country',
-    'country_name' => 'country_name',
-    'allow_dedicated' => 'allow_dedicated',
+    'country_name' => 'countryName',
+    'allow_dedicated' => 'allowDedicated',
     'count' => 'count',
     'max' => 'max',
     'sum' => 'sum',

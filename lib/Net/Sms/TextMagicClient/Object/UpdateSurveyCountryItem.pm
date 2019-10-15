@@ -152,7 +152,7 @@ __PACKAGE__->method_documentation({
     		},
     'user_inbound_id' => {
     	datatype => 'int',
-    	base_name => 'user_inbound_id',
+    	base_name => 'userInboundId',
     	description => 'User inbound phone ID',
     	format => '',
     	read_only => '',
@@ -166,7 +166,7 @@ __PACKAGE__->swagger_types( {
 
 __PACKAGE__->attribute_map( {
     'country' => 'country',
-    'user_inbound_id' => 'user_inbound_id'
+    'user_inbound_id' => 'userInboundId'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});

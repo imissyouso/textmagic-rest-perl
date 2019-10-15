@@ -30,6 +30,7 @@ use Log::Any qw($log);
 use Date::Parse;
 use DateTime;
 
+use Net::Sms::TextMagicClient::Object::Number;
 
 use base ("Class::Accessor", "Class::Data::Inheritable");
 
@@ -143,14 +144,48 @@ __PACKAGE__->class_documentation({description => '',
 }                                 );
 
 __PACKAGE__->method_documentation({
+    'outbound' => {
+    	datatype => 'Number',
+    	base_name => 'outbound',
+    	description => 'Price for outbound message',
+    	format => '',
+    	read_only => '',
+    		},
+    'inbound' => {
+    	datatype => 'Number',
+    	base_name => 'inbound',
+    	description => 'Price for inbound message',
+    	format => '',
+    	read_only => '',
+    		},
+    'forward' => {
+    	datatype => 'Number',
+    	base_name => 'forward',
+    	description => 'Price for forward',
+    	format => '',
+    	read_only => '',
+    		},
+    'country' => {
+    	datatype => 'string',
+    	base_name => 'country',
+    	description => '2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country',
+    	format => '',
+    	read_only => '',
+    		},
 });
 
 __PACKAGE__->swagger_types( {
-    
+    'outbound' => 'Number',
+    'inbound' => 'Number',
+    'forward' => 'Number',
+    'country' => 'string'
 } );
 
 __PACKAGE__->attribute_map( {
-    
+    'outbound' => 'outbound',
+    'inbound' => 'inbound',
+    'forward' => 'forward',
+    'country' => 'country'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});

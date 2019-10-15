@@ -575,6 +575,14 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
+# get_contact_import_session_progress test
+#
+{
+    my $id = undef; # replace NULL with a proper value
+    my $result = $api->get_contact_import_session_progress(id => $id);
+}
+
+#
 # get_contact_note test
 #
 {
@@ -987,9 +995,9 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 {
     my $file = undef; # replace NULL with a proper value
     my $column = undef; # replace NULL with a proper value
-    my $list_name = undef; # replace NULL with a proper value
     my $list_id = undef; # replace NULL with a proper value
-    my $result = $api->import_contacts(file => $file, column => $column, list_name => $list_name, list_id => $list_id);
+    my $list_name = undef; # replace NULL with a proper value
+    my $result = $api->import_contacts(file => $file, column => $column, list_id => $list_id, list_name => $list_name);
 }
 
 #

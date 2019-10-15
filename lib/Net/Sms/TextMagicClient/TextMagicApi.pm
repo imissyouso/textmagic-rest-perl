@@ -3492,7 +3492,7 @@ sub get_all_templates {
 # Find dedicated numbers available for purchase
 # 
 # @param string $country Two-letter dedicated number country ISO code. (required)
-# @param int $prefix Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)
+# @param int $prefix Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)
 # @param int $tollfree Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)
 {
     my $params = {
@@ -4451,6 +4451,73 @@ sub get_contact_if_blocked {
 }
 
 #
+# get_contact_import_session_progress
+#
+# Check import progress
+# 
+# @param int $id  (required)
+{
+    my $params = {
+    'id' => {
+        data_type => 'int',
+        description => '',
+        required => '1',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'get_contact_import_session_progress' } = { 
+    	summary => 'Check import progress',
+        params => $params,
+        returns => 'GetContactImportSessionProgressResponse',
+        };
+}
+# @return GetContactImportSessionProgressResponse
+#
+sub get_contact_import_session_progress {
+    my ($self, %args) = @_;
+
+    # verify the required parameter 'id' is set
+    unless (exists $args{'id'}) {
+      croak("Missing the required parameter 'id' when calling get_contact_import_session_progress");
+    }
+
+    # parse inputs
+    my $_resource_path = '/api/v2/contacts/import/progress/{id}';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # path params
+    if ( exists $args{'id'}) {
+        my $_base_variable = "{" . "id" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'id'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw(BasicAuth )];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('GetContactImportSessionProgressResponse', $response);
+    return $_response_object;
+}
+
+#
 # get_contact_note
 #
 # Get a contact note
@@ -5267,7 +5334,7 @@ sub get_disallowed_rules {
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
-# @param string $query Find contacts or lists by specified search query (optional, default to A)
+# @param string $query Find contacts or lists by specified search query (optional)
 {
     my $params = {
     'page' => {
@@ -6662,7 +6729,7 @@ sub get_messaging_counters {
 # 
 # @param string $by *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year  (optional, default to off)
 # @param int $start Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)
-# @param string $end Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)
+# @param int $end Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)
 {
     my $params = {
     'by' => {
@@ -6676,7 +6743,7 @@ sub get_messaging_counters {
         required => '0',
     },
     'end' => {
-        data_type => 'string',
+        data_type => 'int',
         description => 'Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. ',
         required => '0',
     },
@@ -7180,7 +7247,7 @@ sub get_sender_settings {
 # 
 # @param int $page Fetch specified results page. (optional, default to 1)
 # @param int $limit The number of results per page. (optional, default to 10)
-# @param int $start Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)
+# @param string $start Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)
 # @param string $end Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)
 {
     my $params = {
@@ -7195,7 +7262,7 @@ sub get_sender_settings {
         required => '0',
     },
     'start' => {
-        data_type => 'int',
+        data_type => 'string',
         description => 'Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. ',
         required => '0',
     },
@@ -7890,12 +7957,12 @@ sub get_user_dedicated_numbers {
 #
 # import_contacts
 #
-# Import contacts from the CSV, XLS or XLSX file.
+# Import contacts
 # 
 # @param File $file File containing contacts in csv or xls(x) formats (required)
-# @param string $column  (optional)
-# @param string $list_name List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)
-# @param int $list_id List ID contacts will be imported to. (optional)
+# @param string $column Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)
+# @param int $list_id List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)
+# @param string $list_name List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)
 {
     my $params = {
     'file' => {
@@ -7905,27 +7972,27 @@ sub get_user_dedicated_numbers {
     },
     'column' => {
         data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    'list_name' => {
-        data_type => 'string',
-        description => 'List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end.',
+        description => 'Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. ',
         required => '0',
     },
     'list_id' => {
         data_type => 'int',
-        description => 'List ID contacts will be imported to.',
+        description => 'List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. ',
+        required => '0',
+    },
+    'list_name' => {
+        data_type => 'string',
+        description => 'List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. ',
         required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'import_contacts' } = { 
-    	summary => 'Import contacts from the CSV, XLS or XLSX file.',
+    	summary => 'Import contacts',
         params => $params,
-        returns => undef,
+        returns => 'ResourceLinkResponse',
         };
 }
-# @return void
+# @return ResourceLinkResponse
 #
 sub import_contacts {
     my ($self, %args) = @_;
@@ -7956,13 +8023,13 @@ sub import_contacts {
     }
 
     # query params
-    if ( exists $args{'list_name'}) {
-        $query_params->{'listName'} = $self->{api_client}->to_query_value($args{'list_name'});
+    if ( exists $args{'list_id'}) {
+        $query_params->{'listId'} = $self->{api_client}->to_query_value($args{'list_id'});
     }
 
     # query params
-    if ( exists $args{'list_id'}) {
-        $query_params->{'listId'} = $self->{api_client}->to_query_value($args{'list_id'});
+    if ( exists $args{'list_name'}) {
+        $query_params->{'listName'} = $self->{api_client}->to_query_value($args{'list_name'});
     }
 
     # form params
@@ -7976,10 +8043,14 @@ sub import_contacts {
     my $auth_settings = [qw(BasicAuth )];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ResourceLinkResponse', $response);
+    return $_response_object;
 }
 
 #
@@ -10534,7 +10605,7 @@ sub update_custom_field {
 # Edit the custom field value of a specified contact
 # 
 # @param UpdateCustomFieldValueInputObject $update_custom_field_value_input_object  (required)
-# @param string $id  (required)
+# @param int $id  (required)
 {
     my $params = {
     'update_custom_field_value_input_object' => {
@@ -10543,7 +10614,7 @@ sub update_custom_field {
         required => '1',
     },
     'id' => {
-        data_type => 'string',
+        data_type => 'int',
         description => '',
         required => '1',
     },

@@ -254,7 +254,7 @@ __PACKAGE__->method_documentation({
     'avatar' => {
     	datatype => 'string',
     	base_name => 'avatar',
-    	description => 'null',
+    	description => 'TODO',
     	format => '',
     	read_only => '',
     		},

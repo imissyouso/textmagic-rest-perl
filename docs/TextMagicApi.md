@@ -73,6 +73,7 @@ Method | HTTP request | Description
 [**get_contact**](TextMagicApi.md#get_contact) | **GET** /api/v2/contacts/{id} | Get the details of a specific contact
 [**get_contact_by_phone**](TextMagicApi.md#get_contact_by_phone) | **GET** /api/v2/contacts/phone/{phone} | Get the details of a specific contact by phone number
 [**get_contact_if_blocked**](TextMagicApi.md#get_contact_if_blocked) | **GET** /api/v2/contacts/block/phone | Check is that phone number blocked
+[**get_contact_import_session_progress**](TextMagicApi.md#get_contact_import_session_progress) | **GET** /api/v2/contacts/import/progress/{id} | Check import progress
 [**get_contact_note**](TextMagicApi.md#get_contact_note) | **GET** /api/v2/notes/{id} | Get a contact note
 [**get_contact_notes**](TextMagicApi.md#get_contact_notes) | **GET** /api/v2/contacts/{id}/notes | Fetch notes assigned to the given contact.
 [**get_contacts**](TextMagicApi.md#get_contacts) | **GET** /api/v2/contacts | Get all contacts
@@ -115,7 +116,7 @@ Method | HTTP request | Description
 [**get_unsubscribed_contact**](TextMagicApi.md#get_unsubscribed_contact) | **GET** /api/v2/unsubscribers/{id} | Get the details of a specific unsubscribed contact
 [**get_unsubscribers**](TextMagicApi.md#get_unsubscribers) | **GET** /api/v2/unsubscribers | Get all unsubscribed contacts
 [**get_user_dedicated_numbers**](TextMagicApi.md#get_user_dedicated_numbers) | **GET** /api/v2/numbers | Get all your dedicated numbers
-[**import_contacts**](TextMagicApi.md#import_contacts) | **POST** /api/v2/contacts/import/normalized | Import contacts from the CSV, XLS or XLSX file.
+[**import_contacts**](TextMagicApi.md#import_contacts) | **POST** /api/v2/contacts/import/normalized | Import contacts
 [**invite_subaccount**](TextMagicApi.md#invite_subaccount) | **POST** /api/v2/subaccounts | Invite a new sub-account
 [**mark_chats_read_bulk**](TextMagicApi.md#mark_chats_read_bulk) | **POST** /api/v2/chats/read/bulk | Mark chats as read (bulk)
 [**mark_chats_unread_bulk**](TextMagicApi.md#mark_chats_unread_bulk) | **POST** /api/v2/chats/unread/bulk | Mark chats as unread (bulk)
@@ -672,7 +673,7 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $create_contact_note_input_object = Net::Sms::TextMagicClient::Object::CreateContactNoteInputObject->new(); # CreateContactNoteInputObject | 
-my $id = 56; # int | 
+my $id = 1; # int | 
 
 eval { 
     my $result = $api_instance->create_contact_note(create_contact_note_input_object => $create_contact_note_input_object, id => $id);
@@ -1157,7 +1158,7 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $id = 56; # int | 
+my $id = 1; # int | 
 
 eval { 
     $api_instance->delete_contact_avatar(id => $id);
@@ -2745,7 +2746,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **country** | **string**| Two-letter dedicated number country ISO code. | 
- **prefix** | **int**| Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. | [optional] [default to 1]
+ **prefix** | **int**| Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. | [optional] 
  **tollfree** | **int**| Should we show only tollfree numbers (tollfree available only for US). | [optional] [default to 0]
 
 ### Return type
@@ -3127,7 +3128,7 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $phone = 'phone_example'; # string | 
+my $phone = '"447860021130"'; # string | 
 my $upsert = 56; # int | Create a new chat if not found
 my $reopen = 56; # int | Reopen chat if found or do not change status
 
@@ -3295,7 +3296,7 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $phone = 'phone_example'; # string | 
+my $phone = '"447860021130"'; # string | 
 
 eval { 
     my $result = $api_instance->get_contact_by_phone(phone => $phone);
@@ -3345,7 +3346,7 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $phone = '447860021130'; # string | Phone number to check
+my $phone = '"447860021130"'; # string | Phone number to check
 
 eval { 
     my $result = $api_instance->get_contact_if_blocked(phone => $phone);
@@ -3377,6 +3378,56 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_contact_import_session_progress**
+> GetContactImportSessionProgressResponse get_contact_import_session_progress(id => $id)
+
+Check import progress
+
+Get contact import session progress.
+
+### Example 
+```perl
+use Data::Dumper;
+use Net::Sms::TextMagicClient::TextMagicApi;
+my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $id = 1; # int | 
+
+eval { 
+    my $result = $api_instance->get_contact_import_session_progress(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling TextMagicApi->get_contact_import_session_progress: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**GetContactImportSessionProgressResponse**](GetContactImportSessionProgressResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_contact_note**
 > ContactNote get_contact_note(id => $id)
 
@@ -3395,7 +3446,7 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $id = 56; # int | 
+my $id = 1; # int | 
 
 eval { 
     my $result = $api_instance->get_contact_note(id => $id);
@@ -3961,7 +4012,7 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $page = 56; # int | Fetch specified results page.
 my $limit = 56; # int | The number of results per page.
-my $query = 'query_example'; # string | Find contacts or lists by specified search query
+my $query = '"A"'; # string | Find contacts or lists by specified search query
 
 eval { 
     my $result = $api_instance->get_favourites(page => $page, limit => $limit, query => $query);
@@ -3978,7 +4029,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **query** | **string**| Find contacts or lists by specified search query | [optional] [default to A]
+ **query** | **string**| Find contacts or lists by specified search query | [optional] 
 
 ### Return type
 
@@ -4749,7 +4800,7 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $by = '"off"'; # string | *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year 
 my $start = 1430438400; # int | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
-my $end = '1431648000'; # string | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
+my $end = 1431648000; # int | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
 
 eval { 
     my $result = $api_instance->get_messaging_stat(by => $by, start => $start, end => $end);
@@ -4766,7 +4817,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **by** | **string**| *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year  | [optional] [default to off]
  **start** | **int**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | [optional] 
- **end** | **string**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | [optional] 
+ **end** | **int**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | [optional] 
 
 ### Return type
 
@@ -5113,7 +5164,7 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 
 my $page = 56; # int | Fetch specified results page.
 my $limit = 56; # int | The number of results per page.
-my $start = "2018-11-11 11:11"; # int | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
+my $start = '"2018-11-11 11:11"'; # string | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
 my $end = '"2019-11-11 11:11"'; # string | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
 
 eval { 
@@ -5131,7 +5182,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int**| The number of results per page. | [optional] [default to 10]
- **start** | **int**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | [optional] 
+ **start** | **string**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | [optional] 
  **end** | **string**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | [optional] 
 
 ### Return type
@@ -5608,11 +5659,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **import_contacts**
-> import_contacts(file => $file, column => $column, list_name => $list_name, list_id => $list_id)
+> ResourceLinkResponse import_contacts(file => $file, column => $column, list_id => $list_id, list_name => $list_name)
+
+Import contacts
 
 Import contacts from the CSV, XLS or XLSX file.
-
-
 
 ### Example 
 ```perl
@@ -5626,12 +5677,13 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $file = '/path/to/file.txt'; # File | File containing contacts in csv or xls(x) formats
-my $column = 'column_example'; # string | 
-my $list_name = 'list_name_example'; # string | List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end.
-my $list_id = 56; # int | List ID contacts will be imported to.
+my $column = '"0:firstName;1:lastName;3:phone;4:email"'; # string | Import file column mapping. String must contain substrings of mapping in format `columnNumber:field` glued by `;`. For example: `0:firstName;1:lastName;3:phone;4:email` where value before `:` is a number of column in file, value after `:` is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: `firstName`, `lastName`, `phone`, `email`. Existing of `phone` mapping is required. 
+my $list_id = 364; # int | List ID contacts will be imported to. Ignored if `listName` is specified. 
+my $list_name = '"A new list"'; # string | List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if `listId` is specified. 
 
 eval { 
-    $api_instance->import_contacts(file => $file, column => $column, list_name => $list_name, list_id => $list_id);
+    my $result = $api_instance->import_contacts(file => $file, column => $column, list_id => $list_id, list_name => $list_name);
+    print Dumper($result);
 };
 if ($@) {
     warn "Exception when calling TextMagicApi->import_contacts: $@\n";
@@ -5643,13 +5695,13 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **File**| File containing contacts in csv or xls(x) formats | 
- **column** | **string**|  | [optional] 
- **list_name** | **string**| List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. | [optional] 
- **list_id** | **int**| List ID contacts will be imported to. | [optional] 
+ **column** | **string**| Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  | [optional] 
+ **list_id** | **int**| List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  | [optional] 
+ **list_name** | **string**| List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  | [optional] 
 
 ### Return type
 
-void (empty response body)
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
 
 ### Authorization
 
@@ -7366,7 +7418,7 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $update_custom_field_value_input_object = Net::Sms::TextMagicClient::Object::UpdateCustomFieldValueInputObject->new(); # UpdateCustomFieldValueInputObject | 
-my $id = 'id_example'; # string | 
+my $id = 554; # int | 
 
 eval { 
     my $result = $api_instance->update_custom_field_value(update_custom_field_value_input_object => $update_custom_field_value_input_object, id => $id);
@@ -7382,7 +7434,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **update_custom_field_value_input_object** | [**UpdateCustomFieldValueInputObject**](UpdateCustomFieldValueInputObject.md)|  | 
- **id** | **string**|  | 
+ **id** | **int**|  | 
 
 ### Return type
 
@@ -7669,7 +7721,7 @@ my $api_instance = Net::Sms::TextMagicClient::TextMagicApi->new(
 );
 
 my $image = '/path/to/file.txt'; # File | Contact avatar. Should be PNG or JPG file not more than 10 MB
-my $id = 56; # int | 
+my $id = 1; # int | 
 
 eval { 
     my $result = $api_instance->upload_contact_avatar(image => $image, id => $id);

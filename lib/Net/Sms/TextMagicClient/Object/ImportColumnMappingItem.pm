@@ -145,14 +145,14 @@ __PACKAGE__->class_documentation({description => '',
 __PACKAGE__->method_documentation({
     'column_position_in_file' => {
     	datatype => 'string',
-    	base_name => 'column_position_in_file',
+    	base_name => 'columnPositionInFile',
     	description => 'Column position in file (indexed from 0)',
     	format => '',
     	read_only => '',
     		},
     'field_or_custom_field_id' => {
     	datatype => 'string',
-    	base_name => 'field_or_custom_field_id',
+    	base_name => 'fieldOrCustomFieldId',
     	description => 'Field or custom field id',
     	format => '',
     	read_only => '',
@@ -165,8 +165,8 @@ __PACKAGE__->swagger_types( {
 } );
 
 __PACKAGE__->attribute_map( {
-    'column_position_in_file' => 'column_position_in_file',
-    'field_or_custom_field_id' => 'field_or_custom_field_id'
+    'column_position_in_file' => 'columnPositionInFile',
+    'field_or_custom_field_id' => 'fieldOrCustomFieldId'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});
