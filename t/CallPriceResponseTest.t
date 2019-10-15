@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('Net::Sms::TextMagicClient::Object::ImportColumnMappingItem');
+use_ok('Net::Sms::TextMagicClient::Object::CallPriceResponse');
 
-my $instance = Net::Sms::TextMagicClient::Object::ImportColumnMappingItem->new();
+my $instance = Net::Sms::TextMagicClient::Object::CallPriceResponse->new();
 
-isa_ok($instance, 'Net::Sms::TextMagicClient::Object::ImportColumnMappingItem');
+isa_ok($instance, 'Net::Sms::TextMagicClient::Object::CallPriceResponse');
 

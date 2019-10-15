@@ -10857,7 +10857,7 @@ sub update_sender_setting {
     }
 
     # parse inputs
-    my $_resource_path = '/api/v2/sender/settings/normalized';
+    my $_resource_path = '/api/v2/sender/settings';
 
     my $_method = 'PUT';
     my $query_params = {};
