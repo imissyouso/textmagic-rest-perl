@@ -146,7 +146,7 @@ __PACKAGE__->method_documentation({
     'status' => {
     	datatype => 'int',
     	base_name => 'status',
-    	description => '',
+    	description => 'Session status: * **1** if session has been initialized but not yet started * **3** if session is being processed * **4** if session has errors * **5** if session completed successfully ',
     	format => '',
     	read_only => '',
     		},

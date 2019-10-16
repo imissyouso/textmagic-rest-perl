@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **forwarded_call_notification** | **boolean** | Should user receive notification about new forwarded calls. | 
 **include_sms_history** | **boolean** | Include SMS history into notification Email. | 
 **send_in_html_format** | **boolean** | Send Email notification in HTML format. | 
-**alert_email1** | **string** | New message notification email 2. | 
+**alert_email1** | **string** | New message notification email 1. | 
 **alert_email2** | **string** | New message notification email 2. | 
 **alert_email3** | **string** | New message notification email 3. | 
 

@@ -161,7 +161,7 @@ __PACKAGE__->method_documentation({
     'chars' => {
     	datatype => 'int',
     	base_name => 'chars',
-    	description => '',
+    	description => 'Characters count.',
     	format => '',
     	read_only => '',
     		},
@@ -182,7 +182,7 @@ __PACKAGE__->method_documentation({
     'charset_label' => {
     	datatype => 'string',
     	base_name => 'charsetLabel',
-    	description => '',
+    	description => 'Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages ',
     	format => '',
     	read_only => '',
     		},

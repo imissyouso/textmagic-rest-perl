@@ -9,10 +9,10 @@ use Net::Sms::TextMagicClient::Object::GetContactsAutocompleteResponseItem;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entity_id** | **int** | Id of entity. 0 if object is a Reply | 
-**entity_type** | **string** |  | 
+**entity_type** | **string** | Entry type: * **contact** if it is related to a contact * **list** if it is related to a contact list * **reply** if it is related to an incoming message  | 
 **value** | **string** | Id of contact/list if entityType is contact/list OR phone number if entityType is reply. | 
 **label** | **string** | Name of the contact/list if entityType is contact/list OR phone number if entityType is reply. | 
-**shared_by** | **string** | If contact or list was shared by another user then name if this user will be shown. | 
+**shared_by** | **string** | If contact or list was shared by another sub-account then name if this user will be shown. | 
 **avatar** | **string** | Contact avatar URI. | 
 **favorited** | **boolean** | If contact has been marked as favorite. | 
 **user_id** | **int** | Owner id of the contact/list (if it was shared). | 

@@ -184,7 +184,7 @@ __PACKAGE__->method_documentation({
     'contact_name' => {
     	datatype => 'string',
     	base_name => 'contactName',
-    	description => '',
+    	description => 'Aggregated contact information. If the message scheduled to be sent to a single contact, a full name will be returned here. Otherwise, a total amount contacts will be returned.',
     	format => '',
     	read_only => '',
     		},
@@ -205,7 +205,7 @@ __PACKAGE__->method_documentation({
     'summary' => {
     	datatype => 'string',
     	base_name => 'summary',
-    	description => '',
+    	description => 'A human-readable summary of the sending schedule.',
     	format => '',
     	read_only => '',
     		},
@@ -219,14 +219,14 @@ __PACKAGE__->method_documentation({
     'first_occurrence' => {
     	datatype => 'DateTime',
     	base_name => 'firstOccurrence',
-    	description => '',
+    	description => 'First occurence date.',
     	format => '',
     	read_only => '',
     		},
     'last_occurrence' => {
     	datatype => 'DateTime',
     	base_name => 'lastOccurrence',
-    	description => '',
+    	description => 'Last occurence date (could be &#x60;null&#x60; if the schedule is endless).',
     	format => '',
     	read_only => '',
     		},
@@ -254,7 +254,7 @@ __PACKAGE__->method_documentation({
     'avatar' => {
     	datatype => 'string',
     	base_name => 'avatar',
-    	description => 'TODO',
+    	description => 'A relative link to the contact avatar.',
     	format => '',
     	read_only => '',
     		},

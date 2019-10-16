@@ -174,7 +174,7 @@ __PACKAGE__->method_documentation({
     'alert_email1' => {
     	datatype => 'string',
     	base_name => 'alertEmail1',
-    	description => 'New message notification email 2.',
+    	description => 'New message notification email 1.',
     	format => '',
     	read_only => '',
     		},

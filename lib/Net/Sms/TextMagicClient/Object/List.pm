@@ -190,7 +190,7 @@ __PACKAGE__->method_documentation({
     'service' => {
     	datatype => 'boolean',
     	base_name => 'service',
-    	description => '',
+    	description => 'Internal service field.',
     	format => '',
     	read_only => '',
     		},
@@ -211,7 +211,7 @@ __PACKAGE__->method_documentation({
     'is_default' => {
     	datatype => 'boolean',
     	base_name => 'isDefault',
-    	description => 'Indicates that List is used as a default. All new contacts will be added in this List by default.',
+    	description => 'Indicates that List is used as a default. All new contacts that added via Web-app will be added in this List by default.',
     	format => '',
     	read_only => '',
     		},

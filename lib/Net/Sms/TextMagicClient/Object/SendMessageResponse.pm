@@ -160,7 +160,7 @@ __PACKAGE__->method_documentation({
     'type' => {
     	datatype => 'string',
     	base_name => 'type',
-    	description => '',
+    	description => 'Message response type: * **message** when message sent to a single recipient * **session** when message sent to multiple recipients * **schedule** when message has been scheduled for sending * **bulk** when message sent to multiple recipient and the number of recipients requires asynchronous processiong See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session). ',
     	format => '',
     	read_only => '',
     		},
@@ -181,7 +181,7 @@ __PACKAGE__->method_documentation({
     'message_id' => {
     	datatype => 'int',
     	base_name => 'messageId',
-    	description => '',
+    	description => 'Message ID.',
     	format => '',
     	read_only => '',
     		},

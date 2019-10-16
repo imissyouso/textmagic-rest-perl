@@ -153,7 +153,7 @@ __PACKAGE__->method_documentation({
     'entity_type' => {
     	datatype => 'string',
     	base_name => 'entityType',
-    	description => '',
+    	description => 'Entry type: * **contact** if it is related to a contact * **list** if it is related to a contact list * **reply** if it is related to an incoming message ',
     	format => '',
     	read_only => '',
     		},
@@ -174,7 +174,7 @@ __PACKAGE__->method_documentation({
     'shared_by' => {
     	datatype => 'string',
     	base_name => 'sharedBy',
-    	description => 'If contact or list was shared by another user then name if this user will be shown.',
+    	description => 'If contact or list was shared by another sub-account then name if this user will be shown.',
     	format => '',
     	read_only => '',
     		},
