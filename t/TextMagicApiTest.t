@@ -674,13 +674,6 @@ isa_ok($api, 'Net::Sms::TextMagicClient::TextMagicApi');
 }
 
 #
-# get_disallowed_rules test
-#
-{
-    my $result = $api->get_disallowed_rules();
-}
-
-#
 # get_favourites test
 #
 {

@@ -5279,55 +5279,6 @@ sub get_dedicated_number {
 }
 
 #
-# get_disallowed_rules
-#
-# Get disallowed permissions
-# 
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'get_disallowed_rules' } = { 
-    	summary => 'Get disallowed permissions',
-        params => $params,
-        returns => 'GetDisallowedRulesResponse',
-        };
-}
-# @return GetDisallowedRulesResponse
-#
-sub get_disallowed_rules {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/api/v2/user/disallowed-rules';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw(BasicAuth )];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('GetDisallowedRulesResponse', $response);
-    return $_response_object;
-}
-
-#
 # get_favourites
 #
 # Get favorite contacts and lists

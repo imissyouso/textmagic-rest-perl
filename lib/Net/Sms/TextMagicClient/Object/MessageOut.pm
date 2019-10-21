@@ -283,62 +283,6 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
-    'smsc_id' => {
-    	datatype => 'string',
-    	base_name => 'smscId',
-    	description => '',
-    	format => '',
-    	read_only => '',
-    		},
-    'contact' => {
-    	datatype => 'string',
-    	base_name => 'contact',
-    	description => '',
-    	format => '',
-    	read_only => '',
-    		},
-    'source' => {
-    	datatype => 'string',
-    	base_name => 'source',
-    	description => '',
-    	format => '',
-    	read_only => '',
-    		},
-    'delivered_count' => {
-    	datatype => 'int',
-    	base_name => 'deliveredCount',
-    	description => '',
-    	format => '',
-    	read_only => '',
-    		},
-    'numbers_count' => {
-    	datatype => 'int',
-    	base_name => 'numbersCount',
-    	description => '',
-    	format => '',
-    	read_only => '',
-    		},
-    'user_id' => {
-    	datatype => 'int',
-    	base_name => 'userId',
-    	description => '',
-    	format => '',
-    	read_only => '',
-    		},
-    'credits_price' => {
-    	datatype => 'string',
-    	base_name => 'creditsPrice',
-    	description => '',
-    	format => '',
-    	read_only => '',
-    		},
-    'chars' => {
-    	datatype => 'int',
-    	base_name => 'chars',
-    	description => '',
-    	format => '',
-    	read_only => '',
-    		},
 });
 
 __PACKAGE__->swagger_types( {
@@ -361,15 +305,7 @@ __PACKAGE__->swagger_types( {
     'price' => 'double',
     'parts_count' => 'int',
     'from_email' => 'string',
-    'from_number' => 'string',
-    'smsc_id' => 'string',
-    'contact' => 'string',
-    'source' => 'string',
-    'delivered_count' => 'int',
-    'numbers_count' => 'int',
-    'user_id' => 'int',
-    'credits_price' => 'string',
-    'chars' => 'int'
+    'from_number' => 'string'
 } );
 
 __PACKAGE__->attribute_map( {
@@ -392,15 +328,7 @@ __PACKAGE__->attribute_map( {
     'price' => 'price',
     'parts_count' => 'partsCount',
     'from_email' => 'fromEmail',
-    'from_number' => 'fromNumber',
-    'smsc_id' => 'smscId',
-    'contact' => 'contact',
-    'source' => 'source',
-    'delivered_count' => 'deliveredCount',
-    'numbers_count' => 'numbersCount',
-    'user_id' => 'userId',
-    'credits_price' => 'creditsPrice',
-    'chars' => 'chars'
+    'from_number' => 'fromNumber'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});

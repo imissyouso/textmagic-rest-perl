@@ -28,14 +28,6 @@ Name | Type | Description | Notes
 **parts_count** | **int** | Message parts (multiples of 160 characters) count. | 
 **from_email** | **string** | User email which this message came from. For Email2SMS and Distribution Lists messages it will be an original email address, in other cases it is an account email address. | [optional] 
 **from_number** | **string** | Phone number which is used to send SMS. | [optional] 
-**smsc_id** | **string** |  | [optional] 
-**contact** | **string** |  | [optional] 
-**source** | **string** |  | [optional] 
-**delivered_count** | **int** |  | [optional] 
-**numbers_count** | **int** |  | [optional] 
-**user_id** | **int** |  | [optional] 
-**credits_price** | **string** |  | [optional] 
-**chars** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
